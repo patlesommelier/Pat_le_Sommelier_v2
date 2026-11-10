@@ -395,3 +395,5 @@
 .design-ardoise .message.client { background: #F3E39B; color: #25302B; text-shadow: none; font-family: Kalam, cursive; font-size: 16px; }
 .design-ardoise .jauge .barres span { background: rgba(241, 239, 232, 0.2); }
 .design-ardoise .jauge .barres span.pleine { background: #F3E39B; }
+/* Ardoise : « Qu'allez-vous manger ? » reste collé en haut en défilant ; fond d'ardoise opaque pour que les plats passent dessous. */
+.design-ardoise .question-bandeau, .design-ardoise .bandeau-haut { background: #25302B; }

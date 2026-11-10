@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Icone } from './Icone';
@@ -11,9 +11,6 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   /** Pastille de notification : nombre au chargement et adresse qui le relit. */
   notif?: { n: number; source: string } }
 
-const CLE_REPLIS = 'qv-menu-replis';
-// Au départ, seul « Cartes et menus » est déplié.
-const REPLIS_PAR_DEFAUT: Record<string, boolean> = { 'Gestion de cave': true, 'App client': true, 'Paramètres': true };
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
 export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
@@ -24,24 +21,17 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   if (/^\/admin\/[^/]+\/carte\/[^/]+$/.test(chemin) && /^\/admin\/[^/]+\/stocks/.test(retour)) chemin = retour.split('?')[0];
   if (/^\/admin\/[^/]+\/producteurs\//.test(chemin)) chemin = chemin.replace(/\/producteurs\/.*$/, '/stocks');
   const courant = (href: string) => (href === accueil ? chemin === href : chemin.startsWith(href)) ? 'page' : undefined;
-  // Groupes repliables (flèche à côté du titre) : choix gardé dans ce navigateur. tout sauf « Cartes et menus » est replié au départ ;
-  // le groupe de la page ouverte s'ouvre de lui-même.
-  const [replies, setReplies] = useState<Record<string, boolean>>(REPLIS_PAR_DEFAUT);
-  useEffect(() => {
-    try { const r = JSON.parse(localStorage.getItem(CLE_REPLIS) ?? 'null'); if (r && typeof r === 'object') setReplies({ ...REPLIS_PAR_DEFAUT, ...r }); } catch { /* stockage indisponible */ }
-  }, []);
+  // Groupes repliables (flèche à côté du titre) : en entrant dans l'espace, tous repliés sauf celui de la page ouverte ;
+  // ceux qu'on ouvre ou ferme restent ainsi pendant la visite (pas d'un jour à l'autre).
+  const [replies, setReplies] = useState<Record<string, boolean>>({});
   // Groupe de la page ouverte : déplié d'office, mais on peut quand même le replier (pour cette visite).
   const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && courant(e.href));
-  const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g]));
+  const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
   const basculer = (g: string) => {
     const replier = !cache(g);
     if (groupeOuvert(g)) setFermesIci((f) => ({ ...f, [g]: replier }));
-    setReplies((r) => {
-      const n = { ...r, [g]: replier };
-      try { localStorage.setItem(CLE_REPLIS, JSON.stringify(n)); } catch { /* stockage indisponible */ }
-      return n;
-    });
+    setReplies((r) => ({ ...r, [g]: replier }));
   };
   return (
     <nav aria-label="Back-office" className="bo-liens">
