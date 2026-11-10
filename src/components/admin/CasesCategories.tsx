@@ -6,8 +6,8 @@ import { useState, useTransition } from 'react';
 
 const CASES = [
   ['coups_de_coeur', 'Coups de cœur', 'Les vins cochés « Coup de cœur » dans leur fiche'],
-  ['nature', 'Nature', 'Les vins nature, d’après la base Quid Vinum'],
-  ['bio', 'Bio', 'Les vins bio, d’après la base Quid Vinum'],
+  ['nature', 'Nature', 'Les vins nature, d’après Quid Vinum'],
+  ['bio', 'Bio', 'Les vins bio, d’après Quid Vinum'],
   ['au_verre', 'Au verre', 'Les vins servis au verre'],
 ] as const;
 
@@ -22,8 +22,8 @@ export function CasesCategories({ choisies: initiales, enregistrer }: { choisies
   };
   return (
     <div style={{ marginLeft: 'auto', display: 'flex', flexWrap: 'wrap', gap: '4px 14px', alignItems: 'center', opacity: enCours ? 0.6 : 1 }}
-      title="Catégories en plus des couleurs dans l’app : un vin d’une catégorie cochée n’apparaît que là (s’il est dans plusieurs, la première compte)">
-      <span className="petit discret">Catégories en plus :</span>
+      title="Onglets en plus des couleurs dans l’app : un vin d’une catégorie cochée n’apparaît que là (s’il est dans plusieurs, la première compte)">
+      <span className="petit discret">Onglets en plus dans l’app :</span>
       {CASES.map(([id, libelle, aide]) => (
         <label key={id} title={aide} style={{ display: 'inline-flex', gap: 6, alignItems: 'center', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
           <input type="checkbox" checked={choisies.includes(id)} disabled={enCours} onChange={(e) => basculer(id, e.target.checked)} />

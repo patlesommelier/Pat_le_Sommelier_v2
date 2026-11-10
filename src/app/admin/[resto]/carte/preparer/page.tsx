@@ -46,10 +46,10 @@ export default async function Preparer({ params }: { params: Promise<{ resto: st
         ))}
         {erreurs.map((c) => (
           <span key={c.couleur} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>
-            {COULEURS[c.couleur] ?? c.couleur} : {c.message ?? 'échec'} — ces vins gardent leur résumé court sur la carte. Recliquez sur « Imprimer la carte » pour réessayer.
+            {COULEURS[c.couleur] ?? c.couleur} : {c.message ?? 'échec'} — ces vins auront un texte plus court sur la carte. Recliquez sur « Imprimer la carte » pour réessayer.
           </span>
         ))}
-        {termine && reste > 0 && !erreurs.length && <span className="discret">{reste} vin{reste > 1 ? 's' : ''} sans présentation valide : résumé court sur la carte, à compléter dans la fiche du vin.</span>}
+        {termine && reste > 0 && !erreurs.length && <span className="discret">{reste > 1 ? `Ces ${reste} vins auront` : 'Ce vin aura'} un texte plus court sur la carte : à compléter dans la fiche du vin.</span>}
       </div>
     </>
   );

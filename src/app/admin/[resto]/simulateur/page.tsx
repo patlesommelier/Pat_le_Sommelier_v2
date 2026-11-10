@@ -57,7 +57,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
       <div className="rangee">
         <form method="get" className="etroit" style={{ flex: '1 1 300px' }}>
           <div className="carte-bo pile">
-            <h2>Scénario</h2>
+            <h2>Choisissez vos plats</h2>
             {Object.entries(CAT).map(([k, l]) => {
               const ps = actifs.filter((p) => p.categorie === k);
               if (!ps.length) return null;
@@ -82,9 +82,9 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
             })}
             {table && <input type="hidden" name="table" value="1" />}
             {!table && choisis[0] && <input type="hidden" name="plat" value={choisis[0]} />}
-            <label className="case"><input type="checkbox" name="arelire" value="1" defaultChecked={arelire} /><span>Compter aussi les accords à relire<small>Pour voir le résultat avant de les valider</small></span></label>
+            <label className="case"><input type="checkbox" name="arelire" value="1" defaultChecked={arelire} /><span>Inclure les accords pas encore validés<small>Pour voir le résultat avant de les valider</small></span></label>
             <span className="ligne-actions">
-              {table && <button type="submit" className="btn">Simuler</button>}
+              {table && <button type="submit" className="btn">Voir les vins</button>}
               {table
                 ? <Link href={`${base}?${new URLSearchParams({ plat: choisis[0] ?? '', ...(arelire ? { arelire: '1' } : {}) })}`} className="btn fantome petit">Un seul plat (avec l’app)</Link>
                 : <><button type="submit" className="btn sec petit">Mettre à jour</button><Link href={`${base}?${new URLSearchParams({ table: '1', plat: choisis[0] ?? '', ...(arelire ? { arelire: '1' } : {}) })}`} className="btn fantome petit">Plusieurs plats (vin pour la table)</Link></>}
@@ -134,13 +134,13 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                 })}
               </div>
             )}
-            <span className="discret" style={{ fontSize: 13 }}>{elimines} vin{elimines > 1 ? 's' : ''} écarté{elimines > 1 ? 's' : ''} (note ≤ {R.noteEliminatoire}){exclus.size ? ` · ${exclus.size} retiré${exclus.size > 1 ? 's' : ''} par vos consignes` : ''}.</span>
+            <span className="discret" style={{ fontSize: 13 }}>{elimines} vin{elimines > 1 ? 's' : ''} trop faible{elimines > 1 ? 's' : ''} avec {plusieurs ? 'ces plats' : 'ce plat'}{exclus.size ? ` · ${exclus.size} vin${exclus.size > 1 ? 's' : ''} que vous avez retiré${exclus.size > 1 ? 's' : ''}` : ''}.</span>
             <div className="ligne-actions">
-              {tour > 1 && <Link href={q({ tour: String(tour - 1) })} className="btn fantome petit">← Tour {tour - 1}</Link>}
+              {tour > 1 && <Link href={q({ tour: String(tour - 1) })} className="btn fantome petit">{tour - 1 === 1 ? '← Premiers vins' : '← Vins précédents'}</Link>}
               {tour2.size > 0 && <Link href={q({ tour: String(tour + 1) })} className="btn sec petit">Le client veut autre chose →</Link>}
               <Link href={`/admin/${resto}/regles`} className="btn fantome petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
             </div>
-            {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">Aucun accord {arelire ? '' : 'validé '}pour {plusieurs ? 'ces plats' : 'ce plat'}.{!arelire && ' Cochez « Compter aussi les accords à relire ».'}</p>}
+            {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">Aucun accord {arelire ? '' : 'validé '}pour {plusieurs ? 'ces plats' : 'ce plat'}.{!arelire && ' Cochez « Inclure les accords pas encore validés ».'}</p>}
           </div>
         </section>
       </div>

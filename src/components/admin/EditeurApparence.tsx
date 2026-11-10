@@ -65,7 +65,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           <div><h2>Couleur de l’app</h2><p className="sous">Saisissez le code de votre couleur, ou choisissez-la avec le carré de couleur (sa pipette permet de la prendre sur votre logo).</p></div>
           <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', alignItems: 'start' }}>
             <div className="pile" style={{ gap: 12 }}>
-              <div className="champ"><label htmlFor="hex">Votre couleur (code)</label>
+              <div className="champ"><label htmlFor="hex">Votre couleur (choisissez dans le carré)</label>
                 <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                   <input id="hex" value={saisie} onChange={(e) => { const v = e.target.value.toUpperCase(); setSaisie(v); if (valide(v)) setCouleur(v); }} style={{ width: 130, fontFamily: 'monospace' }} />
                   <input type="color" aria-label="Choisir une couleur" value={couleur.toLowerCase()} onChange={(e) => choisir(e.target.value.toUpperCase())} style={{ width: 48, height: 44, padding: 2, border: '1.5px solid var(--ligne)', borderRadius: 10, background: '#EFEBE9' }} />
@@ -98,7 +98,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           <div className="champ"><label htmlFor="accroche2">Deuxième ligne</label><input id="accroche2" name="accroche2" value={a2} onChange={(e) => setA2(e.target.value)} maxLength={60} /></div>
         </section>
         <section className="carte-bo pile">
-          <h2>Page d’arrivée</h2>
+          <h2>Ce que le client voit en premier</h2>
           <span className="discret">Ce que vos clients voient en scannant le QR code.</span>
           <label className="case"><input type="radio" name="page_accueil" value="menu" defaultChecked={pageAccueil !== 'carte'} />
             <span><b>Le menu, avec le sommelier</b><small>Le client choisit son plat, Pat lui propose des vins.</small></span></label>
@@ -117,11 +117,11 @@ const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['creme', 'Crème et courbes', 'Formes arrondies, fond clair à votre couleur (par défaut).'],
   ['classique', 'Classique', 'Lignes droites et cadres fins, sur fond blanc.'],
   ['sombre', 'Sombre', 'Fond sombre, idéal pour une salle peu éclairée le soir.'],
-  ['bento', 'Bento', 'Tout en cases aux coins très arrondis, comme une boîte à repas.'],
-  ['brut', 'Néo-brutalisme', 'Contours noirs, ombres nettes, couleurs vives et titres épais.'],
+  ['bento', 'Cases arrondies', 'Tout en cases aux coins très arrondis, comme une boîte à repas.'],
+  ['brut', 'Contrasté', 'Contours noirs, ombres nettes, couleurs vives et titres épais.'],
   ['edito', 'Éditorial lumineux', 'Beige lin, beaucoup d’air, titres élégants et listes à filets fins.'],
   ['relief', 'Relief', 'Cartes et boutons en relief, comme des capsules de bouteille ; filtres en liège et en verre.'],
-  ['greige', 'Grège', 'Luxe discret : blancs cassés et gris chauds, filets très fins, beaucoup de calme.'],
+  ['greige', 'Beige chic', 'Luxe discret : blancs cassés et gris chauds, filets très fins, beaucoup de calme.'],
   ['ardoise', 'Ardoise', 'Le tableau noir du bistrot : tout est écrit à la craie.'],
 ];
 

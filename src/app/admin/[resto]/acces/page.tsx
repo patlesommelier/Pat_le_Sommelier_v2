@@ -34,8 +34,8 @@ export default async function Acces({ params, searchParams }: { params: Promise<
               <div className="pile" style={{ flex: '1 1 240px', gap: 12 }}>
                 <CopierLien url={url} />
                 <div className="ligne-actions">
-                  <a href={`/admin/${resto}/acces/qr?format=png`} className="btn sec petit"><Icone nom="download" taille={18} />PNG</a>
-                  <a href={`/admin/${resto}/acces/qr?format=svg`} className="btn sec petit"><Icone nom="download" taille={18} />SVG</a>
+                  <a href={`/admin/${resto}/acces/qr?format=png`} className="btn sec petit"><Icone nom="download" taille={18} />Image</a>
+                  <a href={`/admin/${resto}/acces/qr?format=svg`} className="btn sec petit"><Icone nom="download" taille={18} />Fichier pour l’imprimeur</a>
                   <Link href={`/admin/${resto}/acces/chevalet`} className="btn petit"><Icone nom="print" taille={18} />Chevalet de table (3 modèles)</Link>
                 </div>
               </div>

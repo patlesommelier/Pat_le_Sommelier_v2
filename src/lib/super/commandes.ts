@@ -4,7 +4,7 @@ import { requete } from '@/lib/db';
 
 // Suivi d'une commande Quid Vinum après sa validation, dans cet ordre (les clés restent celles de la base).
 export const STATUTS_QV = [['recue', 'En attente de validation'], ['acceptee', 'En cours de traitement'], ['envoyee_distributeur', 'En cours de livraison'],
-  ['livree_partielle', 'Livraison partielle'], ['livree', 'Commande livrée'], ['facturee', 'Bouteilles facturées']] as const;
+  ['livree_partielle', 'Livraison partielle'], ['livree', 'Commande livrée'], ['facturee', 'Facture envoyée']] as const;
 
 export interface CommandeQv {
   id: string; numero: number; cree_le: string; envoyee_le: string | null; statut: string; reference_interne: string | null; facture_le: string | null; statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;

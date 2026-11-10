@@ -21,11 +21,11 @@ export function pourquoiRetenu(r: Retenu, rang: number, liste: Retenu[], interne
 }
 
 export function pourquoiPas(c: { note: number; score: number; vin: Candidat }, R: Reglages, liste: Retenu[], tour2: Set<string>): [string, 'defaut' | 'propose' | ''] {
-  if (c.note <= R.noteEliminatoire) return [`Écarté : note ${c.note} (≤ ${R.noteEliminatoire})`, 'defaut'];
-  if (tour2.has(c.vin.id)) return ['Tour 2 : si le client veut autre chose', 'propose'];
+  if (c.note <= R.noteEliminatoire) return ['Pas proposé : accord trop faible', 'defaut'];
+  if (tour2.has(c.vin.id)) return ['Si le client demande autre chose : proposé ensuite', 'propose'];
   const dernier = liste[liste.length - 1];
   if (dernier && c.note < R.noteMinAjout && c.score >= (dernier?.score ?? 0) - 1) return [`Note ${c.note} : il faut ${R.noteMinAjout} pour compléter la liste`, ''];
-  return ['Plus loin dans le classement', ''];
+  return ['Pas proposé : d’autres vins vont mieux', ''];
 }
 
 /**

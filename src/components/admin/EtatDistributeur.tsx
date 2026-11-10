@@ -18,7 +18,7 @@ export function EtatDistributeur({ actif, nom, activer, retirer }: { actif: bool
   return (
     <>
       <button type="button" role="switch" aria-checked={actif} disabled={enCours} onClick={basculer}
-        className={`interrupteur${actif ? ' actif' : ''}`} aria-label={`${nom} : ${actif ? 'actif' : 'non sélectionné'}`} title={actif ? 'Actif : cliquez pour désactiver' : 'Non sélectionné : cliquez pour activer'}>
+        className={`interrupteur${actif ? ' actif' : ''}`} aria-label={`${nom} : ${actif ? 'je commande chez lui' : 'je ne commande pas chez lui'}`} title={actif ? 'Je commande chez lui : cliquez pour arrêter' : 'Je ne commande pas chez lui : cliquez pour commander chez lui'}>
         <span className="interrupteur-rond" aria-hidden="true">{actif ? '✓' : '✕'}</span>
       </button>
       {message && <span role="status" className={`toast-admin ${message.erreur ? 'erreur' : ''}`} onClick={() => setMessage(null)}>{message.erreur ?? message.ok}</span>}

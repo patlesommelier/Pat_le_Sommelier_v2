@@ -51,7 +51,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   return (
     <>
       <Entete titre="Carte des vins" texte="Vos vins, leurs contenances et leurs prix, dans l’ordre de votre carte. Pat les présente à vos clients et les accorde à vos plats.">
-        <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
+        <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les textes des vins</Link>
         <BoutonCarteImprimee resto={resto} />
       </Entete>
       {choisi && sp.ok

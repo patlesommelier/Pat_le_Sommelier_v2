@@ -97,7 +97,7 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
                     <div className="pied-vitrine">
                       <span className="prix-vitrine">{v.prix != null ? euros(v.prix) : '—'} <small>HTVA</small></span>
                       {c ? <span className="pile" style={{ gap: 4, alignItems: 'flex-end' }}>
-                          <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ nouveau: c.id })}#vin-${c.id}`} className="petit">✓ Dans ma cave</Link>
+                          <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ nouveau: c.id })}#vin-${c.id}`} className="petit">✓ Dans Ma cave</Link>
                           <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, c.id)} libelle={v.libelle} dansPanier={c.panier} /></span>
                         : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, d.id, v.id)} libelle={v.libelle} texte="+ Ajouter" versCave={`/admin/${resto}/stocks`} />}
                     </div>
@@ -110,7 +110,7 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
       )}
 
       {/* Vin déjà connu du restaurant : décrit à la main (il passe « En attente de validation »). */}
-      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter ma référence →</Link></p>
+      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter un vin moi-même →</Link></p>
 
       {precedentes.length > 0 && (
         <section className="pile" style={{ gap: 8 }}>

@@ -36,7 +36,7 @@ export function IntituleVin({ initial }: { initial: string }) {
 
   return (
     <div className="champ">
-      <label htmlFor="libelle">Intitulé du vin</label>
+      <label htmlFor="libelle">Nom complet du vin sur la carte</label>
       <input ref={ref} id="libelle" name="libelle" value={valeur} placeholder={propose || 'Appellation et nom du vin'}
         onChange={(e) => { setValeur(e.target.value); setAuto(e.target.value === propose); }} />
       <span className="aide">

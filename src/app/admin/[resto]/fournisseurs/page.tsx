@@ -34,7 +34,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
   const propres = fournisseurs.filter((f) => !f.distributeur_id), quidVinum = fournisseurs.filter((f) => f.distributeur_id);
   return (
     <>
-      <Entete titre="Distributeurs" texte="Les distributeurs et fournisseurs chez qui vous achetez votre vin : leurs coordonnées figurent sur vos bons de commande, envoyés à leur adresse e-mail. Choisissez le distributeur de chaque vin dans « Les vins » ou dans la fiche du vin." />
+      <Entete titre="Distributeurs" texte="Les distributeurs et fournisseurs chez qui vous achetez votre vin : leurs coordonnées figurent sur vos bons de commande, envoyés à leur adresse e-mail. Choisissez le distributeur de chaque vin dans « Ma cave » ou dans la fiche du vin." />
       <section className="pile" id="mes-distributeurs">
         <div><h2 style={{ margin: 0 }}>Mes distributeurs</h2><p className="sous" style={{ margin: '4px 0 0' }}>Vos propres distributeurs et fournisseurs : vos bons de commande leur sont envoyés directement.</p></div>
         {propres.map((f) => (
@@ -42,7 +42,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
             <summary><span><b style={{ fontSize: 17 }}>{f.nom}</b> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''}</span></span>
               <span className="discret petit" style={{ flex: 1 }}>{[f.contact, f.email, f.telephone].filter(Boolean).join(' · ') || 'Coordonnées à compléter'}</span>
               {/* Ses vins, tels que le restaurant les a rentrés : Ma cave, filtrée sur ce distributeur. */}
-              <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ distributeur: f.id })}`} className="btn sec petit bouton-commande">Liste de vins</Link></summary>
+              <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ distributeur: f.id })}`} className="btn sec petit bouton-commande">Mes vins de chez lui</Link></summary>
             <FormulaireAdmin action={modifierFournisseur.bind(null, resto, f.id)} className="pile" style={{ gap: 14, marginTop: 14 }}>
               <Champs f={f} />
               <div className="ligne-actions">
@@ -86,7 +86,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
               </span>
               {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}
               {/* « Catalogue » : tous les vins de ce distributeur ; chacun peut être ajouté à vos vins, puis commandé. */}
-              <Link href={`/admin/${resto}/fournisseurs/${d.id}`} className="btn sec petit bouton-commande">Catalogue</Link>
+              <Link href={`/admin/${resto}/fournisseurs/${d.id}`} className="btn sec petit bouton-commande">Tous ses vins</Link>
               {/* À droite, près de la sélection : ses vins sur votre carte (actif), ou la taille de son catalogue. */}
               <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? (() => { const n = vinsSurCarte.get(d.id) ?? 0; return `${n} vin${n > 1 ? 's' : ''} sur votre carte`; })() : `${d.vins} vins au catalogue`}</span>
               <EtatDistributeur actif={Boolean(f)} nom={d.nom} activer={ajouterDistributeurQv.bind(null, resto, d.id)} retirer={supprimerFournisseur.bind(null, resto, f?.id ?? '')} />

@@ -295,7 +295,7 @@ export async function pasMonVin(resto: string, vinId: string, retour: string | n
     [resto, await memeVin(resto, vinId)]);
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/carte/${encodeURIComponent(vinId)}`, { ...(retour ? { retour } : {}), ok: 'Le vin repasse « En attente de validation » : Quid Vinum va le vérifier.' }));
+  redirect(avec(`/admin/${resto}/carte/${encodeURIComponent(vinId)}`, { ...(retour ? { retour } : {}), ok: 'Le vin repasse « Vérification en cours par Quid Vinum ».' }));
 }
 
 /**
@@ -312,7 +312,7 @@ export async function ajouterMillesime(resto: string, vinId: string, retour: str
   if (!v) redirect(vers({ erreur: 'Vin introuvable.' }));
   const deja = await requete('select 1 from vin_carte where restaurant_id = $1 and libelle = $2 and couleur::text = $3 and upper(coalesce(millesime, \'\')) = $4',
     [resto, v.libelle, v.couleur, millesime]);
-  if (deja.length) redirect(vers({ erreur: `Le millésime ${millesime} de ce vin est déjà dans votre cave.` }));
+  if (deja.length) redirect(vers({ erreur: `Le millésime ${millesime} de ce vin est déjà dans Ma cave.` }));
   // Toutes les colonnes du vin sont reprises, sauf celles qui font la nouvelle ligne.
   const propres = new Set(['id', 'millesime', 'stock', 'en_commande', 'disponible', 'modifie_bo']);
   const colonnes = (await requete<{ c: string }>(`select column_name as c from information_schema.columns where table_name = 'vin_carte' and is_generated = 'NEVER' order by ordinal_position`))
@@ -525,7 +525,7 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   if (!libelle) return { erreur: 'Indiquez au moins l’appellation ou le nom du vin.' };
   // Un vin n'est qu'une fois dans vos vins (même millésime) : même vin du catalogue, même vin de la base ou même intitulé.
   const deja = await vinDejaPresent(resto, libelle, txt(f, 'millesime'), txt(f, 'distributeur_vin'), txt(f, 'base_cle'));
-  if (deja) return { erreur: `« ${deja.libelle}${deja.millesime && !deja.libelle.includes(deja.millesime) ? ` ${deja.millesime}` : ''} » est déjà dans vos vins${deja.disponible ? '' : ' (pas encore sur votre carte)'} : ouvrez sa fiche depuis « Les vins » pour changer ses contenances ou ses prix.` };
+  if (deja) return { erreur: `« ${deja.libelle}${deja.millesime && !deja.libelle.includes(deja.millesime) ? ` ${deja.millesime}` : ''} » est déjà dans vos vins${deja.disponible ? '' : ' (pas encore sur votre carte)'} : ouvrez sa fiche depuis « Ma cave » pour changer ses contenances ou ses prix.` };
   let etiquette: string | null = null;
   const image = fichier(f, 'etiquette');
   if (image) {
@@ -738,7 +738,7 @@ async function lancerTravailleurs(nombre: number) {
 
 async function regenerer(resto: string, platIds: string[], retour: Record<string, string>) {
   const u = await exigerAcces(resto);
-  if (!process.env.ANTHROPIC_API_KEY) redirect(avec(`/admin/${resto}/accords`, { ...retour, erreur: 'Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.' }));
+  if (!process.env.ANTHROPIC_API_KEY) redirect(avec(`/admin/${resto}/accords`, { ...retour, erreur: 'Pat ne peut pas travailler pour le moment : contactez Quid Vinum.' }));
   const { crees } = await creerLot(requete, resto, platIds, u.email);
   if (crees) await lancerTravailleurs(crees);
   revalidatePath(`/admin/${resto}/accords`);
@@ -751,11 +751,11 @@ async function regenerer(resto: string, platIds: string[], retour: Record<string
  */
 export async function lancerRegenerationTout(resto: string): Promise<Retour> {
   const u = await exigerAcces(resto);
-  if (!process.env.ANTHROPIC_API_KEY) return { erreur: 'Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.' };
+  if (!process.env.ANTHROPIC_API_KEY) return { erreur: 'Pat ne peut pas travailler pour le moment : contactez Quid Vinum.' };
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
   const { crees } = await creerLot(requete, resto, plats.map((p) => p.id), u.email);
   if (crees) await lancerTravailleurs(crees);
-  return crees ? { ok: 'Régénération lancée.' } : { ok: 'Une régénération est déjà en cours.' };
+  return crees ? { ok: 'Pat refait les accords (quelques minutes).' } : { ok: 'Pat refait déjà les accords.' };
 }
 
 export async function regenererTout(resto: string) {
@@ -796,7 +796,7 @@ export async function preparerImpression(resto: string): Promise<string> {
  */
 export async function reecrirePresentations(resto: string) {
   await exigerAcces(resto);
-  if (!process.env.ANTHROPIC_API_KEY) redirect(`/admin/${resto}/supports?erreur=${encodeURIComponent('Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.')}`);
+  if (!process.env.ANTHROPIC_API_KEY) redirect(`/admin/${resto}/supports?erreur=${encodeURIComponent('Pat ne peut pas travailler pour le moment : contactez Quid Vinum.')}`);
   await requete(`update vin_carte set presentation_carte = null where restaurant_id = $1 and disponible and presentation_carte_perso is null`, [resto]);
   redirect(await preparerImpression(resto));
 }
@@ -814,7 +814,7 @@ export async function enregistrerPresentation(resto: string, vinId: string, f: F
 export async function autrePresentation(resto: string, vinId: string) {
   await exigerAcces(resto);
   const retour = `/admin/${resto}/supports`;
-  if (!process.env.ANTHROPIC_API_KEY) redirect(`${retour}?erreur=${encodeURIComponent('Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.')}#${vinId}`);
+  if (!process.env.ANTHROPIC_API_KEY) redirect(`${retour}?erreur=${encodeURIComponent('Pat ne peut pas travailler pour le moment : contactez Quid Vinum.')}#${vinId}`);
   // Le vin est repris même si le restaurant avait corrigé son texte : il demande explicitement une nouvelle proposition.
   const [vin] = await requete<VinPresentation>(SQL_VINS_A_PRESENTER.replace('and v.presentation_carte_perso is null', '') + ' and v.id = $2', [resto, vinId]);
   const [r] = await requete<{ nom: string }>('select nom from restaurant where id = $1', [resto]);

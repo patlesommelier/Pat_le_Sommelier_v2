@@ -25,7 +25,7 @@ const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'nume
 // Suivi Quid Vinum, tel que le restaurant le lit.
 // Commande Quid Vinum envoyée : son statut suit Quid Vinum (en attente de validation, acceptée, envoyée au distributeur…).
 const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'En cours de traitement', envoyee_distributeur: 'En cours de livraison',
-  livree_partielle: 'Livraison partielle', livree: 'Commande livrée', facturee: 'Bouteilles facturées' };
+  livree_partielle: 'Livraison partielle', livree: 'Commande livrée', facturee: 'Facture envoyée' };
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string; catalogue?: string }> }) {
@@ -79,7 +79,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
       <article key={c.id} id={`commande-${c.id}`} className={`carte-bo pile commande${sp.commande === c.id ? ' choisie' : ''}`} style={{ gap: 12 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
           <span className="pile" style={{ gap: 2 }}>
-            <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}{c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''}</span>
+            <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}{c.reference_interne ? ` · votre référence ${c.reference_interne}` : ''}</span>
             <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
           </span>
           {/* Statut, bien visible : à envoyer → commande envoyée → réception partielle → bouteilles réceptionnées (ou annulée). */}
@@ -175,11 +175,11 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             <FormulaireAdmin action={creerCommandeQv.bind(null, resto)} className="pile" style={{ gap: 12 }}>
               <p className="petit discret" style={{ margin: 0 }}>Une seule commande pour tous vos distributeurs Quid Vinum, aux prix proposés par Quid Vinum (HTVA) : elle part chez Quid Vinum, qui la transmet à chaque distributeur.</p>
               {/* Seulement les vins de votre cave : un nouveau vin s'ajoute d'abord avec « Rajouter un vin ». */}
-              <b>Vins de votre cave</b>
+              <b>Vins de Ma cave</b>
               {surLaCarteQv.length
                 ? <CatalogueCommande lignes={surLaCarteQv} choisi={vinChoisi} sansFiltreCarte />
-                : <p className="petit discret" style={{ margin: 0 }}>Aucun vin de votre cave n’est encore relié à un distributeur Quid Vinum.</p>}
-              <p className="petit discret" style={{ margin: 0 }}>Un vin qui n’est pas encore dans votre cave s’ajoute d’abord avec <Link href={`/admin/${resto}/trouver-vin`}>Rajouter un vin</Link> ; il se commande ensuite ici.</p>
+                : <p className="petit discret" style={{ margin: 0 }}>Aucun de vos vins n’est vendu par un distributeur Quid Vinum.</p>}
+              <p className="petit discret" style={{ margin: 0 }}>Un vin qui n’est pas encore dans Ma cave s’ajoute d’abord avec <Link href={`/admin/${resto}/trouver-vin`}>Ajouter un vin</Link> ; il se commande ensuite ici.</p>
               <div className="barre-valider"><button className="btn rouge">Valider la commande Quid Vinum</button></div>
             </FormulaireAdmin>
           </Panneau>
@@ -191,7 +191,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                 {!b.id && (fournisseurs.length
                   ? <label className="champ" style={{ maxWidth: 360 }}><span>Fournisseur de cette commande</span>
                       <select name="fournisseur" defaultValue="" required><option value="" disabled>Choisir…</option>{fournisseurs.map((f) => <option key={f.id} value={f.id}>{f.nom}</option>)}</select></label>
-                  : <p className="petit" style={{ color: 'var(--ocre)', margin: 0 }}>Ajoutez d’abord vos fournisseurs dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>, puis choisissez celui de chaque vin dans Stocks.</p>)}
+                  : <p className="petit" style={{ color: 'var(--ocre)', margin: 0 }}>Ajoutez d’abord vos fournisseurs dans <Link href={`/admin/${resto}/fournisseurs`}>Distributeurs</Link>, puis choisissez celui de chaque vin dans Ma cave.</p>)}
                 {b.catalogue ? <>
                   <p className="petit discret" style={{ margin: 0 }}>Prix proposés par Quid Vinum (HTVA). Votre commande part chez Quid Vinum, qui la transmet à {b.nom}.</p>
                   <CatalogueCommande lignes={b.catalogue} choisi={groupes.find((g) => g.tous.some((x) => x.id === sp.vin))?.principal.distributeur_vin_id ?? undefined} />
@@ -242,7 +242,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
       {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres du restaurant</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">
-        <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{enCours.length}</span></h2>
+        <h2>Commandes en cours <span className="discret" style={{ fontWeight: 500 }}>{enCours.length}</span></h2>
         {enCours.length ? <div className="pile" style={{ gap: 12 }}>{enCours.map(carte)}</div>
           : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
       </section>

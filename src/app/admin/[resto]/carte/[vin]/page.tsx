@@ -96,7 +96,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
 
   return (
     <>
-      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Les vins' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
+      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Ma cave' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
       <header className="bo-entete">
         <div>
           {/* Code interne du vin : super-admin seulement. */}
@@ -118,9 +118,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
                 <b>Fiche du vin</b>
                 {/* Reconnu, et juste dessous le petit bouton « Pas mon vin ». */}
                 <span className="pile" style={{ gap: 6, alignItems: 'flex-end' }}>
-                  <span className="pastille-reconnu" style={{ marginTop: 0 }}>✓ Reconnu</span>
-                  <BoutonAction action={pasMonVin.bind(null, resto, v.id, depuisBase ?? null)} libelle="Pas mon vin" className="btn rouge tout-petit"
-                    question="Ce n’est pas votre vin ? Il reprendra le nom lu sur votre carte et repassera « En attente de validation » : Quid Vinum le vérifiera." />
+                  <span className="pastille-reconnu" style={{ marginTop: 0 }}>✓ Vérifié par Quid Vinum</span>
+                  <BoutonAction action={pasMonVin.bind(null, resto, v.id, depuisBase ?? null)} libelle="Ce n’est pas mon vin" className="btn rouge tout-petit"
+                    question="Ce n’est pas votre vin ? Il reprendra le nom lu sur votre carte et repassera « Vérification en cours par Quid Vinum »." />
                 </span>
               </div>
               <dl className="infos-base">
@@ -144,7 +144,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               <dl className="infos-base" style={{ alignItems: 'center' }}>
                 <dt>Cette bouteille</dt>
                 <dd><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} placeholder="Ex. 2022" maxLength={20} className="champ-fiche" aria-label="Millésime" /></dd>
-                {autresMillesimes.length > 0 && <><dt>Dans votre cave</dt>
+                {autresMillesimes.length > 0 && <><dt>Dans Ma cave</dt>
                   <dd className="ligne-actions">{autresMillesimes.map((x) => (
                     <Link key={x.id} href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}${depuisBase ? `?${new URLSearchParams({ retour: depuisBase })}` : ''}`} className="pastille-recherche">{x.millesime ?? 'Sans millésime'}</Link>))}</dd></>}
               </dl>
@@ -155,12 +155,12 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             {v.reconnaissance === 'en_attente' && (
               <div className="carte-bo ligne-actions" style={{ alignItems: 'center', justifyContent: 'space-between' }}>
                 <span className="petit">Complétez les informations du producteur et du vin, puis enregistrez : Quid Vinum les vérifiera.</span>
-                <span className="pastille-attente" style={{ marginTop: 0 }}>En attente de validation</span>
+                <span className="pastille-attente" style={{ marginTop: 0 }}>Vérification en cours par Quid Vinum</span>
               </div>
             )}
           <Bloc titre="Producteur" resume={producteurAffiche || 'À préciser'} ouvert={Boolean(sansLien || suggestions.length || (pk === 'attention' && v.a_verifier))}>
             <div className="champ">
-              <label htmlFor="producteur_texte">Nom affiché</label>
+              <label htmlFor="producteur_texte">Nom du producteur sur votre carte</label>
               <input id="producteur_texte" name="producteur_texte" placeholder="Nom du domaine ou de la maison" defaultValue={producteurAffiche} />
             </div>
             {v.producteur_id && (
@@ -182,7 +182,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               </div>
             )}
             {!v.producteur_id && sansLien && suggestions.length > 0 && (
-              <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>La base Quid Vinum contient des noms proches : choisissez le bon producteur, ou proposez-le comme nouveau.</p>
+              <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Nous connaissons des producteurs au nom proche : choisissez le bon, ou gardez le vôtre.</p>
             )}
             {suggestions.map((p) => (
               <label key={p.id} className="case"><input type="radio" name="producteur_choix" value={p.id} />
@@ -190,14 +190,14 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             ))}
             {sansLien && (
               <label className="case"><input type="radio" name="producteur_choix" value="nouveau" />
-                <span>Nouveau producteur : « {v.producteur_texte} »<small>Proposé à Quid Vinum pour sa base</small></span></label>
+                <span>Nouveau producteur : « {v.producteur_texte} »<small>Producteur nouveau pour nous : nous l’ajoutons</small></span></label>
             )}
-            <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : il est cherché dans la base Quid Vinum. S’il n’y est pas, il est proposé à Quid Vinum comme nouveau producteur.</span>
+            <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Écrivez le nom du producteur : nous le retrouvons pour vous.</span>
             {pk === 'attention' && v.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {v.a_verifier}</p>}
           </Bloc>
 
           <Bloc titre="Vin" resume={[v.libelle, v.millesime, COULEURS[v.couleur]].filter(Boolean).join(' · ')}>
-            <div className="champ" style={{ maxWidth: 260 }}><label htmlFor="couleur">Catégorie</label>
+            <div className="champ" style={{ maxWidth: 260 }}><label htmlFor="couleur">Couleur</label>
               <select id="couleur" name="couleur" defaultValue={v.couleur}>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
             <IntituleVin initial={v.libelle} />
             <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
@@ -232,9 +232,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             </div>
           </Bloc>
 
-          <Bloc titre="Disponible, coup de cœur, bio, nature" resume={[groupe.some((x) => x.disponible) ? 'Disponible' : 'Indisponible', v.coup_de_coeur ? 'Coup de cœur' : '', groupe.some((x) => x.bio) ? 'Bio' : '', groupe.some((x) => x.nature) ? 'Nature' : ''].filter(Boolean).join(' · ')}>
+          <Bloc titre="Sur ma carte, coup de cœur, bio, nature" resume={[groupe.some((x) => x.disponible) ? 'Sur ma carte' : 'Pas sur ma carte', v.coup_de_coeur ? 'Coup de cœur' : '', groupe.some((x) => x.bio) ? 'Bio' : '', groupe.some((x) => x.nature) ? 'Nature' : ''].filter(Boolean).join(' · ')}>
             <div>
-              <label className="case"><input type="checkbox" name="disponible" defaultChecked={groupe.some((x) => x.disponible)} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
+              <label className="case"><input type="checkbox" name="disponible" defaultChecked={groupe.some((x) => x.disponible)} /><span>Sur ma carte<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
               <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={v.coup_de_coeur} /><span>Coup de cœur de la maison<small>Petit cœur ♥ dans l’app ; si la catégorie « Coups de cœur » est choisie dans Apparence, il n’apparaît que là.</small></span></label>
               <input type="hidden" name="bio_nature_envoyes" value="1" />
               <label className="case"><input type="checkbox" name="bio" defaultChecked={groupe.some((x) => x.bio)} /><span>Vin bio<small>Petite feuille verte dans l’app et sur la carte imprimée.</small></span></label>
@@ -266,7 +266,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             <div className="champ" style={{ margin: 0 }}>
               <input type="hidden" name="fournisseur_envoye" value="1" />
               <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
-              <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Gestion de cave › Les vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
+              <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Gestion de cave › Ma cave</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
             </div>
           )}
 
@@ -276,10 +276,10 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
           <div className="champ" style={{ margin: 0 }}>
             <label htmlFor="presentation_carte_perso" className="sr-only">Présentation (app et carte imprimée)</label>
             <textarea id="presentation_carte_perso" name="presentation_carte_perso" rows={5} defaultValue={v.presentation_carte_perso ?? ''} placeholder={v.presentation_carte ?? 'Trois phrases : le lieu ou le vigneron, le style du vin, ce avec quoi il brille à table.'} />
-            <span className="aide">{v.presentation_carte ? 'Laissez vide pour garder le texte de Pat (en grisé) ; écrivez pour le remplacer.' : 'Trois phrases, 3 à 4 lignes sur la carte (230 à 380 caractères).'}</span>
+            <span className="aide">{v.presentation_carte ? 'Laissez vide pour garder le texte de Pat (en grisé) ; écrivez pour le remplacer.' : '3 phrases courtes (3 à 4 lignes).'}</span>
             {!v.presentation_carte && !v.presentation_carte_perso && groupe.some((x) => x.disponible) && (
-              <span><button formAction={ecrirePresentations.bind(null, resto, v.id, depuisBase ?? null)} formNoValidate className="btn sec petit">Faire écrire la présentation par Pat</button>
-                <span className="petit discret"> {enCoursPresentation ? 'Pat l’écrit : rechargez la page dans quelques minutes.' : 'd’après la base Quid Vinum, sinon le site du producteur'}</span></span>
+              <span><button formAction={ecrirePresentations.bind(null, resto, v.id, depuisBase ?? null)} formNoValidate className="btn sec petit">Demander à Pat d’écrire le texte</button>
+                <span className="petit discret"> {enCoursPresentation ? 'Pat l’écrit : rechargez la page dans quelques minutes.' : ''}</span></span>
             )}
           </div>
 

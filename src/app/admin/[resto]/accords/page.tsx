@@ -103,8 +103,8 @@ export default async function Accords({ params, searchParams }: { params: Promis
       </Entete>
       <div className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px 20px', padding: '16px 20px' }}>
         <span style={{ flex: '1 1 340px', display: 'flex', flexDirection: 'column', gap: 2 }}>
-          <strong>{resume.accords.toLocaleString('fr-BE')} accords · {resume.plats_avec_accords} plats × {resume.vins} vins</strong>
-          <span className="discret">{resume.accords_proposes ? 'Les accords « proposés » ne sont montrés aux clients qu’une fois validés.' : 'Tous les accords sont validés.'}</span>
+          <strong>{resume.accords.toLocaleString('fr-BE')} accords pour {resume.plats_avec_accords} plats</strong>
+          <span className="discret">{resume.accords_proposes ? 'Les accords « à relire » ne sont montrés aux clients qu’une fois validés.' : 'Tous les accords sont validés.'}</span>
         </span>
         <span className="ligne-actions"><Etat type="propose">{resume.accords_proposes.toLocaleString('fr-BE')} à relire</Etat><Etat type="ok">{resume.accords_valides.toLocaleString('fr-BE')} validés</Etat></span>
         {resume.accords_proposes > 0 && <form action={validerTout.bind(null, resto)}><button className="btn petit"><Icone nom="check" taille={18} />Tout valider</button></form>}
@@ -112,7 +112,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
           <BoutonRegenerer action={lancerRegenerationTout.bind(null, resto)} className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</BoutonRegenerer>
           {derniere?.le && <span className="discret" style={{ fontSize: 12.5 }}>Dernière génération : {dateHeure(derniere.le)}</span>}
           {(!etat || etat.termine) && platsAnciens > 0 && <span style={{ fontSize: 12.5, color: 'var(--ocre)', maxWidth: 360 }}>
-            {platsAnciens} plat{platsAnciens > 1 ? 's gardent' : ' garde'} des commentaires d’origine{raison ? ` (${raison})` : ''} : relancez la régénération.</span>}
+            {platsAnciens} plat{platsAnciens > 1 ? 's gardent' : ' garde'} des anciens commentaires{raison ? ` (${raison})` : ''} : relancez la régénération.</span>}
         </span>
       </div>
       <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
@@ -126,7 +126,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
       {(!etat || etat.termine) && sansAccord.length > 0 && (
         <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px', borderColor: 'var(--ocre)' }}>
           <strong>{sansAccord.length} plat{sansAccord.length > 1 ? 's n’ont' : ' n’a'} encore aucun accord</strong>
-          <span className="discret">{etat?.erreurs.length ? 'La dernière génération n’a pas abouti pour ces plats.' : 'Ces plats n’ont pas encore été générés.'}
+          <span className="discret">{etat?.erreurs.length ? 'La dernière génération n’a pas réussi pour ces plats.' : 'Pat n’a pas encore fait ces accords.'}
             {interne && etat?.erreurs.length ? ` Motif : ${[...new Set(etat.erreurs.map((e) => (e.message ?? 'inconnu').slice(0, 160)))].slice(0, 3).join(' · ')}` : ''}</span>
           <form action={relancerPlatsSansAccord.bind(null, resto)}><button className="btn sec petit"><Icone nom="reset" taille={18} />Relancer les plats sans accord</button></form>
         </div>
@@ -142,7 +142,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
               <Link key={p.id} href={`/admin/${resto}/accords?plat=${p.id}`} aria-current={on ? 'true' : undefined} className={`onglet-plat${on ? ' on' : ''}`}>
                 <span style={{ display: 'flex', flexDirection: 'column', gap: 2, flex: 1 }}><b style={{ fontSize: 15, fontWeight: on ? 700 : 500 }}>{p.nom_court ?? p.nom}</b><span className="cat">{CAT[p.categorie]}</span></span>
                 <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: 12.5, fontWeight: 600, whiteSpace: 'nowrap', color: 'var(--discret)' }}>{!st ? 'aucun' : st.valides === st.total ? 'validé' : `${st.total - st.valides} à relire`}
-                  {anciens.get(p.id) ? <span>textes d’origine</span> : null}</span>
+                  {anciens.get(p.id) ? <span>anciens textes</span> : null}</span>
                 {on && <span aria-hidden="true" style={{ color: 'var(--encre)', fontSize: 16 }}>→</span>}
               </Link>
             );
@@ -160,7 +160,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
             {!s ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
               Aucun accord pour ce plat{bilanPlat ? ` — dernière génération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec' : 'terminée sans accord'}${interne && bilanPlat.message ? `, ${bilanPlat.message.slice(0, 200)}` : ''}` : ' — pas encore généré'}.</span> : null}
             {anciens.get(plat.id) ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
-              {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} commentaire d’origine sur ce plat
+              {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} ancien commentaire sur ce plat
               {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)})${bilanPlat.statut === 'erreur' ? ' : échec' : ''}${interne ? ` : ${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ''}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
             <div className="pile">
               <div><h3 style={{ fontSize: 20, color: 'var(--encre)' }}>Avec {nomCourt}, Pat proposera :</h3>
@@ -229,11 +229,11 @@ export default async function Accords({ params, searchParams }: { params: Promis
               <div><h3 style={{ fontSize: 20 }}>Tous les vins classés pour {nomCourt}</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Pat classe les vins à partir de la note d’accord et de sa propre sélection.'}</p></div>
               <div className="tableau">
                 <table style={{ minWidth: 900 }}>
-                  <thead><tr><th className="droite">Rang</th><th>Vin</th><th>Note</th>{interne && <th className="droite">Score</th>}<th>Pourquoi (Pat)</th><th>Résultat</th></tr></thead>
+                  <thead><tr><th className="droite">Ordre</th><th>Vin</th><th>Note</th>{interne && <th className="droite">Score</th>}<th>Le mot de Pat</th><th>Montré au client ?</th></tr></thead>
                   <tbody>
                     {tri.map((t, rang) => {
                       const l = lignesParVin.get(t.vin.id)?.[0];
-                      const [res, rk] = retenus.has(t.vin.id) ? [`Proposé · n° ${sel.liste.findIndex((r) => r.vin.id === t.vin.id) + 1}`, 'ok' as const]
+                      const [res, rk] = retenus.has(t.vin.id) ? [`Oui, en ${((n) => n === 1 ? '1er' : `${n}e`)(sel.liste.findIndex((r) => r.vin.id === t.vin.id) + 1)}`, 'ok' as const]
                         : interne ? [raisonEcart(t, R, sel, tour2), (t.note <= R.noteEliminatoire ? 'defaut' : tour2.has(t.vin.id) ? 'propose' : '') as 'defaut' | 'propose' | '']
                         : pourquoiPas(t, R, sel.liste, tour2);
                       return (

@@ -10,7 +10,7 @@ const ASTUCES = [
   'À table, vos clients scannent le QR code, choisissent leur plat, et Pat leur propose les vins de votre carte qui s’y accordent le mieux.',
   'Vos clients peuvent aussi écrire à Pat : il leur répond avec les vins de vos accords, étiquette et explication à l’appui.',
   'Dans votre espace, vous relisez chaque accord : changez une note ou réécrivez un commentaire, Pat suit vos choix.',
-  'Une rupture ? Décochez « Disponible » dans la carte des vins : Pat ne propose plus ce vin, tout de suite.',
+  'Une rupture ? Décochez « Sur ma carte » dans la carte des vins : Pat ne propose plus ce vin, tout de suite.',
   'Mettez en avant vos coups de cœur : cochez « Coup de cœur de la maison » sur un vin de votre carte.',
   'Règles du sommelier : ajustez le nombre de vins proposés et la manière dont Pat les choisit.',
   'Imprimez une belle carte des vins, avec votre logo, le QR code et une présentation de chaque vin écrite par Pat.',

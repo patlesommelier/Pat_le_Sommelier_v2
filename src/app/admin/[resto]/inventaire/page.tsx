@@ -28,11 +28,11 @@ export default async function Inventaire({ params }: { params: Promise<{ resto: 
   return (
     <>
       <Entete titre="Faire l’inventaire">
-        <Link href={`/admin/${resto}/stocks`} className="btn fantome">← Les vins</Link>
+        <Link href={`/admin/${resto}/stocks`} className="btn fantome">← Ma cave</Link>
       </Entete>
       <p className="petit" style={{ margin: 0 }}>{dernier ? <>Dernier inventaire : <b>{ilYA(dernier)}</b>.</> : <b>Aucun inventaire pour l’instant.</b>}</p>
       <form action={action} className="pile" style={{ gap: 14 }}>
-        {!groupes.length && <p className="discret">Aucun vin dans votre cave pour l’instant.</p>}
+        {!groupes.length && <p className="discret">Aucun vin dans Ma cave pour l’instant.</p>}
         {parCouleur.length > 0 && (
           <div className="tableau" style={{ maxWidth: 820 }}>
             <table className="table-stocks table-inventaire">
@@ -57,7 +57,7 @@ export default async function Inventaire({ params }: { params: Promise<{ resto: 
             </table>
           </div>
         )}
-        {groupes.length > 0 && <span><button className="btn">Envoyer l’inventaire</button></span>}
+        {groupes.length > 0 && <span><button className="btn">Enregistrer l’inventaire</button></span>}
       </form>
     </>
   );

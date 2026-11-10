@@ -33,7 +33,7 @@ export function CentreImpression({ action, resto, logoApp, logoImpression, desig
             </span>
           ))}
         </div>
-        <span className="discret" style={{ fontSize: 14 }}>{propre ? 'Logo propre aux impressions.' : 'Le même logo que l’app.'}</span>
+        <span className="discret" style={{ fontSize: 14 }}>{propre ? 'Un logo différent pour le papier.' : 'Le même logo que l’app.'}</span>
         <div className="champ" style={{ maxWidth: 420 }}>
           <label htmlFor="logo_impression">{propre ? 'Remplacer le logo des impressions' : 'Utiliser un autre logo pour les impressions'}</label>
           <input id="logo_impression" name="logo_impression" type="file" accept="image/png,image/svg+xml,image/webp,image/jpeg" style={{ padding: 8 }}

@@ -53,7 +53,7 @@ export default async function Parametres({ params, searchParams }: { params: Pro
           <h2>Limite de stock bas</h2>
           <label className="champ" style={{ maxWidth: 320 }}><span>Alerte à partir de</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}><input name="stock_limite_basse" type="number" min={0} max={1000} defaultValue={c.stock_limite_basse} required style={{ width: 100 }} /> bouteilles ou moins</span>
-            <span className="aide">Un point d’exclamation rouge apparaît alors dans « Les vins » et sur la carte des vins (jamais à l’impression).</span>
+            <span className="aide">Un point d’exclamation rouge apparaît alors dans « Ma cave » et sur la carte des vins (jamais à l’impression).</span>
           </label>
         </section>
         <span><button className="btn">Enregistrer</button></span>

@@ -354,7 +354,7 @@ async function enregistrerCommandeQv(resto: string, email: string | null, demand
       ?? vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur },
         vins.map((v) => ({ id: v.id, libelle: v.libelle, millesime: v.millesime, format: v.format, producteur_id: v.producteur_id, producteur: v.producteur })));
   const horsCave = demandes.map(([vid]) => trouve(vid)!.c).find((c) => !enCave(c));
-  if (horsCave) return { erreur: `« ${horsCave.libelle} » n’est pas dans votre cave : ajoutez-le d’abord avec « Rajouter un vin », puis commandez-le.` };
+  if (horsCave) return { erreur: `« ${horsCave.libelle} » n’est pas dans Ma cave : ajoutez-le d’abord avec « Ajouter un vin », puis commandez-le.` };
   const id = randomUUID();
   const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
   await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, quid_vinum, reference_interne) values ($1, $2, null, $3, $4, $5, true, $6)',
@@ -454,7 +454,7 @@ async function enregistrerReception(resto: string, commandeId: string, recues: M
   rafraichir(resto);
   const n = recu.reduce((t, l) => t + l.q, 0);
   return { ok: `${n} bouteille${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au stock : ${complete ? 'commande entièrement reçue' : 'réception partielle'}.`
-    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page « Les vins »).` : ''), reception: id };
+    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page « Ma cave »).` : ''), reception: id };
 }
 
 /** Réception des bouteilles (fenêtre de la commande) : champs recue_<ordre de la ligne>. */
@@ -518,7 +518,7 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
   const c = (await catalogueDistributeur(distributeurId, resto)).find((x) => x.id === distributeurVinId);
   if (!c) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   const [deja] = await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1 and distributeur_vin_id = $2 limit 1', [resto, distributeurVinId]);
-  if (deja) return { ok: `« ${c.libelle} » est déjà dans votre cave.`, vin: deja.id };
+  if (deja) return { ok: `« ${c.libelle} » est déjà dans Ma cave.`, vin: deja.id };
   await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id) select $1, $2, $3, $4
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
     [randomUUID(), resto, d.nom, distributeurId]);
@@ -533,13 +533,13 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
     await choisirFournisseur(resto, [meme.id], f.id, null);
     rafraichir(resto);
     revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-    return { ok: `« ${meme.libelle} » est déjà dans votre cave : il est maintenant relié à ${d.nom}, au prix de son catalogue.`, vin: meme.id };
+    return { ok: `« ${meme.libelle} » est déjà dans Ma cave : il est maintenant relié à ${d.nom}, au prix de son catalogue.`, vin: meme.id };
   }
   const id = await ajouterVinCommande(resto, distributeurVinId, f.id, c.prix, 0);
   if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   rafraichir(resto);
   revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-  return { ok: `« ${c.libelle} » est ajouté à votre cave (dans « Les vins », avec les vins de sa couleur) : mettez-le au panier ici ou depuis « Les vins ».`, vin: id };
+  return { ok: `« ${c.libelle} » est ajouté à Ma cave (avec les vins de sa couleur) : mettez-le au panier ici ou depuis « Ma cave ».`, vin: id };
 }
 
 // ───────── Panier (page Vins) ─────────

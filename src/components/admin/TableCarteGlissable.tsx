@@ -198,7 +198,7 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
       ))}
       {!fixe && (
         <tbody><tr><td colSpan={colonnes} style={{ border: 0, paddingTop: 12 }}>
-          <button type="button" className="btn sec petit" onClick={ajouter}>+ Nouvelle sous-catégorie</button>
+          <button type="button" className="btn sec petit" onClick={ajouter}>+ Ajouter un titre (ex. Bourgogne)</button>
           {avecCategories && <button type="button" className="btn sec petit" style={{ marginLeft: 8 }} onClick={ajouterCategorie}>+ Nouvelle catégorie</button>}
           <span className="petit discret" style={{ marginLeft: 10 }}>{avecCategories ? 'Elle s’ajoute tout en bas : nommez-la, puis glissez-y des vins (ou flèche ↓ sur le dernier vin du dessus).' : 'Elle s’ajoute en bas : nommez-la, puis glissez-y des vins (ou flèche ↓ sur le dernier vin du dessus).'}</span>
         </td></tr></tbody>

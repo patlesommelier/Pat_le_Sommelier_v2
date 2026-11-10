@@ -10,7 +10,7 @@ export default async function AjoutALaMain({ params }: { params: Promise<{ resto
   await exigerAcces(resto);
   return (
     <>
-      <Entete titre="Ajouter ma référence" texte="Décrivez le vin : il s’ajoute à vos vins « En attente de validation », le temps que Quid Vinum le vérifie.">
+      <Entete titre="Ajouter un vin moi-même" texte="Décrivez le vin : il s’ajoute à Ma cave avec la mention « Vérification en cours par Quid Vinum », le temps que Quid Vinum le vérifie.">
         <Link href={`/admin/${resto}/trouver-vin`} className="btn fantome">← Ajouter un vin</Link>
       </Entete>
       <FormulaireAjoutVin resto={resto} manuel />

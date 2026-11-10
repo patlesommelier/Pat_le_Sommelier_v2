@@ -70,7 +70,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       where v.restaurant_id = $1 and v.id = $2 and f.distributeur_id is not null`, [resto, ajoute]) : [];
   return (
     <>
-      <Entete titre="Les vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock (à compter dans « Faire l’inventaire ») et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres du restaurant).`}>
+      <Entete titre="Ma cave" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock (à compter dans « Faire l’inventaire ») et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres du restaurant).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
         {/* « + Ajouter un vin » : la page Ajouter un vin (chercher dans la base, chez un distributeur, ou à la main). */}
         <Link href={`/admin/${resto}/trouver-vin`} className="btn">+ Ajouter un vin</Link>
@@ -82,7 +82,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       </Entete>
       {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
       {nouveau && (() => { const n = vins.find((x) => x.id === nouveau); return n ? (
-        <p className="message ok" style={{ margin: 0 }}>« {n.libelle} » est dans votre cave (en évidence ci-dessous) : indiquez le nombre de bouteilles et cliquez sur + 🛒 pour le commander.</p>) : null; })()}
+        <p className="message ok" style={{ margin: 0 }}>« {n.libelle} » est dans Ma cave (en évidence ci-dessous) : indiquez le nombre de bouteilles et cliquez sur + 🛒 pour le commander.</p>) : null; })()}
       <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche : description, stock, commande, suppression. Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
@@ -96,7 +96,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         <div className="stat"><span className="chiffre">{groupes.reduce((n, g) => n + g.principal.stock, 0).toLocaleString('fr-BE')}</span><span>bouteilles en stock</span></div>
         <div className="stat"><span className="chiffre">{enCommande}</span><span>bouteilles en commande</span></div>
         <div className="stat"><span className="chiffre">{euros(valeur)}</span><span>valeur du stock HTVA{sansPrix ? ` (${sansPrix} vin${sansPrix > 1 ? 's' : ''} sans prix d’achat)` : ''}</span></div>
-        <div className="stat"><span className="chiffre">{ouvertes.length}</span><span>{ouvertes.length > 1 ? 'commandes ouvertes' : 'commande ouverte'}</span></div>
+        <div className="stat"><span className="chiffre">{ouvertes.length}</span><span>{ouvertes.length > 1 ? 'commandes en cours' : 'commande en cours'}</span></div>
       </section>
       {/* Enregistrement automatique : chaque chiffre ou distributeur changé est enregistré en quittant le champ. */}
       <FormulaireAdmin action={enregistrerStocks.bind(null, resto)} className="pile" auto>
@@ -117,9 +117,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         {categories.length > 0 && (
           <div className="tableau">
             <table className="table-stocks" style={{ minWidth: 1060 }}>
-              <thead><tr><th>Vin</th><th>À ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
+              <thead><tr><th>Vin</th><th>Sur ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
               {/* Catégories et sous-catégories de la cave (titres modifiables), vins à glisser ou à déplacer avec les flèches ↑ ↓ (à part de la carte). */}
-              <TableCarteGlissable key={String(fixe)} colonnes={9} apres="classement de votre cave enregistré" fixe={fixe}
+              <TableCarteGlissable key={String(fixe)} colonnes={9} apres="classement de Ma cave enregistré" fixe={fixe}
                     enregistrer={fixe ? undefined : enregistrerOrdreCave.bind(null, resto)}
                     rubriques={categories.flatMap((c, ci) => c.rubriques.filter((r, ri) => ri === 0 || r.groupes.length).map((r, ri) => ({ ...r, categorie: ri === 0, cle: `${ci}:${ri}:${c.nom}:${r.nom}`, nomAffiche: ri === 0 ? c.nom : r.nom }))).map((r) => ({
                       cle: r.cle, nom: r.nomAffiche, categorie: r.categorie,
@@ -138,15 +138,15 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         <td style={{ minWidth: 240 }}><div className="vin-cell">{!fixe && <span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4, cursor: 'grab' }}>⋮⋮</span>}<VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Pas sur votre carte</div>}
                           {/* Vin lu sur la carte : reconnu dans la base de Pat (ses données), ou en attente de validation (tel que lu). */}
-                          {v.reconnaissance === 'reconnu' && <span className="pastille-reconnu" title="Vin reconnu dans la base de Pat : nom, producteur et appellation viennent de la base">✓ Reconnu</span>}
-                          {v.reconnaissance === 'en_attente' && <span className="pastille-attente" title="Vin pas encore retrouvé dans la base de Pat : tel que lu sur votre carte, en attente de validation">En attente de validation</span>}
+                          {v.reconnaissance === 'reconnu' && <span className="pastille-reconnu" title="Vin vérifié par Quid Vinum : nom, producteur et appellation viennent de ses vins connus">✓ Vérifié</span>}
+                          {v.reconnaissance === 'en_attente' && <span className="pastille-attente" title="Vin tel que lu sur votre carte : Quid Vinum est en train de le vérifier">Vérification en cours par Quid Vinum</span>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
                             <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}</div>); })()}
                           </div></div></td>
                         {/* À ma carte : le vin est proposé sur la carte des vins (app et carte imprimée) ; toutes ses contenances. */}
                         <td className="centre"><input type="hidden" name={`carte_envoye_${v.id}`} value="1" />
-                          <input type="checkbox" name={`carte_${v.id}`} defaultChecked={disponible} className="case-carte" aria-label={`À ma carte : ${v.libelle}`} /></td>
+                          <input type="checkbox" name={`carte_${v.id}`} defaultChecked={disponible} className="case-carte" aria-label={`Sur ma carte : ${v.libelle}`} /></td>
                         {/* Millésime : une ligne par millésime d'un même vin ; modifiable ici (toutes ses contenances). */}
                         <td><input type="text" name={`millesime_${v.id}`} defaultValue={v.millesime ?? ''} placeholder="—" maxLength={20} className="champ-millesime" aria-label={`Millésime : ${v.libelle}`} /></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>

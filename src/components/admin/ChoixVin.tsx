@@ -147,7 +147,7 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
           {choisi.offres?.length ? <OffresVin offres={choisi.offres} valeur={offre} changer={(id) => prendreOffre(choisi, id)} /> : null}
         </div>
       ) : libre ? (
-        <p className="petit" style={{ margin: 0 }}>Décrivez le vin ci-dessous : il sera ajouté à la base Quid Vinum. <button type="button" className="btn fantome petit" onClick={recommencer}>Revenir à la recherche</button></p>
+        <p className="petit" style={{ margin: 0 }}>Décrivez le vin ci-dessous : Quid Vinum l’ajoutera à ses vins connus. <button type="button" className="btn fantome petit" onClick={recommencer}>Revenir à la recherche</button></p>
       ) : (
         <>
           <div className="champ" style={{ margin: 0 }}>
@@ -157,7 +157,7 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
                 onChange={(e) => setTexte(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); lancer(); } }} />
               <button type="button" className="btn" onClick={lancer} disabled={attente || texte.trim().length < 3}>{attente && !distributeur ? 'Recherche…' : 'Chercher'}</button>
             </div>
-            <span className="aide">Nom, producteur, appellation… La recherche couvre la base Quid Vinum et les catalogues de ses distributeurs.</span>
+            <span className="aide">Nom, producteur, appellation… La recherche couvre les vins connus de Quid Vinum et les catalogues de ses distributeurs.</span>
           </div>
           {distributeurs.length > 0 && (
             <div className="champ" style={{ margin: 0 }}>
@@ -178,7 +178,7 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
             {attente && <span className="petit" style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}><PatAttente taille={40} />{distributeur ? 'Chargement du catalogue…' : 'Pat cherche ce vin…'}</span>}
             {trouves && !attente && (trouves.length
               ? <><span className="petit">{trouves.length === 1 ? 'Un vin trouvé :' : `${trouves.length} vins trouvés :`} cliquez sur le vôtre.</span>{trouves.map((v) => ligne(v, v.cle))}</>
-              : <span className="petit">Ce vin n’est pas encore dans la base Quid Vinum.</span>)}
+              : <span className="petit">Nous ne connaissons pas encore ce vin.</span>)}
             {catalogue && !attente && <>
               <span className="petit discret">{visibles.length} vin{visibles.length > 1 ? 's' : ''}{visibles.length > MAX ? ` : les ${MAX} premiers sont affichés, filtrez la liste` : ''}.</span>
               {visibles.slice(0, MAX).map((v) => ligne(v, v.offres?.[0]?.id ?? v.cle))}

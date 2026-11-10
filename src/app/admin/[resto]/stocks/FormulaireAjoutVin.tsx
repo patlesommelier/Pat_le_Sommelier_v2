@@ -33,7 +33,7 @@ export async function FormulaireAjoutVin({ resto, couleur: c, manuel = false }: 
           <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
             <div className="champ"><label htmlFor="couleur">Couleur</label>
               <select id="couleur" name="couleur" defaultValue={couleur}>{COULEURS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
-            <div className="champ"><label htmlFor="section">Région (titre de la carte)</label><input id="section" name="section" placeholder="Ex. Bourgogne" /></div>
+            <div className="champ"><label htmlFor="section">Titre sur la carte (ex. Bourgogne)</label><input id="section" name="section" placeholder="Ex. Bourgogne" /></div>
           </div>
           <IntituleVin initial="" />
           <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
@@ -44,7 +44,7 @@ export async function FormulaireAjoutVin({ resto, couleur: c, manuel = false }: 
           </div>
           <PhotoEtiquette url={null} base hauteur={200}>
             <span className="libelle">Photo de l’étiquette (facultatif)</span>
-            <span className="petit discret">Sans photo, elle est cherchée dans la base Quid Vinum.</span>
+            <span className="petit discret">Sans photo, elle est cherchée parmi les vins connus de Quid Vinum.</span>
           </PhotoEtiquette>
         </div>
       </details>

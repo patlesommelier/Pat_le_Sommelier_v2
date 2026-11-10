@@ -30,7 +30,7 @@ export default async function NouveauPlat({ params, searchParams }: { params: Pr
         </PhotoEtiquette>
         <div className="champ"><label htmlFor="prix_variantes">Prix détaillé (facultatif)</label><input id="prix_variantes" name="prix_variantes" placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
         <div className="champ">
-          <label htmlFor="description_cuisine">Description pour Pat</label>
+          <label htmlFor="description_cuisine">Description du plat (pour Pat)</label>
           <textarea id="description_cuisine" name="description_cuisine" rows={6}
             placeholder={'Cuisson (rôti, poché, frit, grillé, mijoté…), degré de cuisson, tous les ingrédients, épices et herbes, sauce et sa base (beurre, crème, vin, jus…), garniture, assaisonnement, piquant, acidité, sucre, textures, origine des produits…'} />
           <span className="aide">Plus elle est précise, meilleurs sont les accords. Non montrée aux clients.</span>

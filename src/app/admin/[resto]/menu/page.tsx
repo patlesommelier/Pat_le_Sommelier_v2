@@ -46,7 +46,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
         </div>
         {/* Chaque plat se déroule (flèche vers le bas) pour afficher et modifier son détail. */}
         <div className="liste-deroulante">
-          <div className="entete-deroulante" aria-hidden="true"><span className="case-proposee">Proposé</span></div>
+          <div className="entete-deroulante" aria-hidden="true"><span className="case-proposee">Visible par les clients</span></div>
           {affiches.map((p) => (
             <details key={p.id} id={`plat-${p.id}`} className={`deroulant ${p.actif ? '' : 'non-propose'}${p.id === nouveau ? ' ligne-nouvelle' : ''}`} open={p.id === platId}>
               <summary>
@@ -70,7 +70,7 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
     <FormulaireAdmin key={plat.id} action={enregistrerPlat.bind(null, resto, plat.id)} className="deroulant-corps">
       <Message ok={ok ? 'Enregistré.' : undefined} />
       <div className="champ"><label htmlFor={`nom-${plat.id}`}>Nom sur le menu</label><textarea id={`nom-${plat.id}`} name="nom" rows={2} defaultValue={plat.nom} /></div>
-      <div className="champ"><label htmlFor={`nom_court-${plat.id}`}>Nom court (bouton de l’accueil client)</label><input id={`nom_court-${plat.id}`} name="nom_court" defaultValue={plat.nom_court ?? ''} maxLength={28} /></div>
+      <div className="champ"><label htmlFor={`nom_court-${plat.id}`}>Nom court (sur le téléphone du client)</label><input id={`nom_court-${plat.id}`} name="nom_court" defaultValue={plat.nom_court ?? ''} maxLength={28} /></div>
       <div className="champs">
         <div className="champ"><label htmlFor={`categorie-${plat.id}`}>Catégorie</label>
           <select id={`categorie-${plat.id}`} name="categorie" defaultValue={plat.categorie}>
@@ -78,7 +78,7 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
           </select></div>
         <div className="champ"><label htmlFor={`prix-${plat.id}`}>Prix (€)</label><input id={`prix-${plat.id}`} name="prix" inputMode="decimal" defaultValue={plat.prix ?? ''} /></div>
       </div>
-      <div className="champ"><label htmlFor={`prix_variantes-${plat.id}`}>Prix détaillé (facultatif)</label><input id={`prix_variantes-${plat.id}`} name="prix_variantes" defaultValue={plat.prix_variantes ?? ''} placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
+      <div className="champ"><label htmlFor={`prix_variantes-${plat.id}`}>Plusieurs prix (ex. 1 pièce / 2 pièces)</label><input id={`prix_variantes-${plat.id}`} name="prix_variantes" defaultValue={plat.prix_variantes ?? ''} placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
       <div className="champ">
         <label htmlFor={`description_cuisine-${plat.id}`}>Description détaillée du plat</label>
         <textarea id={`description_cuisine-${plat.id}`} name="description_cuisine" rows={7} defaultValue={plat.description_cuisine ?? ''}
@@ -97,18 +97,18 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
         ))}
       </fieldset>
       {plat.description_apres_accords && (
-        <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Description modifiée après le calcul des accords de ce plat : Pat en tiendra compte au prochain calcul.</p>
+        <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Description modifiée après le calcul des accords de ce plat : refaites les accords de ce plat pour que Pat en tienne compte.</p>
       )}
       {profil && (
         <div className="encadre-rose" style={{ flexDirection: 'column', gap: 8 }}>
           <span className="surtitre" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-avatar.svg" alt="" width={22} height={22} />Profil d’accord préparé par Pat</span>
-          <dl style={{ margin: 0, display: 'grid', gridTemplateColumns: '84px 1fr', gap: '6px 12px' }}>
-            {profil.ancrages?.length ? <><dt style={{ fontWeight: 700 }}>Ancrages</dt><dd style={{ margin: 0 }}>{profil.ancrages.join(', ')}</dd></> : null}
-            {profil.profil && <><dt style={{ fontWeight: 700 }}>Profil</dt><dd style={{ margin: 0 }}>{profil.profil}</dd></>}
+            <img src="/pat/pat-avatar.svg" alt="" width={22} height={22} />Ce que Pat a retenu du plat</span>
+          <dl style={{ margin: 0, display: 'grid', gridTemplateColumns: '110px 1fr', gap: '6px 12px' }}>
+            {profil.ancrages?.length ? <><dt style={{ fontWeight: 700 }}>Points forts</dt><dd style={{ margin: 0 }}>{profil.ancrages.join(', ')}</dd></> : null}
+            {profil.profil && <><dt style={{ fontWeight: 700 }}>Style</dt><dd style={{ margin: 0 }}>{profil.profil}</dd></>}
             {profil.a_eviter && <><dt style={{ fontWeight: 700 }}>À éviter</dt><dd style={{ margin: 0 }}>{profil.a_eviter}</dd></>}
-            {profil.temperature_service && <><dt style={{ fontWeight: 700 }}>Service</dt><dd style={{ margin: 0 }}>{profil.temperature_service}</dd></>}
+            {profil.temperature_service && <><dt style={{ fontWeight: 700 }}>Température</dt><dd style={{ margin: 0 }}>{profil.temperature_service}</dd></>}
           </dl>
         </div>
       )}
@@ -116,7 +116,7 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
         <button type="submit" className="btn petit">Enregistrer</button>
         <Link href={`/admin/${resto}/accords?plat=${plat.id}`} className="btn sec petit">Voir ses accords</Link>
         <BoutonSupprimer action={supprimerPlat.bind(null, resto, plat.id)} libelle="Supprimer ce plat" className="btn sec petit"
-          question={`Supprimer « ${plat.nom} » du menu ? Ses accords seront supprimés aussi. Cette action est définitive. (Pour le retirer temporairement, décochez plutôt sa case « Proposé » dans la liste.)`} />
+          question={`Supprimer « ${plat.nom} » du menu ? Ses accords seront supprimés aussi. Cette action est définitive. (Pour le retirer temporairement, décochez plutôt sa case « Visible par les clients » dans la liste.)`} />
       </div>
     </FormulaireAdmin>
   );

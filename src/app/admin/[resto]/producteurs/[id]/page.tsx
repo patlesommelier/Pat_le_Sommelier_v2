@@ -64,7 +64,7 @@ export default async function FicheProducteur({ params, searchParams }: { params
   const lieu = [p.sous_region, p.region, p.pays].filter(Boolean).join(' · ');
   return (
     <>
-      <Link href={vers} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← {vin ? 'Fiche du vin' : 'Les vins'}</Link>
+      <Link href={vers} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← {vin ? 'Fiche du vin' : 'Ma cave'}</Link>
       <header className="bo-entete"><div>
         <span className="surtitre">Producteur</span>
         <h1>{p.nom}</h1>
@@ -93,14 +93,14 @@ export default async function FicheProducteur({ params, searchParams }: { params
                     <VignetteVin url={l.etiquette} logo={l.logo} taille={72} />
                     <div className="pile" style={{ gap: 8, minWidth: 0 }}>
                       <div><b>{l.nom}</b>{l.detail && <div className="petit discret">{l.detail}</div>}</div>
-                      {l.cave ? <Link href={ficheVin(l.cave.id)} className="petit">✓ Dans ma cave</Link> : null}
+                      {l.cave ? <Link href={ficheVin(l.cave.id)} className="petit">✓ Dans Ma cave</Link> : null}
                       {!l.cave && !l.offres.length && <span className="petit discret">Pas encore chez un distributeur de Quid Vinum</span>}
                       {!l.cave && l.offres.map((o) => (
                         <div key={o.id} className="offre-producteur">
                           <span className="petit">{o.distributeur}{o.millesime ? ` · ${o.millesime}` : ''}{o.contenance && o.contenance !== '75 cl' ? ` · ${o.contenance}` : ''}
                             {o.prix != null && <> · <b>{euros(o.prix)}</b> HTVA</>}</span>
                           {o.epuise ? <span className="petit discret">épuisé</span>
-                            : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, o.distributeur_id, o.id)} libelle={o.libelle} texte="+ Ajouter à ma cave" versCave={versCave} />}
+                            : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, o.distributeur_id, o.id)} libelle={o.libelle} texte="+ Ajouter à Ma cave" versCave={versCave} />}
                         </div>
                       ))}
                     </div>
