@@ -2,7 +2,7 @@ import { exigerAcces } from '@/lib/admin/auth';
 import { sansContenance } from '@/lib/format';
 import { contenanceDuFormat, grouperMemeVin, libelleCourt, reunirDoublons, tarifsDuGroupe } from '@/lib/contenances';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
-import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
+import { estDesignCarte, genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
 import { SQL_PICTOS } from '@/lib/pictos-sql';
 import { couleurClaire, logoAffiche } from '@/lib/couleurs';
@@ -26,9 +26,15 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const { resto } = await params;
   await exigerAcces(resto);
   const sp = new URL(req.url).searchParams;
-  const [r] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_choix: string | null }>(
-    'select nom, couleur, logo_url, logo_fonce_url, logo_choix, couleur_impression from restaurant where id = $1', [resto]);
-  if (!r) return new Response('Restaurant introuvable', { status: 404 });
+  const [brut] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_choix: string | null;
+    logo_impression_url: string | null; design_impression: string | null; impression_nb: boolean }>(
+    'select nom, couleur, logo_url, logo_fonce_url, logo_choix, couleur_impression, logo_impression_url, design_impression, impression_nb from restaurant where id = $1', [resto]);
+  if (!brut) return new Response('Restaurant introuvable', { status: 404 });
+  // Logo choisi dans le Centre d'impression : c'est lui qui est imprimé, sur le bandeau comme sur le blanc.
+  const r = brut.logo_impression_url ? { ...brut, logo_url: brut.logo_impression_url, logo_fonce_url: brut.logo_impression_url } : brut;
+  // Design : celui de l'adresse (aperçu du Centre d'impression), sinon celui enregistré, sinon « classique ».
+  const design = estDesignCarte(sp.get('design')) ? sp.get('design') as OptionsCarte['design'] : estDesignCarte(brut.design_impression) ? brut.design_impression : 'classique';
+  const apercu = sp.get('apercu') === '1';
 
   const lignes = await requete<{ id: string; libelle: string; producteur: string | null; millesime: string | null; format: string; couleur: CouleurCarte;
     section: string | null; prix: number | null; prix_verre: number | null; presentation_carte: string | null; presentation_carte_perso: string | null; resume_court: string | null; disponible: boolean;
@@ -61,7 +67,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const options: Partial<OptionsCarte> = {
     format: sp.get('format') === 'A5' ? 'A5' : 'A4',
     couleurAccent: teinte.couleur,
-    noirEtBlanc: sp.get('nb') === '1',
+    // Noir et blanc : celui de l'adresse (barre d'outils, aperçu), sinon le réglage du Centre d'impression.
+    noirEtBlanc: sp.has('nb') ? sp.get('nb') === '1' : brut.impression_nb,
     ordre: sp.get('ordre') === 'prix' ? 'prix' : 'app',
     afficherPresentation: sp.get('presentation') !== '0',
     afficherProducteur: sp.get('producteur') !== '0',
@@ -71,13 +78,16 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     bandeauAuto: !['couleur', 'blanc'].includes(sp.get('couv') ?? ''),
     fondBandeau: sp.get('couv') === 'blanc' ? '#FFFFFF' : sp.get('couv') === 'couleur' ? null : await fondDuLogo(r.logo_fonce_url ?? r.logo_url),
     rappelPat: sp.get('rappel') !== '0',
+    design,
   };
   const qr = `data:image/svg+xml;base64,${Buffer.from(await qrSvg(await adresseApp(resto), options.noirEtBlanc ? '#1F1A1C' : '#24151A')).toString('base64')}`;
   const sansPresentation = vins.filter((v) => v.visible && !v.presentationPerso && !lignes.find((l) => l.id === v.id)?.presentation_carte).length;
 
   const html = genererCarteHTML({
-    restaurant: { nom: r.nom, ...(await logoCouverture(r, teinte.couleur)), logoSurBlanc: r.logo_fonce_url ?? r.logo_url, logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
-    vins, options, barre: barreOutils(resto, options, teinte, ['couleur', 'blanc'].includes(sp.get('couv') ?? '') ? sp.get('couv')! : 'auto', sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
+    restaurant: { nom: r.nom, ...(await logoCouverture(r, teinte.couleur)), logoSurBlanc: r.logo_fonce_url ?? r.logo_url, logoSombreUrl: r.logo_fonce_url,
+      // Noir et blanc sans logo foncé : un logo clair à fond transparent passe en noir.
+      logoEnNoir: Boolean(options.noirEtBlanc && !brut.logo_fonce_url && (r.logo_fonce_url ?? r.logo_url) && !(await fondDuLogo(r.logo_fonce_url ?? r.logo_url))), qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
+    vins, options, barre: apercu ? '<style>body{padding:0!important;background:#FFFFFF!important}.couverture,.pages{box-shadow:none!important;margin:0 auto!important}</style>' : barreOutils(resto, options, teinte, ['couleur', 'blanc'].includes(sp.get('couv') ?? '') ? sp.get('couv')! : 'auto', sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
   });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }

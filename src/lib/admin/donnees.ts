@@ -6,7 +6,7 @@ import { SQL_LOGO_DISTRIBUTEUR } from '../etiquettes/logo';
 export interface RestaurantBO {
   id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null;
   accroche: string | null; reglages_selection: Record<string, unknown>; modifie_bo: string | null;
-  statut: string; origine: string; page_accueil: string; categories_carte: string[]; couleur_impression: string | null; design_app: string | null;
+  statut: string; origine: string; page_accueil: string; categories_carte: string[]; couleur_impression: string | null; design_app: string | null; logo_impression_url: string | null; design_impression: string | null; impression_nb: boolean;
   /** Gestion des stocks : alerte « stock bas » à ce nombre de bouteilles (ou moins). */
   stock_limite_basse: number;
   /** Date du dernier inventaire validé (page Inventaire) ; null : jamais. */
@@ -15,7 +15,7 @@ export interface RestaurantBO {
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, stock_limite_basse, inventaire_le::text as inventaire_le
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, impression_nb, stock_limite_basse, inventaire_le::text as inventaire_le
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }

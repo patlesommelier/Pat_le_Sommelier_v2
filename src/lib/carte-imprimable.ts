@@ -34,6 +34,7 @@ export interface RestaurantImprimable {
   logoEnBlanc?: boolean;         // logo qui ne se verrait pas sur la couleur du bandeau : il passe en blanc
   logoSurBlanc?: string | null;  // logo pour le bandeau blanc (le foncé de préférence), dans ses couleurs
   logoSombreUrl?: string | null; // logo foncé, pour le noir et blanc
+  logoEnNoir?: boolean;          // noir et blanc : logo clair à fond transparent (blanc…), passé en noir pour se voir sur le papier
   qrCodeUrl?: string | null;     // image du QR code (URL ou data:)
   patLogoUrl?: string | null;    // petit logo de Pat le sommelier, en bas à gauche de chaque page
 }
@@ -50,7 +51,21 @@ export interface OptionsCarte {
   fondBandeau?: string | null;  // couverture : bandeau de cette couleur (blanc, ou le fond crème du logo), logo dans ses couleurs ;
                                 // sinon bandeau de la couleur des titres
   rappelPat: boolean;
+  /** Design de la carte imprimée (Centre d'impression) ; « classique » par défaut. */
+  design?: DesignCarte;
 }
+
+/** Les six designs de la carte des vins imprimée (Centre d'impression). */
+export const DESIGNS_CARTE = [
+  ['classique', 'Classique', 'Garamond élégant, titres à la couleur des impressions (par défaut).'],
+  ['moderne', 'Moderne', 'Titres ronds et nets, bandeaux de couleur pour chaque partie.'],
+  ['editorial', 'Éditorial', 'Comme un magazine : grands titres à empattements, filets fins, beaucoup d’air.'],
+  ['epure', 'Épuré', 'Luxe discret : lettres fines et espacées, gris chauds, presque aucune couleur.'],
+  ['bistrot', 'Bistrot', 'Titres écrits à la main, comme sur l’ardoise du bistrot.'],
+  ['audacieux', 'Audacieux', 'Contours noirs épais, titres en capitales grasses, prix en étiquettes.'],
+] as const;
+export type DesignCarte = (typeof DESIGNS_CARTE)[number][0];
+export const estDesignCarte = (d: unknown): d is DesignCarte => DESIGNS_CARTE.some(([k]) => k === d);
 
 export const OPTIONS_PAR_DEFAUT: OptionsCarte = {
   format: 'A4',
@@ -202,7 +217,8 @@ function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte,
   const blanc = options.noirEtBlanc || Boolean(options.fondBandeau);
   const logo = options.noirEtBlanc ? restaurant.logoSombreUrl ?? restaurant.logoSurBlanc : options.fondBandeau ? restaurant.logoSurBlanc : restaurant.logoUrl;
   const marque = logo
-    ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}"${restaurant.logoEnBlanc && !blanc ? ' style="filter: brightness(0) invert(1)"' : ''}>`
+    ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}"${restaurant.logoEnBlanc && !blanc ? ' style="filter: brightness(0) invert(1)"'
+      : options.noirEtBlanc && restaurant.logoEnNoir ? ' style="filter: brightness(0)"' : ''}>`
     : `<span class="couv-nom">${echapper(restaurant.nom)}</span>`;
   const qr = restaurant.qrCodeUrl ? `<img class="couv-qr" src="${echapper(restaurant.qrCodeUrl)}" alt="QR code de ${echapper(restaurant.nom)}">` : '';
   return `<section class="couverture">
@@ -327,7 +343,8 @@ export function genererCarteHTML({ restaurant, vins, options: opts = {}, barre =
 <title>${echapper(restaurant.nom)} — carte des vins</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap">
-<style>${css(options, restaurant)}</style>
+${POLICES_DESIGN[options.design ?? 'classique'] ? `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?${POLICES_DESIGN[options.design ?? 'classique']}&display=swap">` : ''}
+<style>${css(options, restaurant)}${cssDesign(options)}</style>
 </head>
 <body data-nb-vins="${nbVins}">
 ${barre}
@@ -362,4 +379,93 @@ ${options.couverture ? htmlCouverture(restaurant, options, couleurs.map((c) => (
 </script>
 </body>
 </html>`;
+}
+
+/** Polices propres à chaque design (Google Fonts). */
+const POLICES_DESIGN: Record<DesignCarte, string> = {
+  classique: '',
+  moderne: 'family=Outfit:wght@500;600;700',
+  editorial: 'family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500',
+  epure: 'family=Jost:wght@300;400',
+  bistrot: 'family=Cabin+Sketch:wght@700&family=Kalam:wght@400;700',
+  audacieux: 'family=Archivo+Black&family=Space+Grotesk:wght@500;700',
+};
+
+/**
+ * Feuille de style de chaque design, posée par-dessus la carte classique : mêmes pages, mêmes vins, autre allure.
+ * La couleur des titres reste celle choisie pour les impressions (sauf Épuré, presque sans couleur).
+ */
+function cssDesign(options: OptionsCarte) {
+  const accent = options.noirEtBlanc ? '#1F1A1C' : couleurSure(options.couleurAccent);
+  switch (options.design ?? 'classique') {
+    case 'moderne': return `
+.couv-corps h1, .couleur > h2, .vin-nom, .couv-nom { font-family: Outfit, 'Helvetica Neue', sans-serif; letter-spacing: -0.02em; }
+.couv-corps h1 { font-weight: 700; }
+.couleur > h2 { font-weight: 700; background: ${accent}; color: #FFFFFF; padding: 2.5mm 5mm; border-radius: 3mm; }
+.couleur > h2::before { display: none; }
+.region > h3 { font-family: Outfit, sans-serif; letter-spacing: 1.6px; }
+.vin-nom { font-weight: 600; font-size: 12.5pt; }
+.vin-points { border-bottom-style: solid; border-color: #E8E1E3; }
+.vin-mot, .couv-pat p, .fin .fin-pat { font-family: Lato, sans-serif; font-style: normal; font-size: 9.5pt; }
+.couv-filet { width: 12mm; height: 3px; border-radius: 2px; }`;
+    case 'editorial': return `
+body { background: #FFFFFF; }
+.couv-corps h1, .couleur > h2, .vin-nom, .couv-nom { font-family: Fraunces, Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+.couv-corps h1 { font-size: 58pt; }
+.couleur > h2 { font-size: 30pt; border-bottom: 0.5pt solid #CFC6BC; padding-bottom: 2mm; color: #2B2724; }
+.couleur > h2::before { display: none; }
+.region > h3, .couv-couleurs { font-family: Inter, sans-serif; font-weight: 500; letter-spacing: 2.6px; color: #8A8077; }
+.region > h3::after { background: #E6DED3; }
+.vin { margin-bottom: 6mm; }
+.vin-nom { font-size: 14pt; }
+.vin-points { border: 0; }
+.vin-prix { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 12pt; }
+.vin-mot { font-family: Fraunces, Georgia, serif; font-style: italic; font-weight: 400; color: #5E564F; }
+.couv-filet { background: ${accent}; width: 10mm; height: 1px; }`;
+    case 'epure': return `
+body { font-family: Jost, 'Helvetica Neue', sans-serif; font-weight: 300; color: #4A443E; }
+.couv-bandeau { background: #F4F1EC !important; border-bottom: 0.5pt solid #DDD6CB; }
+.couv-nom { color: #4A443E !important; }
+.couv-corps h1, .couleur > h2, .vin-nom, .couv-nom { font-family: Jost, sans-serif; font-weight: 300; letter-spacing: 0.06em; color: #4A443E; }
+.couv-corps h1 { font-size: 44pt; }
+.couleur > h2 { font-size: 15pt; text-transform: uppercase; letter-spacing: 0.32em; justify-content: center; margin: 6mm 0 4mm; }
+.couleur > h2::before { display: none; }
+.region > h3 { font-family: Jost, sans-serif; font-weight: 400; letter-spacing: 3px; color: #8C847A; justify-content: center; }
+.region > h3::after { display: none; }
+.vin { margin-bottom: 5.5mm; }
+.vin-nom { font-size: 12pt; font-weight: 400; }
+.vin-points { border-bottom: 0.5pt solid #E6E0D6; }
+.vin-prix { font-weight: 400; }
+.vin-detail, .couv-couleurs, .vin-mot { color: #8C847A; }
+.vin-mot, .couv-pat p, .fin .fin-pat { font-family: Jost, sans-serif; font-style: normal; font-weight: 300; font-size: 9.5pt; }
+.couv-filet { background: #B8AFA3; height: 0.5pt; width: 20mm; }`;
+    case 'bistrot': return `
+.couv-corps h1, .couleur > h2, .couv-nom { font-family: 'Cabin Sketch', 'Comic Sans MS', cursive; font-weight: 700; letter-spacing: 0; }
+.couleur > h2 { font-size: 28pt; }
+.couleur > h2::before { height: 0; border-top: 2px dashed ${accent}; }
+.region > h3 { font-family: Kalam, cursive; font-weight: 700; font-size: 12pt; letter-spacing: 0; text-transform: none; }
+.region > h3::after { height: 0; border-top: 1.5px dashed #C9C0B4; background: none; }
+.vin-nom { font-family: Kalam, cursive; font-weight: 700; font-size: 13pt; }
+.vin-detail { font-family: Kalam, cursive; font-size: 10pt; }
+.vin-points { border-bottom: 1.5px dashed #B8AEA2; }
+.vin-prix { font-family: Kalam, cursive; font-size: 12.5pt; color: ${accent}; }
+.vin-mot, .couv-pat p, .fin .fin-pat { font-family: Kalam, cursive; font-style: normal; font-size: 10.5pt; }
+.couv-filet { height: 0; border-top: 3px dashed ${accent}; background: none; width: 22mm; }`;
+    case 'audacieux': return `
+body { font-family: 'Space Grotesk', sans-serif; }
+.couv-bandeau { border-bottom: 3pt solid #111111; }
+.couv-corps h1, .couleur > h2, .couv-nom { font-family: 'Archivo Black', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0; }
+.couv-corps h1 { font-size: 40pt; color: #111111; }
+.couleur > h2 { display: inline-flex; font-size: 20pt; color: #111111; background: ${options.noirEtBlanc ? '#FFFFFF' : '#FFE14D'}; border: 2.5pt solid #111111; box-shadow: 4px 4px 0 #111111; padding: 1.5mm 5mm; }
+.couleur > h2::before { display: none; }
+.region > h3 { color: #111111; font-weight: 700; }
+.region > h3::after { height: 2pt; background: #111111; }
+.vin { border: 1.5pt solid #111111; padding: 2.5mm 3.5mm; box-shadow: 3px 3px 0 #111111; }
+.vin-nom { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 11.5pt; text-transform: uppercase; }
+.vin-points { border: 0; }
+.vin-prix { background: ${accent}; color: #FFFFFF; border: 1.5pt solid #111111; padding: 0.5mm 2mm; }
+.vin-mot, .couv-pat p, .fin .fin-pat { font-family: 'Space Grotesk', sans-serif; font-style: normal; font-size: 9.5pt; }
+.couv-filet { background: #111111; height: 3pt; }`;
+    default: return '';
+  }
 }

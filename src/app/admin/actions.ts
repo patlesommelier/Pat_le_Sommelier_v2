@@ -11,6 +11,7 @@ import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
 import { randomUUID } from 'node:crypto';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { deposerLogo } from '@/lib/logo';
+import { estDesignCarte } from '@/lib/carte-imprimable';
 import { creerLot, PLATS_EN_PARALLELE, travaillerEnParallele } from '@/lib/generation/file';
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
@@ -1041,6 +1042,32 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   return { ok: 'Apparence enregistrée : l’app de vos clients est à jour.' };
+}
+
+// ───────── Centre d'impression ─────────
+/** Logo des impressions (vide : celui de l'app), couleur des impressions et design de la carte des vins imprimée. */
+export async function enregistrerImpression(resto: string, f: FormData): Promise<Retour> {
+  await exigerAcces(resto);
+  try {
+    const l = fichier(f, 'logo_impression');
+    if (l) {
+      const { url } = await deposerLogo(l, `${resto}/logo`);
+      await requete('update restaurant set logo_impression_url = $2 where id = $1', [resto, url]);
+    } else if (f.get('logo_impression_retirer') === '1') {
+      await requete('update restaurant set logo_impression_url = null where id = $1', [resto]);
+    }
+  } catch (e) {
+    return { erreur: (e as Error).message };
+  }
+  if (f.has('couleur_impression_envoyee')) {
+    const ci = txt(f, 'couleur_impression');
+    await requete('update restaurant set couleur_impression = $2 where id = $1', [resto, ci && /^#[0-9a-f]{6}$/i.test(ci) ? ci.toUpperCase() : null]);
+  }
+  if (f.has('impression_nb_envoye')) await requete('update restaurant set impression_nb = $2 where id = $1', [resto, f.get('impression_nb') === '1']);
+  const design = txt(f, 'design_impression');
+  if (design && estDesignCarte(design)) await requete('update restaurant set design_impression = $2 where id = $1', [resto, design]);
+  revalidatePath(`/admin/${resto}`, 'layout');
+  return { ok: 'Enregistré : vos impressions sont à jour.' };
 }
 
 // ───────── Accès ─────────

@@ -11,7 +11,7 @@ export function CouleurImpression({ initiale, app, logo, auto }: { initiale: str
   const affichee = valeur || auto;
   const pastille = (c: string) => <span aria-hidden="true" style={{ display: 'inline-block', width: 18, height: 18, borderRadius: 5, background: c, border: '1px solid var(--ligne)', verticalAlign: -4, marginRight: 6 }} />;
   const option = (v: typeof choix, titre: React.ReactNode, aide: string) => (
-    <label className="case"><input type="radio" name="couleur_impression_choix" checked={choix === v} onChange={() => setChoix(v)} />
+    <label className="case"><input type="radio" name="couleur_impression_choix" defaultChecked={choix === v} onChange={() => setChoix(v)} />
       <span><b>{titre}</b><small>{aide}</small></span></label>
   );
   return (
