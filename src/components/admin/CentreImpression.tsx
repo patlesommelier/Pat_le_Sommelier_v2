@@ -6,14 +6,11 @@ import { BoutonCarteImprimee } from './BoutonCarteImprimee';
 import { FormulaireAdmin, type Retour } from './FormulaireAdmin';
 import { DESIGNS_CARTE, type DesignCarte } from '@/lib/carte-imprimable';
 
-export function CentreImpression({ action, resto, logoApp, logoImpression, design: initial, couleur, fond, noirEtBlanc: nbInitial }: {
+export function CentreImpression({ action, resto, logoApp, logoImpression, design: initial, couleur, fond }: {
   action: (f: FormData) => Promise<Retour>; resto: string; logoApp: string | null; logoImpression: string | null; design: DesignCarte; couleur: ReactNode;
   /** Couleur du bandeau de la couverture imprimée, sur laquelle le logo est aussi montré. */
   fond: string;
-  /** Impressions en noir et blanc (carte, menu, suggestions). */
-  noirEtBlanc: boolean;
 }) {
-  const [nb, setNb] = useState(nbInitial);
   const [design, setDesign] = useState<DesignCarte>(initial);
   const [apercuLogo, setApercuLogo] = useState<string | null>(logoImpression);
   const [retirer, setRetirer] = useState(false);
@@ -48,13 +45,8 @@ export function CentreImpression({ action, resto, logoApp, logoImpression, desig
         {retirer && <input type="hidden" name="logo_impression_retirer" value="1" />}
       </section>
 
-      {/* 2. Couleur des impressions (titres et filets, sur le papier blanc), ou tout en noir et blanc. */}
+      {/* 2. Couleur des impressions (titres et filets, sur le papier blanc). Le noir et blanc se choisit au moment d'imprimer. */}
       {couleur}
-      <section className="carte-bo pile">
-        <input type="hidden" name="impression_nb_envoye" value="1" />
-        <label className="case" style={{ margin: 0 }}><input type="checkbox" name="impression_nb" value="1" defaultChecked={nb} onChange={(e) => setNb(e.currentTarget.checked)} />
-          <span><b>Noir et blanc</b><small>Carte des vins, menu et suggestions imprimés sans couleur (pour une imprimante noir et blanc).</small></span></label>
-      </section>
 
       {/* 3. Menu et suggestions. */}
       <section className="carte-bo pile">
@@ -81,8 +73,10 @@ export function CentreImpression({ action, resto, logoApp, logoImpression, desig
             ))}
             <span className="discret" style={{ fontSize: 13 }}>Enregistrez votre choix : il servira pour « Imprimer la carte ».</span>
           </div>
-          <div className="apercu-carte" aria-label="Aperçu de la carte des vins">
-            <iframe key={`${design}-${nb}`} title="Aperçu de la carte des vins" src={`/admin/${resto}/carte/imprimer?apercu=1&design=${design}&nb=${nb ? 1 : 0}`} loading="lazy" />
+          {/* Aperçu : la page de garde et la première page de vins, côte à côte (chacune défile pour voir la suite). */}
+          <div className="apercus-carte" aria-label="Aperçu de la carte des vins">
+            <div className="apercu-carte"><iframe key={`garde-${design}`} title="Page de garde" src={`/admin/${resto}/carte/imprimer?apercu=1&design=${design}`} loading="lazy" /></div>
+            <div className="apercu-carte"><iframe key={`vins-${design}`} title="Première page des vins" src={`/admin/${resto}/carte/imprimer?apercu=1&couverture=0&design=${design}`} loading="lazy" /></div>
           </div>
         </div>
       </section>

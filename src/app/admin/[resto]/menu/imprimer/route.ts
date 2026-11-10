@@ -22,8 +22,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   await exigerAcces(resto);
   const sp = new URL(req.url).searchParams;
   const suggestions = sp.get('type') === 'suggestions';
-  const [brut] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_impression_url: string | null; impression_nb: boolean }>(
-    'select nom, couleur, logo_url, logo_fonce_url, couleur_impression, logo_impression_url, impression_nb from restaurant where id = $1', [resto]);
+  const [brut] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_impression_url: string | null }>(
+    'select nom, couleur, logo_url, logo_fonce_url, couleur_impression, logo_impression_url from restaurant where id = $1', [resto]);
   // Logo choisi dans le Centre d'impression : c'est lui qui est imprimé.
   const r = brut?.logo_impression_url ? { ...brut, logo_url: brut.logo_impression_url, logo_fonce_url: brut.logo_impression_url } : brut;
   if (!r) return new Response('Restaurant introuvable', { status: 404 });
@@ -60,8 +60,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     titre: suggestions ? 'Suggestions du moment' : 'Menu',
     format: sp.get('format') === 'A5' ? 'A5' : 'A4',
     couleurAccent: teinte.couleur,
-    // Noir et blanc : celui de l'adresse (barre d'outils), sinon le réglage du Centre d'impression.
-    noirEtBlanc: sp.has('nb') ? sp.get('nb') === '1' : r.impression_nb,
+    noirEtBlanc: sp.get('nb') === '1',
     prixVin: sp.get('prix') !== '0',
     rappelPat: sp.get('rappel') !== '0',
   };

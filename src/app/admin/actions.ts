@@ -1063,7 +1063,6 @@ export async function enregistrerImpression(resto: string, f: FormData): Promise
     const ci = txt(f, 'couleur_impression');
     await requete('update restaurant set couleur_impression = $2 where id = $1', [resto, ci && /^#[0-9a-f]{6}$/i.test(ci) ? ci.toUpperCase() : null]);
   }
-  if (f.has('impression_nb_envoye')) await requete('update restaurant set impression_nb = $2 where id = $1', [resto, f.get('impression_nb') === '1']);
   const design = txt(f, 'design_impression');
   if (design && estDesignCarte(design)) await requete('update restaurant set design_impression = $2 where id = $1', [resto, design]);
   revalidatePath(`/admin/${resto}`, 'layout');

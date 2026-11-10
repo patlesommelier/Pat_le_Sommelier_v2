@@ -27,8 +27,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   await exigerAcces(resto);
   const sp = new URL(req.url).searchParams;
   const [brut] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_choix: string | null;
-    logo_impression_url: string | null; design_impression: string | null; impression_nb: boolean }>(
-    'select nom, couleur, logo_url, logo_fonce_url, logo_choix, couleur_impression, logo_impression_url, design_impression, impression_nb from restaurant where id = $1', [resto]);
+    logo_impression_url: string | null; design_impression: string | null }>(
+    'select nom, couleur, logo_url, logo_fonce_url, logo_choix, couleur_impression, logo_impression_url, design_impression from restaurant where id = $1', [resto]);
   if (!brut) return new Response('Restaurant introuvable', { status: 404 });
   // Logo choisi dans le Centre d'impression : c'est lui qui est imprimé, sur le bandeau comme sur le blanc.
   const r = brut.logo_impression_url ? { ...brut, logo_url: brut.logo_impression_url, logo_fonce_url: brut.logo_impression_url } : brut;
@@ -64,19 +64,20 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   });
 
   const teinte = await couleurDesSupports(r, sp);
+  const couv = ['couleur', 'auto'].includes(sp.get('couv') ?? '') ? sp.get('couv')! : 'blanc';
   const options: Partial<OptionsCarte> = {
     format: sp.get('format') === 'A5' ? 'A5' : 'A4',
     couleurAccent: teinte.couleur,
-    // Noir et blanc : celui de l'adresse (barre d'outils, aperçu), sinon le réglage du Centre d'impression.
-    noirEtBlanc: sp.has('nb') ? sp.get('nb') === '1' : brut.impression_nb,
+    noirEtBlanc: sp.get('nb') === '1',
     ordre: sp.get('ordre') === 'prix' ? 'prix' : 'app',
     afficherPresentation: sp.get('presentation') !== '0',
     afficherProducteur: sp.get('producteur') !== '0',
     couverture: sp.get('couverture') !== '0',
     // Bandeau de la couverture (?couv=auto|couleur|blanc) : automatique, il prend le fond clair d'un logo carré (crème…),
     // sinon la couleur des titres.
-    bandeauAuto: !['couleur', 'blanc'].includes(sp.get('couv') ?? ''),
-    fondBandeau: sp.get('couv') === 'blanc' ? '#FFFFFF' : sp.get('couv') === 'couleur' ? null : await fondDuLogo(r.logo_fonce_url ?? r.logo_url),
+    // Par défaut, couverture blanche avec le logo en petit (un grand bandeau de couleur coûte cher en encre).
+    bandeauAuto: couv === 'auto',
+    fondBandeau: couv === 'blanc' ? '#FFFFFF' : couv === 'couleur' ? null : await fondDuLogo(r.logo_fonce_url ?? r.logo_url),
     rappelPat: sp.get('rappel') !== '0',
     design,
   };
@@ -86,8 +87,11 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const html = genererCarteHTML({
     restaurant: { nom: r.nom, ...(await logoCouverture(r, teinte.couleur)), logoSurBlanc: r.logo_fonce_url ?? r.logo_url, logoSombreUrl: r.logo_fonce_url,
       // Noir et blanc sans logo foncé : un logo clair à fond transparent passe en noir.
+      // Couverture blanche : un logo clair à fond transparent (blanc) est imprimé à la couleur des titres.
+      logoTeinte: Boolean(couv === 'blanc' && (r.logo_fonce_url ?? r.logo_url) && !(await fondDuLogo(r.logo_fonce_url ?? r.logo_url))
+        && ((await contrasteLogo(r.logo_fonce_url ?? r.logo_url, '#FFFFFF')) ?? 99) < 1.8),
       logoEnNoir: Boolean(options.noirEtBlanc && !brut.logo_fonce_url && (r.logo_fonce_url ?? r.logo_url) && !(await fondDuLogo(r.logo_fonce_url ?? r.logo_url))), qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
-    vins, options, barre: apercu ? '<style>body{padding:0!important;background:#FFFFFF!important}.couverture,.pages{box-shadow:none!important;margin:0 auto!important}</style>' : barreOutils(resto, options, teinte, ['couleur', 'blanc'].includes(sp.get('couv') ?? '') ? sp.get('couv')! : 'auto', sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
+    vins, options, barre: apercu ? '<style>body{padding:0!important;background:#FFFFFF!important}.couverture,.pages{box-shadow:none!important;margin:0 auto!important}</style>' : barreOutils(resto, options, teinte, couv, sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
   });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
@@ -123,7 +127,7 @@ function barreOutils(resto: string, o: Partial<OptionsCarte>, teinte: CouleurSup
   ${coche('presentation', 'Présentations', o.afficherPresentation)}
   ${coche('producteur', 'Producteurs', o.afficherProducteur)}
   ${coche('couverture', 'Couverture', o.couverture)}
-  <label>Bandeau <select name="couv" onchange="envoyer(this.form)">${[['auto', 'automatique'], ['couleur', 'de couleur'], ['blanc', 'blanc']]
+  <label>Style <select name="couv" onchange="envoyer(this.form)">${[['blanc', 'blanche, logo en petit'], ['couleur', 'grand bandeau de couleur'], ['auto', 'automatique']]
     .map(([v, l]) => `<option value="${v}" ${couv === v ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
   ${coche('rappel', 'Rappel « Demandez à Pat »', o.rappelPat)}
   <button type="button" onclick="window.print()" style="padding:8px 16px;border:0;border-radius:999px;background:#FFF;color:#24151A;font-weight:700;cursor:pointer">Imprimer / Enregistrer en PDF</button>
@@ -135,7 +139,7 @@ function barreOutils(resto: string, o: Partial<OptionsCarte>, teinte: CouleurSup
 function envoyer(f) {
   var p = new URLSearchParams();
   ['format', 'ordre'].forEach(function (n) { p.set(n, f.elements[n].value); });
-  if (f.elements.couv.value !== 'auto') p.set('couv', f.elements.couv.value);
+  if (f.elements.couv.value !== 'blanc') p.set('couv', f.elements.couv.value);
   ['nb', 'presentation', 'producteur', 'couverture', 'rappel'].forEach(function (n) { p.set(n, f.elements[n].checked ? '1' : '0'); });
   ${SCRIPT_COULEUR}
   location.search = p.toString();

@@ -24,7 +24,6 @@ export default async function CentreDImpression({ params, searchParams }: { para
       <Message ok={sp.ok} erreur={sp.erreur} />
       <CentreImpression action={enregistrerImpression.bind(null, resto)} resto={resto}
         logoApp={r.logo_fonce_url ?? r.logo_url} logoImpression={r.logo_impression_url}
-        noirEtBlanc={r.impression_nb}
         fond={r.couleur_impression ?? couleurImpression(r.couleur.toUpperCase(), logoCouleur)}
         design={estDesignCarte(r.design_impression) ? r.design_impression : 'classique'}
         couleur={<CouleurImpression initiale={r.couleur_impression} app={r.couleur.toUpperCase()} logo={logoCouleur} auto={couleurImpression(r.couleur.toUpperCase(), logoCouleur)} />} />

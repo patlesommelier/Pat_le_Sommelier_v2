@@ -35,6 +35,7 @@ export interface RestaurantImprimable {
   logoSurBlanc?: string | null;  // logo pour le bandeau blanc (le foncé de préférence), dans ses couleurs
   logoSombreUrl?: string | null; // logo foncé, pour le noir et blanc
   logoEnNoir?: boolean;          // noir et blanc : logo clair à fond transparent (blanc…), passé en noir pour se voir sur le papier
+  logoTeinte?: boolean;          // couverture blanche : logo clair à fond transparent (blanc…), imprimé à la couleur des titres
   qrCodeUrl?: string | null;     // image du QR code (URL ou data:)
   patLogoUrl?: string | null;    // petit logo de Pat le sommelier, en bas à gauche de chaque page
 }
@@ -216,7 +217,12 @@ function htmlVin(vin: VinImprimable, options: OptionsCarte) {
 function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte, couleursPresentes: string[]) {
   const blanc = options.noirEtBlanc || Boolean(options.fondBandeau);
   const logo = options.noirEtBlanc ? restaurant.logoSombreUrl ?? restaurant.logoSurBlanc : options.fondBandeau ? restaurant.logoSurBlanc : restaurant.logoUrl;
-  const marque = logo
+  // Couverture blanche : un logo blanc à fond transparent ne se verrait pas ; il est imprimé à la couleur des titres (sa forme
+  // sert de pochoir).
+  const teinte = Boolean(logo && options.fondBandeau && !options.noirEtBlanc && restaurant.logoTeinte);
+  const marque = teinte
+    ? `<span class="couv-logo couv-logo-teinte" role="img" aria-label="${echapper(restaurant.nom)}" style="-webkit-mask-image:url(${echapper(chaineCss(logo!))});mask-image:url(${echapper(chaineCss(logo!))})"></span>`
+    : logo
     ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}"${restaurant.logoEnBlanc && !blanc ? ' style="filter: brightness(0) invert(1)"'
       : options.noirEtBlanc && restaurant.logoEnNoir ? ' style="filter: brightness(0)"' : ''}>`
     : `<span class="couv-nom">${echapper(restaurant.nom)}</span>`;
@@ -260,6 +266,11 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: ${encr
 .couv-bandeau { height: 44%; background: ${options.noirEtBlanc ? '#FFFFFF' : options.fondBandeau ?? accent}; display: flex; align-items: center; justify-content: center;
   ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : ''} }
 .couv-logo { width: 30%; height: auto; max-height: 44%; object-fit: contain; ${options.noirEtBlanc || options.fondBandeau ? 'mix-blend-mode: multiply; /* le fond d’un logo carré se fond dans le bandeau */' : ''} }
+${options.noirEtBlanc || options.fondBandeau ? `/* Couverture blanche : le logo, en petit, en haut de la page (pas de grand bandeau de couleur). */
+.couv-bandeau { height: 30%; align-items: flex-end; padding-bottom: 6mm; border-bottom: 0 !important; }
+.couv-logo { width: 26%; max-height: 50%; }` : ''}
+.couv-logo-teinte { display: block; height: 22mm; background: ${options.noirEtBlanc ? '#1F1A1C' : couleurSure(options.couleurAccent)};
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
 .couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.fondBandeau ? accent : '#FFFFFF'}; }
 .couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
 .couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; color: ${accent}; }

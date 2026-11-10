@@ -594,5 +594,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .design-carte[data-choisi] { border-color: var(--encre); box-shadow: 0 0 0 3px var(--rose); }
 .design-carte input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; }
 .design-carte small { font-size: 12.5px; line-height: 1.35; }
-.apercu-carte { flex: 0 0 auto; width: 420px; max-width: 100%; height: 594px; overflow: hidden; border: 1px solid var(--ligne); border-radius: 10px; background: #FFFFFF; }
-.apercu-carte iframe { width: 840px; height: 1188px; border: 0; transform: scale(0.5); transform-origin: top left; }
+.apercus-carte { flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: 12px; max-width: 100%; }
+.apercu-carte { flex: 0 0 auto; width: 294px; max-width: 100%; height: 416px; overflow: hidden; border: 1px solid var(--ligne); border-radius: 8px; background: #FFFFFF; box-shadow: 0 10px 24px -16px rgba(0, 0, 0, 0.35); }
+.apercu-carte iframe { width: 840px; height: 1188px; border: 0; transform: scale(0.35); transform-origin: top left; }
