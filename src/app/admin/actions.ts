@@ -1165,3 +1165,13 @@ export async function changerPrixCarte(resto: string, vinId: string, code: strin
   revalidatePath(`/admin/${resto}/carte`);
   return { ok: true };
 }
+
+/** Centre d'impression : la couleur des impressions, enregistrée dès qu'on la change (les aperçus suivent). Vide : automatique. */
+export async function changerCouleurImpression(resto: string, valeur: string): Promise<{ ok: boolean }> {
+  await exigerAcces(resto);
+  const v = valeur.trim();
+  if (v && !/^#[0-9a-f]{6}$/i.test(v)) return { ok: false };
+  await requete('update restaurant set couleur_impression = $2 where id = $1', [resto, v ? v.toUpperCase() : null]);
+  revalidatePath(`/admin/${resto}/impression`);
+  return { ok: true };
+}

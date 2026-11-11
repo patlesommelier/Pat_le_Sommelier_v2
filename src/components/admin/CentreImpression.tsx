@@ -1,7 +1,8 @@
 'use client';
 // Centre d'impression : logo des impressions, couleur des impressions, menu et suggestions à imprimer, puis la carte des vins :
 // son design (six au choix, « Classique » par défaut) avec l'aperçu de la carte, et le bouton pour l'imprimer.
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
+import { COULEUR_ENREGISTREE } from './CouleurImpression';
 import { BoutonCarteImprimee } from './BoutonCarteImprimee';
 import { FormulaireAdmin, type Retour } from './FormulaireAdmin';
 import { DESIGNS_CARTE, type DesignCarte } from '@/lib/carte-imprimable';
@@ -12,6 +13,13 @@ export function CentreImpression({ action, resto, logoApp, logoImpression, desig
   fond: string;
 }) {
   const [design, setDesign] = useState<DesignCarte>(initial);
+  // Couleur des impressions enregistrée (choix fait plus haut) : les aperçus se rechargent avec elle.
+  const [version, setVersion] = useState(0);
+  useEffect(() => {
+    const suivre = () => setVersion(Date.now());
+    window.addEventListener(COULEUR_ENREGISTREE, suivre);
+    return () => window.removeEventListener(COULEUR_ENREGISTREE, suivre);
+  }, []);
   const [apercuLogo, setApercuLogo] = useState<string | null>(logoImpression);
   const [retirer, setRetirer] = useState(false);
   const logo = retirer ? logoApp : apercuLogo ?? logoApp;
@@ -75,8 +83,8 @@ export function CentreImpression({ action, resto, logoApp, logoImpression, desig
           </div>
           {/* Aperçu : la page de garde et la première page de vins, côte à côte (chacune défile pour voir la suite). */}
           <div className="apercus-carte" aria-label="Aperçu de la carte des vins">
-            <div className="apercu-carte"><iframe key={`garde-${design}`} title="Page de garde" src={`/admin/${resto}/carte/imprimer?apercu=1&design=${design}`} loading="lazy" /></div>
-            <div className="apercu-carte"><iframe key={`vins-${design}`} title="Première page des vins" src={`/admin/${resto}/carte/imprimer?apercu=1&couverture=0&design=${design}`} loading="lazy" /></div>
+            <div className="apercu-carte"><iframe key={`garde-${design}-${version}`} title="Page de garde" src={`/admin/${resto}/carte/imprimer?apercu=1&design=${design}${version ? `&v=${version}` : ''}`} loading="lazy" /></div>
+            <div className="apercu-carte"><iframe key={`vins-${design}-${version}`} title="Première page des vins" src={`/admin/${resto}/carte/imprimer?apercu=1&couverture=0&design=${design}${version ? `&v=${version}` : ''}`} loading="lazy" /></div>
           </div>
         </div>
       </section>

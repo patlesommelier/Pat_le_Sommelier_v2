@@ -1,7 +1,7 @@
 // Centre d'impression : tout ce qui s'imprime au même endroit — le logo et la couleur des impressions, le menu et les suggestions,
 // la carte des vins avec son design (six au choix) et son aperçu.
 import { notFound } from 'next/navigation';
-import { enregistrerImpression } from '../../actions';
+import { changerCouleurImpression, enregistrerImpression } from '../../actions';
 import { CentreImpression } from '@/components/admin/CentreImpression';
 import { CouleurImpression } from '@/components/admin/CouleurImpression';
 import { Entete, Message } from '@/components/admin/Ui';
@@ -26,7 +26,8 @@ export default async function CentreDImpression({ params, searchParams }: { para
         logoApp={r.logo_fonce_url ?? r.logo_url} logoImpression={r.logo_impression_url}
         fond={r.couleur_impression ?? couleurImpression(r.couleur.toUpperCase(), logoCouleur)}
         design={estDesignCarte(r.design_impression) ? r.design_impression : 'classique'}
-        couleur={<CouleurImpression initiale={r.couleur_impression} app={r.couleur.toUpperCase()} logo={logoCouleur} auto={couleurImpression(r.couleur.toUpperCase(), logoCouleur)} />} />
+        couleur={<CouleurImpression initiale={r.couleur_impression} app={r.couleur.toUpperCase()} logo={logoCouleur} auto={couleurImpression(r.couleur.toUpperCase(), logoCouleur)}
+          enregistrer={changerCouleurImpression.bind(null, resto)} />} />
     </>
   );
 }

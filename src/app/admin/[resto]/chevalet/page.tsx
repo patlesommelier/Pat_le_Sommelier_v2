@@ -31,13 +31,17 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
   const r = brut.logo_impression_url ? { ...brut, logo_url: brut.logo_impression_url, logo_fonce_url: brut.logo_impression_url } : brut;
   const couleur = (await couleurDesSupports(r, new URLSearchParams())).couleur;
   const surCouleur = await logoSurCouleur(r, couleur);
+  // Logo à fond opaque (une image avec son fond blanc, crème…) : le bandeau et le fond plein prennent la couleur de ce fond,
+  // pour que le logo s'y fonde ; sinon la couleur du restaurant.
+  const fondMarque = surCouleur.fond ?? couleur;
+  const encre = couleurClaire(fondMarque) ? '#241F20' : '#FFFFFF';
   const surBlanc = await logoSurBlanc(r, couleur);
   const svg = await qrSvg(await adresseApp(resto));
 
   // Logo (ou, sans logo, le nom du restaurant) sur la couleur, ou sur le blanc.
   const marque = (fond: 'couleur' | 'blanc', hauteur: string, largeur: string) => {
     const l = fond === 'couleur' ? surCouleur : surBlanc;
-    const teinteTexte = fond === 'couleur' ? (couleurClaire(couleur) ? '#241F20' : '#FFFFFF') : couleur;
+    const teinteTexte = fond === 'couleur' ? encre : couleur;
     if (!l.url) return <span style={{ fontFamily: SERIF, fontSize: '9mm', lineHeight: 1.05, color: teinteTexte, textAlign: 'center' }}>{brut.nom}</span>;
     if (l.teinte) {
       return <span role="img" aria-label={brut.nom} style={{ display: 'block', width: largeur, height: hauteur, background: l.teinte,
@@ -66,12 +70,12 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
   const titre = (texte: ReactNode, teinte: string, taille = '8mm') => (
     <span className="titre-chevalet" style={{ fontFamily: SERIF, fontSize: taille, lineHeight: 1.08, color: teinte, textAlign: 'center', letterSpacing: '-0.01em' }}>{texte}</span>
   );
-  const encre = couleurClaire(couleur) ? '#241F20' : '#FFFFFF';
 
   const contenus: Record<number, { fond: string; corps: ReactNode }> = {
     // 1. Bandeau : le logo sur la couleur du restaurant, le reste sur un fond clair.
     1: { fond: '#FFFFFF', corps: (<>
-      <div style={{ background: couleur, height: '48mm', margin: '-6mm -6mm 0', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6mm' }}>
+      <div style={{ background: fondMarque, height: '48mm', margin: '-6mm -6mm 0', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6mm',
+        borderBottom: surCouleur.fond ? `2mm solid ${couleur}` : undefined }}>
         {marque('couleur', '30mm', '78mm')}
       </div>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', paddingTop: '5mm' }}>
@@ -94,11 +98,11 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
       </div>
     ) },
     // 3. Plein : tout à la couleur, le QR code sur une carte blanche.
-    3: { fond: couleur, corps: (
+    3: { fond: fondMarque, corps: (
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', padding: '2mm 0 0' }}>
         {marque('couleur', '24mm', '74mm')}
-        {titre(<>Quel vin avec<br /><i>votre plat</i> ?</>, encre)}
-        {qr('34mm', { boxShadow: '0 1.5mm 4mm rgba(0,0,0,.18)' })}
+        {titre(<>Quel vin avec<br /><i>votre plat</i> ?</>, surCouleur.fond ? couleur : encre)}
+        {qr('34mm', surCouleur.fond ? { border: `0.6mm solid ${couleur}` } : { boxShadow: '0 1.5mm 4mm rgba(0,0,0,.18)' })}
         {consigne(encre)}
         {signature(encre, encre === '#FFFFFF')}
       </div>
@@ -151,11 +155,14 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
 type Logos = { couleur: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null };
 
 /** Logo posé sur la couleur : le clair sur une couleur foncée (sinon le foncé) ; passé en blanc s'il ne s'y voit pas. */
-async function logoSurCouleur(r: Logos, couleur: string): Promise<{ url: string | null; blanc?: boolean; teinte?: string }> {
+async function logoSurCouleur(r: Logos, couleur: string): Promise<{ url: string | null; blanc?: boolean; teinte?: string; fond?: string }> {
+  // Un logo à fond opaque d'abord (il garde son fond), sinon le clair sur une couleur foncée, le foncé sur une claire.
+  const candidats = [...new Set([r.logo_url, r.logo_fonce_url].filter((x): x is string => Boolean(x)))];
+  for (const u of candidats) { const fond = await fondDuLogo(u); if (fond) return { url: u, fond }; }
   const url = couleurClaire(couleur) ? r.logo_fonce_url ?? logoAffiche({ ...r, couleur })?.url ?? null : r.logo_url ?? r.logo_fonce_url;
   if (!url) return { url: null };
-  const [contraste, fondClair] = await Promise.all([contrasteLogo(url, couleur), fondDuLogo(url)]);
-  return { url, blanc: !fondClair && !couleurClaire(couleur) && contraste != null && contraste < 2.2 };
+  const contraste = await contrasteLogo(url, couleur);
+  return { url, blanc: !couleurClaire(couleur) && contraste != null && contraste < 2.2 };
 }
 
 /** Logo posé sur le blanc : le foncé ; un logo clair sans fond (invisible sur le blanc) est imprimé à la couleur. */

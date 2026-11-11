@@ -95,7 +95,9 @@ export async function couleurDuLogo(url: string | null | undefined): Promise<str
     const octets = url.startsWith('/')
       ? await fs.readFile(path.join(process.cwd(), 'public', decodeURIComponent(url.split('?')[0])))
       : Buffer.from(await (await fetch(url, { signal: AbortSignal.timeout(5000) })).arrayBuffer());
-    const { data } = await sharp(octets).resize(80, 80, { fit: 'inside' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    // Réduction sans mélange des pixels (« nearest ») : les lettres fines d'un logo gardent leur vraie couleur, au lieu d'un
+    // rose pâle mêlé au fond blanc.
+    const { data } = await sharp(octets).resize(160, 160, { fit: 'inside', kernel: 'nearest' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     return couleurDominante(data);
   } catch {
     return null;
@@ -116,7 +118,8 @@ export async function couleurDesSupports(r: { couleur: string; logo_url: string 
   const autre = sp.get('couleur');
   if (autre && /^#[0-9a-f]{6}$/i.test(autre)) return { ...base, couleur: autre.toUpperCase(), choix: 'autre' };
   // Une couleur trop claire pour le papier blanc (titres et logo invisibles) laisse la place à l'encre presque noire.
-  const lisible = (c: string) => couleurClaire(c) ? ENCRE_PAR_DEFAUT : c;
+  // (la couleur du logo d'abord, si elle se lit).
+  const lisible = (c: string) => !couleurClaire(c) ? c : logo && !couleurClaire(logo) ? logo : ENCRE_PAR_DEFAUT;
   if (sp.get('teinte') === 'app') return { ...base, couleur: lisible(r.couleur), choix: 'app' };
   if (sp.get('teinte') === 'logo' && logo) return { ...base, couleur: lisible(logo), choix: 'logo' };
   if (sp.get('teinte') === 'auto' || !apparence) return { ...base, couleur: couleurImpression(r.couleur, logo), choix: 'auto' };
