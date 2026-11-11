@@ -1,5 +1,6 @@
 'use client';
 import { Fragment, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Icone } from './Icone';
@@ -81,11 +82,16 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | 
   const chevalet = etapes.find((e) => /\/chevalet$/.test(e.href))?.href;
   const surCarte = Boolean(carte && chemin === carte);
   const [etape3, setEtape3] = useState(false);
+  // Retenu pour la visite (cet onglet) : '2' quand la bulle 2 a été montrée dans le simulateur ; sur la carte des vins,
+  // par la bulle ou par le menu, on passe à '3' ; le chevalet ouvert, les premiers pas sont finis.
   useEffect(() => {
     try {
-      if (chevalet && chemin.startsWith(chevalet)) { sessionStorage.removeItem(CLE_GUIDE); setEtape3(false); return; }
-      if (surCarte && bienvenue) sessionStorage.setItem(CLE_GUIDE, '1');
-      setEtape3(surCarte && (bienvenue || sessionStorage.getItem(CLE_GUIDE) === '1'));
+      if (chevalet && chemin.startsWith(chevalet)) { sessionStorage.setItem(CLE_GUIDE, 'fini'); setEtape3(false); return; }
+      const avant = sessionStorage.getItem(CLE_GUIDE);
+      if (bienvenue && /\/simulateur$/.test(chemin) && avant !== 'fini' && avant !== '3') sessionStorage.setItem(CLE_GUIDE, '2');
+      const montre = surCarte && (bienvenue || avant === '2' || avant === '3');
+      if (montre) sessionStorage.setItem(CLE_GUIDE, '3');
+      setEtape3(montre);
     } catch { setEtape3(surCarte && bienvenue); }
   }, [chemin, bienvenue, surCarte, chevalet]);
   if (bienvenue && /\/simulateur$/.test(chemin) && carte) return { href: carte, lien: `${carte}?bienvenue=1`, numero: 2, texte: 'Vérifiez votre carte des vins' };
@@ -94,27 +100,38 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | 
 }
 
 /**
- * Encart « étape suivante » des premiers pas : une bulle posée au-dessus de l'entrée du menu de l'étape suivante,
- * sa flèche pointée vers le bas sur cette entrée.
+ * Post-it « étape suivante » des premiers pas : collé à côté de l'entrée du menu visée, qui est entourée.
+ * Un clic sur le post-it y mène.
  */
 function BulleEtape({ guide }: { guide: Guide }) {
-  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+  const [pos, setPos] = useState<{ top: number; left: number; largeur: number; cote: 'droite' | 'dessous' } | null>(null);
   useEffect(() => {
     const placer = () => {
+      // À côté de l'entrée du menu visée (à sa droite, à sa hauteur) ; dessous quand le menu prend toute la largeur (téléphone).
       const r = document.getElementById('lien-etape-suivante')?.getBoundingClientRect();
-      setPos(r && r.height ? { top: r.top - 10, left: r.left + 4 } : null);
+      const nav = document.querySelector('.bo-nav')?.getBoundingClientRect();
+      if (!r || !r.height || !nav) { setPos(null); return; }
+      const largeur = Math.min(260, window.innerWidth - 32);
+      const aDroite = nav.right + largeur + 24 <= document.documentElement.clientWidth && nav.width < window.innerWidth * 0.6;
+      setPos(aDroite
+        ? { top: r.top + window.scrollY + r.height / 2 - 52, left: nav.right + window.scrollX + 14, largeur, cote: 'droite' }
+        : { top: r.bottom + window.scrollY + 10, left: Math.max(16, r.left + window.scrollX + 8), largeur, cote: 'dessous' });
     };
     placer();
     const t = setTimeout(placer, 300); // après le dépliage du groupe
     window.addEventListener('resize', placer);
-    window.addEventListener('scroll', placer, true);
-    return () => { clearTimeout(t); window.removeEventListener('resize', placer); window.removeEventListener('scroll', placer, true); };
+    return () => { clearTimeout(t); window.removeEventListener('resize', placer); };
   }, [guide.href]);
+  // L'entrée du menu visée : entourée tant que le post-it est là.
+  useEffect(() => {
+    const lien = document.getElementById('lien-etape-suivante');
+    lien?.classList.add('cible-etape');
+    return () => lien?.classList.remove('cible-etape');
+  });
   if (!pos) return null;
-  return (
-    <Link href={guide.lien} className="bulle-etape" style={{ top: pos.top, left: pos.left }}>
-      <span className="badge-suivante" aria-hidden="true">{guide.numero}</span>
-      <span className="pile" style={{ gap: 2 }}><b>{guide.texte}</b><small>Votre étape suivante</small></span>
-    </Link>
-  );
+  return createPortal(
+    <Link href={guide.lien} className={`post-it-etape ${pos.cote}`} style={{ top: pos.top, left: pos.left, width: pos.largeur }}>
+      <span className="post-it-numero" aria-hidden="true">{guide.numero}</span>
+      <span className="pile" style={{ gap: 4 }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>
+    </Link>, document.body);
 }

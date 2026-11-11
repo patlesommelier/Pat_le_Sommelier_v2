@@ -44,15 +44,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
 
   return (
     <>
-      <Entete titre="Simulateur">
-        {/* Le QR code de l'app : scanné avec son téléphone, on vit l'app comme un client, à table. */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span className="petit discret" style={{ maxWidth: 150, textAlign: 'right' }}>Scannez-le avec votre téléphone pour essayer l’app à table</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`/admin/${resto}/acces/qr?affichage=1`} alt="QR code de votre app" width={96} height={96}
-            style={{ padding: 6, borderRadius: 12, border: '1px solid var(--ligne)', background: '#FFFFFF' }} />
-        </div>
-      </Entete>
+      <Entete titre="Simulateur" />
       <div className="rangee">
         {/* Le téléphone : la vraie app, où l'on choisit ses plats comme un client ; la page suit le plat choisi. */}
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
@@ -63,9 +55,14 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
           </div>
         {!choisis.length ? (
           <section className="large" style={{ flex: '1 1 340px' }}>
+            {/* Le QR code de l'app : scanné avec son téléphone, on vit l'app comme un client, à table. */}
+            <div className="carte-bo" style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 16 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`/admin/${resto}/acces/qr?affichage=1`} alt="QR code de votre app" width={96} height={96}
+                style={{ padding: 6, borderRadius: 12, border: '1px solid var(--ligne)', background: '#FFFFFF', flexShrink: 0 }} />
+              <span className="discret" style={{ fontSize: 15 }}>Scannez-le avec votre téléphone pour essayer l’app à table, comme vos clients.</span>
+            </div>
             <div className="carte-bo pile">
-              <h2>Pourquoi ces vins ?</h2>
-              <p className="discret" style={{ margin: 0 }}>Choisissez un plat dans le téléphone, comme le ferait un client : Pat vous propose le vin de votre carte qui l’accompagne, et ici, vous voyez pourquoi.</p>
               <div className="ligne-actions">
                 <Link href={`/admin/${resto}/regles`} className="btn sec petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
                 <Link href={`/admin/${resto}/accords`} className="btn sec petit"><Icone nom="link" taille={16} />Revoir les accords</Link>
@@ -73,6 +70,13 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
             </div>
           </section>
         ) : <section className="large" style={{ flex: '1 1 340px' }}>
+            {/* Le QR code de l'app : scanné avec son téléphone, on vit l'app comme un client, à table. */}
+            <div className="carte-bo" style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 16 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`/admin/${resto}/acces/qr?affichage=1`} alt="QR code de votre app" width={96} height={96}
+                style={{ padding: 6, borderRadius: 12, border: '1px solid var(--ligne)', background: '#FFFFFF', flexShrink: 0 }} />
+              <span className="discret" style={{ fontSize: 15 }}>Scannez-le avec votre téléphone pour essayer l’app à table, comme vos clients.</span>
+            </div>
           <div className="carte-bo pile">
             <div>
               <h2>Pourquoi ces vins ?</h2>
