@@ -7,6 +7,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import s from './quidvinum.module.css';
 import { Inscription } from './Inscription';
+import { ConcentrationInscription } from './ConcentrationInscription';
 import { BarreInscription } from './BarreInscription';
 import { VideoDemo } from './VideoDemo';
 import { Icone } from '@/components/admin/Icone';
@@ -175,8 +176,9 @@ export async function PageQuidVinum() {
 
       {/* Inscription : une bulle rouge, juste après les avantages en cartes. */}
       <section className={s.final} aria-labelledby="h-insc" id="demarrer">
+        <ConcentrationInscription />
         <div className={s.large}>
-          <div className={s.bulle}>
+          <div className={s.bulle} data-bulle-inscription>
             <h2 id="h-insc">Rejoignez Quid Vinum.</h2>
             <p className={s.finalTexte}>La solution est gratuite. Votre espace est prêt en quelques minutes.</p>
             {/* Ce qui rassure au moment de s'inscrire. */}

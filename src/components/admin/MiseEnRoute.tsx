@@ -97,7 +97,7 @@ export function MiseEnRoute({ resto, app, exemple, verifier }: {
             <p className="discret" style={{ margin: 0, fontSize: 15, flex: '1 1 160px' }}>Vos clients le scannent avec leur téléphone : Pat les conseille à table.</p>
           </div>
           <div className="ligne-actions">
-            <Link href={`/admin/${resto}/acces/chevalet`} className="btn">Imprimer un chevalet de table</Link>
+            <Link href={`/admin/${resto}/chevalet`} className="btn">Imprimer un chevalet de table</Link>
             <a href={`/admin/${resto}/acces/qr?format=png`} download className="btn sec petit">Télécharger l’image</a>
           </div>
         </article>

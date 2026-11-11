@@ -28,10 +28,11 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   const [replies, setReplies] = useState<Record<string, boolean>>({});
   // Groupe de la page ouverte : déplié d'office, mais on peut quand même le replier (pour cette visite).
   const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
-  // Première arrivée dans le simulateur après l'inscription (?bienvenue=1) : « Cartes et menus » déplié, et « Gérer la
-  // carte des vins » marqué comme l'étape suivante.
-  const premiereVisite = sp?.get('bienvenue') === '1' && /\/simulateur$/.test(chemin);
-  const suivante = premiereVisite ? etapes.find((e) => /\/carte$/.test(e.href))?.href : undefined;
+  // Premiers pas après l'inscription, une bulle sur l'entrée du menu de l'étape suivante (son groupe est déplié) :
+  // 2. dans le simulateur (?bienvenue=1) : « Vérifiez votre carte des vins » ;
+  // 3. puis dans la carte des vins (arrivé par la bulle 2, retenu pour cette visite) : « Imprimez votre chevalet de table ».
+  const guide = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
+  const suivante = guide?.href;
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && (courant(e.href) || e.href === suivante));
   const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
   const basculer = (g: string) => {
@@ -64,18 +65,39 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
 
         </Fragment>
       ))}
-      {suivante && <BulleEtape href={suivante} />}
+      {guide && <BulleEtape guide={guide} />}
       {admin?.length ? <div className="section">Pat</div> : null}
       {admin?.map((l) => <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}><span className="bo-num" style={{ border: 0 }}><Icone nom="users" /></span>{l.libelle}</Link>)}
     </nav>
   );
 }
 
+type Guide = { href: string; lien: string; numero: number; texte: string };
+const CLE_GUIDE = 'pat-guide-chevalet';
+
+/** L'étape suivante des premiers pas, selon la page ouverte (voir NavLiens). */
+function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | null {
+  const carte = etapes.find((e) => /\/carte$/.test(e.href))?.href;
+  const chevalet = etapes.find((e) => /\/chevalet$/.test(e.href))?.href;
+  const surCarte = Boolean(carte && chemin === carte);
+  const [etape3, setEtape3] = useState(false);
+  useEffect(() => {
+    try {
+      if (chevalet && chemin.startsWith(chevalet)) { sessionStorage.removeItem(CLE_GUIDE); setEtape3(false); return; }
+      if (surCarte && bienvenue) sessionStorage.setItem(CLE_GUIDE, '1');
+      setEtape3(surCarte && (bienvenue || sessionStorage.getItem(CLE_GUIDE) === '1'));
+    } catch { setEtape3(surCarte && bienvenue); }
+  }, [chemin, bienvenue, surCarte, chevalet]);
+  if (bienvenue && /\/simulateur$/.test(chemin) && carte) return { href: carte, lien: `${carte}?bienvenue=1`, numero: 2, texte: 'Vérifiez votre carte des vins' };
+  if (etape3 && chevalet) return { href: chevalet, lien: chevalet, numero: 3, texte: 'Imprimez votre chevalet de table' };
+  return null;
+}
+
 /**
- * Encart « étape suivante » (première visite du simulateur) : une bulle posée au-dessus de « Gérer la carte des vins »,
- * sa flèche pointée vers le bas sur l'entrée du menu.
+ * Encart « étape suivante » des premiers pas : une bulle posée au-dessus de l'entrée du menu de l'étape suivante,
+ * sa flèche pointée vers le bas sur cette entrée.
  */
-function BulleEtape({ href }: { href: string }) {
+function BulleEtape({ guide }: { guide: Guide }) {
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   useEffect(() => {
     const placer = () => {
@@ -87,12 +109,12 @@ function BulleEtape({ href }: { href: string }) {
     window.addEventListener('resize', placer);
     window.addEventListener('scroll', placer, true);
     return () => { clearTimeout(t); window.removeEventListener('resize', placer); window.removeEventListener('scroll', placer, true); };
-  }, [href]);
+  }, [guide.href]);
   if (!pos) return null;
   return (
-    <Link href={href} className="bulle-etape" style={{ top: pos.top, left: pos.left }}>
-      <span className="badge-suivante" aria-hidden="true">2</span>
-      <span className="pile" style={{ gap: 2 }}><b>Vérifiez votre carte des vins</b><small>Votre étape suivante</small></span>
+    <Link href={guide.lien} className="bulle-etape" style={{ top: pos.top, left: pos.left }}>
+      <span className="badge-suivante" aria-hidden="true">{guide.numero}</span>
+      <span className="pile" style={{ gap: 2 }}><b>{guide.texte}</b><small>Votre étape suivante</small></span>
     </Link>
   );
 }
