@@ -617,3 +617,16 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .prix-carte .champ-prix input { width: 76px; padding: 5px 8px; font-weight: 700; color: var(--texte); }
 .prix-ok { color: var(--vert); font-weight: 700; }
 .prix-erreur { color: var(--rouge); font-size: 12px; white-space: normal; max-width: 160px; }
+.badge-suivante { margin-left: auto; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--rouge); color: #FFFFFF;
+  font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; animation: suivante 1.6s ease-in-out 3; }
+@keyframes suivante { 50% { transform: scale(1.08); } }
+@media (prefers-reduced-motion: reduce) { .badge-suivante { animation: none; } }
+.bulle-etape { position: fixed; z-index: 60; transform: translateY(-100%); display: flex; align-items: center; gap: 10px; width: max-content; max-width: 240px;
+  padding: 10px 14px 10px 10px; border-radius: 14px; background: var(--encre); color: #FFFFFF !important; text-decoration: none;
+  box-shadow: 0 12px 30px -12px rgba(36, 31, 32, .5); font-size: 14px; line-height: 1.3; animation: bulle-arrive .35s ease-out both; }
+.bulle-etape small { opacity: .8; font-size: 12px; }
+/* Flèche vers le bas, sur l'icône de l'entrée du menu. */
+.bulle-etape::after { content: ''; position: absolute; left: 20px; bottom: -8px; border: 8px solid transparent; border-bottom: 0; border-top-color: var(--encre); }
+.bulle-etape .badge-suivante { margin-left: 0; background: var(--rouge); animation: none; }
+@keyframes bulle-arrive { from { opacity: 0; transform: translateY(calc(-100% - 6px)); } }
+@media (prefers-reduced-motion: reduce) { .bulle-etape { animation: none; } }

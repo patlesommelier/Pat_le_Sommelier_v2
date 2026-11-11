@@ -51,7 +51,7 @@ export function MiseEnRoute({ resto, app, exemple, verifier }: {
             </div>
           ) : <p className="discret" style={{ margin: 0 }}>Choisissez un de vos plats : Pat vous propose le vin de votre carte qui l’accompagne, et vous dit pourquoi.</p>}
           <div className="ligne-actions">
-            <Link href={`/admin/${resto}/simulateur?bienvenue=1`} className="btn">Ouvrir le simulateur →</Link>
+            <Link href={`/admin/${resto}/simulateur`} className="btn">Ouvrir le simulateur →</Link>
             <a href={app} target="_blank" rel="noopener" className="btn sec petit">Ouvrir l’app comme un client</a>
           </div>
         </article>

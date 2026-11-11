@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { Icone } from '@/components/admin/Icone';
 import { ApercuApp } from '@/components/admin/ApercuApp';
 import { requete } from '@/lib/db';
-import { Entete, Etat, Points, Vignette, euros } from '@/components/admin/Ui';
+import { Entete, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
-import { getPlatsBO, getRegleDuJour } from '@/lib/admin/donnees';
-import { pourquoiPas, pourquoiRetenu } from '@/lib/admin/explications';
+import { getPlatsBO } from '@/lib/admin/donnees';
+import { pourquoiRetenu } from '@/lib/admin/explications';
 import { accordsVisibles, getCandidats, getReglages } from '@/lib/donnees';
 import { selectionner, tourSuivant } from '@/lib/selection';
 
@@ -14,18 +14,17 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const bienvenue = sp.bienvenue === '1';
-  const [plats, R, u, jour, avecAccords] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant(),
-    // Arrivée après l'inscription : un plat dont l'accord est parlant (celui de la règle du jour), plutôt que le premier du menu.
-    bienvenue && !sp.plat ? getRegleDuJour(resto, { exemple: true }) : null,
+  const [plats, R, u, avecAccords] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant(),
     // Plats que l'app sait montrer (au moins un accord visible des clients) : le téléphone n'ouvre jamais une page vide.
     requete<{ plat_id: string }>('select distinct plat_id from accord where restaurant_id = $1 and statut = any($2)', [resto, accordsVisibles()])
       .then((r) => new Set(r.map((x) => x.plat_id)))]);
   // Score et rankings : cuisine interne, montrés à Pat seulement. Le restaurant voit le rang et la note /5.
   const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
-  // Sans plat demandé : celui de la règle du jour, sinon le premier plat du menu qui a des accords.
-  const parDefaut = jour?.plat_id ?? actifs.find((p) => avecAccords.has(p.id))?.id ?? actifs[0]?.id;
-  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [parDefaut]).filter((id) => actifs.some((p) => p.id === id)) as string[];
+  // Sans plat demandé : le premier plat du menu qui a des accords. Arrivée après l'inscription : aucun, le téléphone montre
+  // le menu de l'app et le restaurateur choisit lui-même son plat, comme un client.
+  const parDefaut = bienvenue ? undefined : actifs.find((p) => avecAccords.has(p.id))?.id ?? actifs[0]?.id;
+  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : parDefaut ? [parDefaut] : []).filter((id) => actifs.some((p) => p.id === id)) as string[];
   const arelire = sp.arelire === '1';
   const tour = Math.max(1, Math.min(5, Number(sp.tour) || 1));
   const statuts = arelire ? ['valide', 'propose'] : accordsVisibles();
@@ -39,9 +38,6 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
     liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite && choisis.length === 1, R.plafondBulles, R.bullesApres);
     proposes.push(...liste.map((r) => r.vin.id));
   }
-  const tour2 = new Set(tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles, R.bullesApres).map((r) => r.vin.id));
-  const deja = new Set(proposes);
-  const ecartes = sel.classement.filter((c) => !deja.has(c.vin.id)).slice(0, 6);
   const elimines = candidats.filter((c) => choisis.every((p) => typeof c.notes[p] === 'number') && Math.min(...choisis.map((p) => c.notes[p])) <= R.noteEliminatoire).length;
   const plusieurs = choisis.length > 1;
   const nomPlat = (id: string) => { const p = actifs.find((x) => x.id === id); return p?.nom_court ?? p?.nom ?? id; };
@@ -49,30 +45,34 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   return (
     <>
       <Entete titre="Simulateur">
-        <Link href={`/${resto}`} target="_blank" className="btn sec"><Icone nom="out" taille={18} />Ouvrir l’app</Link>
+        {/* Le QR code de l'app : scanné avec son téléphone, on vit l'app comme un client, à table. */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <span className="petit discret" style={{ maxWidth: 150, textAlign: 'right' }}>Scannez-le avec votre téléphone pour essayer l’app à table</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`/admin/${resto}/acces/qr?affichage=1`} alt="QR code de votre app" width={96} height={96}
+            style={{ padding: 6, borderRadius: 12, border: '1px solid var(--ligne)', background: '#FFFFFF' }} />
+        </div>
       </Entete>
-      {/* Arrivée après l'inscription : les accords sont prêts, voici ce que les clients verront. */}
-      {bienvenue && (
-        <section className="carte-bo rappel-inventaire" aria-labelledby="bienvenue-simulateur">
-          <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
-            <span className="surtitre">Vos accords sont prêts</span>
-            <b id="bienvenue-simulateur" style={{ fontSize: 19 }}>Voici ce que vos clients verront</b>
-            <span className="petit">Le téléphone montre votre app : touchez l’écran pour choisir un autre plat. Pat vous propose le vin de votre carte qui l’accompagne, et vous dit pourquoi.</span>
-          </div>
-          <Link href={`/admin/${resto}`} className="btn">Continuer vers mon espace →</Link>
-        </section>
-      )}
       <div className="rangee">
         {/* Le téléphone : la vraie app, où l'on choisit ses plats comme un client ; la page suit le plat choisi. */}
-        {choisis[0] && (
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
             <span className="surtitre">L’app de vos clients</span>
             <ApercuApp resto={resto} garder={bienvenue ? { bienvenue: '1' } : {}}
-              src={!avecAccords.has(choisis[0]) ? `/${resto}` : `/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
-            <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>Touchez l’écran pour choisir un autre plat.</span>
+              src={!choisis[0] || !avecAccords.has(choisis[0]) ? `/${resto}` : `/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
+            <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>{choisis[0] ? 'Touchez l’écran pour choisir un autre plat.' : 'Touchez l’écran pour choisir un plat.'}</span>
           </div>
-        )}
-        <section className="large" style={{ flex: '1 1 340px' }}>
+        {!choisis.length ? (
+          <section className="large" style={{ flex: '1 1 340px' }}>
+            <div className="carte-bo pile">
+              <h2>Pourquoi ces vins ?</h2>
+              <p className="discret" style={{ margin: 0 }}>Choisissez un plat dans le téléphone, comme le ferait un client : Pat vous propose le vin de votre carte qui l’accompagne, et ici, vous voyez pourquoi.</p>
+              <div className="ligne-actions">
+                <Link href={`/admin/${resto}/regles`} className="btn sec petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
+                <Link href={`/admin/${resto}/accords`} className="btn sec petit"><Icone nom="link" taille={16} />Revoir les accords</Link>
+              </div>
+            </div>
+          </section>
+        ) : <section className="large" style={{ flex: '1 1 340px' }}>
           <div className="carte-bo pile">
             <div>
               <h2>Pourquoi ces vins ?</h2>
@@ -93,15 +93,6 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                 </li>
               ))}
             </ol>
-            {ecartes.length > 0 && (
-              <div className="pile" style={{ gap: 8, padding: 14, borderRadius: 12, background: 'var(--fond)' }}>
-                <span className="surtitre" style={{ color: 'var(--discret)' }}>Juste après</span>
-                {ecartes.map((c) => {
-                  const [t, k] = pourquoiPas(c, R, liste, tour2);
-                  return <span key={c.vin.id} style={{ fontSize: 13.5, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}><span>{c.vin.libelle} <span className="discret">({interne ? `${c.note} · ${c.score}` : `${c.note}/5`})</span></span><Etat type={k}>{t}</Etat></span>;
-                })}
-              </div>
-            )}
             <span className="discret" style={{ fontSize: 13 }}>{elimines} vin{elimines > 1 ? 's' : ''} trop faible{elimines > 1 ? 's' : ''} avec {plusieurs ? 'ces plats' : 'ce plat'}{exclus.size ? ` · ${exclus.size} vin${exclus.size > 1 ? 's' : ''} que vous avez retiré${exclus.size > 1 ? 's' : ''}` : ''}.</span>
             <div className="ligne-actions">
               <Link href={`/admin/${resto}/regles`} className="btn sec petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
@@ -109,7 +100,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
             </div>
             {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">{!plusieurs && !avecAccords.has(choisis[0]) ? 'Pat n’a pas encore d’accord pour ce plat : ouvrez « Revoir les accords » pour les préparer.' : `Aucun accord ${arelire ? '' : 'validé '}pour ${plusieurs ? 'ces plats' : 'ce plat'}${arelire ? '.' : ' : relisez ses accords pour que vos clients voient des vins.'}`}</p>}
           </div>
-        </section>
+        </section>}
       </div>
     </>
   );
