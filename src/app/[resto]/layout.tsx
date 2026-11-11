@@ -7,6 +7,7 @@ import { couleurDuLogo } from '@/lib/couleur-logo';
 import { getRestaurant } from '@/lib/donnees';
 import { appOuverte } from '@/lib/ouverture';
 import { requete } from '@/lib/db';
+import { utilisateurReel } from '@/lib/admin/auth';
 import { reparerLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
@@ -72,10 +73,20 @@ export default async function LayoutRestaurant({ children, params }: { children:
   }
   // Première ouverture de l'app (le QR code vient d'être scanné) : notée une seule fois.
   await requete('update restaurant set premier_scan_le = now() where id = $1 and premier_scan_le is null', [restaurant.id]);
+  // Premier client : la même ouverture, mais pas par l'équipe du restaurant ni par Quid Vinum (« Essayer comme un client »).
+  if (!(await estEquipe(restaurant.id))) {
+    await requete('update restaurant set premier_client_le = now() where id = $1 and premier_client_le is null', [restaurant.id]);
+  }
   return (
     <div className={classe} style={theme}>
       {children}
       <BarrePat restaurant={restaurant.id} nom={restaurant.nom} />
     </div>
   );
+}
+
+/** Visiteur connecté à l'espace de ce restaurant, ou super-admin : ce n'est pas un client. */
+async function estEquipe(restaurantId: string) {
+  const u = await utilisateurReel().catch(() => null);
+  return Boolean(u && (u.admin || u.restaurants.includes(restaurantId)));
 }

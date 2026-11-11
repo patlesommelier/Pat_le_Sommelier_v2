@@ -9,13 +9,16 @@ export interface RestaurantBO {
   statut: string; origine: string; page_accueil: string; categories_carte: string[]; couleur_impression: string | null; design_app: string | null; logo_impression_url: string | null; design_impression: string | null;
   /** Gestion des stocks : alerte « stock bas » à ce nombre de bouteilles (ou moins). */
   stock_limite_basse: number;
+  /** Mise en route : première ouverture de l'app par un client ; fermeture du bandeau « Suivez vos stocks ». */
+  premier_client_le: string | null; cave_annonce_fermee_le: string | null; cree_le: string;
   /** Date du dernier inventaire validé (page Inventaire) ; null : jamais. */
   inventaire_le: string | null;
 }
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, stock_limite_basse, inventaire_le::text as inventaire_le
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, stock_limite_basse, inventaire_le::text as inventaire_le,
+            premier_client_le::text as premier_client_le, cave_annonce_fermee_le::text as cave_annonce_fermee_le, cree_le::text as cree_le
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }
@@ -258,4 +261,15 @@ export async function getRegleDuJour(id: string): Promise<RegleDuJour | null> {
     vin: { libelle: r.vin_libelle, nom_vin: r.nom_vin, vin_texte: r.vin_texte, appellation_texte: r.appellation_texte, appellation_nom: r.appellation_nom,
       producteur: r.producteur, cepages: r.cepages, millesime: r.millesime, etiquette_url: r.etiquette_url, presentation: r.presentation },
   };
+}
+
+/** Mise en route : ce que la lecture des cartes n'a pas trouvé (vins et plats proposés sans prix), pour une vérification rapide. */
+export async function aVerifierLecture(id: string) {
+  const [vins, plats] = await Promise.all([
+    requete<{ id: string; nom: string }>(
+      `select id, libelle as nom from vin_carte where restaurant_id = $1 and disponible and prix is null and prix_verre is null order by ordre nulls last, libelle`, [id]),
+    requete<{ id: string; nom: string }>(
+      `select id, nom from plat where restaurant_id = $1 and actif and prix is null and coalesce(prix_variantes, '') = '' order by ordre nulls last, nom`, [id]),
+  ]);
+  return { vins, plats };
 }

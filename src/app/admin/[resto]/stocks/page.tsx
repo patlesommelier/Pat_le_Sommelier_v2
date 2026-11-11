@@ -22,7 +22,9 @@ const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'],
 
 export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string; distributeur?: string; nouveau?: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto);
+  const u = await exigerAcces(resto);
+  // Le restaurant est venu voir sa cave : le bandeau « Suivez vos stocks avec Pat » du tableau de bord a fait son travail.
+  if (!u.admin) await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and premier_client_le is not null and cave_annonce_fermee_le is null', [resto]);
   const { filtre, ajoute, commander, ok, erreur, ajout, distributeur, nouveau } = await searchParams;
   if (ajout === '1') redirect(`/admin/${resto}/trouver-vin`); // anciens liens (?ajout=1) : la page Ajouter un vin
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);

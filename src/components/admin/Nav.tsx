@@ -9,7 +9,9 @@ export type EtatEtape = 'fait' | 'encours' | 'afaire';
 /** Étape du menu de gauche, rangée sous son groupe ; un outil (icône) n'est pas une étape à cocher. */
 export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?: string; icone?: string;
   /** Pastille de notification : nombre au chargement et adresse qui le relit. */
-  notif?: { n: number; source: string } }
+  notif?: { n: number; source: string };
+  /** Entrée qui vient d'apparaître (la Gestion de cave après le premier client) : pastille « Nouveau ». */
+  nouveau?: boolean }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
@@ -42,7 +44,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
             <button type="button" className="section section-repliable" aria-expanded={!cache(e.groupe)} onClick={() => basculer(e.groupe!)}>
               {e.groupe}
               {/* Groupe replié qui cache une notification (commandes) : un point rouge le signale. */}
-              {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && (x.notif?.n ?? 0) > 0) && <span className="point-notif" aria-label="Nouveauté" />}
+              {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && ((x.notif?.n ?? 0) > 0 || x.nouveau)) && <span className="point-notif" aria-label="Nouveauté" />}
               <svg className="fleche-section" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
             </button>)}
           {!cache(e.groupe) && <Link href={e.href} className="bo-lien" aria-current={courant(e.href)}>
@@ -52,6 +54,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
               </span>
             )}
             {e.libelle}
+            {e.nouveau && <span className="badge-nouveau">Nouveau</span>}
             {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
           </Link>}
         </Fragment>

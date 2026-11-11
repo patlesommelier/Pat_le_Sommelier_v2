@@ -255,3 +255,21 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
     .filter((v) => !photo || (photo === 'avec') === Boolean(v.etiquette_url));
   return { lignes: vins.slice(page * 50, page * 50 + 50), total: vins.length };
 }
+
+/** Super-admin : la mise en route des restaurants inscrits seuls sur 60 jours (du formulaire au premier client). */
+export async function suiviMiseEnRoute() {
+  const [[chiffres], restos] = await Promise.all([
+    requete<{ commencees: number; comptes: number; ouvertes: number; clients: number; delai_median_h: number | null }>(
+      `select (select count(*)::int from inscription where cree_le > now() - interval '60 days') as commencees,
+              count(*)::int as comptes,
+              count(*) filter (where statut = 'en_service')::int as ouvertes,
+              count(premier_client_le)::int as clients,
+              (percentile_cont(0.5) within group (order by extract(epoch from premier_client_le - cree_le) / 3600))::float as delai_median_h
+         from restaurant where origine = 'inscription' and cree_le > now() - interval '60 days'`),
+    requete<{ id: string; nom: string; statut: string; cree_le: string; premier_client_le: string | null; relances: number }>(
+      `select id, nom, statut::text, cree_le::text, premier_client_le::text,
+              ((relance_1_le is not null)::int + (relance_2_le is not null)::int) as relances
+         from restaurant where origine = 'inscription' and cree_le > now() - interval '60 days' order by cree_le desc limit 30`),
+  ]);
+  return { chiffres, restos };
+}

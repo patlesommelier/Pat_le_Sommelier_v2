@@ -1,0 +1,120 @@
+import Link from 'next/link';
+import { fermerAnnonceCave } from '@/app/admin/actions';
+import type { RegleDuJour } from '@/lib/admin/donnees';
+import { titreCarte } from '@/lib/admin/intitule';
+import { sansContenance } from '@/lib/format';
+
+const pl = (n: number, s: string, p = `${s}s`) => `${n} ${n > 1 ? p : s}`;
+const MAX = 5;
+
+/**
+ * Tableau de bord d'un restaurant inscrit seul, tant qu'aucun client n'a encore ouvert l'app : trois pas pour être prêt.
+ * 1. Voir ce que ses clients vont vivre (un vrai accord de sa carte), et l'essayer comme un client.
+ * 2. Vérifier ce que la lecture des cartes n'a pas trouvé (vins et plats sans prix).
+ * 3. Poser le QR code sur les tables.
+ */
+export function MiseEnRoute({ resto, app, exemple, verifier }: {
+  resto: string; app: string; exemple: RegleDuJour | null; verifier: { vins: { id: string; nom: string }[]; plats: { id: string; nom: string }[] };
+}) {
+  const vin = exemple && titreCarte(exemple.vin);
+  const manques = verifier.vins.length + verifier.plats.length;
+  return (
+    <section className="pile" style={{ gap: 18 }} aria-labelledby="mise-en-route">
+      <div className="pile" style={{ gap: 6 }}>
+        <span className="surtitre">Votre mise en route</span>
+        <h2 id="mise-en-route" style={{ fontSize: 26 }}>Votre app est prête : plus que 3 pas</h2>
+        <p className="discret" style={{ margin: 0, fontSize: 15.5 }}>Ce bloc disparaît dès que votre premier client aura utilisé l’app.</p>
+      </div>
+
+      <div className="mise-en-route">
+        {/* 1. Le moment « waouh » : un vrai plat, un vrai vin de sa carte, et l'explication de Pat. */}
+        <article className="carte-bo pile" style={{ gap: 14 }}>
+          <span className="pas-mise-en-route">1</span>
+          <h3 style={{ fontSize: 20 }}>Voyez ce que vos clients vont vivre</h3>
+          {exemple && vin ? (
+            <div className="pile" style={{ gap: 10, padding: 16, borderRadius: 14, background: 'var(--fond)', border: '1px solid var(--ligne)' }}>
+              <span className="surtitre">Le client choisit : {exemple.plat}</span>
+              <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                {exemple.vin.etiquette_url && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={exemple.vin.etiquette_url} alt="" style={{ width: 56, maxHeight: 84, objectFit: 'contain', borderRadius: 6, flexShrink: 0 }} />
+                )}
+                <div className="pile" style={{ gap: 2 }}>
+                  <span className="discret" style={{ fontSize: 13.5 }}>Pat lui propose</span>
+                  <b style={{ fontSize: 17 }}>{vin.titre}</b>
+                  {vin.sousTitre && <span className="discret" style={{ fontSize: 14 }}>{vin.sousTitre}</span>}
+                </div>
+              </div>
+              {exemple.explication && (
+                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.5, paddingLeft: 12, borderLeft: '3px solid var(--rouge)' }}>{sansContenance(exemple.explication)}</p>
+              )}
+            </div>
+          ) : <p className="discret" style={{ margin: 0 }}>Choisissez un de vos plats : Pat vous propose le vin de votre carte qui l’accompagne, et vous dit pourquoi.</p>}
+          <a href={app} target="_blank" rel="noopener" className="btn" style={{ alignSelf: 'flex-start' }}>Essayer comme un client →</a>
+        </article>
+
+        {/* 2. Vérification rapide : seulement ce que la lecture des cartes n'a pas trouvé. */}
+        <article className="carte-bo pile" style={{ gap: 14 }}>
+          <span className="pas-mise-en-route">2</span>
+          <h3 style={{ fontSize: 20 }}>Vérifiez la lecture de vos cartes</h3>
+          {manques === 0 ? (
+            <p style={{ margin: 0 }}><span className="etat ok">✓ Tout est en ordre</span> Pat a trouvé un prix pour tous vos vins et tous vos plats.</p>
+          ) : (
+            <>
+              <p className="discret" style={{ margin: 0, fontSize: 15 }}>
+                Pat n’a pas trouvé de prix pour {[verifier.vins.length && pl(verifier.vins.length, 'vin'), verifier.plats.length && pl(verifier.plats.length, 'plat')].filter(Boolean).join(' et ')}. Complétez-les en un clic :
+              </p>
+              <ul className="pile liste-a-verifier">
+                {verifier.vins.slice(0, MAX).map((v) => (
+                  <li key={v.id}><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}`}>{v.nom}</Link><span className="discret">vin sans prix</span></li>
+                ))}
+                {verifier.plats.slice(0, MAX).map((p) => (
+                  <li key={p.id}><Link href={`/admin/${resto}/menu?plat=${encodeURIComponent(p.id)}#plat-${p.id}`}>{p.nom}</Link><span className="discret">plat sans prix</span></li>
+                ))}
+              </ul>
+              {(verifier.vins.length > MAX || verifier.plats.length > MAX) && (
+                <span className="discret" style={{ fontSize: 14 }}>
+                  Et d’autres : voir {verifier.vins.length > MAX && <Link href={`/admin/${resto}/carte`}>la carte des vins</Link>}
+                  {verifier.vins.length > MAX && verifier.plats.length > MAX && ' et '}
+                  {verifier.plats.length > MAX && <Link href={`/admin/${resto}/menu`}>le menu</Link>}.
+                </span>
+              )}
+            </>
+          )}
+        </article>
+
+        {/* 3. Le QR code sur les tables. */}
+        <article className="carte-bo pile" style={{ gap: 14 }}>
+          <span className="pas-mise-en-route">3</span>
+          <h3 style={{ fontSize: 20 }}>Posez le QR code sur vos tables</h3>
+          <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`/admin/${resto}/acces/qr?affichage=1`} alt="Votre QR code" width={112} height={112}
+              style={{ padding: 6, borderRadius: 12, border: '1px solid var(--ligne)', background: '#FFFFFF' }} />
+            <p className="discret" style={{ margin: 0, fontSize: 15, flex: '1 1 160px' }}>Vos clients le scannent avec leur téléphone : Pat les conseille à table.</p>
+          </div>
+          <div className="ligne-actions">
+            <Link href={`/admin/${resto}/acces/chevalet`} className="btn">Imprimer un chevalet de table</Link>
+            <a href={`/admin/${resto}/acces/qr?format=png`} download className="btn sec petit">Télécharger l’image</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+}
+
+/** Après le premier client : la Gestion de cave apparaît dans le menu, annoncée une fois par ce bandeau (à fermer). */
+export function AnnonceCave({ resto }: { resto: string }) {
+  return (
+    <section className="carte-bo rappel-inventaire" aria-label="Gestion de cave">
+      <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
+        <b style={{ fontSize: 17 }}>Votre premier client a demandé conseil à Pat !</b>
+        <span className="petit">Suivez maintenant vos stocks avec Pat : vos bouteilles, l’inventaire et vos commandes aux distributeurs, dans « Gestion de cave ».</span>
+      </div>
+      <div className="ligne-actions">
+        <Link href={`/admin/${resto}/stocks`} className="btn">Suivre mes stocks →</Link>
+        <form action={fermerAnnonceCave.bind(null, resto)}><button type="submit" className="btn fantome petit">Fermer</button></form>
+      </div>
+    </section>
+  );
+}

@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { ilYA, inventaireARefaire } from '@/lib/admin/inventaire';
 import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
 import { Entete } from '@/components/admin/Ui';
-import { getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
+import { aVerifierLecture, getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
+import { AnnonceCave, MiseEnRoute } from '@/components/admin/MiseEnRoute';
+import { adresseApp } from '@/lib/admin/qr';
 import { exigerAcces, prenomUtilisateur } from '@/lib/admin/auth';
 import { titreCarte } from '@/lib/admin/intitule';
 import { avecAppreciation } from '@/lib/appreciation';
@@ -18,6 +20,10 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
   if (!r) notFound();
   // Après l'inscription : « Bienvenue », préparation des accords et QR code, à la place du résumé.
   const accueil = Boolean(bienvenue) || (r.origine === 'inscription' && r.statut === 'mise_en_place');
+  // Restaurant inscrit seul, app ouverte, mais pas encore de premier client : « Votre mise en route » (3 pas).
+  const miseEnRoute = !accueil && r.origine === 'inscription' && !r.premier_client_le;
+  const annonceCave = !accueil && r.origine === 'inscription' && Boolean(r.premier_client_le) && !r.cave_annonce_fermee_le && !u.admin;
+  const [app, verifier] = miseEnRoute ? await Promise.all([adresseApp(r.id), aVerifierLecture(r.id)]) : [null, null];
   const resume: [number, string, string][] = [[s.plats, 'plat', 'plats au menu'], [s.vins, 'vin', 'vins à la carte'], [s.accords, 'accord', 'accords mets-vins']];
   const vin = jour && titreCarte(jour.vin);
   return (
@@ -25,6 +31,9 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       {accueil ? <BienvenueRestaurant restaurantId={r.id} /> : <>
       <Entete titre={prenom ? `Bonjour ${prenom}` : 'Bonjour'}
         texte="Votre espace Quid Vinum : votre menu et votre carte des vins, vos vins en stock et vos commandes à vos distributeurs. Pour les accords mets-vins, Pat le Sommelier accompagne vos clients : chacun choisit son plat sur son téléphone et découvre le vin de votre carte qui l’accompagne le mieux, comme le ferait un sommelier à table. Vous gardez la main : relisez les accords que Pat a préparés, ajustez ses règles à votre service, choisissez l’apparence de l’app et imprimez le QR code à poser sur vos tables." />
+      {miseEnRoute && app && verifier && <MiseEnRoute resto={r.id} app={app} exemple={jour} verifier={verifier} />}
+      {/* Après le premier client : la Gestion de cave apparaît, annoncée une fois (bandeau à fermer). */}
+      {annonceCave && <AnnonceCave resto={r.id} />}
       {/* Résumé général du restaurant */}
       <div className="carte-bo sticker" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -41,7 +50,7 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       </>}
 
       {/* Inventaire à refaire (jamais fait, ou plus de 7 jours) : un message, avec le lien vers la page Inventaire. */}
-      {!accueil && s.vins > 0 && inventaireARefaire(r.inventaire_le) && (
+      {!accueil && !miseEnRoute && !annonceCave && s.vins > 0 && inventaireARefaire(r.inventaire_le) && (
         <section className="carte-bo rappel-inventaire" aria-label="Inventaire">
           <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
             <b style={{ fontSize: 17 }}>{r.inventaire_le ? `Dernier inventaire ${ilYA(r.inventaire_le)}` : 'Faites votre premier inventaire'}</b>
@@ -52,7 +61,7 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       )}
 
       {/* La règle de Pat du jour : une de ses règles, illustrée par le meilleur vin de la carte pour un plat du menu. */}
-      {jour && vin && (
+      {!miseEnRoute && jour && vin && (
         <section className="carte-bo" style={{ display: 'flex', flexDirection: 'column', gap: 18 }} aria-labelledby="regle-du-jour">
           <div className="pile" style={{ gap: 8 }}>
             <span className="surtitre" id="regle-du-jour">La règle de Pat du jour</span>

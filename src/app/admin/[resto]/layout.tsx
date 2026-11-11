@@ -14,19 +14,20 @@ import { requete } from '@/lib/db';
 const LIBELLES_MENU: Record<string, string> = { Menu: 'Gérer le menu', 'Carte des vins': 'Gérer la carte des vins', Accords: 'Gérer les accords mets/vins' };
 const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus', Sommelier: 'Cartes et menus', App: 'App client' };
 // « Gestion de cave » (Ma cave, Inventaire, Ajouter un vin, Commandes, Distributeurs) : sous « Cartes et menus ».
-function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
+function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'cachee' | 'nouvelle' | 'visible' = 'visible'): Etape[] {
   const base = `/admin/${resto}`;
   const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['inventaire', 'Faire l’inventaire', 'check'], ['trouver-vin', 'Ajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Gestion de cave', icone,
       // Commandes : pastille quand Quid Vinum a changé le statut d’une commande ou joint une facture depuis la dernière visite.
-      ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}) }));
+      ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}),
+      ...(chemin === 'stocks' && cave === 'nouvelle' ? { nouveau: true } : {}) }));
   // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.
   const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Paramètres', icone: 'reglages' };
   // Centre d'impression (logo et couleur des impressions, menu, suggestions, carte des vins) : entre l'app client et les paramètres.
   const impression: Etape = { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', groupe: 'Centre d’impression', icone: 'imprimante' };
   // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et les paramètres.
   const cartes = etapes.filter((e) => e.groupe === 'Cartes et menus');
-  return [...cartes, ...stocks, ...etapes.filter((e) => e.groupe !== 'Cartes et menus'), impression, parametres];
+  return [...cartes, ...(cave === 'cachee' ? [] : stocks), ...etapes.filter((e) => e.groupe !== 'Cartes et menus'), impression, parametres];
 }
 
 export default async function LayoutRestaurant({ children, params }: { children: React.ReactNode; params: Promise<{ resto: string }> }) {
@@ -36,9 +37,13 @@ export default async function LayoutRestaurant({ children, params }: { children:
     // Avis de Quid Vinum pas encore fermés par le restaurant (pas montrés au super-admin, qui ne doit pas les fermer à sa place).
     u.admin ? [] : requete<Avis>('select id, titre, texte, lien from avis_restaurant where restaurant_id = $1 and lu_le is null order by cree_le', [resto])]);
   if (!r) notFound();
+  // Mise en route : un restaurant inscrit seul ne voit la Gestion de cave qu'après son premier client (« Nouveau » 7 jours).
+  // (Un restaurant qui fait déjà son inventaire la garde.)
+  const cave = r.origine !== 'inscription' || r.inventaire_le ? 'visible' : !r.premier_client_le ? 'cachee'
+    : Date.now() - Date.parse(r.premier_client_le) < 7 * 864e5 ? 'nouvelle' : 'visible';
   return (
     <Coque utilisateur={u} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}
-      etapes={avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir)}>
+      etapes={avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir, cave)}>
       <AvisRestaurant resto={resto} avis={avis} />
       {children}
     </Coque>

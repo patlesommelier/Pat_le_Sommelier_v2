@@ -597,3 +597,17 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .apercus-carte { flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: 12px; max-width: 100%; }
 .apercu-carte { flex: 0 0 auto; width: 294px; max-width: 100%; height: 416px; overflow: hidden; border: 1px solid var(--ligne); border-radius: 8px; background: #FFFFFF; box-shadow: 0 10px 24px -16px rgba(0, 0, 0, 0.35); }
 .apercu-carte iframe { width: 840px; height: 1188px; border: 0; transform: scale(0.35); transform-origin: top left; }
+
+/* Tableau de bord : « Votre mise en route » (restaurant inscrit, avant son premier client) : trois pas côte à côte. */
+.mise-en-route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 1100px) { .mise-en-route { grid-template-columns: 1fr; } }
+.pas-mise-en-route { width: 34px; height: 34px; border-radius: 50%; background: var(--encre); color: #FFFFFF; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center; }
+.liste-a-verifier { list-style: none; margin: 0; padding: 0; gap: 0; border-top: 1px solid var(--ligne); }
+.liste-a-verifier li { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--ligne); font-size: 15px; }
+.liste-a-verifier li .discret { font-size: 13.5px; white-space: nowrap; }
+.badge-nouveau { margin-left: auto; padding: 2px 8px; border-radius: 999px; background: var(--rouge); color: #FFFFFF; font-size: 11.5px; font-weight: 700; letter-spacing: .02em; }
+/* Super-admin : entonnoir de la mise en route (inscriptions → comptes → apps ouvertes → premier client). */
+.entonnoir { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 800px) { .entonnoir { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.entonnoir-pas { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: 14px; background: var(--fond); border: 1px solid var(--ligne); }

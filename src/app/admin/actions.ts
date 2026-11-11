@@ -1124,3 +1124,10 @@ export async function fermerAvis(resto: string, id: string) {
   await requete('update avis_restaurant set lu_le = now() where id = $1 and restaurant_id = $2 and lu_le is null', [id, resto]);
   revalidatePath(`/admin/${resto}`, 'layout');
 }
+
+/** Tableau de bord : le restaurant ferme le bandeau « Suivez vos stocks avec Pat » (il ne revient plus). */
+export async function fermerAnnonceCave(resto: string) {
+  await exigerAcces(resto);
+  await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and cave_annonce_fermee_le is null', [resto]);
+  revalidatePath(`/admin/${resto}`);
+}
