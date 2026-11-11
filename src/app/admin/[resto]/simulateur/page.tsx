@@ -51,7 +51,6 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
             <span className="surtitre">L’app de vos clients</span>
             <ApercuApp resto={resto} garder={bienvenue ? { bienvenue: '1' } : {}}
               src={!choisis[0] || !avecAccords.has(choisis[0]) ? `/${resto}` : `/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
-            <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>{choisis[0] ? 'Touchez l’écran pour choisir un autre plat.' : 'Touchez l’écran pour choisir un plat.'}</span>
           </div>
         {!choisis.length ? (
           <section className="large" style={{ flex: '1 1 340px' }}>

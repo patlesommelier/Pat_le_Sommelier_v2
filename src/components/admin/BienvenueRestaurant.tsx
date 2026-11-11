@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { PatAttente } from '@/components/PatAttente';
 import { AstucesPat } from '@/components/AstucesPat';
+import { reprendrePremiersPas } from '@/components/accueil/Preparation';
 
 type Etat = { restaurant?: string; termine?: boolean; preparation: { statut: string; total: number; faits: number } };
 
@@ -14,7 +15,7 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
   const fini = Boolean(etat.termine);
   useEffect(() => {
     // Accords prêts : le restaurateur arrive dans le simulateur, sur un de ses plats, pour voir ce que ses clients verront.
-    if (fini) { router.replace(`/admin/${restaurantId}/simulateur?bienvenue=1`); return; }
+    if (fini) { reprendrePremiersPas(); router.replace(`/admin/${restaurantId}/simulateur?bienvenue=1`); return; }
     let actif = true;
     const lire = async () => {
       const r = await fetch(`/api/restaurants/${restaurantId}/preparation`, { cache: 'no-store' });

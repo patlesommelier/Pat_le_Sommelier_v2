@@ -22,7 +22,7 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
       if (!r?.ok || !actif) return;
       const e: Etat | null = await r.json().catch(() => null);
       if (!e?.preparation) return;
-      if (e.termine) { window.location.href = arrivee; return; } // tous les accords prêts : au simulateur
+      if (e.termine) { reprendrePremiersPas(); window.location.href = arrivee; return; } // tous les accords prêts : au simulateur
       setEtat(e);
     };
     lire();
@@ -62,4 +62,9 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
       </span>
     </div>
   );
+}
+
+/** Nouvelle inscription : les premiers pas (post-it 1, 2, 3) repartent de zéro, même dans un onglet qui a déjà servi. */
+export function reprendrePremiersPas() {
+  try { Object.keys(sessionStorage).filter((k) => k.startsWith('pat-guide-')).forEach((k) => sessionStorage.removeItem(k)); } catch { /* rien */ }
 }
