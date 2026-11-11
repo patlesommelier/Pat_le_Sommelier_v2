@@ -24,6 +24,9 @@ export async function GET(_: Request, { params }: { params: Promise<{ id: string
     restaurant: r.statut,
     scanne: r.scanne, // l'app des clients a été ouverte (QR code scanné)
     // « bloque » : génération terminée (relances automatiques comprises) mais des plats sans accord : Pat s'en occupe.
-    preparation: { statut: r.statut === 'en_service' ? 'fait' : r.en_cours ? 'en_cours' : r.prets < r.total ? 'bloque' : 'en_cours', total: r.total, faits: r.prets },
+    // (Le restaurant ouvre dès la moitié des plats prêts : « fait » seulement quand la préparation est vraiment terminée.)
+    preparation: { statut: r.en_cours ? 'en_cours' : r.prets < r.total ? (r.statut === 'en_service' ? 'fait' : 'bloque') : r.statut === 'en_service' ? 'fait' : 'en_cours', total: r.total, faits: r.prets },
+    // Plus aucun plat en préparation : l'arrivée dans le simulateur peut se faire (tous les plats ont leurs accords).
+    termine: r.statut === 'en_service' && !r.en_cours,
   }, { headers: { 'cache-control': 'no-store' } });
 }

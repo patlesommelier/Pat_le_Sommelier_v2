@@ -6,11 +6,11 @@ import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
 import { AstucesPat } from '@/components/AstucesPat';
 
-type Etat = { restaurant?: string; scanne?: boolean; preparation: { statut: string; total: number; faits: number } };
+type Etat = { restaurant?: string; scanne?: boolean; termine?: boolean; preparation: { statut: string; total: number; faits: number } };
 
 export function Preparation({ restaurantId }: { restaurantId: string }) {
   const [etat, setEtat] = useState<Etat>({ preparation: { statut: 'en_cours', total: 0, faits: 0 } });
-  const pret = etat.restaurant === 'en_service';
+  const pret = Boolean(etat.termine);
   const espace = `/admin/${restaurantId}`;
   // Première arrivée dans l'espace : le simulateur, avec le bandeau « Vos accords sont prêts ».
   const arrivee = `${espace}/simulateur?bienvenue=1`;
@@ -22,7 +22,7 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
       if (!r?.ok || !actif) return;
       const e: Etat | null = await r.json().catch(() => null);
       if (!e?.preparation) return;
-      if (e.restaurant === 'en_service') { window.location.href = arrivee; return; } // accords prêts : au simulateur
+      if (e.termine) { window.location.href = arrivee; return; } // tous les accords prêts : au simulateur
       setEtat(e);
     };
     lire();

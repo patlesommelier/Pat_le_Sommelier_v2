@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Icone } from '@/components/admin/Icone';
 import { ApercuApp } from '@/components/admin/ApercuApp';
+import { requete } from '@/lib/db';
 import { Entete, Etat, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getPlatsBO, getRegleDuJour } from '@/lib/admin/donnees';
@@ -13,13 +14,18 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const bienvenue = sp.bienvenue === '1';
-  const [plats, R, u, jour] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant(),
+  const [plats, R, u, jour, avecAccords] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant(),
     // Arrivée après l'inscription : un plat dont l'accord est parlant (celui de la règle du jour), plutôt que le premier du menu.
-    bienvenue && !sp.plat ? getRegleDuJour(resto) : null]);
+    bienvenue && !sp.plat ? getRegleDuJour(resto, { exemple: true }) : null,
+    // Plats que l'app sait montrer (au moins un accord visible des clients) : le téléphone n'ouvre jamais une page vide.
+    requete<{ plat_id: string }>('select distinct plat_id from accord where restaurant_id = $1 and statut = any($2)', [resto, accordsVisibles()])
+      .then((r) => new Set(r.map((x) => x.plat_id)))]);
   // Score et rankings : cuisine interne, montrés à Pat seulement. Le restaurant voit le rang et la note /5.
   const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
-  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [jour?.plat_id ?? actifs[0]?.id]).filter((id) => actifs.some((p) => p.id === id)) as string[];
+  // Sans plat demandé : celui de la règle du jour, sinon le premier plat du menu qui a des accords.
+  const parDefaut = jour?.plat_id ?? actifs.find((p) => avecAccords.has(p.id))?.id ?? actifs[0]?.id;
+  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [parDefaut]).filter((id) => actifs.some((p) => p.id === id)) as string[];
   const arelire = sp.arelire === '1';
   const tour = Math.max(1, Math.min(5, Number(sp.tour) || 1));
   const statuts = arelire ? ['valide', 'propose'] : accordsVisibles();
@@ -62,7 +68,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
             <span className="surtitre">L’app de vos clients</span>
             <ApercuApp resto={resto} garder={bienvenue ? { bienvenue: '1' } : {}}
-              src={`/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
+              src={!avecAccords.has(choisis[0]) ? `/${resto}` : `/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
             <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>Touchez l’écran pour choisir un autre plat.</span>
           </div>
         )}
@@ -101,7 +107,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
               <Link href={`/admin/${resto}/regles`} className="btn sec petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
               <Link href={`/admin/${resto}/accords${choisis[0] ? `?plat=${encodeURIComponent(choisis[0])}` : ''}`} className="btn sec petit"><Icone nom="link" taille={16} />Revoir les accords</Link>
             </div>
-            {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">Aucun accord {arelire ? '' : 'validé '}pour {plusieurs ? 'ces plats' : 'ce plat'}{arelire ? '.' : ' : relisez ses accords pour que vos clients voient des vins.'}</p>}
+            {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">{!plusieurs && !avecAccords.has(choisis[0]) ? 'Pat n’a pas encore d’accord pour ce plat : ouvrez « Revoir les accords » pour les préparer.' : `Aucun accord ${arelire ? '' : 'validé '}pour ${plusieurs ? 'ces plats' : 'ce plat'}${arelire ? '.' : ' : relisez ses accords pour que vos clients voient des vins.'}`}</p>}
           </div>
         </section>
       </div>

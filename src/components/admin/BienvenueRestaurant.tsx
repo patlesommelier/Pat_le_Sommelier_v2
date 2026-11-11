@@ -6,12 +6,12 @@ import { useEffect, useState } from 'react';
 import { PatAttente } from '@/components/PatAttente';
 import { AstucesPat } from '@/components/AstucesPat';
 
-type Etat = { restaurant?: string; preparation: { statut: string; total: number; faits: number } };
+type Etat = { restaurant?: string; termine?: boolean; preparation: { statut: string; total: number; faits: number } };
 
 export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) {
   const router = useRouter();
   const [etat, setEtat] = useState<Etat>({ preparation: { statut: 'en_cours', total: 0, faits: 0 } });
-  const fini = etat.restaurant === 'en_service';
+  const fini = Boolean(etat.termine);
   useEffect(() => {
     // Accords prêts : le restaurateur arrive dans le simulateur, sur un de ses plats, pour voir ce que ses clients verront.
     if (fini) { router.replace(`/admin/${restaurantId}/simulateur?bienvenue=1`); return; }
