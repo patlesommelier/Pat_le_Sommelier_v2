@@ -72,7 +72,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   );
 }
 
-type Guide = { href: string; numero: 2 | 3; texte: string; postIt: boolean; fermer: () => void };
+type Guide = { href: string; numero: 1 | 2 | 3; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
 const CLE_GUIDE = 'pat-guide-chevalet';
 /** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
 const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
@@ -88,7 +88,7 @@ const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
 function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | null {
   const carte = etapes.find((e) => /\/carte$/.test(e.href))?.href;
   const chevalet = etapes.find((e) => /\/chevalet$/.test(e.href))?.href;
-  const [etat, setEtat] = useState<{ numero: 2 | 3; visible: boolean; ferme: boolean } | null>(null);
+  const [etat, setEtat] = useState<{ numero: 2 | 3; visible: boolean; ferme: boolean; accueil: boolean } | null>(null);
   const [fermes, setFermes] = useState(0); // relance l'effet quand on ferme le post-it
   useEffect(() => {
     let t: ReturnType<typeof setTimeout> | undefined;
@@ -104,18 +104,25 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | 
       const numero = Number(etape) as 2 | 3;
       const reste = Number(lire(`debut-${numero}`) ?? Date.now()) + ATTENTE[numero] - Date.now();
       const ferme = lire(`ferme-${numero}`) === '1';
-      setEtat({ numero, visible: reste <= 0, ferme });
-      if (reste > 0) t = setTimeout(() => setEtat({ numero, visible: true, ferme }), reste);
+      // Étape 1 : à l'arrivée dans le simulateur, en attendant le post-it 2 (sauf s'il a été fermé).
+      const accueil = numero === 2 && /\/simulateur$/.test(chemin) && lire('ferme-1') !== '1';
+      setEtat({ numero, visible: reste <= 0, ferme, accueil });
+      if (reste > 0) t = setTimeout(() => setEtat({ numero, visible: true, ferme, accueil: false }), reste);
     } catch { setEtat(null); }
     return () => clearTimeout(t);
   }, [chemin, bienvenue, carte, chevalet, fermes]);
+  const fermer = (n: number) => () => { try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1'); } catch { /* rien */ } setFermes((x) => x + 1); };
+  if (etat && !etat.visible && etat.accueil) return {
+    href: '', numero: 1, place: 'haut-droite', postIt: true, fermer: fermer(1),
+    titre: 'Bienvenue dans le simulateur', texte: 'Testez l’application comme si vous étiez un client du restaurant.',
+  };
   if (!etat?.visible) return null;
   const href = etat.numero === 2 ? carte : chevalet;
   if (!href) return null;
   return {
     href, numero: etat.numero, postIt: !etat.ferme,
     texte: etat.numero === 2 ? 'Vérifiez votre carte des vins' : 'Imprimez votre chevalet de table',
-    fermer: () => { try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${etat.numero}`, '1'); } catch { /* rien */ } setFermes((n) => n + 1); },
+    fermer: fermer(etat.numero),
   };
 }
 
@@ -124,9 +131,14 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | 
  * téléphone). Un clic le ferme ; l'entrée reste entourée.
  */
 function BulleEtape({ guide }: { guide: Guide }) {
-  const [pos, setPos] = useState<{ top: number; left: number; largeur: number; cote: 'droite' | 'dessous' } | null>(null);
+  const [pos, setPos] = useState<{ top: number; left: number; largeur: number; cote: 'droite' | 'dessous' | 'haut' } | null>(null);
   useEffect(() => {
     const placer = () => {
+      if (guide.place === 'haut-droite') {
+        const largeur = Math.min(290, window.innerWidth - 32);
+        setPos({ top: 14, left: document.documentElement.clientWidth - largeur - 18, largeur, cote: 'haut' });
+        return;
+      }
       const r = document.getElementById('lien-etape-suivante')?.getBoundingClientRect();
       const nav = document.querySelector('.bo-nav')?.getBoundingClientRect();
       if (!r || !r.height || !nav) { setPos(null); return; }
@@ -140,13 +152,15 @@ function BulleEtape({ guide }: { guide: Guide }) {
     const t = setTimeout(placer, 300); // après le dépliage du groupe
     window.addEventListener('resize', placer);
     return () => { clearTimeout(t); window.removeEventListener('resize', placer); };
-  }, [guide.href]);
+  }, [guide.href, guide.place]);
   if (!pos) return null;
   return createPortal(
     <button type="button" onClick={guide.fermer} className={`post-it-etape ${pos.cote}`} style={{ top: pos.top, left: pos.left, width: pos.largeur }}
-      title="Cliquez pour fermer" aria-label={`Étape suivante : ${guide.texte}. Fermer`}>
+      title="Cliquez pour fermer" aria-label={`${guide.titre ?? 'Étape suivante'} : ${guide.texte} Fermer`}>
       <span className="post-it-numero" aria-hidden="true">{guide.numero}</span>
-      <span className="pile" style={{ gap: 4, textAlign: 'left' }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>
+      {guide.titre
+        ? <span className="pile" style={{ gap: 4, textAlign: 'left' }}><b>{guide.titre}</b><span style={{ fontSize: 15 }}>{guide.texte}</span></span>
+        : <span className="pile" style={{ gap: 4, textAlign: 'left' }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>}
       <span className="post-it-fermer" aria-hidden="true">✕</span>
     </button>, document.body);
 }
