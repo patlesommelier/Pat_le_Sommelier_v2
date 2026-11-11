@@ -111,7 +111,14 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | 
     } catch { setEtat(null); }
     return () => clearTimeout(t);
   }, [chemin, bienvenue, carte, chevalet, fermes]);
-  const fermer = (n: number) => () => { try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1'); } catch { /* rien */ } setFermes((x) => x + 1); };
+  const fermer = (n: number) => () => {
+    try {
+      sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1');
+      // Post-it 1 fermé : la minute avant l'étape 2 (post-it et entrée entourée) repart de ce moment.
+      if (n === 1) sessionStorage.setItem(`${CLE_GUIDE}-debut-2`, String(Date.now()));
+    } catch { /* rien */ }
+    setFermes((x) => x + 1);
+  };
   if (etat && !etat.visible && etat.accueil) return {
     href: '', numero: 1, place: 'haut-droite', postIt: true, fermer: fermer(1),
     titre: 'Bienvenue dans le simulateur', texte: 'Testez l’application comme si vous étiez un client du restaurant.',
@@ -135,8 +142,13 @@ function BulleEtape({ guide }: { guide: Guide }) {
   useEffect(() => {
     const placer = () => {
       if (guide.place === 'haut-droite') {
+        // Sur le téléphone du simulateur, à cheval sur son bord droit ; sans téléphone, en haut à droite de la page.
         const largeur = Math.min(290, window.innerWidth - 32);
-        setPos({ top: 14, left: document.documentElement.clientWidth - largeur - 18, largeur, cote: 'haut' });
+        const tel = document.querySelector('iframe[title="Aperçu de l’app client"]')?.getBoundingClientRect();
+        if (tel && tel.width) {
+          const left = Math.min(tel.right + window.scrollX - 70, document.documentElement.clientWidth - largeur - 12);
+          setPos({ top: tel.top + window.scrollY + 280, left: Math.max(12, left), largeur, cote: 'haut' });
+        } else setPos({ top: 14, left: document.documentElement.clientWidth - largeur - 18, largeur, cote: 'haut' });
         return;
       }
       const r = document.getElementById('lien-etape-suivante')?.getBoundingClientRect();

@@ -2,7 +2,7 @@
 // carte et accords (préparation), producteurs à valider, distributeurs (et verrou sur un seul distributeur Quid Vinum), suppression.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { changerStatutRestaurant, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
+import { changerStatutRestaurant, envoyerCarteComplete, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { CopierLien } from '@/components/admin/CopierLien';
 import { etapesRestaurant } from '../../../[resto]/etapes';
@@ -40,6 +40,10 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
   const x = infos.find((i) => i.id === id)!;
   const etapes = bo ? etapesRestaurant(bo, resume).filter((e) => e.libelle !== 'Simulateur') : [];
   const lienApp = await adresseApp(id);
+  // « La carte est complète » : étiquettes encore manquantes (vins proposés), et date du dernier envoi.
+  const [complete] = await requete<{ manquent: number; envoye: string | null }>(
+    `select (select count(distinct libelle)::int from vin_carte where restaurant_id = $1 and disponible and etiquette_url is null) as manquent,
+            (select carte_complete_le::text from restaurant where id = $1) as envoye`, [id]);
   // Remise du restaurant chez chaque distributeur actif (la sienne, sinon celle du distributeur), sur le prix public.
   const remises = new Map((await requete<{ distributeur_id: string; remise: number; propre: boolean }>(
     `select f.distributeur_id, coalesce(f.remise, d.remise_restaurant)::float8 as remise, f.remise is not null as propre
@@ -87,6 +91,16 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
           </form>
         )}
         <p className="petit" style={{ margin: 0 }}>Producteurs à valider sur sa carte : {x.producteurs ? <Link href="/admin/super/producteurs">{x.producteurs}</Link> : 'aucun'}.</p>
+        {/* Carte relue et étiquettes toutes là : on l'annonce au restaurant (post-it à sa prochaine visite). */}
+        <form action={envoyerCarteComplete.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center', borderTop: '1px solid var(--ligne)', paddingTop: 12 }}>
+          <button className="btn petit" disabled={complete.manquent > 0}>Envoyer « La carte est complète »</button>
+          <span className="petit" style={{ color: complete.manquent ? 'var(--ocre)' : 'var(--discret)' }}>
+            {complete.manquent
+              ? <>Encore <Link href={`/admin/${id}/carte`}>{complete.manquent} étiquette{complete.manquent > 1 ? 's' : ''} à trouver</Link> avant de pouvoir l’envoyer.</>
+              : complete.envoye ? `Déjà envoyé le ${new Date(complete.envoye).toLocaleDateString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'long' })} : vous pouvez le renvoyer.`
+              : 'Toutes les étiquettes sont là : le restaurant verra un post-it à sa prochaine visite.'}
+          </span>
+        </form>
       </section>
 
       <section className="carte-bo pile">

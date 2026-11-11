@@ -33,8 +33,8 @@ export async function contrasteLogo(url: string | null | undefined, fond: string
 }
 
 /**
- * Couleur du fond d'un logo à fond opaque et clair (une image carrée avec son fond blanc ou crème, pas un dessin détouré) :
- * la moyenne de ses quatre coins, s'ils sont opaques, clairs et semblables. null : logo détouré, fond foncé, ou illisible.
+ * Couleur du fond d'un logo à fond opaque et clair (une image avec son fond blanc ou crème, pas un dessin détouré) : la couleur
+ * qui domine son pourtour. null : logo détouré, fond foncé, ou illisible.
  * Un tel logo ne se pose pas sur un bandeau de couleur : le bandeau prend la couleur de son fond.
  */
 export async function fondDuLogo(url: string | null | undefined): Promise<string | null> {
@@ -43,13 +43,22 @@ export async function fondDuLogo(url: string | null | undefined): Promise<string
     const octets = url.startsWith('/')
       ? await fs.readFile(path.join(process.cwd(), 'public', decodeURIComponent(url.split('?')[0])))
       : Buffer.from(await (await fetch(url, { signal: AbortSignal.timeout(8000) })).arrayBuffer());
-    const { data, info } = await sharp(octets).resize(60, 60, { fit: 'fill' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-    const px = (x: number, y: number) => { const i = (y * info.width + x) * 4; return [data[i], data[i + 1], data[i + 2], data[i + 3]]; };
-    const coins = [px(3, 3), px(info.width - 4, 3), px(3, info.height - 4), px(info.width - 4, info.height - 4)]; // un peu à l'intérieur des bords
-    if (!coins.every(([r, g, b, a]) => a >= 240 && luminance(r, g, b) > 0.7)) return null;
-    const ecart = Math.max(...[0, 1, 2].map((k) => Math.max(...coins.map((c) => c[k])) - Math.min(...coins.map((c) => c[k]))));
-    if (ecart > 24) return null; // coins différents : pas un fond uni
-    const moy = (k: number) => Math.round(coins.reduce((t, c) => t + c[k], 0) / 4).toString(16).padStart(2, '0');
+    // Tout le pourtour de l'image (un logo recadré au plus près a des lettres dans ses coins) : la couleur qui en couvre
+    // au moins la moitié, opaque et claire, à 24 près, est le fond.
+    const { data, info } = await sharp(octets).resize(120, 120, { fit: 'fill', kernel: 'nearest' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const bord: number[][] = [];
+    const px = (x: number, y: number) => { const i = (y * info.width + x) * 4; bord.push([data[i], data[i + 1], data[i + 2], data[i + 3]]); };
+    for (let x = 0; x < info.width; x++) { px(x, 1); px(x, info.height - 2); }
+    for (let y = 2; y < info.height - 2; y++) { px(1, y); px(info.width - 2, y); }
+    const proches = (a: number[], c: number[]) => Math.max(...[0, 1, 2].map((k) => Math.abs(a[k] - c[k]))) <= 24;
+    const clairs = bord.filter(([r, g, b, a]) => a >= 240 && luminance(r, g, b) > 0.7);
+    let meilleur: number[][] = [];
+    for (const c of clairs.filter((_, i) => i % 5 === 0)) {
+      const groupe = clairs.filter((a) => proches(a, c));
+      if (groupe.length > meilleur.length) meilleur = groupe;
+    }
+    if (meilleur.length < bord.length * 0.5) return null; // pas de fond uni : logo détouré, ou fond foncé
+    const moy = (k: number) => Math.round(meilleur.reduce((t, c) => t + c[k], 0) / meilleur.length).toString(16).padStart(2, '0');
     return `#${moy(0)}${moy(1)}${moy(2)}`.toUpperCase();
   } catch (e) {
     console.error('[impression] fond du logo illisible', url, (e as Error).message);

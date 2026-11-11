@@ -37,7 +37,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   const u = await exigerAcces(resto);
   const [r, resume, aVoir, avis] = await Promise.all([getRestaurantBO(resto), getResume(resto), u.admin ? 0 : commandesAVoir(resto),
     // Avis de Quid Vinum pas encore fermés par le restaurant (pas montrés au super-admin, qui ne doit pas les fermer à sa place).
-    u.admin ? [] : requete<Avis>('select id, titre, texte, lien from avis_restaurant where restaurant_id = $1 and lu_le is null order by cree_le', [resto])]);
+    u.admin ? [] : requete<Avis>('select id, titre, texte, lien, lien_libelle, forme from avis_restaurant where restaurant_id = $1 and lu_le is null order by cree_le', [resto])]);
   if (!r) notFound();
   // Mise en route : un restaurant inscrit seul ne voit la Gestion de cave qu'après son premier client (« Nouveau » 7 jours).
   // (Un restaurant qui fait déjà son inventaire la garde.)

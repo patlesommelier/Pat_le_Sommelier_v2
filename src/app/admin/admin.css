@@ -638,3 +638,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 
 .post-it-fermer { position: absolute; top: 8px; right: 10px; font-size: 13px; opacity: .55; }
 .post-it-etape:hover .post-it-fermer { opacity: 1; }
+/* Avis de Quid Vinum en post-it (« La carte est complète ») : en haut à droite, jusqu'à « Compris ». */
+.post-it-avis { position: fixed; top: 16px; right: 18px; width: min(300px, calc(100vw - 32px)); cursor: default; }
+.post-it-avis .post-it-numero { font-size: 22px; background: #2E7D4F; }
