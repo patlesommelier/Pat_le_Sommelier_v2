@@ -1,11 +1,11 @@
 // Bon de commande d'une commande de vin : le PDF, avec « Envoyer la commande » (puis le statut « Commande envoyée »).
 // On y arrive après avoir validé une commande ; une fois envoyée, retour à la liste des commandes.
+import { exigerCave } from '@/lib/admin/garde-cave';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { envoyerCommande, marquerEnvoyee } from '../../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
-import { exigerAcces } from '@/lib/admin/auth';
 import { getCommandes, getCoordonnees } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
@@ -23,7 +23,7 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
   const suite = (sp.suite ?? '').split(',').filter((x) => /^[0-9a-f-]{36}$/i.test(x));
   const rang = Number(sp.n) || 1, nombre = Number(sp.total) || suite.length + 1;
   const suivante = suite.length ? `/admin/${resto}/commandes/${suite[0]}?${new URLSearchParams({ suite: suite.slice(1).join(','), n: String(rang + 1), total: String(nombre) })}` : null;
-  await exigerAcces(resto);
+  await exigerCave(resto);
   const [commandes, coord] = await Promise.all([getCommandes(resto, ['ouverte', 'recue', 'annulee'], 500), getCoordonnees(resto)]);
   const c = commandes.find((x) => x.id === id);
   if (!c) notFound();

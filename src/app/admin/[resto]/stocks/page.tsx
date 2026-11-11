@@ -1,5 +1,6 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
+import { exigerCave } from '@/lib/admin/garde-cave';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { ajouterAuPanier, commanderPanier, enregistrerOrdreCave, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
@@ -12,7 +13,6 @@ import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
 import { Entete, Message } from '@/components/admin/Ui';
 import { requete } from '@/lib/db';
 import { euros } from '@/lib/bon-commande';
-import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { getCommandes, getFournisseurs, getPanier, getPrixAchat, stockBas } from '@/lib/admin/stocks';
 import { nomPourListe, regrouperVins } from '../carte/etats';
@@ -22,9 +22,9 @@ const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'],
 
 export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string; distributeur?: string; nouveau?: string }> }) {
   const { resto } = await params;
-  const u = await exigerAcces(resto);
-  // Le restaurant est venu voir sa cave : le bandeau « Suivez vos stocks avec Pat » du tableau de bord a fait son travail.
-  if (!u.admin) await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and premier_client_le is not null and cave_annonce_fermee_le is null', [resto]);
+  const u = await exigerCave(resto);
+  // Le restaurant est venu voir sa cave : le post-it 4 « Gérez votre cave » a fait son travail.
+  if (!u.admin) await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and cave_annonce_fermee_le is null', [resto]);
   const { filtre, ajoute, commander, ok, erreur, ajout, distributeur, nouveau } = await searchParams;
   if (ajout === '1') redirect(`/admin/${resto}/trouver-vin`); // anciens liens (?ajout=1) : la page Ajouter un vin
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);

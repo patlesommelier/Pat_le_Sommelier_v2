@@ -71,3 +71,26 @@ export function titreCarte(v: {
     .filter((x, i, t) => x && !t.slice(0, i).some((y) => y && ` ${cle(y)} `.includes(` ${cle(x)} `)) && !` ${cle(tete)} `.includes(` ${cle(x)} `));
   return { titre: [tete, millesime].filter(Boolean).join(' '), sousTitre: dessous.join(' · ') };
 }
+
+/**
+ * Intitulé sans redite : un passage répété juste après lui-même, aux accents, tirets et majuscules près, n'est gardé qu'une
+ * fois, sous sa forme la mieux écrite (« Châteauneuf-du-Pape CHATEAUNEUF DU PAPE » → « Châteauneuf-du-Pape »).
+ */
+export function sansRedite(libelle: string): string {
+  let mots = libelle.trim().split(/\s+/);
+  const criard = (s: string) => s === s.toUpperCase() && /[A-Z]/.test(s);
+  for (let i = 0; i < mots.length; i++) {
+    for (let j = i + 1; j < mots.length; j++) {
+      const a = mots.slice(i, j).join(' ');
+      if (!cle(a)) continue;
+      for (let k = j + 1; k <= mots.length; k++) {
+        const b = mots.slice(j, k).join(' ');
+        if (cle(a) !== cle(b)) continue;
+        const garde = criard(a) && !criard(b) ? b : a;
+        mots = [...mots.slice(0, i), ...garde.split(' '), ...mots.slice(k)];
+        return sansRedite(mots.join(' '));
+      }
+    }
+  }
+  return mots.join(' ');
+}

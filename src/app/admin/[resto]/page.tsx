@@ -4,7 +4,7 @@ import { ilYA, inventaireARefaire } from '@/lib/admin/inventaire';
 import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
 import { Entete } from '@/components/admin/Ui';
 import { aVerifierLecture, getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
-import { AnnonceCave, MiseEnRoute } from '@/components/admin/MiseEnRoute';
+import { MiseEnRoute } from '@/components/admin/MiseEnRoute';
 import { adresseApp } from '@/lib/admin/qr';
 import { caveVisible, prochaineEtape } from '@/lib/admin/prochaine-etape';
 import { commandesAVoir, stockBas } from '@/lib/admin/stocks';
@@ -26,11 +26,10 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
   const accueil = Boolean(bienvenue) || (r.origine === 'inscription' && r.statut === 'mise_en_place');
   // Restaurant inscrit seul, app ouverte, mais pas encore de premier client : « Votre mise en route » (3 pas).
   const miseEnRoute = !accueil && r.origine === 'inscription' && !r.premier_client_le;
-  const annonceCave = !accueil && r.origine === 'inscription' && Boolean(r.premier_client_le) && !r.cave_annonce_fermee_le && !u.admin;
   const [app, verifier, exemple] = miseEnRoute
     ? await Promise.all([adresseApp(r.id), aVerifierLecture(r.id), jour ?? getRegleDuJour(r.id, { exemple: true })]) : [null, null, null];
   // « Votre prochaine étape » : ni pendant la mise en route (ses 3 pas guident déjà), ni avec l'annonce de la cave.
-  const etape = !accueil && !miseEnRoute && !annonceCave ? await etapeDuRestaurant(r, s, u.admin) : null;
+  const etape = !accueil && !miseEnRoute ? await etapeDuRestaurant(r, s, u.admin) : null;
   const resume: [number, string, string][] = [[s.plats, 'plat', 'plats au menu'], [s.vins, 'vin', 'vins à la carte'], [s.accords, 'accord', 'accords mets-vins']];
   const vin = jour && titreCarte(jour.vin);
   return (
@@ -39,8 +38,6 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       <Entete titre={prenom ? `Bonjour ${prenom}` : 'Bonjour'}
         texte="Votre espace Quid Vinum : votre menu et votre carte des vins, vos vins en stock et vos commandes à vos distributeurs. Pour les accords mets-vins, Pat le Sommelier accompagne vos clients : chacun choisit son plat sur son téléphone et découvre le vin de votre carte qui l’accompagne le mieux, comme le ferait un sommelier à table. Vous gardez la main : relisez les accords que Pat a préparés, ajustez ses règles à votre service, choisissez l’apparence de l’app et imprimez le QR code à poser sur vos tables." />
       {miseEnRoute && app && verifier && <MiseEnRoute resto={r.id} app={app} exemple={exemple} verifier={verifier} />}
-      {/* Après le premier client : la Gestion de cave apparaît, annoncée une fois (bandeau à fermer). */}
-      {annonceCave && <AnnonceCave resto={r.id} />}
       {/* Sinon : une seule chose à faire maintenant, la plus urgente. */}
       {etape && (
         <section className="carte-bo rappel-inventaire" aria-labelledby="prochaine-etape">

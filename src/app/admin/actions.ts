@@ -1125,13 +1125,6 @@ export async function fermerAvis(resto: string, id: string) {
   revalidatePath(`/admin/${resto}`, 'layout');
 }
 
-/** Tableau de bord : le restaurant ferme le bandeau « Suivez vos stocks avec Pat » (il ne revient plus). */
-export async function fermerAnnonceCave(resto: string) {
-  await exigerAcces(resto);
-  await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and cave_annonce_fermee_le is null', [resto]);
-  revalidatePath(`/admin/${resto}`);
-}
-
 /**
  * Carte des vins (liste) : le prix de vente d'une contenance, changé directement dans le tableau.
  * Même règle que la fiche du vin : bouteille, ½, ¼, magnum sur la ligne de cette contenance ; le verre sur la ligne

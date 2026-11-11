@@ -1,11 +1,11 @@
 // Catalogue d'un distributeur Quid Vinum (Base des vins — Distributeurs → « Catalogue ») : tous ses vins, prix public et prix du restaurant (sa remise en haut).
 // Un vin peut être ajouté à « Vins » (pas encore sur la carte) ; il se commande ensuite avec le panier.
+import { exigerCave } from '@/lib/admin/garde-cave';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ajouterAuPanier, ajouterDuCatalogue } from '../../../stocks-actions';
 import { AjoutCatalogue, AjoutPanier } from '@/components/admin/Panier';
 import { Entete, Etat } from '@/components/admin/Ui';
-import { exigerAcces } from '@/lib/admin/auth';
 import { euros } from '@/lib/bon-commande';
 import { requete } from '@/lib/db';
 import { catalogueDistributeur, distributeursProposes } from '@/lib/distributeurs/donnees';
@@ -17,7 +17,7 @@ const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').to
 
 export default async function Catalogue({ params, searchParams }: { params: Promise<{ resto: string; distributeur: string }>; searchParams: Promise<{ q?: string; c?: string; n?: string }> }) {
   const { resto, distributeur } = await params;
-  await exigerAcces(resto);
+  await exigerCave(resto);
   const sp = await searchParams;
   const d = (await distributeursProposes(resto)).find((x) => x.id === distributeur);
   if (!d) notFound();

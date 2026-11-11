@@ -46,6 +46,16 @@ export function prochaineEtape(e: EtatRestaurant): ProchaineEtape | null {
   return null;
 }
 
-/** Gestion de cave visible : toujours, sauf pour un restaurant inscrit seul qui n'a encore eu ni client ni inventaire. */
-export const caveVisible = (r: { origine: string; premier_client_le: string | null; inventaire_le: string | null }) =>
-  r.origine !== 'inscription' || Boolean(r.inventaire_le) || Boolean(r.premier_client_le);
+/** Carte des vins validée par Quid Vinum (« La carte est complète ») ; d'office pour un restaurant créé par Quid Vinum. */
+export const carteValidee = (r: { origine: string; carte_complete_le?: string | null }) =>
+  r.origine !== 'inscription' || Boolean(r.carte_complete_le);
+
+/**
+ * Gestion de cave ouverte : toujours pour un restaurant créé par Quid Vinum ; pour un restaurant inscrit seul, une fois sa
+ * carte validée par Quid Vinum (avant, elle est grisée dans le menu).
+ */
+export const caveVisible = (r: { origine: string; premier_client_le?: string | null; inventaire_le?: string | null; carte_complete_le?: string | null }) =>
+  carteValidee(r);
+
+/** Message des entrées grisées (Gestion de cave, impression de la carte) tant que la carte n'est pas validée. */
+export const MESSAGE_CARTE_A_VALIDER = 'Le menu sera disponible dès que la liste des vins est validée, ceci prend 1 à 2 jours';

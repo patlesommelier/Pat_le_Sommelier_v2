@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { fermerAnnonceCave } from '@/app/admin/actions';
 import type { RegleDuJour } from '@/lib/admin/donnees';
 import { titreCarte } from '@/lib/admin/intitule';
 import { sansContenance } from '@/lib/format';
@@ -101,22 +100,6 @@ export function MiseEnRoute({ resto, app, exemple, verifier }: {
             <a href={`/admin/${resto}/acces/qr?format=png`} download className="btn sec petit">Télécharger l’image</a>
           </div>
         </article>
-      </div>
-    </section>
-  );
-}
-
-/** Après le premier client : la Gestion de cave apparaît dans le menu, annoncée une fois par ce bandeau (à fermer). */
-export function AnnonceCave({ resto }: { resto: string }) {
-  return (
-    <section className="carte-bo rappel-inventaire" aria-label="Gestion de cave">
-      <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
-        <b style={{ fontSize: 17 }}>Votre premier client a demandé conseil à Pat !</b>
-        <span className="petit">Suivez maintenant vos stocks avec Pat : vos bouteilles, l’inventaire et vos commandes aux distributeurs, dans « Gestion de cave ».</span>
-      </div>
-      <div className="ligne-actions">
-        <Link href={`/admin/${resto}/stocks`} className="btn">Suivre mes stocks →</Link>
-        <form action={fermerAnnonceCave.bind(null, resto)}><button type="submit" className="btn fantome petit">Fermer</button></form>
       </div>
     </section>
   );

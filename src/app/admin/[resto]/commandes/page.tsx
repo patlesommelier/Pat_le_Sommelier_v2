@@ -1,5 +1,6 @@
 // Gestion des stocks — Commandes de vin : les commandes ouvertes (bon de commande PDF, envoi au fournisseur, réception),
 // puis « + Nouvelle commande » : une fenêtre où l’on choisit le distributeur, puis les bouteilles (avec leur stock actuel).
+import { exigerCave } from '@/lib/admin/garde-cave';
 import Link from 'next/link';
 import { annulerCommande, creerCommande, creerCommandeQv, envoyerCommande, marquerEnvoyee, recevoirBouteilles } from '../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
@@ -9,7 +10,6 @@ import { Superposition } from '@/components/admin/Superposition';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
-import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { commandeVerrouillee, getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, marquerCommandesVues, stockBas, type Commande } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
@@ -30,7 +30,7 @@ const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string; catalogue?: string }> }) {
   const { resto } = await params;
-  const u = await exigerAcces(resto);
+  const u = await exigerCave(resto);
   const sp = await searchParams;
   // Le restaurant voit ses commandes : la pastille du menu s'efface (pas quand le super-admin regarde à sa place).
   if (!u.admin) await marquerCommandesVues(resto);

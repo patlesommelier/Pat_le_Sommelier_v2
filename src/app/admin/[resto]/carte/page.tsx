@@ -7,6 +7,7 @@ import { PictosVin } from '@/components/Pictos';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
+import { carteValidee } from '@/lib/admin/prochaine-etape';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
@@ -54,7 +55,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     <>
       <Entete titre="Carte des vins" texte="Vos vins, leurs contenances et leurs prix, dans l’ordre de votre carte. Pat les présente à vos clients et les accorde à vos plats.">
         <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les textes des vins</Link>
-        <BoutonCarteImprimee resto={resto} />
+        {(u?.admin || (restaurant && carteValidee(restaurant))) && <BoutonCarteImprimee resto={resto} />}
       </Entete>
       {choisi && sp.ok
         ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />

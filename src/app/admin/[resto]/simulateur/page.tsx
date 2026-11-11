@@ -48,7 +48,6 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
       <div className="rangee">
         {/* Le téléphone : la vraie app, où l'on choisit ses plats comme un client ; la page suit le plat choisi. */}
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
-            <span className="surtitre">L’app de vos clients</span>
             <ApercuApp resto={resto} garder={bienvenue ? { bienvenue: '1' } : {}}
               src={!choisis[0] || !avecAccords.has(choisis[0]) ? `/${resto}` : `/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
           </div>

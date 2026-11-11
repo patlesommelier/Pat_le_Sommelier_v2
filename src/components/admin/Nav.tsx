@@ -12,7 +12,11 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   /** Pastille de notification : nombre au chargement et adresse qui le relit. */
   notif?: { n: number; source: string };
   /** Entrée qui vient d'apparaître (la Gestion de cave après le premier client) : pastille « Nouveau ». */
-  nouveau?: boolean }
+  nouveau?: boolean;
+  /** Entrée grisée, non cliquable : le message montré au survol (ex. carte pas encore validée par Quid Vinum). */
+  desactive?: string;
+  /** Ma cave qui vient de s'ouvrir (carte validée) : post-it 4 « Gérez votre cave », jusqu'à la première visite ou sa fermeture. */
+  annonce?: boolean }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
@@ -31,7 +35,16 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
-  const guide = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
+  const premiersPas = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
+  // Post-it 4 : la cave vient de s'ouvrir (carte validée par Quid Vinum) ; pas par-dessus un autre post-it des premiers pas.
+  const cave = etapes.find((e) => e.annonce);
+  // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que Ma cave n'a pas été ouverte.
+  const [caveFermee, setCaveFermee] = useState(false);
+  useEffect(() => { try { setCaveFermee(sessionStorage.getItem(`${CLE_GUIDE}-ferme-4`) === '1'); } catch { /* rien */ } }, []);
+  const guide: Guide | null = premiersPas ?? (cave && !chemin.startsWith(cave.href) ? {
+    href: cave.href, numero: 4, postIt: !caveFermee, texte: 'Gérez votre cave : classez vos vins et indiquez votre stock',
+    fermer: () => { setCaveFermee(true); try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-4`, '1'); } catch { /* rien */ } },
+  } : null);
   const suivante = guide?.href;
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && (courant(e.href) || e.href === suivante));
   const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
@@ -52,7 +65,13 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
               {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && ((x.notif?.n ?? 0) > 0 || x.nouveau)) && <span className="point-notif" aria-label="Nouveauté" />}
               <svg className="fleche-section" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
             </button>)}
-          {!cache(e.groupe) && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
+          {!cache(e.groupe) && e.desactive && (
+            <span className="bo-lien bo-lien-desactive" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
+              {e.icone && <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span>}
+              <span>{e.libelle}</span>
+            </span>
+          )}
+          {!cache(e.groupe) && !e.desactive && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
             {e.icone ? <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span> : (
               <span className={`bo-num ${e.etat}`} aria-label={e.etat === 'fait' ? 'Terminé' : undefined}>
                 {e.etat === 'fait' ? <Icone nom="check" taille={14} epaisseur={2.4} /> : i + 1}
@@ -72,7 +91,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   );
 }
 
-type Guide = { href: string; numero: 1 | 2 | 3; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
+type Guide = { href: string; numero: 1 | 2 | 3 | 4; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
 const CLE_GUIDE = 'pat-guide-chevalet';
 /** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
 const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };

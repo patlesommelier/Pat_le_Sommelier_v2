@@ -641,3 +641,11 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 /* Avis de Quid Vinum en post-it (« La carte est complète ») : en haut à droite, jusqu'à « Compris ». */
 .post-it-avis { position: fixed; top: 16px; right: 18px; width: min(300px, calc(100vw - 32px)); cursor: default; }
 .post-it-avis .post-it-numero { font-size: 22px; background: #2E7D4F; }
+/* Entrée du menu grisée (carte pas encore validée) : non cliquable, le message s'affiche au survol. */
+.bo-lien-desactive { position: relative; cursor: not-allowed; }
+.bo-lien-desactive > span { opacity: .4; }
+.bo-lien-desactive:hover, .bo-lien-desactive:focus { background: transparent; }
+.bo-lien-desactive:hover::after, .bo-lien-desactive:focus::after { content: attr(data-info); position: absolute; z-index: 80; left: calc(100% + 10px); top: 50%;
+  transform: translateY(-50%); width: 240px; padding: 10px 12px; border-radius: 10px; background: #241F20; color: #FFFFFF; font-size: 13px; font-weight: 500;
+  line-height: 1.4; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5); pointer-events: none; }
+@media (max-width: 900px) { .bo-lien-desactive:hover::after, .bo-lien-desactive:focus::after { left: 12px; top: calc(100% + 6px); transform: none; } }

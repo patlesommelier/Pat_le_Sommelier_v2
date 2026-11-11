@@ -1,4 +1,6 @@
+import { sansRedite } from '@/lib/admin/intitule';
 import { exigerAcces } from '@/lib/admin/auth';
+import { impressionCarteOuverte } from '@/lib/admin/garde-cave';
 import { sansContenance } from '@/lib/format';
 import { contenanceDuFormat, grouperMemeVin, libelleCourt, reunirDoublons, tarifsDuGroupe } from '@/lib/contenances';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
@@ -24,7 +26,15 @@ const resume = (r: string | null) => (r ? r.replace(/\s*;\s*/g, ' ; ').trim().re
  */
 export async function GET(req: Request, { params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto);
+  const u = await exigerAcces(resto);
+  // Restaurant inscrit seul : la carte s'imprime une fois validée par Quid Vinum (« La carte est complète »).
+  if (!(await impressionCarteOuverte(resto, u.admin))) {
+    return new Response(`<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Carte en relecture</title></head>
+<body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui,sans-serif;background:#FFFFFF;color:#241F20;text-align:center;padding:24px">
+<div><h1 style="font-size:22px;margin:0 0 10px">Votre carte des vins est en relecture</h1>
+<p style="margin:0;font-size:15px;line-height:1.5">Quid Vinum vérifie vos vins et leurs étiquettes. Vous pourrez l’imprimer dès qu’elle sera validée.</p></div></body></html>`,
+      { status: 403, headers: { 'content-type': 'text/html; charset=utf-8' } });
+  }
   const sp = new URL(req.url).searchParams;
   const [brut] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_choix: string | null;
     logo_impression_url: string | null; design_impression: string | null }>(
@@ -54,7 +64,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     const tous = tarifsDuGroupe(groupe);
     const tarifs = tous.map((t) => ({ libelle: libelleCourt(t.code), prix: t.prix }));
     return {
-      id: v.id, nom: v.libelle, producteur: v.producteur,
+      id: v.id, nom: sansRedite(v.libelle), producteur: v.producteur,
       millesime: (groupe.find((l) => l.millesime)?.millesime ?? null)?.replace(/^NM$/, '').replace('/', '-') || null,
       contenance: v.format && !['75 cl', 'au verre'].includes(v.format) ? v.format : null,
       couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre, tarifs, auVerre: tous.some((t) => t.code === 'verre'),
@@ -77,7 +87,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     // sinon la couleur des titres.
     // Par défaut, couverture blanche avec le logo en petit (un grand bandeau de couleur coûte cher en encre).
     bandeauAuto: couv === 'auto',
-    fondBandeau: couv === 'blanc' ? '#FFFFFF' : couv === 'couleur' ? null : await fondDuLogo(r.logo_fonce_url ?? r.logo_url),
+    // Grand bandeau : la couleur de la carte, sauf pour un logo à fond opaque (fond blanc, crème…), dont le bandeau prend le fond.
+    fondBandeau: couv === 'blanc' ? '#FFFFFF' : await fondDuLogo(r.logo_fonce_url ?? r.logo_url),
     rappelPat: sp.get('rappel') !== '0',
     design,
   };
