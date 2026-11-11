@@ -14,7 +14,7 @@ import { Preparation } from './Preparation';
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
   carte: { depot: 'Déposez votre carte des vins pour son analyse', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
-  menu: { depot: 'Déposez votre menu pour son analyse', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
+  menu: { depot: 'Déposez votre menu, nous préparons les accords', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
 /** Zone de dépôt et, juste dessous, le bouton « Continuer → » pour passer à l'étape suivante. */

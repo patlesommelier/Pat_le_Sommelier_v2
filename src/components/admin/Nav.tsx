@@ -29,9 +29,8 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   const [replies, setReplies] = useState<Record<string, boolean>>({});
   // Groupe de la page ouverte : déplié d'office, mais on peut quand même le replier (pour cette visite).
   const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
-  // Premiers pas après l'inscription, une bulle sur l'entrée du menu de l'étape suivante (son groupe est déplié) :
-  // 2. dans le simulateur (?bienvenue=1) : « Vérifiez votre carte des vins » ;
-  // 3. puis dans la carte des vins (arrivé par la bulle 2, retenu pour cette visite) : « Imprimez votre chevalet de table ».
+  // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
+  // la montre, après un temps pour essayer la page (voir useGuide).
   const guide = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
   const suivante = guide?.href;
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && (courant(e.href) || e.href === suivante));
@@ -53,7 +52,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
               {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && ((x.notif?.n ?? 0) > 0 || x.nouveau)) && <span className="point-notif" aria-label="Nouveauté" />}
               <svg className="fleche-section" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
             </button>)}
-          {!cache(e.groupe) && <Link href={e.href} className="bo-lien" aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
+          {!cache(e.groupe) && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
             {e.icone ? <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span> : (
               <span className={`bo-num ${e.etat}`} aria-label={e.etat === 'fait' ? 'Terminé' : undefined}>
                 {e.etat === 'fait' ? <Icone nom="check" taille={14} epaisseur={2.4} /> : i + 1}
@@ -66,48 +65,68 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
 
         </Fragment>
       ))}
-      {guide && <BulleEtape guide={guide} />}
+      {guide?.postIt && <BulleEtape guide={guide} />}
       {admin?.length ? <div className="section">Pat</div> : null}
       {admin?.map((l) => <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}><span className="bo-num" style={{ border: 0 }}><Icone nom="users" /></span>{l.libelle}</Link>)}
     </nav>
   );
 }
 
-type Guide = { href: string; lien: string; numero: number; texte: string };
+type Guide = { href: string; numero: 2 | 3; texte: string; postIt: boolean; fermer: () => void };
 const CLE_GUIDE = 'pat-guide-chevalet';
+/** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
+const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
 
-/** L'étape suivante des premiers pas, selon la page ouverte (voir NavLiens). */
+/**
+ * Premiers pas, retenus pour la visite (cet onglet) :
+ * - arrivée dans le simulateur après l'inscription (?bienvenue=1) → étape 2, « Vérifiez votre carte des vins » ;
+ * - carte des vins ouverte (par le post-it ou par le menu) → étape 3, « Imprimez votre chevalet de table » ;
+ * - chevalet ouvert → fini.
+ * Pendant une étape : rien la première minute (deux pour l'étape 3), puis l'entrée du menu est entourée et un post-it
+ * apparaît à côté ; un clic sur le post-it le ferme, l'entrée reste entourée jusqu'à ce qu'on l'ouvre.
+ */
 function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | null {
   const carte = etapes.find((e) => /\/carte$/.test(e.href))?.href;
   const chevalet = etapes.find((e) => /\/chevalet$/.test(e.href))?.href;
-  const surCarte = Boolean(carte && chemin === carte);
-  const [etape3, setEtape3] = useState(false);
-  // Retenu pour la visite (cet onglet) : '2' quand la bulle 2 a été montrée dans le simulateur ; sur la carte des vins,
-  // par la bulle ou par le menu, on passe à '3' ; le chevalet ouvert, les premiers pas sont finis.
+  const [etat, setEtat] = useState<{ numero: 2 | 3; visible: boolean; ferme: boolean } | null>(null);
+  const [fermes, setFermes] = useState(0); // relance l'effet quand on ferme le post-it
   useEffect(() => {
+    let t: ReturnType<typeof setTimeout> | undefined;
     try {
-      if (chevalet && chemin.startsWith(chevalet)) { sessionStorage.setItem(CLE_GUIDE, 'fini'); setEtape3(false); return; }
-      const avant = sessionStorage.getItem(CLE_GUIDE);
-      if (bienvenue && /\/simulateur$/.test(chemin) && avant !== 'fini' && avant !== '3') sessionStorage.setItem(CLE_GUIDE, '2');
-      const montre = surCarte && (bienvenue || avant === '2' || avant === '3');
-      if (montre) sessionStorage.setItem(CLE_GUIDE, '3');
-      setEtape3(montre);
-    } catch { setEtape3(surCarte && bienvenue); }
-  }, [chemin, bienvenue, surCarte, chevalet]);
-  if (bienvenue && /\/simulateur$/.test(chemin) && carte) return { href: carte, lien: `${carte}?bienvenue=1`, numero: 2, texte: 'Vérifiez votre carte des vins' };
-  if (etape3 && chevalet) return { href: chevalet, lien: chevalet, numero: 3, texte: 'Imprimez votre chevalet de table' };
-  return null;
+      const lire = (k: string) => sessionStorage.getItem(`${CLE_GUIDE}-${k}`);
+      const ecrire = (k: string, v: string) => sessionStorage.setItem(`${CLE_GUIDE}-${k}`, v);
+      let etape = lire('etape');
+      if (chevalet && chemin.startsWith(chevalet)) { if (etape === '2' || etape === '3') ecrire('etape', 'fini'); etape = 'fini'; }
+      else if (carte && chemin === carte && (etape === '2' || etape === '3' || bienvenue)) {
+        if (etape !== '3') { ecrire('etape', '3'); ecrire('debut-3', String(Date.now())); etape = '3'; }
+      } else if (bienvenue && /\/simulateur$/.test(chemin) && !etape) { ecrire('etape', '2'); ecrire('debut-2', String(Date.now())); etape = '2'; }
+      if (etape !== '2' && etape !== '3') { setEtat(null); return; }
+      const numero = Number(etape) as 2 | 3;
+      const reste = Number(lire(`debut-${numero}`) ?? Date.now()) + ATTENTE[numero] - Date.now();
+      const ferme = lire(`ferme-${numero}`) === '1';
+      setEtat({ numero, visible: reste <= 0, ferme });
+      if (reste > 0) t = setTimeout(() => setEtat({ numero, visible: true, ferme }), reste);
+    } catch { setEtat(null); }
+    return () => clearTimeout(t);
+  }, [chemin, bienvenue, carte, chevalet, fermes]);
+  if (!etat?.visible) return null;
+  const href = etat.numero === 2 ? carte : chevalet;
+  if (!href) return null;
+  return {
+    href, numero: etat.numero, postIt: !etat.ferme,
+    texte: etat.numero === 2 ? 'Vérifiez votre carte des vins' : 'Imprimez votre chevalet de table',
+    fermer: () => { try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${etat.numero}`, '1'); } catch { /* rien */ } setFermes((n) => n + 1); },
+  };
 }
 
 /**
- * Post-it « étape suivante » des premiers pas : collé à côté de l'entrée du menu visée, qui est entourée.
- * Un clic sur le post-it y mène.
+ * Post-it « étape suivante » des premiers pas : collé à côté de l'entrée du menu visée (à sa droite ; dessous sur
+ * téléphone). Un clic le ferme ; l'entrée reste entourée.
  */
 function BulleEtape({ guide }: { guide: Guide }) {
   const [pos, setPos] = useState<{ top: number; left: number; largeur: number; cote: 'droite' | 'dessous' } | null>(null);
   useEffect(() => {
     const placer = () => {
-      // À côté de l'entrée du menu visée (à sa droite, à sa hauteur) ; dessous quand le menu prend toute la largeur (téléphone).
       const r = document.getElementById('lien-etape-suivante')?.getBoundingClientRect();
       const nav = document.querySelector('.bo-nav')?.getBoundingClientRect();
       if (!r || !r.height || !nav) { setPos(null); return; }
@@ -122,16 +141,12 @@ function BulleEtape({ guide }: { guide: Guide }) {
     window.addEventListener('resize', placer);
     return () => { clearTimeout(t); window.removeEventListener('resize', placer); };
   }, [guide.href]);
-  // L'entrée du menu visée : entourée tant que le post-it est là.
-  useEffect(() => {
-    const lien = document.getElementById('lien-etape-suivante');
-    lien?.classList.add('cible-etape');
-    return () => lien?.classList.remove('cible-etape');
-  });
   if (!pos) return null;
   return createPortal(
-    <Link href={guide.lien} className={`post-it-etape ${pos.cote}`} style={{ top: pos.top, left: pos.left, width: pos.largeur }}>
+    <button type="button" onClick={guide.fermer} className={`post-it-etape ${pos.cote}`} style={{ top: pos.top, left: pos.left, width: pos.largeur }}
+      title="Cliquez pour fermer" aria-label={`Étape suivante : ${guide.texte}. Fermer`}>
       <span className="post-it-numero" aria-hidden="true">{guide.numero}</span>
-      <span className="pile" style={{ gap: 4 }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>
-    </Link>, document.body);
+      <span className="pile" style={{ gap: 4, textAlign: 'left' }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>
+      <span className="post-it-fermer" aria-hidden="true">✕</span>
+    </button>, document.body);
 }
