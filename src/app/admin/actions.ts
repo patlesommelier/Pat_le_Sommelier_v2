@@ -1131,3 +1131,37 @@ export async function fermerAnnonceCave(resto: string) {
   await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and cave_annonce_fermee_le is null', [resto]);
   revalidatePath(`/admin/${resto}`);
 }
+
+/**
+ * Carte des vins (liste) : le prix de vente d'une contenance, changé directement dans le tableau.
+ * Même règle que la fiche du vin : bouteille, ½, ¼, magnum sur la ligne de cette contenance ; le verre sur la ligne
+ * « au verre », sinon porté par la bouteille. Champ vidé : plus de prix pour cette contenance.
+ */
+export async function changerPrixCarte(resto: string, vinId: string, code: string, valeur: string): Promise<{ ok: boolean; erreur?: string }> {
+  await exigerAcces(resto);
+  const brut = valeur.replace(/\s|€/g, '').replace(',', '.');
+  const prix = brut === '' ? null : Number(brut);
+  if (prix !== null && (!Number.isFinite(prix) || prix < 0 || prix >= 100000)) return { ok: false, erreur: 'Prix illisible : écrivez par exemple 24,50.' };
+  const p = prix === null ? null : Math.round(prix * 100) / 100;
+  const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null; format: string }>(
+    'select id, couleur::text, libelle, millesime, format from vin_carte where restaurant_id = $1 order by ordre, id', [resto]);
+  const v = lignes.find((l) => l.id === vinId);
+  if (!v) return { ok: false, erreur: 'Vin introuvable.' };
+  const groupe = grouperMemeVin(lignes, (l) => l.format).find((g) => g.includes(v)) ?? [v];
+  const ligneDe = (c: string) => groupe.find((l) => contenanceDuFormat(l.format) === c);
+  if (code === 'verre') {
+    const verre = ligneDe('verre');
+    if (verre) await requete('update vin_carte set prix_verre = $2 where id = $1', [verre.id, p]);
+    else {
+      const porteur = (ligneDe('bouteille') ?? groupe[0]).id;
+      await requete('update vin_carte set prix_verre = case when id = $2 then $3::numeric end where id = any($1)', [groupe.map((l) => l.id), porteur, p]);
+    }
+  } else if (['bouteille', 'demi', 'quart', 'magnum'].includes(code)) {
+    const ligne = ligneDe(code);
+    if (!ligne) return { ok: false, erreur: 'Cette contenance se règle dans la fiche du vin.' };
+    await requete('update vin_carte set prix = $2 where id = $1', [ligne.id, p]);
+  } else return { ok: false, erreur: 'Contenance inconnue.' };
+  revalidatePath(`/${resto}`, 'layout'); // l'app des clients
+  revalidatePath(`/admin/${resto}/carte`);
+  return { ok: true };
+}

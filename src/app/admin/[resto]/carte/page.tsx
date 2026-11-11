@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { changerCategoriesCarte, chercherEtiquettes, enregistrerOrdreCarte } from '../../actions';
+import { changerCategoriesCarte, changerPrixCarte, chercherEtiquettes, enregistrerOrdreCarte } from '../../actions';
+import { ChampPrixVin } from '@/components/admin/ChampPrixVin';
+import { contenanceDuFormat, libelleCourt, ordonner } from '@/lib/contenances';
 import { CasesCategories } from '@/components/admin/CasesCategories';
 import { PictosVin } from '@/components/Pictos';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
@@ -87,10 +89,10 @@ export default async function Carte({ params, searchParams }: { params: Promise<
           </div>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>
-              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th>{pourPat && <th>Étiquette</th>}<th /></tr></thead>
+              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th className="droite">Prix</th>{pourPat && <th>Étiquette</th>}<th /></tr></thead>
               {/* Comme dans l'app : les sous-catégories de la carte (renommables), puis leurs vins (flèches pour les déplacer). */}
               {/* Catégorie spéciale : les vins groupés par couleur, comme dans l'app ; pas de sous-catégories à renommer ni d'ordre à régler ici. */}
-              <TableCarteGlissable key={c} fixe={special} enregistrer={special ? undefined : enregistrerOrdreCarte.bind(null, resto, c)}
+              <TableCarteGlissable key={c} colonnes={7} fixe={special} enregistrer={special ? undefined : enregistrerOrdreCarte.bind(null, resto, c)}
                 rubriques={(special
                   ? COULEURS.map(([k, l]) => ({ nom: l as string, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((r) => r.groupes.length)
                   : parRubrique(affiches)).map((r, ri) => ({
@@ -98,7 +100,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 nom: r.nom,
                 // Catégorie spéciale : titre fixe (la couleur) ; sinon titre modifiable par le composant.
                 entete: special ? (
-                  <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
+                  <td colSpan={7}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
                 ) : undefined,
                 vins: r.groupes.map(({ principal: v, tous, contenances, prix }) => {
                   const [el, ek] = etatEtiquette(v);
@@ -112,10 +114,19 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                       <td>{v.millesime ?? '—'}</td>
                       <td className="col-producteur">{v.producteur_nom ?? v.producteur_texte ?? '—'}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
-                      <td>{contenances.length
-                        ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
-                        : <Etat type="attention">Indisponible</Etat>}</td>
-                      <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
+                      {/* Prix de vente de chaque contenance, modifiable sur place (enregistré en quittant le champ). */}
+                      <td className="droite">{(() => {
+                        // Comme l'app : une contenance par ligne du vin proposée (son format), et le verre s'il a un prix au verre.
+                        const lignes = tous.some((x) => x.disponible) ? tous.filter((x) => x.disponible) : tous;
+                        const codes = ordonner([...lignes.map((x) => contenanceDuFormat(x.format)), ...(lignes.some((x) => x.prix_verre != null) ? ['verre'] : [])]);
+                        const prixDe = (code: string) => code === 'verre'
+                          ? tous.find((x) => x.prix_verre != null)?.prix_verre ?? (tous.find((x) => contenanceDuFormat(x.format) === 'verre')?.prix ?? null)
+                          : tous.find((x) => contenanceDuFormat(x.format) === code)?.prix ?? null;
+                        return <div className="pile" style={{ gap: 4, alignItems: 'flex-end' }}>{!contenances.length && <Etat type="attention">Indisponible</Etat>}{[...new Set(codes)].map((code) => (
+                          <ChampPrixVin key={code} libelle={libelleCourt(code)} nomVin={v.libelle} initial={prixDe(code) != null ? Number(prixDe(code)) : null}
+                            enregistrer={changerPrixCarte.bind(null, resto, v.id, code)} />
+                        ))}</div>;
+                      })()}</td>
                       {pourPat && <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>}
                     </>),
                     libelle: v.libelle,

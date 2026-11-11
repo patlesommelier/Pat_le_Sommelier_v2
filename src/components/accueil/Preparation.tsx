@@ -1,6 +1,6 @@
 'use client';
-// Fin de l'inscription, dans le cadre doré : Pat prépare les accords (barre d'avancement), puis le QR code
-// s'affiche (« C'est prêt, scannez ») ; dès que l'app est ouverte avec ce QR code, on bascule vers l'espace du restaurant.
+// Fin de l'inscription, dans le cadre doré : Pat prépare les accords (barre d'avancement) ; dès qu'ils sont prêts, on
+// arrive dans le simulateur de l'espace restaurant, sur un de ses plats : ce que ses clients verront (l'effet « waouh »).
 import { useEffect, useState } from 'react';
 import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
@@ -12,22 +12,17 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
   const [etat, setEtat] = useState<Etat>({ preparation: { statut: 'en_cours', total: 0, faits: 0 } });
   const pret = etat.restaurant === 'en_service';
   const espace = `/admin/${restaurantId}`;
-  // Première arrivée dans l'espace : directement sur la carte des vins (lue à l'inscription).
-  const arrivee = `${espace}/carte`;
+  // Première arrivée dans l'espace : le simulateur, avec le bandeau « Vos accords sont prêts ».
+  const arrivee = `${espace}/simulateur?bienvenue=1`;
 
   useEffect(() => {
     let actif = true;
-    // On ne bascule vers l'espace que si l'app est ouverte pour la première fois après l'affichage du QR code ici.
-    let dejaOuverte: boolean | null = null;
     const lire = async () => {
       const r = await fetch(`/api/restaurants/${restaurantId}/preparation`, { cache: 'no-store', redirect: 'manual' }).catch(() => null);
       if (!r?.ok || !actif) return;
       const e: Etat | null = await r.json().catch(() => null);
       if (!e?.preparation) return;
-      if (e.restaurant === 'en_service') {
-        if (dejaOuverte === null) dejaOuverte = Boolean(e.scanne);
-        else if (!dejaOuverte && e.scanne) { window.location.href = arrivee; return; } // QR code scanné
-      }
+      if (e.restaurant === 'en_service') { window.location.href = arrivee; return; } // accords prêts : au simulateur
       setEtat(e);
     };
     lire();

@@ -611,3 +611,9 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .entonnoir { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 @media (max-width: 800px) { .entonnoir { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .entonnoir-pas { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: 14px; background: var(--fond); border: 1px solid var(--ligne); }
+/* Carte des vins : prix de vente de chaque contenance, modifiable dans le tableau. */
+.prix-carte { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--discret); white-space: nowrap; }
+.prix-carte > span:first-child { min-width: 34px; text-align: right; }
+.prix-carte .champ-prix input { width: 76px; padding: 5px 8px; font-weight: 700; color: var(--texte); }
+.prix-ok { color: var(--vert); font-weight: 700; }
+.prix-erreur { color: var(--rouge); font-size: 12px; white-space: normal; max-width: 160px; }
