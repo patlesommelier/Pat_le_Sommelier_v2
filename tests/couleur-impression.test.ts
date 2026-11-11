@@ -13,7 +13,8 @@ test('la couleur dominante d’un logo bleu foncé sur fond blanc', () => {
 test('la couleur imprimée : celle de l’app si elle se lit, sinon celle du logo', () => {
   assert.equal(couleurImpression('#1B2A5C', '#C8102E'), '#1B2A5C'); // fond bleu foncé : gardé
   assert.equal(couleurImpression('#F2D16B', '#14286E'), '#14286E'); // fond jaune, logo bleu foncé : le bleu
-  assert.equal(couleurImpression('#F2D16B', '#FFE08A'), '#F2D16B'); // rien de foncé : la couleur de l'app
+  assert.equal(couleurImpression('#F2D16B', '#FFE08A'), '#241F20'); // rien de lisible sur le blanc : l'encre presque noire
+  assert.equal(couleurImpression('#FFFFFF', null), '#241F20'); // app blanche, logo blanc : titres et logo jamais invisibles
 });
 
 test('la couleur imprimée : une app noire ou grise laisse la place à la couleur du logo', () => {

@@ -59,13 +59,18 @@ export function couleurNeutre(hex: string) {
   return max < 40 || max - min < 30;
 }
 
+/** Encre des impressions quand ni l'app ni le logo n'ont de couleur lisible sur le papier blanc (logo blanc, app blanche). */
+export const ENCRE_PAR_DEFAUT = '#241F20';
+
 /**
- * Couleur des supports imprimés (carte des vins, menu) : celle de l'app si elle se lit sur le papier blanc (bleu foncé, bordeaux…)
- * et n'est pas un noir ou un gris ; sinon (jaune, beige, noir…) la couleur du logo si elle s'y lit ; sinon celle de l'app quand même.
+ * Couleur des supports imprimés (carte des vins, menu, chevalet) : celle de l'app si elle se lit sur le papier blanc (bleu foncé,
+ * bordeaux…) et n'est pas un noir ou un gris ; sinon (jaune, beige, noir…) la couleur du logo si elle s'y lit ; sinon celle de
+ * l'app si elle s'y lit (noir, gris foncé) ; sinon (blanc, crème…) une encre presque noire : jamais un titre invisible.
  */
 export function couleurImpression(app: string, logo: string | null) {
   if (!couleurClaire(app) && !couleurNeutre(app)) return app;
-  return logo && !couleurClaire(logo) ? logo : app;
+  if (logo && !couleurClaire(logo)) return logo;
+  return couleurClaire(app) ? ENCRE_PAR_DEFAUT : app;
 }
 
 /** Mélange une couleur (#RRGGBB) avec du blanc : part = part de la couleur gardée (0 à 1). */

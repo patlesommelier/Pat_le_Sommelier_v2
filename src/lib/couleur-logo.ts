@@ -2,7 +2,7 @@ import 'server-only';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { couleurDominante, couleurImpression } from './couleurs';
+import { couleurClaire, couleurDominante, couleurImpression, ENCRE_PAR_DEFAUT } from './couleurs';
 
 /** Couleur dominante du logo d'un restaurant (adresse publique ou fichier de public/), ou null. Jamais d'erreur. */
 const luminance = (r: number, g: number, b: number) => {
@@ -115,10 +115,12 @@ export async function couleurDesSupports(r: { couleur: string; logo_url: string 
   const base = { app: r.couleur, logo, apparence };
   const autre = sp.get('couleur');
   if (autre && /^#[0-9a-f]{6}$/i.test(autre)) return { ...base, couleur: autre.toUpperCase(), choix: 'autre' };
-  if (sp.get('teinte') === 'app') return { ...base, couleur: r.couleur, choix: 'app' };
-  if (sp.get('teinte') === 'logo' && logo) return { ...base, couleur: logo, choix: 'logo' };
+  // Une couleur trop claire pour le papier blanc (titres et logo invisibles) laisse la place à l'encre presque noire.
+  const lisible = (c: string) => couleurClaire(c) ? ENCRE_PAR_DEFAUT : c;
+  if (sp.get('teinte') === 'app') return { ...base, couleur: lisible(r.couleur), choix: 'app' };
+  if (sp.get('teinte') === 'logo' && logo) return { ...base, couleur: lisible(logo), choix: 'logo' };
   if (sp.get('teinte') === 'auto' || !apparence) return { ...base, couleur: couleurImpression(r.couleur, logo), choix: 'auto' };
-  return { ...base, couleur: apparence, choix: 'apparence' }; // couleur choisie dans « Apparence »
+  return { ...base, couleur: lisible(apparence), choix: 'apparence' }; // couleur choisie dans « Apparence »
 }
 
 /** Choix de la couleur dans la barre d'outils d'impression (écran seulement). Le script de la page lit « teinte » et « couleur ». */

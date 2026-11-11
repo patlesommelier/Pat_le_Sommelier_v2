@@ -2,11 +2,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import { BoutonImprimer } from '@/components/admin/BoutonImprimer';
+import { Entete } from '@/components/admin/Ui';
 import { getRestaurantBO } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { exigerAcces } from '@/lib/admin/auth';
 import { couleurClaire, logoAffiche } from '@/lib/couleurs';
 import { contrasteLogo, couleurDesSupports, fondDuLogo } from '@/lib/couleur-logo';
+import { logoPourMasque } from '@/lib/logo-masque';
 
 // Chevalet de table A6 (105 × 148 mm), aux couleurs du restaurant : son logo, sa couleur d'impression (Centre
 // d'impression), son nom ; Pat signe discrètement en bas. Quatre par feuille A4.
@@ -39,7 +41,7 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
     if (!l.url) return <span style={{ fontFamily: SERIF, fontSize: '9mm', lineHeight: 1.05, color: teinteTexte, textAlign: 'center' }}>{brut.nom}</span>;
     if (l.teinte) {
       return <span role="img" aria-label={brut.nom} style={{ display: 'block', width: largeur, height: hauteur, background: l.teinte,
-        WebkitMaskImage: `url(${l.url})`, maskImage: `url(${l.url})`, WebkitMaskSize: 'contain', maskSize: 'contain',
+        WebkitMaskImage: `url(${logoPourMasque(l.url)})`, maskImage: `url(${logoPourMasque(l.url)})`, WebkitMaskSize: 'contain', maskSize: 'contain',
         WebkitMaskRepeat: 'no-repeat', maskRepeat: 'no-repeat', WebkitMaskPosition: 'center', maskPosition: 'center' }} />;
     }
     // eslint-disable-next-line @next/next/no-img-element
@@ -110,25 +112,39 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
     </div>
   );
   return (
-    <div style={{ padding: 24, background: '#EFEBE9', minHeight: '100vh', fontFamily: SANS }}>
+    <>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;600&display=swap" />
-      <div className="pas-imprime" style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginBottom: 20 }}>
-        <Link href={`/admin/${resto}/impression`}>← Centre d’impression</Link>
-        <nav aria-label="Modèle de chevalet" style={{ display: 'flex', gap: 8 }}>
-          {MODELES.map((m) => (
-            <Link key={m.n} href={`/admin/${resto}/chevalet?modele=${m.n}`} title={m.aide} aria-current={modele === m.n ? 'true' : undefined}
-              style={{ padding: '8px 14px', borderRadius: 999, fontWeight: 600, textDecoration: 'none', border: '1.5px solid #241F20',
-                background: modele === m.n ? '#241F20' : '#FFFFFF', color: modele === m.n ? '#FFFFFF' : '#241F20' }}>{m.titre}</Link>
-          ))}
-        </nav>
-        <BoutonImprimer />
-        <span style={{ color: '#241F20', fontSize: 14 }}>Quatre chevalets A6 par feuille A4 : découpez le long des pointillés. Le logo et la couleur se règlent dans le Centre d’impression.</span>
+      <style>{`.titre-chevalet i { font-family: ${SERIF} !important; font-style: italic; }
+        .feuille-chevalets { display: none; }
+        @page { size: A4; margin: 0 }
+        @media print { body { margin: 0 } .feuille-chevalets { display: grid; } }`}</style>
+      {/* À l'écran, comme la carte des vins du Centre d'impression : les modèles à gauche, l'aperçu à droite, puis l'impression. */}
+      <div className="pas-imprime pile" style={{ gap: 24 }}>
+        <Entete titre="Impression du chevalet" texte="Un chevalet A6 à poser sur vos tables, à vos couleurs : vos clients scannent le QR code et Pat leur conseille un vin de votre carte. Le logo et la couleur se règlent dans « Impression de la carte des vins »." />
+        <section className="carte-bo pile">
+          <div className="impression-carte">
+            <div role="radiogroup" aria-label="Modèle de chevalet" className="pile" style={{ gap: 8, flex: '1 1 260px', minWidth: 0 }}>
+              {MODELES.map((m) => (
+                <Link key={m.n} href={`/admin/${resto}/chevalet?modele=${m.n}`} role="radio" aria-checked={modele === m.n} className="design-carte"
+                  data-choisi={modele === m.n ? 'oui' : undefined} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <span aria-hidden="true" style={{ width: 18, height: 18, marginTop: 2, flexShrink: 0, borderRadius: '50%', boxSizing: 'border-box',
+                    border: modele === m.n ? '5px solid var(--encre)' : '1.5px solid var(--ligne-forte)' }} />
+                  <span className="pile" style={{ gap: 2 }}><b>{m.titre}</b><small className="discret">{m.aide}</small></span>
+                </Link>
+              ))}
+              <div className="ligne-actions" style={{ marginTop: 8 }}><BoutonImprimer /></div>
+              <span className="discret" style={{ fontSize: 13 }}>Quatre chevalets par feuille A4 : découpez le long des pointillés.</span>
+            </div>
+            {/* Aperçu du chevalet choisi. */}
+            <div aria-label="Aperçu du chevalet" style={{ flex: '0 0 auto', boxShadow: '0 10px 30px -14px rgba(36,31,32,.35)', fontFamily: SANS }}>{carte}</div>
+          </div>
+        </section>
       </div>
-      <style>{`.titre-chevalet i { font-family: ${SERIF} !important; font-style: italic; } @page { size: A4; margin: 0 } @media print { body { margin: 0 } .pas-imprime { display: none !important } }`}</style>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 105mm)', gap: 0, width: '210mm', background: '#FFFFFF' }}>
+      {/* À l'impression seulement : la feuille A4 avec quatre chevalets. */}
+      <div className="feuille-chevalets" style={{ gridTemplateColumns: 'repeat(2, 105mm)', gap: 0, width: '210mm', background: '#FFFFFF', fontFamily: SANS }}>
         {carte}{carte}{carte}{carte}
       </div>
-    </div>
+    </>
   );
 }
 

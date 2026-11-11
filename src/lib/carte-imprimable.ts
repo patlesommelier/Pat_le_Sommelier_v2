@@ -4,6 +4,7 @@
  *
  * IMPORTANT : ne jamais transmettre ici les rankings, notes ou scores. Ce module ne lit que les champs de VinImprimable.
  */
+import { logoPourMasque } from './logo-masque';
 import { encresImpression } from './couleurs';
 
 export type CouleurCarte = 'bulles' | 'blanc' | 'rose' | 'rouge' | 'orange' | 'doux' | 'sans_alcool';
@@ -221,7 +222,7 @@ function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte,
   // sert de pochoir).
   const teinte = Boolean(logo && options.fondBandeau && !options.noirEtBlanc && restaurant.logoTeinte);
   const marque = teinte
-    ? `<span class="couv-logo couv-logo-teinte" role="img" aria-label="${echapper(restaurant.nom)}" style="-webkit-mask-image:url(${echapper(chaineCss(logo!))});mask-image:url(${echapper(chaineCss(logo!))})"></span>`
+    ? `<span class="couv-logo couv-logo-teinte" role="img" aria-label="${echapper(restaurant.nom)}" style="-webkit-mask-image:url(${echapper(chaineCss(logoPourMasque(logo!)))});mask-image:url(${echapper(chaineCss(logoPourMasque(logo!)))})"></span>`
     : logo
     ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}"${restaurant.logoEnBlanc && !blanc ? ' style="filter: brightness(0) invert(1)"'
       : options.noirEtBlanc && restaurant.logoEnNoir ? ' style="filter: brightness(0)"' : ''}>`
