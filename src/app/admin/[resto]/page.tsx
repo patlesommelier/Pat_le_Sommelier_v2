@@ -6,6 +6,10 @@ import { Entete } from '@/components/admin/Ui';
 import { aVerifierLecture, getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { AnnonceCave, MiseEnRoute } from '@/components/admin/MiseEnRoute';
 import { adresseApp } from '@/lib/admin/qr';
+import { caveVisible, prochaineEtape } from '@/lib/admin/prochaine-etape';
+import { commandesAVoir, stockBas } from '@/lib/admin/stocks';
+import { getVinsBO, type RestaurantBO, type Resume } from '@/lib/admin/donnees';
+import { regrouperVins } from './carte/etats';
 import { exigerAcces, prenomUtilisateur } from '@/lib/admin/auth';
 import { titreCarte } from '@/lib/admin/intitule';
 import { avecAppreciation } from '@/lib/appreciation';
@@ -24,6 +28,8 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
   const miseEnRoute = !accueil && r.origine === 'inscription' && !r.premier_client_le;
   const annonceCave = !accueil && r.origine === 'inscription' && Boolean(r.premier_client_le) && !r.cave_annonce_fermee_le && !u.admin;
   const [app, verifier] = miseEnRoute ? await Promise.all([adresseApp(r.id), aVerifierLecture(r.id)]) : [null, null];
+  // « Votre prochaine étape » : ni pendant la mise en route (ses 3 pas guident déjà), ni avec l'annonce de la cave.
+  const etape = !accueil && !miseEnRoute && !annonceCave ? await etapeDuRestaurant(r, s, u.admin) : null;
   const resume: [number, string, string][] = [[s.plats, 'plat', 'plats au menu'], [s.vins, 'vin', 'vins à la carte'], [s.accords, 'accord', 'accords mets-vins']];
   const vin = jour && titreCarte(jour.vin);
   return (
@@ -34,6 +40,17 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       {miseEnRoute && app && verifier && <MiseEnRoute resto={r.id} app={app} exemple={jour} verifier={verifier} />}
       {/* Après le premier client : la Gestion de cave apparaît, annoncée une fois (bandeau à fermer). */}
       {annonceCave && <AnnonceCave resto={r.id} />}
+      {/* Sinon : une seule chose à faire maintenant, la plus urgente. */}
+      {etape && (
+        <section className="carte-bo rappel-inventaire" aria-labelledby="prochaine-etape">
+          <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
+            <span className="surtitre">Votre prochaine étape</span>
+            <b id="prochaine-etape" style={{ fontSize: 18 }}>{etape.titre}</b>
+            <span className="petit">{etape.texte}</span>
+          </div>
+          <Link href={`/admin/${r.id}${etape.chemin}`} className="btn">{etape.bouton} →</Link>
+        </section>
+      )}
       {/* Résumé général du restaurant */}
       <div className="carte-bo sticker" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -49,16 +66,6 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       </div>
       </>}
 
-      {/* Inventaire à refaire (jamais fait, ou plus de 7 jours) : un message, avec le lien vers la page Inventaire. */}
-      {!accueil && !miseEnRoute && !annonceCave && s.vins > 0 && inventaireARefaire(r.inventaire_le) && (
-        <section className="carte-bo rappel-inventaire" aria-label="Inventaire">
-          <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
-            <b style={{ fontSize: 17 }}>{r.inventaire_le ? `Dernier inventaire ${ilYA(r.inventaire_le)}` : 'Faites votre premier inventaire'}</b>
-            <span className="petit">Comptez vos bouteilles pour garder votre stock à jour : alertes de stock bas et commandes au plus juste.</span>
-          </div>
-          <Link href={`/admin/${r.id}/inventaire`} className="btn">Faire l’inventaire</Link>
-        </section>
-      )}
 
       {/* La règle de Pat du jour : une de ses règles, illustrée par le meilleur vin de la carte pour un plat du menu. */}
       {!miseEnRoute && jour && vin && (
@@ -89,4 +96,17 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       )}
     </>
   );
+}
+
+/** Compteurs de « Votre prochaine étape » (le stock bas ne compte qu'après un premier inventaire). */
+async function etapeDuRestaurant(r: RestaurantBO, s: Resume, admin: boolean) {
+  const cave = caveVisible(r);
+  const [aVoir, verifier, vins] = await Promise.all([admin ? 0 : commandesAVoir(r.id), aVerifierLecture(r.id),
+    cave && r.inventaire_le ? getVinsBO(r.id) : []]);
+  const vinsStockBas = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible) && stockBas(g.principal.stock, r.stock_limite_basse ?? 2)).length;
+  return prochaineEtape({
+    commandesAVoir: aVoir, accordsARelire: s.accords_proposes, vinsSansPrix: verifier.vins.length, cave, vinsStockBas,
+    inventaireARefaire: s.vins > 0 && inventaireARefaire(r.inventaire_le), inventaireIlYA: r.inventaire_le ? ilYA(r.inventaire_le) : null,
+    apparenceAChoisir: !r.modifie_bo,
+  });
 }

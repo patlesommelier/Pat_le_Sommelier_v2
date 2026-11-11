@@ -50,7 +50,10 @@ export function MiseEnRoute({ resto, app, exemple, verifier }: {
               )}
             </div>
           ) : <p className="discret" style={{ margin: 0 }}>Choisissez un de vos plats : Pat vous propose le vin de votre carte qui l’accompagne, et vous dit pourquoi.</p>}
-          <a href={app} target="_blank" rel="noopener" className="btn" style={{ alignSelf: 'flex-start' }}>Essayer comme un client →</a>
+          <div className="ligne-actions">
+            <Link href={`/admin/${resto}/simulateur?bienvenue=1`} className="btn">Ouvrir le simulateur →</Link>
+            <a href={app} target="_blank" rel="noopener" className="btn sec petit">Ouvrir l’app comme un client</a>
+          </div>
         </article>
 
         {/* 2. Vérification rapide : seulement ce que la lecture des cartes n'a pas trouvé. */}

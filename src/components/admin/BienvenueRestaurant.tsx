@@ -13,7 +13,8 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
   const [etat, setEtat] = useState<Etat>({ preparation: { statut: 'en_cours', total: 0, faits: 0 } });
   const fini = etat.restaurant === 'en_service';
   useEffect(() => {
-    if (fini) { router.refresh(); return; } // étapes de la mise en place à jour
+    // Accords prêts : le restaurateur arrive dans le simulateur, sur un de ses plats, pour voir ce que ses clients verront.
+    if (fini) { router.replace(`/admin/${restaurantId}/simulateur?bienvenue=1`); return; }
     let actif = true;
     const lire = async () => {
       const r = await fetch(`/api/restaurants/${restaurantId}/preparation`, { cache: 'no-store' });
@@ -32,7 +33,7 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
         <span className="etat ok" style={{ alignSelf: 'flex-start' }}>Compte créé</span>
         <h1 style={{ fontSize: 'clamp(30px, 3.2vw, 40px)', fontWeight: 700, letterSpacing: -0.8 }}>Bienvenue</h1>
         <p className="discret" style={{ margin: 0, fontSize: 16, lineHeight: 1.55 }}>
-          Votre sommelier est en route. Votre QR code est déjà prêt : posez-le sur vos tables, il fonctionnera dès que Pat aura fini de préparer vos accords.
+          Votre sommelier est en route. Dès qu’il aura fini vos accords, vous verrez exactement ce que vos clients verront. Votre QR code est déjà prêt : posez-le sur vos tables.
         </p>
       </header>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24 }}>

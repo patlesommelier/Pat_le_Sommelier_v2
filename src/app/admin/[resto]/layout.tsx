@@ -8,6 +8,7 @@ import { etapesRestaurant } from './etapes';
 import type { Etape } from '@/components/admin/Nav';
 import { AvisRestaurant, type Avis } from '@/components/admin/AvisRestaurant';
 import { requete } from '@/lib/db';
+import { caveVisible } from '@/lib/admin/prochaine-etape';
 
 
 // Menu de gauche : chaque entrée avec son icône (celle des cadres du tableau de bord) ; les trois premières disent ce qu'on y fait.
@@ -39,7 +40,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   if (!r) notFound();
   // Mise en route : un restaurant inscrit seul ne voit la Gestion de cave qu'après son premier client (« Nouveau » 7 jours).
   // (Un restaurant qui fait déjà son inventaire la garde.)
-  const cave = r.origine !== 'inscription' || r.inventaire_le ? 'visible' : !r.premier_client_le ? 'cachee'
+  const cave = !caveVisible(r) ? 'cachee' : r.origine !== 'inscription' || !r.premier_client_le ? 'visible'
     : Date.now() - Date.parse(r.premier_client_le) < 7 * 864e5 ? 'nouvelle' : 'visible';
   return (
     <Coque utilisateur={u} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}

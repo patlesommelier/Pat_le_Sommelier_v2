@@ -1,26 +1,26 @@
 import Link from 'next/link';
 import { Icone } from '@/components/admin/Icone';
+import { ApercuApp } from '@/components/admin/ApercuApp';
 import { Entete, Etat, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
-import { getPlatsBO } from '@/lib/admin/donnees';
+import { getPlatsBO, getRegleDuJour } from '@/lib/admin/donnees';
 import { pourquoiPas, pourquoiRetenu } from '@/lib/admin/explications';
 import { accordsVisibles, getCandidats, getReglages } from '@/lib/donnees';
 import { selectionner, tourSuivant } from '@/lib/selection';
 
-const CAT: Record<string, string> = { entree: 'Entrées', plat: 'Plats', dessert: 'Desserts', fromage: 'Fromages' };
-
-export default async function Simulateur({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string | string[]; arelire?: string; tour?: string; table?: string }> }) {
+export default async function Simulateur({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string | string[]; arelire?: string; tour?: string; bienvenue?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [plats, R, u] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant()]);
+  const bienvenue = sp.bienvenue === '1';
+  const [plats, R, u, jour] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant(),
+    // Arrivée après l'inscription : un plat dont l'accord est parlant (celui de la règle du jour), plutôt que le premier du menu.
+    bienvenue && !sp.plat ? getRegleDuJour(resto) : null]);
   // Score et rankings : cuisine interne, montrés à Pat seulement. Le restaurant voit le rang et la note /5.
   const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
-  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [actifs[0]?.id]).filter((id) => actifs.some((p) => p.id === id)) as string[];
+  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [jour?.plat_id ?? actifs[0]?.id]).filter((id) => actifs.some((p) => p.id === id)) as string[];
   const arelire = sp.arelire === '1';
-  // Par défaut un plat à la fois (avec l'aperçu de l'app) ; « table » : plusieurs plats pour un vin à partager.
-  const table = sp.table === '1' || choisis.length > 1;
   const tour = Math.max(1, Math.min(5, Number(sp.tour) || 1));
   const statuts = arelire ? ['valide', 'propose'] : accordsVisibles();
   const { candidats, lignesParVin, exclus } = choisis.length ? await getCandidats(resto, choisis, statuts) : { candidats: [], lignesParVin: new Map(), exclus: new Set<string>() };
@@ -39,69 +39,31 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   const elimines = candidats.filter((c) => choisis.every((p) => typeof c.notes[p] === 'number') && Math.min(...choisis.map((p) => c.notes[p])) <= R.noteEliminatoire).length;
   const plusieurs = choisis.length > 1;
   const nomPlat = (id: string) => { const p = actifs.find((x) => x.id === id); return p?.nom_court ?? p?.nom ?? id; };
-  const base = `/admin/${resto}/simulateur`;
-  const q = (extra: Record<string, string>) => {
-    const u = new URLSearchParams();
-    choisis.forEach((c) => u.append('plat', c));
-    if (arelire) u.set('arelire', '1');
-    if (table) u.set('table', '1');
-    Object.entries(extra).forEach(([k, v]) => u.set(k, v));
-    return `${base}?${u}`;
-  };
 
   return (
     <>
-      <Entete titre="Simulateur" texte="Ce que vos clients voient, et pourquoi Pat propose ces vins. Choisissez un plat, ou plusieurs pour un vin à partager à table.">
+      <Entete titre="Simulateur">
         <Link href={`/${resto}`} target="_blank" className="btn sec"><Icone nom="out" taille={18} />Ouvrir l’app</Link>
       </Entete>
+      {/* Arrivée après l'inscription : les accords sont prêts, voici ce que les clients verront. */}
+      {bienvenue && (
+        <section className="carte-bo rappel-inventaire" aria-labelledby="bienvenue-simulateur">
+          <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
+            <span className="surtitre">Vos accords sont prêts</span>
+            <b id="bienvenue-simulateur" style={{ fontSize: 19 }}>Voici ce que vos clients verront</b>
+            <span className="petit">Le téléphone montre votre app : touchez l’écran pour choisir un autre plat. Pat vous propose le vin de votre carte qui l’accompagne, et vous dit pourquoi.</span>
+          </div>
+          <Link href={`/admin/${resto}`} className="btn">Continuer vers mon espace →</Link>
+        </section>
+      )}
       <div className="rangee">
-        <form method="get" className="etroit" style={{ flex: '1 1 300px' }}>
-          <div className="carte-bo pile">
-            <h2>Choisissez vos plats</h2>
-            {Object.entries(CAT).map(([k, l]) => {
-              const ps = actifs.filter((p) => p.categorie === k);
-              if (!ps.length) return null;
-              return (
-                <fieldset key={k} style={{ border: 0, padding: 0, margin: 0 }}>
-                  <legend style={{ fontSize: 13, fontWeight: 700, marginBottom: 8 }}>{l}</legend>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                    {ps.map((p) => {
-                      const style = { display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne-forte)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : 'var(--carte)', fontSize: 13.5, cursor: 'pointer', color: 'var(--texte)', textDecoration: 'none' };
-                      // Un seul plat : un clic l'affiche directement (avec le téléphone). Plusieurs plats : cases à cocher.
-                      return table ? (
-                        <label key={p.id} style={style}>
-                          <input type="checkbox" name="plat" value={p.id} defaultChecked={choisis.includes(p.id)} style={{ accentColor: 'var(--encre)' }} />{p.nom_court ?? p.nom}
-                        </label>
-                      ) : (
-                        <Link key={p.id} href={`${base}?${new URLSearchParams({ plat: p.id, ...(arelire ? { arelire: '1' } : {}) })}`} style={style} aria-current={choisis.includes(p.id) ? 'true' : undefined}>{p.nom_court ?? p.nom}</Link>
-                      );
-                    })}
-                  </div>
-                </fieldset>
-              );
-            })}
-            {table && <input type="hidden" name="table" value="1" />}
-            {!table && choisis[0] && <input type="hidden" name="plat" value={choisis[0]} />}
-            <label className="case"><input type="checkbox" name="arelire" value="1" defaultChecked={arelire} /><span>Inclure les accords pas encore validés<small>Pour voir le résultat avant de les valider</small></span></label>
-            <span className="ligne-actions">
-              {table && <button type="submit" className="btn">Voir les vins</button>}
-              {table
-                ? <Link href={`${base}?${new URLSearchParams({ plat: choisis[0] ?? '', ...(arelire ? { arelire: '1' } : {}) })}`} className="btn fantome petit">Un seul plat (avec l’app)</Link>
-                : <><button type="submit" className="btn sec petit">Mettre à jour</button><Link href={`${base}?${new URLSearchParams({ table: '1', plat: choisis[0] ?? '', ...(arelire ? { arelire: '1' } : {}) })}`} className="btn fantome petit">Plusieurs plats (vin pour la table)</Link></>}
-            </span>
-          </div>
-        </form>
-        {plusieurs && (
-          <div className="carte-bo" style={{ flex: '0 1 300px', alignSelf: 'flex-start', fontSize: 13.5 }}>
-            <span className="discret">L’aperçu de l’app montre un plat à la fois : revenez à « Un seul plat » pour voir le téléphone.</span>
-          </div>
-        )}
-        {!plusieurs && choisis[0] && (
+        {/* Le téléphone : la vraie app, où l'on choisit ses plats comme un client ; la page suit le plat choisi. */}
+        {choisis[0] && (
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
             <span className="surtitre">L’app de vos clients</span>
-            <iframe title="Aperçu de l’app client" src={`/${resto}/plat/${choisis[0]}${tour > 1 ? `?tour=${tour}` : ''}`}
-              style={{ width: 360, maxWidth: '100%', height: 740, border: '10px solid #241F20', borderRadius: 44, background: '#EFEBE9' }} />
-            {arelire && <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>L’app ne montre que les accords validés{process.env.AFFICHER_ACCORDS_PROPOSES === 'true' ? ' (et, en démonstration, ceux à relire)' : ''}.</span>}
+            <ApercuApp resto={resto} garder={bienvenue ? { bienvenue: '1' } : {}}
+              src={`/${resto}/plat/${encodeURIComponent(choisis[0])}?${new URLSearchParams({ ...(choisis.length > 1 ? { et: choisis.slice(1).join(',') } : {}), ...(tour > 1 ? { tour: String(tour) } : {}) })}`} />
+            <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>Touchez l’écran pour choisir un autre plat.</span>
           </div>
         )}
         <section className="large" style={{ flex: '1 1 340px' }}>
@@ -136,11 +98,10 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
             )}
             <span className="discret" style={{ fontSize: 13 }}>{elimines} vin{elimines > 1 ? 's' : ''} trop faible{elimines > 1 ? 's' : ''} avec {plusieurs ? 'ces plats' : 'ce plat'}{exclus.size ? ` · ${exclus.size} vin${exclus.size > 1 ? 's' : ''} que vous avez retiré${exclus.size > 1 ? 's' : ''}` : ''}.</span>
             <div className="ligne-actions">
-              {tour > 1 && <Link href={q({ tour: String(tour - 1) })} className="btn fantome petit">{tour - 1 === 1 ? '← Premiers vins' : '← Vins précédents'}</Link>}
-              {tour2.size > 0 && <Link href={q({ tour: String(tour + 1) })} className="btn sec petit">Le client veut autre chose →</Link>}
-              <Link href={`/admin/${resto}/regles`} className="btn fantome petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
+              <Link href={`/admin/${resto}/regles`} className="btn sec petit"><Icone nom="sliders" taille={16} />Ajuster les règles</Link>
+              <Link href={`/admin/${resto}/accords${choisis[0] ? `?plat=${encodeURIComponent(choisis[0])}` : ''}`} className="btn sec petit"><Icone nom="link" taille={16} />Revoir les accords</Link>
             </div>
-            {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">Aucun accord {arelire ? '' : 'validé '}pour {plusieurs ? 'ces plats' : 'ce plat'}.{!arelire && ' Cochez « Inclure les accords pas encore validés ».'}</p>}
+            {lignesParVin.size === 0 && choisis.length > 0 && <p className="discret">Aucun accord {arelire ? '' : 'validé '}pour {plusieurs ? 'ces plats' : 'ce plat'}{arelire ? '.' : ' : relisez ses accords pour que vos clients voient des vins.'}</p>}
           </div>
         </section>
       </div>
