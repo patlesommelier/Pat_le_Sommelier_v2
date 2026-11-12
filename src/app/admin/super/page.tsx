@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { testerEmail, voirCommeRestaurant } from './actions';
+import { voirCommeRestaurant } from './actions';
 import { etatEmail } from '@/lib/email';
 import { BoutonMode } from '@/components/admin/BoutonMode';
 import { CopierLien } from '@/components/admin/CopierLien';
@@ -46,7 +46,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                 </span>
                 <span className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/')].filter(Boolean).join(' · ') || ' '}</span>
                 {/* Statut de l'espace : interrupteur à trois positions, vert (actif), jaune (inscription), rouge (test). */}
-                <BoutonMode id={r.id} nom={r.nom} mode={r.mode} retour="/admin/super" />
+                <BoutonMode id={r.id} nom={r.nom} mode={r.mode} />
                 {r.statut !== 'en_service' && (
                   <span style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
                     <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
@@ -63,7 +63,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
       </div>
 
 
-      {/* Tout en bas : envoi des e-mails (test). */}
+      {/* Tout en bas : lectures en échec à l'inscription, et avertissement si l'envoi d'e-mails est mal réglé. */}
       <div className="pile" style={{ gap: 8, marginTop: 64, paddingTop: 16, borderTop: '1px solid var(--ligne)' }}>
       {echecs.length > 0 && (
         <details className="petit">
@@ -75,17 +75,14 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
         </details>
       )}
       {(() => {
-        // Envoi d'e-mails (invitations, mot de passe oublié, bons de commande) : réglage et test.
+        // Envoi d'e-mails : rien quand tout va bien ; un avertissement seulement s'il est mal réglé.
         const e = etatEmail();
-        const pret = e.cle && e.expediteur;
+        if (e.cle && e.expediteur && e.cleForme) return null;
         return (
-          <form action={testerEmail} className="ligne-actions" style={{ alignItems: 'center' }}>
-            <span className="petit" style={{ color: pret ? 'var(--vert)' : 'var(--ocre)' }}>
-              E-mails : {pret ? `envoyés par Resend, depuis ${e.expediteur}.` : `non configurés (${!e.cle ? 'RESEND_API_KEY manque' : 'EMAIL_EXPEDITEUR manque'}).`}
-              {e.cle && !e.cleForme && ' Attention : RESEND_API_KEY n’a pas la forme d’une clé Resend (elle commence par re_) : recopiez-la depuis Resend.'}
-            </span>
-            <button className="btn fantome petit">Tester l’envoi d’e-mails</button>
-          </form>
+          <span className="petit" style={{ color: 'var(--ocre)' }}>
+            E-mails : {!e.cle ? 'non configurés (RESEND_API_KEY manque).' : !e.expediteur ? 'non configurés (EMAIL_EXPEDITEUR manque).'
+              : 'attention, RESEND_API_KEY n’a pas la forme d’une clé Resend (elle commence par re_) : recopiez-la depuis Resend.'}
+          </span>
         );
       })()}
       </div>

@@ -51,7 +51,7 @@ export type ModeRestaurant = 'actif' | 'inscription' | 'test';
 export const MODES: Record<ModeRestaurant, { couleur: string; libelle: string; sens: string }> = {
   actif: { couleur: '#2E9E5B', libelle: 'Actif', sens: 'Tout est ouvert, les e-mails partent.' },
   inscription: { couleur: '#E3A21A', libelle: 'Inscription', sens: 'Gestion de cave et impression de la carte fermées jusqu’à la validation des vins ; aucun e-mail ne part.' },
-  test: { couleur: '#C62828', libelle: 'Test', sens: 'Tout est ouvert, aucun e-mail ne part.' },
+  test: { couleur: '#C62828', libelle: 'Inactif', sens: 'Tout est ouvert, aucun e-mail ne part.' },
 };
 
 /** Carte des vins validée par Quid Vinum : le restaurant n'est plus en mode inscription (jaune). */

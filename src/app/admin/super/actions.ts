@@ -132,20 +132,18 @@ export async function supprimerRestaurant(restaurantId: string, f: FormData) {
   redirect(avec('/admin/super', { ok: `« ${r.nom} » a été supprimé.` }));
 }
 
-/** Statut de l'espace (petit bouton de couleur) : vert actif, jaune inscription, rouge test. */
-export async function changerModeRestaurant(restaurantId: string, f: FormData) {
+/**
+ * Statut de l'espace (interrupteur à trois positions de l'encart) : vert actif, jaune inscription, rouge test. Enregistré sans
+ * recharger la page (l'interrupteur bouge tout seul) ; les pages du restaurant sont relues à chaque ouverture.
+ */
+export async function changerModeRestaurant(restaurantId: string, mode: string) {
   await exigerAdmin();
-  const mode = txt(f, 'mode');
-  if (mode && ['actif', 'inscription', 'test'].includes(mode)) {
-    // Passer au vert ouvre la cave comme une validation de la carte (« Nouveau » à côté de Gestion de cave pendant un jour).
-    // Passage au vert noté (actif_le) : point de départ des relances J+1 et J+3.
-    await requete(`update restaurant set mode = $2, carte_complete_le = case when $2 = 'actif' and origine = 'inscription' then coalesce(carte_complete_le, now()) else carte_complete_le end,
-                    actif_le = case when $2 = 'actif' and mode <> 'actif' then now() else actif_le end
-                    where id = $1`, [restaurantId, mode]);
-  }
-  revalidatePath('/admin', 'layout');
-  const retour = txt(f, 'retour');
-  redirect(retour?.startsWith('/admin/super') ? avec(retour, { ok: 'Statut enregistré.' }) : '/admin/super');
+  if (!['actif', 'inscription', 'test'].includes(mode)) return;
+  // Passer au vert ouvre la cave comme une validation de la carte (« Nouveau » à côté de Gestion de cave pendant un jour) ;
+  // le passage au vert (actif_le) est le point de départ des relances J+1 et J+3.
+  await requete(`update restaurant set mode = $2, carte_complete_le = case when $2 = 'actif' and origine = 'inscription' then coalesce(carte_complete_le, now()) else carte_complete_le end,
+                  actif_le = case when $2 = 'actif' and mode <> 'actif' then now() else actif_le end
+                  where id = $1`, [restaurantId, mode]);
 }
 
 export async function changerStatutRestaurant(restaurantId: string, f: FormData) {

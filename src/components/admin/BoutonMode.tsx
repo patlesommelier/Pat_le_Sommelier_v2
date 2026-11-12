@@ -7,15 +7,14 @@ import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
 const ORDRE: ModeRestaurant[] = ['actif', 'inscription', 'test'];
 
-export function BoutonMode({ id, nom, mode, retour }: { id: string; nom: string; mode: string; retour: string }) {
+export function BoutonMode({ id, nom, mode }: { id: string; nom: string; mode: string }) {
   const [choisi, setChoisi] = useState<ModeRestaurant>(ORDRE.includes(mode as ModeRestaurant) ? mode as ModeRestaurant : 'actif');
   const [enCours, demarrer] = useTransition();
   const m = MODES[choisi];
   const choisir = (k: ModeRestaurant) => {
     if (k === choisi || enCours) return;
     setChoisi(k);
-    const f = new FormData(); f.set('mode', k); f.set('retour', retour);
-    demarrer(() => changerModeRestaurant(id, f));
+    demarrer(() => changerModeRestaurant(id, k));
   };
   return (
     <span className="mode-ligne">
@@ -26,7 +25,7 @@ export function BoutonMode({ id, nom, mode, retour }: { id: string; nom: string;
             title={`${MODES[k].libelle} : ${MODES[k].sens}`} aria-label={MODES[k].libelle} />
         ))}
       </span>
-      <span className="petit" title={m.sens}><b>{m.libelle}</b></span>
+      <span className="petit"><b>{m.libelle}</b></span>
     </span>
   );
 }
