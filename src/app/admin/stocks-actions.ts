@@ -53,6 +53,8 @@ async function lignesDuStock(resto: string): Promise<(id: string) => string> {
 const rafraichir = (resto: string) => {
   for (const p of ['stocks', 'commandes', 'fournisseurs', 'parametres', 'carte', 'trouver-vin']) revalidatePath(`/admin/${resto}/${p}`);
   revalidatePath(`/${resto}`, 'layout'); // l'app des clients (prix de vente)
+  // Menu de gauche : les post-its qui dépendent des distributeurs, des commandes et des livraisons (9, 10) suivent tout de suite.
+  revalidatePath(`/admin/${resto}`, 'layout');
 };
 
 /** Toutes les lignes (contenances) des vins dont on donne la ligne principale. */

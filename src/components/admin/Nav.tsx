@@ -37,10 +37,21 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
   const [premiersPas, premiersPasEnCours] = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
-  // Post-its 4 (la cave vient de s'ouvrir) et 5 (premier inventaire fait : les distributeurs) ; pas par-dessus un autre
-  // post-it des premiers pas.
-  // Le plus petit numéro d'abord ; aucun pendant les premiers pas (post-its 1 à 3, même en attendant le suivant).
-  const annonce = premiersPasEnCours ? undefined : etapes.filter((e) => e.annonce && (e.annonce.surPlace || !chemin.startsWith(e.href)))
+  // Post-its 4, 5, 7, 9, 10 : le plus petit numéro d'abord ; aucun pendant les premiers pas (post-its 1 à 3, même en
+  // attendant le suivant).
+  // Page montrée déjà ouverte : le post-it et l'entourage disparaissent tout de suite. Le menu (layout) n'est pas relu en
+  // changeant de page : sans cela, l'entrée restait entourée jusqu'au prochain rechargement.
+  const [annoncesVues, setAnnoncesVues] = useState<number[]>([]);
+  const pagesAnnoncees = etapes.filter((e) => e.annonce && !e.annonce.surPlace).map((e) => `${e.annonce!.numero} ${e.href}`).join('|');
+  useEffect(() => {
+    const vue = pagesAnnoncees.split('|').map((x) => x.split(' ')).find(([, href]) => href && chemin.startsWith(href))?.[0];
+    try {
+      if (vue) sessionStorage.setItem(`${CLE_GUIDE}-vu-${vue}`, '1');
+      setAnnoncesVues([4, 5, 7, 9].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
+    } catch { if (vue) setAnnoncesVues((v) => [...v, Number(vue)]); }
+  }, [chemin, pagesAnnoncees]);
+  const annonce = premiersPasEnCours ? undefined : etapes
+    .filter((e) => e.annonce && !annoncesVues.includes(e.annonce.numero) && (e.annonce.surPlace || !chemin.startsWith(e.href)))
     .sort((a, b) => a.annonce!.numero - b.annonce!.numero)[0];
   // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
   const [annoncesFermees, setAnnoncesFermees] = useState<number[]>([]);
