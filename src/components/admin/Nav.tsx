@@ -16,8 +16,8 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   nouveau?: boolean;
   /** Entrée grisée, non cliquable : le message montré au survol (ex. carte pas encore validée par Quid Vinum). */
   desactive?: string;
-  /** Post-it qui montre cette entrée (4 « Gérez votre cave », 5 « Configurez vos distributeurs ») jusqu'à sa première visite. */
-  annonce?: { numero: 4 | 5; texte: string } }
+  /** Post-it qui montre cette entrée (4 « Gérez votre cave », 5 « Configurez vos distributeurs », 7 « Accords », 9 « Ajouter un vin, commander », 10 « Livraison », montré aussi sur sa page : surPlace) jusqu'à sa première visite. */
+  annonce?: { numero: 4 | 5 | 7 | 9 | 10; texte: string; surPlace?: boolean } }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
@@ -36,14 +36,16 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
-  const premiersPas = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
+  const [premiersPas, premiersPasEnCours] = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
   // Post-its 4 (la cave vient de s'ouvrir) et 5 (premier inventaire fait : les distributeurs) ; pas par-dessus un autre
   // post-it des premiers pas.
-  const annonce = etapes.find((e) => e.annonce && !chemin.startsWith(e.href));
+  // Le plus petit numéro d'abord ; aucun pendant les premiers pas (post-its 1 à 3, même en attendant le suivant).
+  const annonce = premiersPasEnCours ? undefined : etapes.filter((e) => e.annonce && (e.annonce.surPlace || !chemin.startsWith(e.href)))
+    .sort((a, b) => a.annonce!.numero - b.annonce!.numero)[0];
   // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
   const [annoncesFermees, setAnnoncesFermees] = useState<number[]>([]);
   useEffect(() => {
-    try { setAnnoncesFermees([4, 5].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
+    try { setAnnoncesFermees([4, 5, 7, 9, 10].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
   }, []);
   const guide: Guide | null = premiersPas ?? (annonce?.annonce ? {
     href: annonce.href, numero: annonce.annonce.numero, postIt: !annoncesFermees.includes(annonce.annonce.numero), texte: annonce.annonce.texte,
@@ -114,7 +116,7 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   );
 }
 
-type Guide = { href: string; numero: 1 | 2 | 3 | 4 | 5; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
+type Guide = { href: string; numero: 1 | 2 | 3 | 4 | 5 | 7 | 9 | 10; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
 const CLE_GUIDE = 'pat-guide-chevalet';
 /** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
 const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
@@ -127,7 +129,7 @@ const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
  * Pendant une étape : rien la première minute (deux pour l'étape 3), puis l'entrée du menu est entourée et un post-it
  * apparaît à côté ; un clic sur le post-it le ferme, l'entrée reste entourée jusqu'à ce qu'on l'ouvre.
  */
-function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | null {
+function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): [Guide | null, boolean] {
   const carte = etapes.find((e) => /\/carte$/.test(e.href))?.href;
   const chevalet = etapes.find((e) => /\/chevalet$/.test(e.href))?.href;
   const [etat, setEtat] = useState<{ numero: 2 | 3; visible: boolean; ferme: boolean; accueil: boolean } | null>(null);
@@ -161,18 +163,19 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): Guide | 
     } catch { /* rien */ }
     setFermes((x) => x + 1);
   };
-  if (etat && !etat.visible && etat.accueil) return {
+  // Second élément : premiers pas en cours (étape 2 ou 3, post-it affiché ou attendu).
+  if (etat && !etat.visible && etat.accueil) return [{
     href: '', numero: 1, place: 'haut-droite', postIt: true, fermer: fermer(1),
     titre: 'Bienvenue dans le simulateur', texte: 'Testez l’application comme si vous étiez un client du restaurant.',
-  };
-  if (!etat?.visible) return null;
+  }, true];
+  if (!etat?.visible) return [null, Boolean(etat)];
   const href = etat.numero === 2 ? carte : chevalet;
-  if (!href) return null;
-  return {
+  if (!href) return [null, true];
+  return [{
     href, numero: etat.numero, postIt: !etat.ferme,
     texte: etat.numero === 2 ? 'Vérifiez votre carte des vins' : 'Imprimez votre chevalet de table',
     fermer: fermer(etat.numero),
-  };
+  }, true];
 }
 
 /**

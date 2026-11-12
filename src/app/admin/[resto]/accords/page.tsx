@@ -20,7 +20,9 @@ const CAT: Record<string, string> = { entree: 'Entrée', plat: 'Plat', dessert: 
 
 export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string; regeneration?: string; erreur?: string; commentaire?: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
+  const acces = await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
+  // Le restaurant est venu voir ses accords : le post-it 7 a fait son travail.
+  if (!acces.admin) await requete('update restaurant set accords_annonce_fermee_le = now() where id = $1 and accords_annonce_fermee_le is null', [resto]);
   const sp = await searchParams;
   const [plats, stats, resume, R, u, etat, [derniere]] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto),
     requete<{ le: string | null }>('select max(coalesce(regenere_le, explication_generee_le, calcule_le)) as le from accord where restaurant_id = $1', [resto])]);

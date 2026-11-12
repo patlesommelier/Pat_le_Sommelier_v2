@@ -23,7 +23,9 @@ type Recherche = { id: string; demande: string; plat_id: string | null; budget: 
 
 export default async function RajouterUnVin({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ r?: string; erreur?: string; nouvelle?: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto);
+  const acces = await exigerAcces(resto);
+  // Le restaurant est venu ajouter un vin : le post-it 9 a fait son travail.
+  if (!acces.admin) await requete('update restaurant set commandes_annonce_fermee_le = now() where id = $1 and commandes_annonce_fermee_le is null', [resto]);
   const sp = await searchParams;
   const [plats, recherches, u] = await Promise.all([
     requete<{ id: string; nom: string }>('select id, nom from plat where restaurant_id = $1 and actif order by ordre, nom', [resto]),
