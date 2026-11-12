@@ -759,10 +759,9 @@ export async function envoyerCarteComplete(restaurantId: string) {
     `select count(distinct libelle)::int as manquent from vin_carte where restaurant_id = $1 and disponible and etiquette_url is null`, [restaurantId]);
   if (m?.manquent) redirect(avec(page, { erreur: `Il manque encore ${m.manquent} étiquette(s) : la carte n’est pas complète.` }));
   await requete(`update avis_restaurant set lu_le = now() where restaurant_id = $1 and titre = 'La carte est complète' and lu_le is null`, [restaurantId]);
-  await requete(`insert into avis_restaurant (restaurant_id, titre, texte, lien, lien_libelle, forme) values ($1, $2, $3, $4, $5, 'post-it')`,
+  await requete(`insert into avis_restaurant (restaurant_id, titre, texte, forme) values ($1, $2, $3, 'post-it')`,
     [restaurantId, 'La carte est complète',
-      'Quid Vinum a relu votre carte des vins : chaque vin a sa photo d’étiquette et sa présentation. Elle est prête pour vos clients et pour l’impression.',
-      `/admin/${restaurantId}/carte`, 'Voir ma carte des vins →']);
+      'Quid Vinum a relu votre carte des vins : chaque vin a sa photo d’étiquette et sa présentation. Elle est prête pour vos clients et pour l’impression.']);
   await requete('update restaurant set carte_complete_le = now() where id = $1', [restaurantId]);
   revalidatePath(page);
   redirect(avec(page, { ok: '« La carte est complète » envoyé : le restaurant le verra en post-it à sa prochaine visite.' }));

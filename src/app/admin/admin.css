@@ -47,7 +47,7 @@
 .bo-resto b { display: block; font-size: 14.5px; font-weight: 600; }
 .bo-resto small { font-size: 12px; color: var(--discret); }
 .bo-liens { display: flex; flex-direction: column; gap: 2px; }
-.bo-liens .section { margin: 16px 12px 6px; font-size: 12.5px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texte); font-weight: 800; }
+.bo-liens .section { margin: 16px 12px 6px; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; color: var(--texte); font-weight: 800; }
 /* Titre de groupe repliable : la flèche pointe vers le bas (ouvert) ou vers la droite (replié). */
 .bo-liens .section-repliable { display: flex; align-items: center; gap: 8px; width: calc(100% - 24px); background: none; border: 0; padding: 4px 0; cursor: pointer; font-family: inherit; text-align: left; }
 .bo-liens .section-repliable:hover { color: var(--vert-fond, #610420); }
@@ -598,17 +598,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .apercu-carte { flex: 0 0 auto; width: 294px; max-width: 100%; height: 416px; overflow: hidden; border: 1px solid var(--ligne); border-radius: 8px; background: #FFFFFF; box-shadow: 0 10px 24px -16px rgba(0, 0, 0, 0.35); }
 .apercu-carte iframe { width: 840px; height: 1188px; border: 0; transform: scale(0.35); transform-origin: top left; }
 
-/* Tableau de bord : « Votre mise en route » (restaurant inscrit, avant son premier client) : trois pas côte à côte. */
-.mise-en-route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
-/* Trois cartes de même hauteur, leurs boutons alignés en bas. */
-.mise-en-route > .carte-bo { height: 100%; box-sizing: border-box; }
-.mise-en-route-action { margin-top: auto; }
-@media (max-width: 1100px) { .mise-en-route { grid-template-columns: 1fr; } }
-.pas-mise-en-route { width: 34px; height: 34px; border-radius: 50%; background: var(--encre); color: #FFFFFF; font-weight: 700;
-  display: inline-flex; align-items: center; justify-content: center; }
-.liste-a-verifier { list-style: none; margin: 0; padding: 0; gap: 0; border-top: 1px solid var(--ligne); }
-.liste-a-verifier li { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--ligne); font-size: 15px; }
-.liste-a-verifier li .discret { font-size: 13.5px; white-space: nowrap; }
 .badge-nouveau { margin-left: auto; padding: 2px 8px; border-radius: 999px; background: var(--rouge); color: #FFFFFF; font-size: 11.5px; font-weight: 700; letter-spacing: .02em; }
 /* Super-admin : entonnoir de la mise en route (inscriptions → comptes → apps ouvertes → premier client). */
 .entonnoir { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
@@ -659,3 +648,5 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   transform: translateY(-50%); width: 240px; padding: 10px 12px; border-radius: 10px; background: #241F20; color: #FFFFFF; font-size: 13px; font-weight: 500;
   letter-spacing: 0; text-transform: none; line-height: 1.4; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5); pointer-events: none; }
 @media (max-width: 900px) { .section-desactivee:hover::after, .section-desactivee:focus::after { left: 12px; top: calc(100% + 6px); transform: none; } }
+.badge-groupe { margin-left: 2px; padding: 1px 7px; font-size: 10.5px; letter-spacing: .02em; text-transform: none; flex-shrink: 0; }
+.bo-liens .section-repliable { white-space: nowrap; }

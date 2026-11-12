@@ -119,7 +119,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         {categories.length > 0 && (
           <div className="tableau">
             <table className="table-stocks" style={{ minWidth: 1060 }}>
-              <thead><tr><th>Vin</th><th>Sur ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
+              <thead><tr><th>Vin</th><th>Sur ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Ajouter au panier</th></tr></thead>
               {/* Catégories et sous-catégories de la cave (titres modifiables), vins à glisser ou à déplacer avec les flèches ↑ ↓ (à part de la carte). */}
               <TableCarteGlissable key={String(fixe)} colonnes={9} apres="classement de Ma cave enregistré" fixe={fixe}
                     enregistrer={fixe ? undefined : enregistrerOrdreCave.bind(null, resto)}

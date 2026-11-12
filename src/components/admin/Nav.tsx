@@ -69,7 +69,9 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
             <button type="button" className="section section-repliable" aria-expanded={!cache(e.groupe)} onClick={() => basculer(e.groupe!)}>
               {e.groupe}
               {/* Groupe replié qui cache une notification (commandes) : un point rouge le signale. */}
-              {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && ((x.notif?.n ?? 0) > 0 || x.nouveau)) && <span className="point-notif" aria-label="Nouveauté" />}
+              {/* « Nouveau » (la Gestion de cave vient de s'ouvrir) : à côté du titre du groupe. */}
+              {etapes.some((x) => x.groupe === e.groupe && x.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}
+              {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && (x.notif?.n ?? 0) > 0) && <span className="point-notif" aria-label="Nouveauté" />}
               <svg className="fleche-section" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
             </button>)}
           {!cache(e.groupe) && !groupeGrise(e.groupe) && e.desactive && (
@@ -85,7 +87,6 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
               </span>
             )}
             {e.libelle}
-            {e.nouveau && <span className="badge-nouveau">Nouveau</span>}
             {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
           </Link>}
 
