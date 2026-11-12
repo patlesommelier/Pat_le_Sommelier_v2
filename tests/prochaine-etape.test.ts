@@ -20,15 +20,11 @@ test('prochaine étape : pas de cave, pas d’étape de cave', () => {
   assert.equal(prochaineEtape({ ...rien, cave: false, vinsStockBas: 4, inventaireARefaire: true }), null);
 });
 
-test('cave visible', () => {
-  assert.equal(caveVisible({ origine: 'super_admin', premier_client_le: null, inventaire_le: null }), true);
-  // Inscrit seul : ouverte une fois la carte validée par Quid Vinum (grisée avant).
-  assert.equal(caveVisible({ origine: 'inscription', premier_client_le: '2026-11-10', inventaire_le: null }), false);
-  assert.equal(caveVisible({ origine: 'inscription', premier_client_le: null, inventaire_le: null, carte_complete_le: '2026-11-12' }), true);
-});
-
-test('carte validée', () => {
-  assert.equal(carteValidee({ origine: 'super_admin' }), true);
-  assert.equal(carteValidee({ origine: 'inscription', carte_complete_le: null }), false);
-  assert.equal(carteValidee({ origine: 'inscription', carte_complete_le: '2026-11-12' }), true);
+test('cave visible et carte validée, selon le statut de l’espace', () => {
+  // Vert (actif) et rouge (test) : tout est ouvert ; jaune (inscription) : cave et impression fermées.
+  assert.equal(caveVisible({ mode: 'actif' }), true);
+  assert.equal(caveVisible({ mode: 'test' }), true);
+  assert.equal(caveVisible({ mode: 'inscription' }), false);
+  assert.equal(carteValidee({ mode: 'actif' }), true);
+  assert.equal(carteValidee({ mode: 'inscription' }), false);
 });

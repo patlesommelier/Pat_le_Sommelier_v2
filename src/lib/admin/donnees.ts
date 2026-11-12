@@ -11,8 +11,12 @@ export interface RestaurantBO {
   stock_limite_basse: number;
   /** Mise en route : première ouverture de l'app par un client ; fermeture du bandeau « Suivez vos stocks ». */
   premier_client_le: string | null; cave_annonce_fermee_le: string | null; cree_le: string;
+  /** Post-it 5 « Configurez vos distributeurs » : première visite de la page Distributeurs (après le premier inventaire). */
+  distributeurs_annonce_fermee_le: string | null;
   /** Carte validée par Quid Vinum (« La carte est complète ») : impression de la carte et Gestion de cave ouvertes. */
   carte_complete_le: string | null;
+  /** Statut de l'espace : 'actif' (vert), 'inscription' (jaune : cave et impression fermées), 'test' (rouge : pas d'e-mails). */
+  mode: string;
   /** Date du dernier inventaire validé (page Inventaire) ; null : jamais. */
   inventaire_le: string | null;
   /** Fréquence d'inventaire choisie dans les Paramètres ('aucune', 'semaine', '2semaines', 'mois'). */
@@ -22,7 +26,7 @@ export interface RestaurantBO {
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
     `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, stock_limite_basse, inventaire_le::text as inventaire_le, inventaire_frequence,
-            premier_client_le::text as premier_client_le, cave_annonce_fermee_le::text as cave_annonce_fermee_le, cree_le::text as cree_le, carte_complete_le::text as carte_complete_le
+            premier_client_le::text as premier_client_le, cave_annonce_fermee_le::text as cave_annonce_fermee_le, distributeurs_annonce_fermee_le::text as distributeurs_annonce_fermee_le, cree_le::text as cree_le, carte_complete_le::text as carte_complete_le, mode
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }

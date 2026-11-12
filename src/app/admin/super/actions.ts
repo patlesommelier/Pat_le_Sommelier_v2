@@ -132,6 +132,22 @@ export async function supprimerRestaurant(restaurantId: string, f: FormData) {
   redirect(avec('/admin/super', { ok: `« ${r.nom} » a été supprimé.` }));
 }
 
+/** Statut de l'espace (petit bouton de couleur) : vert actif, jaune inscription, rouge test. */
+export async function changerModeRestaurant(restaurantId: string, f: FormData) {
+  await exigerAdmin();
+  const mode = txt(f, 'mode');
+  if (mode && ['actif', 'inscription', 'test'].includes(mode)) {
+    // Passer au vert ouvre la cave comme une validation de la carte (« Nouveau » à côté de Gestion de cave pendant un jour).
+    // Passage au vert noté (actif_le) : point de départ des relances J+1 et J+3.
+    await requete(`update restaurant set mode = $2, carte_complete_le = case when $2 = 'actif' and origine = 'inscription' then coalesce(carte_complete_le, now()) else carte_complete_le end,
+                    actif_le = case when $2 = 'actif' and mode <> 'actif' then now() else actif_le end
+                    where id = $1`, [restaurantId, mode]);
+  }
+  revalidatePath('/admin', 'layout');
+  const retour = txt(f, 'retour');
+  redirect(retour?.startsWith('/admin/super') ? avec(retour, { ok: 'Statut enregistré.' }) : '/admin/super');
+}
+
 export async function changerStatutRestaurant(restaurantId: string, f: FormData) {
   await exigerAdmin();
   const statut = txt(f, 'statut');
@@ -674,15 +690,6 @@ export async function lancerComparaison(f: FormData) {
   redirect(avec('/admin/super/comparaison', { resto: resto!, id: c.id }));
 }
 
-/** Mode test : coupe (ou rétablit) les e-mails aux distributeurs des restaurants. */
-export async function changerModeTest(f: FormData) {
-  await exigerAdmin();
-  const actif = f.get('mode_test') === 'on';
-  await requete(`insert into reglage_serveur (cle, valeur) values ('mode_test_distributeurs', $1) on conflict (cle) do update set valeur = excluded.valeur, maj_le = now()`, [actif ? '1' : '0']);
-  revalidatePath('/admin/super');
-  redirect(avec('/admin/super', { ok: actif ? 'Mode test : aucun e-mail n’est envoyé aux distributeurs des restaurants.' : 'Mode test arrêté : les bons de commande partent chez les distributeurs.' }));
-}
-
 /**
  * Doublon dans les producteurs : ce producteur est regroupé dans un autre (le producteur gardé). Ses vins de la base, ses vins
  * sur les cartes et chez les distributeurs passent au producteur gardé, qui reprend ce qui lui manque (pays, région, fiche, ranking,
@@ -762,7 +769,7 @@ export async function envoyerCarteComplete(restaurantId: string) {
   await requete(`insert into avis_restaurant (restaurant_id, titre, texte, forme) values ($1, $2, $3, 'post-it')`,
     [restaurantId, 'La carte est complète',
       'Quid Vinum a relu votre carte des vins : chaque vin a sa photo d’étiquette et sa présentation. Elle est prête pour vos clients et pour l’impression.']);
-  await requete('update restaurant set carte_complete_le = now() where id = $1', [restaurantId]);
+  await requete(`update restaurant set carte_complete_le = now(), actif_le = case when mode = 'inscription' then now() else actif_le end, mode = case when mode = 'inscription' then 'actif' else mode end where id = $1`, [restaurantId]);
   revalidatePath(page);
   redirect(avec(page, { ok: '« La carte est complète » envoyé : le restaurant le verra en post-it à sa prochaine visite.' }));
 }

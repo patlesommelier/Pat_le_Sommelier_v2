@@ -136,8 +136,9 @@ export async function envoyerLien(email: string, lien: string, sujet: string, te
 }
 
 /** Invitation : un lien (7 jours) pour choisir son mot de passe, envoyé par e-mail (ou à transmettre soi-même : `lien`). */
-export async function inviter(compteId: string, email: string) {
+export async function inviter(compteId: string, email: string, sansEmail = false) {
   const lien = await creerLien(compteId, '/admin/mot-de-passe', 7);
+  if (sansEmail) return { envoye: false, erreur: 'Restaurant pas encore actif (vert) : aucun e-mail n’est envoyé', lien };
   const r = await envoyerLien(email, lien, 'Votre accès à l’espace restaurant Quid Vinum',
     'Bonjour,\n\nUn accès à votre espace restaurant Quid Vinum a été créé pour vous. Pour choisir votre mot de passe, ouvrez ce lien (valable 7 jours) :');
   return { ...r, lien };

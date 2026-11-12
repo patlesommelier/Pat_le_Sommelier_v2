@@ -46,15 +46,22 @@ export function prochaineEtape(e: EtatRestaurant): ProchaineEtape | null {
   return null;
 }
 
-/** Carte des vins validée par Quid Vinum (« La carte est complète ») ; d'office pour un restaurant créé par Quid Vinum. */
-export const carteValidee = (r: { origine: string; carte_complete_le?: string | null }) =>
-  r.origine !== 'inscription' || Boolean(r.carte_complete_le);
+/** Statut de l'espace, choisi par le super-admin : vert (actif), jaune (inscription), rouge (test). */
+export type ModeRestaurant = 'actif' | 'inscription' | 'test';
+export const MODES: Record<ModeRestaurant, { couleur: string; libelle: string; sens: string }> = {
+  actif: { couleur: '#2E9E5B', libelle: 'Actif', sens: 'Tout est ouvert, les e-mails partent.' },
+  inscription: { couleur: '#E3A21A', libelle: 'Inscription', sens: 'Gestion de cave et impression de la carte fermées jusqu’à la validation des vins ; aucun e-mail ne part.' },
+  test: { couleur: '#C62828', libelle: 'Test', sens: 'Tout est ouvert, aucun e-mail ne part.' },
+};
+
+/** Carte des vins validée par Quid Vinum : le restaurant n'est plus en mode inscription (jaune). */
+export const carteValidee = (r: { mode?: string | null }) => r.mode !== 'inscription';
 
 /**
  * Gestion de cave ouverte : toujours pour un restaurant créé par Quid Vinum ; pour un restaurant inscrit seul, une fois sa
  * carte validée par Quid Vinum (avant, elle est grisée dans le menu).
  */
-export const caveVisible = (r: { origine: string; premier_client_le?: string | null; inventaire_le?: string | null; carte_complete_le?: string | null }) =>
+export const caveVisible = (r: { mode?: string | null }) =>
   carteValidee(r);
 
 /** Messages des entrées grisées tant que la carte n'est pas validée : la Gestion de cave, et l'impression de la carte. */

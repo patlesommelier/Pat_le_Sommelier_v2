@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
-import { choisirFournisseur, donneesBon, modeTestDistributeurs, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
+import { choisirFournisseur, donneesBon, emailsCoupes, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
 import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
 import { ajouterVinCommande } from '@/lib/admin/distributeur-vin';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
@@ -392,8 +392,8 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
   if (!bon.fournisseur.email) return { erreur: bon.distributeur || bon.quidVinum ? 'L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.' : `Ajoutez l’adresse e-mail de « ${bon.fournisseur.nom} » dans Fournisseurs.` };
   const ref = referenceCommande(bon);
   const total = bon.lignes.reduce((n, l) => n + l.quantite, 0);
-  // Mode test : rien ne part chez un distributeur du restaurant (la commande passe quand même « envoyée »).
-  const coupe = !bon.distributeur && !bon.quidVinum && await modeTestDistributeurs();
+  // Restaurant pas en vert (jaune ou rouge) : aucun e-mail, même à Quid Vinum (la commande passe quand même « envoyée »).
+  const coupe = await emailsCoupes(resto);
   const erreur = coupe ? null : await envoyerEmail({
     a: bon.fournisseur.email, copie: bon.restaurant.email, repondreA: bon.restaurant.email,
     sujet: `Bon de commande ${ref} — ${bon.restaurant.nom}${bon.distributeur ? ` — ${bon.distributeur}` : ''}`,
@@ -409,7 +409,7 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
                          statut_qv_le = coalesce(c.statut_qv_le, now())
                    where id = $1 and restaurant_id = $2`, [id, resto, bon.fournisseur.email]);
   rafraichir(resto);
-  return { ok: coupe ? `Mode test : rien n’est envoyé à ${bon.fournisseur.email} ; la commande est marquée envoyée.` : `Bon de commande envoyé à ${bon.fournisseur.email}.` };
+  return { ok: coupe ? `Restaurant pas encore actif (vert) : rien n’est envoyé à ${bon.fournisseur.email} ; la commande est marquée envoyée.` : `Bon de commande envoyé à ${bon.fournisseur.email}.` };
 }
 
 /** Commande envoyée par le restaurant lui-même (partage du PDF ou messagerie) : statut « Commande envoyée ». */
@@ -489,8 +489,8 @@ export async function annulerCommande(resto: string, id: string): Promise<Retour
   let prevenu = '';
   const bon = r[0].envoyee_le ? await donneesBon(resto, id) : null;
   const a = r[0].envoyee_a ?? bon?.fournisseur.email ?? null;
-  const coupe = Boolean(bon && !bon.distributeur && !bon.quidVinum && await modeTestDistributeurs());
-  if (bon && a && coupe) prevenu = ` Mode test : ${a} n’a pas été prévenu par e-mail.`;
+  const coupe = Boolean(bon && await emailsCoupes(resto));
+  if (bon && a && coupe) prevenu = ` Restaurant pas encore actif (vert) : ${a} n’a pas été prévenu par e-mail.`;
   if (bon && a && !coupe) {
     const ref = referenceCommande(bon);
     const erreur = await envoyerEmail({

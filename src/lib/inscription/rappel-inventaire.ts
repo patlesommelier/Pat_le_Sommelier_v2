@@ -13,7 +13,7 @@ export async function envoyerRappelsInventaire(maintenant = new Date()): Promise
   const candidats = await requete<{ id: string; nom: string; frequence: Frequence; rappel: string | null }>(
     `select id, nom, inventaire_frequence as frequence, inventaire_rappel_le::text as rappel from restaurant
       where inventaire_frequence <> 'aucune' and statut <> 'suspendu'
-        and (origine <> 'inscription' or carte_complete_le is not null) -- cave ouverte
+        and mode = 'actif' -- en vert : seul statut où les e-mails partent
         and (inventaire_le is null or inventaire_le < now() - interval '1 day')`); // pas s'il vient d'être fait
   let partis = 0;
   for (const r of candidats) {

@@ -141,12 +141,13 @@ export async function donneesReception(resto: string, commandeId: string, recept
 }
 
 /**
- * Mode test (réglage du super-admin, actif par défaut) : aucun e-mail n'est envoyé aux distributeurs du restaurant
- * (bons de commande, annulations) ; les commandes passent quand même « envoyées ». Quid Vinum reçoit les siennes.
+ * E-mails coupés pour ce restaurant : il n'est pas en vert (actif). En jaune (inscription) et en rouge (test), aucun e-mail
+ * ne part pour lui (bons de commande et annulations, même à Quid Vinum ; refus de commande ; invitations ; rappels) ;
+ * les commandes passent quand même « envoyées ».
  */
-export async function modeTestDistributeurs(): Promise<boolean> {
-  const [r] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'mode_test_distributeurs'`);
-  return r?.valeur !== '0';
+export async function emailsCoupes(resto: string): Promise<boolean> {
+  const [r] = await requete<{ mode: string }>('select mode from restaurant where id = $1', [resto]);
+  return r?.mode !== 'actif';
 }
 
 /** Panier de commande du restaurant (page Vins) : chaque vin, ses bouteilles, son distributeur et son prix d'achat HTVA. */

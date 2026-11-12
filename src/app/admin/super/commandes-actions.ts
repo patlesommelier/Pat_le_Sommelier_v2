@@ -5,7 +5,7 @@ import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import type { Retour } from '@/components/admin/FormulaireAdmin';
 import { STATUTS_QV } from '@/lib/super/commandes';
-import { donneesBon } from '@/lib/admin/stocks';
+import { donneesBon, emailsCoupes } from '@/lib/admin/stocks';
 import { envoyerEmail } from '@/lib/email';
 import { referenceCommande } from '@/lib/bon-commande';
 import { getVinsBO } from '@/lib/admin/donnees';
@@ -52,7 +52,7 @@ export async function refuserCommandeQv(id: string, f: FormData): Promise<Retour
       where v.id = l.vin_id and v.restaurant_id = $2`, [id, resto]);
   let note = '';
   const bon = await donneesBon(resto, id);
-  if (bon?.restaurant.email) {
+  if (bon?.restaurant.email && !(await emailsCoupes(resto))) { // pas en vert : pas d'e-mail au restaurant
     const ref = referenceCommande(bon);
     const erreur = await envoyerEmail({
       a: bon.restaurant.email, sujet: `Commande ${ref} refusée par Quid Vinum`,

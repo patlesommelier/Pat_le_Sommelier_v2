@@ -1,7 +1,7 @@
 import 'server-only';
 // E-mails de relance de la mise en route : un restaurant inscrit seul dont aucun client n'a encore utilisé l'app reçoit
-// un e-mail le lendemain de son inscription, puis un second 3 jours après. Chacun part une seule fois, et seulement dans
-// les 14 jours qui suivent l'inscription (jamais aux restaurants inscrits avant la mise en service des relances).
+// un e-mail le lendemain de son passage au vert (actif : vins validés par Quid Vinum), puis un second 3 jours après.
+// Chacun part une seule fois, et seulement dans les 14 jours qui suivent ce passage au vert.
 import { requete } from '../db';
 import { adressePour } from '../domaines';
 import { envoiEmailConfigure, envoyerEmail } from '../email';
@@ -19,8 +19,8 @@ export async function envoyerRelances(): Promise<number> {
     // Réservées d'abord (une seule instance du serveur les envoie), puis envoyées.
     const dues = await requete<Relance>(
       `update restaurant r set ${colonne} = now()
-        where r.origine = 'inscription' and r.premier_client_le is null and r.statut <> 'suspendu' and r.${colonne} is null
-          and r.cree_le < now() - interval '${delai}' and r.cree_le > now() - interval '14 days'
+        where r.origine = 'inscription' and r.premier_client_le is null and r.statut <> 'suspendu' and r.mode = 'actif' and r.${colonne} is null
+          and r.actif_le < now() - interval '${delai}' and r.actif_le > now() - interval '14 days'
           ${numero === 2 ? 'and r.relance_1_le is not null' : ''}
        returning r.id, r.nom, r.statut::text,
          coalesce(r.cree_par, (select a.email from acces_restaurant a where a.restaurant_id = r.id order by a.email limit 1)) as email,

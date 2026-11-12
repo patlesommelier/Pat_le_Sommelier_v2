@@ -28,7 +28,7 @@ import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { chercherVinsBase, offresDistributeurs, type VinTrouve } from '@/lib/admin/recherche-base';
 import { rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
 import { completerBase } from '@/lib/admin/completer-base';
-import { choisirFournisseur } from '@/lib/admin/stocks';
+import { choisirFournisseur, emailsCoupes } from '@/lib/admin/stocks';
 import { distributeurPermis } from '@/lib/distributeurs/verrou';
 import { reconnaitreVins } from '@/lib/inscription/reconnaissance';
 
@@ -1096,7 +1096,7 @@ export async function creerAcces(resto: string, f: FormData) {
     if (sansMotDePasse) await definirMotDePasse(id, mdp);
     retour({ ok: `Utilisateur ${email} ajouté : communiquez-lui son mot de passe.` });
   }
-  const r = await inviter(id, email);
+  const r = await inviter(id, email, await emailsCoupes(resto));
   retour(r.envoye ? { ok: `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.` }
     : { ok: `Utilisateur ${email} invité. ${r.erreur ? r.erreur.replace(/\.$/, '') : 'L’envoi d’e-mails n’est pas encore activé'} ; transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });
 }

@@ -5,10 +5,12 @@ import { NavLiens, type Etape } from '@/components/admin/Nav';
 import type { Utilisateur } from '@/lib/admin/auth';
 
 /** Coque du back-office : marque, restaurant, menu des étapes, déconnexion. */
-export function Coque({ utilisateur, resto, etapes, children }: {
+export function Coque({ utilisateur, resto, etapes, mode, children }: {
   utilisateur: Utilisateur;
   resto?: { id: string; nom: string; couleur: string; resume: string; logo?: string | null };
   etapes: Etape[];
+  /** Statut de l'espace du restaurant (vert actif, jaune inscription, rouge test) : montré sous « Tableau de bord ». */
+  mode?: string;
   children: React.ReactNode;
 }) {
   const accueil = resto ? `/admin/${resto.id}` : '/admin';
@@ -37,7 +39,7 @@ export function Coque({ utilisateur, resto, etapes, children }: {
                 <span style={{ flexGrow: 1 }}><b>{resto.nom}</b><small>{resto.resume}</small></span></>}
           </Link>
         )}
-        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
+        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} mode={mode} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
         <div className="bo-bas">
           <span>{utilisateur.email}</span>
           <form action={seDeconnecter}><button type="submit" className="btn fantome petit" style={{ paddingLeft: 0 }}>Se déconnecter</button></form>

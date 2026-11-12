@@ -15,14 +15,20 @@ import { carteValidee, MESSAGE_CARTE_A_VALIDER, MESSAGE_IMPRESSION_A_VALIDER } f
 const LIBELLES_MENU: Record<string, string> = { Menu: 'Gérer le menu', 'Carte des vins': 'Gérer la carte des vins', Accords: 'Gérer les accords mets/vins' };
 const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus', Sommelier: 'Cartes et menus', App: 'App client' };
 // « Gestion de cave » (Ma cave, Inventaire, Ajouter un vin, Commandes, Distributeurs) : sous « Cartes et menus ».
-function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee' | 'nouvelle' | 'visible' = 'visible', annonce = false): Etape[] {
+// Post-its de la Gestion de cave : 4 « Gérez votre cave » (cave qui vient de s'ouvrir), 5 « Configurez vos distributeurs »
+// (après le premier inventaire). Un seul à la fois : le premier de la liste.
+const ANNONCES = {
+  stocks: { numero: 4, texte: 'Gérez votre cave : classez vos vins et indiquez votre stock' },
+  fournisseurs: { numero: 5, texte: 'Configurez vos distributeurs de vin pour automatiser vos commandes, ou choisissez ceux de Quid Vinum pour bénéficier de leurs prix' },
+} as const;
+function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee' | 'nouvelle' | 'visible' = 'visible', annonces: { stocks?: boolean; fournisseurs?: boolean } = {}): Etape[] {
   const base = `/admin/${resto}`;
   const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['inventaire', 'Faire l’inventaire', 'check'], ['trouver-vin', 'Ajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Gestion de cave', icone,
       // Commandes : pastille quand Quid Vinum a changé le statut d’une commande ou joint une facture depuis la dernière visite.
       ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}),
       ...(chemin === 'stocks' && cave === 'nouvelle' ? { nouveau: true } : {}),
-      ...(chemin === 'stocks' && annonce ? { annonce: true } : {}),
+      ...((chemin === 'stocks' || chemin === 'fournisseurs') && annonces[chemin] ? { annonce: ANNONCES[chemin] } : {}),
       // Carte pas encore validée par Quid Vinum : grisé, avec le message (la page « Ajouter un vin » reste ouverte depuis la
       // carte des vins, pour la compléter).
       ...(cave === 'grisee' ? { desactive: MESSAGE_CARTE_A_VALIDER } : {}) }));
@@ -49,10 +55,14 @@ export default async function LayoutRestaurant({ children, params }: { children:
   const cave = !carteValidee(r) ? (u.admin ? 'visible' : 'grisee')
     : r.origine === 'inscription' && r.carte_complete_le && Date.now() - Date.parse(r.carte_complete_le) < 864e5 ? 'nouvelle' : 'visible';
   return (
-    <Coque utilisateur={u} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}
+    <Coque utilisateur={u} mode={r.mode} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}
       etapes={avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir, cave,
-        // Post-it 4 « Gérez votre cave » : restaurant inscrit seul, carte validée, cave pas encore ouverte (ni le post-it fermé).
-        !u.admin && r.origine === 'inscription' && cave !== 'grisee' && !r.cave_annonce_fermee_le)}>
+        {
+          // Post-it 4 « Gérez votre cave » : restaurant inscrit seul, carte validée, cave pas encore ouverte.
+          stocks: !u.admin && r.origine === 'inscription' && cave !== 'grisee' && !r.cave_annonce_fermee_le,
+          // Post-it 5 « Configurez vos distributeurs » : premier inventaire enregistré, page Distributeurs pas encore ouverte.
+          fournisseurs: !u.admin && cave !== 'grisee' && Boolean(r.inventaire_le) && !r.distributeurs_annonce_fermee_le,
+        })}>
       <AvisRestaurant resto={resto} avis={avis} />
       {children}
     </Coque>

@@ -68,8 +68,8 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     restaurantId = slugRestaurant(i.nom_restaurant ?? 'restaurant', existants);
     const couleur = i.couleur ?? '#610420';
     await requete(
-      `insert into restaurant (id, nom, couleur, couleur_claire, accroche, statut, ville, origine, cree_par)
-       values ($1, $2, $3, $4, $5, 'mise_en_place', $6, 'inscription', $7)`,
+      `insert into restaurant (id, nom, couleur, couleur_claire, accroche, statut, ville, origine, cree_par, mode)
+       values ($1, $2, $3, $4, $5, 'mise_en_place', $6, 'inscription', $7, 'inscription')`,
       [restaurantId, i.nom_restaurant, couleur, couleurClaire(couleur), `Bienvenue chez ${i.nom_restaurant},|je vous aide à choisir le vin`, i.ville, email]);
     await majInscription(inscriptionId, { restaurant_id: restaurantId });
   } else {

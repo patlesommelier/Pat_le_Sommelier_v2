@@ -1,6 +1,7 @@
 // Base des vins — Distributeurs : « Mes distributeurs » (ceux du restaurant, coordonnées reprises sur les bons de commande)
 // et « Distributeurs Quid Vinum » (catalogue et prix de Quid Vinum, commandes envoyées à Quid Vinum). On peut en ajouter dans les deux.
 import { exigerCave } from '@/lib/admin/garde-cave';
+import { requete } from '@/lib/db';
 import Link from 'next/link';
 import { ajouterDistributeurQv, ajouterFournisseur, modifierFournisseur, supprimerFournisseur } from '../../stocks-actions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -29,7 +30,9 @@ function Champs({ f }: { f?: Fournisseur }) {
 
 export default async function Fournisseurs({ params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
-  await exigerCave(resto);
+  const u = await exigerCave(resto);
+  // Le restaurant est venu voir ses distributeurs : le post-it 5 « Configurez vos distributeurs » a fait son travail.
+  if (!u.admin) await requete('update restaurant set distributeurs_annonce_fermee_le = now() where id = $1 and distributeurs_annonce_fermee_le is null', [resto]);
   const [fournisseurs, proposes, vinsSurCarte] = await Promise.all([getFournisseurs(resto), distributeursProposes(resto), vinsSurCarteParDistributeur(resto)]);
   const propres = fournisseurs.filter((f) => !f.distributeur_id), quidVinum = fournisseurs.filter((f) => f.distributeur_id);
   return (

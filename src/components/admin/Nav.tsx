@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Icone } from './Icone';
 import { PastilleNotif } from './PastilleNotif';
+import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
 export type EtatEtape = 'fait' | 'encours' | 'afaire';
 /** Étape du menu de gauche, rangée sous son groupe ; un outil (icône) n'est pas une étape à cocher. */
@@ -15,12 +16,12 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   nouveau?: boolean;
   /** Entrée grisée, non cliquable : le message montré au survol (ex. carte pas encore validée par Quid Vinum). */
   desactive?: string;
-  /** Ma cave qui vient de s'ouvrir (carte validée) : post-it 4 « Gérez votre cave », jusqu'à la première visite ou sa fermeture. */
-  annonce?: boolean }
+  /** Post-it qui montre cette entrée (4 « Gérez votre cave », 5 « Configurez vos distributeurs ») jusqu'à sa première visite. */
+  annonce?: { numero: 4 | 5; texte: string } }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
-export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
+export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[]; mode?: string }) {
   const sp = useSearchParams();
   let chemin = usePathname();
   // Fiche d'un vin ouverte depuis Ma cave (?retour=…/stocks), fiche d'un producteur : on reste sur « Ma cave » dans le menu.
@@ -36,14 +37,21 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
   const premiersPas = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
-  // Post-it 4 : la cave vient de s'ouvrir (carte validée par Quid Vinum) ; pas par-dessus un autre post-it des premiers pas.
-  const cave = etapes.find((e) => e.annonce);
-  // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que Ma cave n'a pas été ouverte.
-  const [caveFermee, setCaveFermee] = useState(false);
-  useEffect(() => { try { setCaveFermee(sessionStorage.getItem(`${CLE_GUIDE}-ferme-4`) === '1'); } catch { /* rien */ } }, []);
-  const guide: Guide | null = premiersPas ?? (cave && !chemin.startsWith(cave.href) ? {
-    href: cave.href, numero: 4, postIt: !caveFermee, texte: 'Gérez votre cave : classez vos vins et indiquez votre stock',
-    fermer: () => { setCaveFermee(true); try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-4`, '1'); } catch { /* rien */ } },
+  // Post-its 4 (la cave vient de s'ouvrir) et 5 (premier inventaire fait : les distributeurs) ; pas par-dessus un autre
+  // post-it des premiers pas.
+  const annonce = etapes.find((e) => e.annonce && !chemin.startsWith(e.href));
+  // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
+  const [annoncesFermees, setAnnoncesFermees] = useState<number[]>([]);
+  useEffect(() => {
+    try { setAnnoncesFermees([4, 5].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
+  }, []);
+  const guide: Guide | null = premiersPas ?? (annonce?.annonce ? {
+    href: annonce.href, numero: annonce.annonce.numero, postIt: !annoncesFermees.includes(annonce.annonce.numero), texte: annonce.annonce.texte,
+    fermer: () => {
+      const n = annonce.annonce!.numero;
+      setAnnoncesFermees((f) => [...f, n]);
+      try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1'); } catch { /* rien */ }
+    },
   } : null);
   const suivante = guide?.href;
   const groupeGrise = (g?: string) => Boolean(g && etapes.filter((x) => x.groupe === g).every((x) => x.desactive));
@@ -57,6 +65,13 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   return (
     <nav aria-label="Back-office" className="bo-liens">
       <Link href={accueil} className="bo-lien" aria-current={courant(accueil)}><span className="bo-num" style={{ border: 0 }}><Icone nom="home" /></span>Tableau de bord</Link>
+      {/* Statut de l'espace (choisi par Quid Vinum) et ce qu'il veut dire. */}
+      {mode && MODES[mode as ModeRestaurant] && (
+        <span className="statut-espace">
+          <span className="rond-mode" style={{ background: MODES[mode as ModeRestaurant].couleur }} aria-hidden="true" />
+          <span><b>{MODES[mode as ModeRestaurant].libelle}</b> : {MODES[mode as ModeRestaurant].sens}</span>
+        </span>
+      )}
       {etapes.map((e, i) => (
         <Fragment key={e.href}>
           {/* Groupe dont toutes les entrées sont grisées (Gestion de cave avant la validation de la carte) : titre grisé, qui ne
@@ -99,7 +114,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   );
 }
 
-type Guide = { href: string; numero: 1 | 2 | 3 | 4; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
+type Guide = { href: string; numero: 1 | 2 | 3 | 4 | 5; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
 const CLE_GUIDE = 'pat-guide-chevalet';
 /** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
 const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
