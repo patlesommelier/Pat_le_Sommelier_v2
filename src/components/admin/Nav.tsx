@@ -65,11 +65,11 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   return (
     <nav aria-label="Back-office" className="bo-liens">
       <Link href={accueil} className="bo-lien" aria-current={courant(accueil)}><span className="bo-num" style={{ border: 0 }}><Icone nom="home" /></span>Tableau de bord</Link>
-      {/* Statut de l'espace (choisi par Quid Vinum) et ce qu'il veut dire. */}
+      {/* Statut de l'espace (choisi par Quid Vinum) : son nom seulement. */}
       {mode && MODES[mode as ModeRestaurant] && (
         <span className="statut-espace">
           <span className="rond-mode" style={{ background: MODES[mode as ModeRestaurant].couleur }} aria-hidden="true" />
-          <span><b>{MODES[mode as ModeRestaurant].libelle}</b> : {MODES[mode as ModeRestaurant].sens}</span>
+          <b>{MODES[mode as ModeRestaurant].libelle}</b>
         </span>
       )}
       {etapes.map((e, i) => (
