@@ -599,7 +599,10 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .apercu-carte iframe { width: 840px; height: 1188px; border: 0; transform: scale(0.35); transform-origin: top left; }
 
 /* Tableau de bord : « Votre mise en route » (restaurant inscrit, avant son premier client) : trois pas côte à côte. */
-.mise-en-route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.mise-en-route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+/* Trois cartes de même hauteur, leurs boutons alignés en bas. */
+.mise-en-route > .carte-bo { height: 100%; box-sizing: border-box; }
+.mise-en-route-action { margin-top: auto; }
 @media (max-width: 1100px) { .mise-en-route { grid-template-columns: 1fr; } }
 .pas-mise-en-route { width: 34px; height: 34px; border-radius: 50%; background: var(--encre); color: #FFFFFF; font-weight: 700;
   display: inline-flex; align-items: center; justify-content: center; }
@@ -649,3 +652,10 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   transform: translateY(-50%); width: 240px; padding: 10px 12px; border-radius: 10px; background: #241F20; color: #FFFFFF; font-size: 13px; font-weight: 500;
   line-height: 1.4; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5); pointer-events: none; }
 @media (max-width: 900px) { .bo-lien-desactive:hover::after, .bo-lien-desactive:focus::after { left: 12px; top: calc(100% + 6px); transform: none; } }
+/* Titre de groupe grisé (Gestion de cave avant la validation de la carte) : ne se déroule pas, message au survol. */
+.section-desactivee { position: relative; display: flex; align-items: center; cursor: not-allowed; }
+.section-desactivee > span { opacity: .4; }
+.section-desactivee:hover::after, .section-desactivee:focus::after { content: attr(data-info); position: absolute; z-index: 80; left: calc(100% + 10px); top: 50%;
+  transform: translateY(-50%); width: 240px; padding: 10px 12px; border-radius: 10px; background: #241F20; color: #FFFFFF; font-size: 13px; font-weight: 500;
+  letter-spacing: 0; text-transform: none; line-height: 1.4; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5); pointer-events: none; }
+@media (max-width: 900px) { .section-desactivee:hover::after, .section-desactivee:focus::after { left: 12px; top: calc(100% + 6px); transform: none; } }

@@ -46,6 +46,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
     fermer: () => { setCaveFermee(true); try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-4`, '1'); } catch { /* rien */ } },
   } : null);
   const suivante = guide?.href;
+  const groupeGrise = (g?: string) => Boolean(g && etapes.filter((x) => x.groupe === g).every((x) => x.desactive));
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && (courant(e.href) || e.href === suivante));
   const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
   const basculer = (g: string) => {
@@ -58,20 +59,26 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
       <Link href={accueil} className="bo-lien" aria-current={courant(accueil)}><span className="bo-num" style={{ border: 0 }}><Icone nom="home" /></span>Tableau de bord</Link>
       {etapes.map((e, i) => (
         <Fragment key={e.href}>
-          {e.groupe && e.groupe !== etapes[i - 1]?.groupe && (
+          {/* Groupe dont toutes les entrées sont grisées (Gestion de cave avant la validation de la carte) : titre grisé, qui ne
+              se déroule pas, avec le message au survol. */}
+          {e.groupe && e.groupe !== etapes[i - 1]?.groupe && groupeGrise(e.groupe) && (
+            <span className="section section-desactivee" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
+              <span>{e.groupe}</span>
+            </span>)}
+          {e.groupe && e.groupe !== etapes[i - 1]?.groupe && !groupeGrise(e.groupe) && (
             <button type="button" className="section section-repliable" aria-expanded={!cache(e.groupe)} onClick={() => basculer(e.groupe!)}>
               {e.groupe}
               {/* Groupe replié qui cache une notification (commandes) : un point rouge le signale. */}
               {cache(e.groupe) && etapes.some((x) => x.groupe === e.groupe && ((x.notif?.n ?? 0) > 0 || x.nouveau)) && <span className="point-notif" aria-label="Nouveauté" />}
               <svg className="fleche-section" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
             </button>)}
-          {!cache(e.groupe) && e.desactive && (
+          {!cache(e.groupe) && !groupeGrise(e.groupe) && e.desactive && (
             <span className="bo-lien bo-lien-desactive" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
               {e.icone && <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span>}
               <span>{e.libelle}</span>
             </span>
           )}
-          {!cache(e.groupe) && !e.desactive && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
+          {!cache(e.groupe) && !groupeGrise(e.groupe) && !e.desactive && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
             {e.icone ? <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span> : (
               <span className={`bo-num ${e.etat}`} aria-label={e.etat === 'fait' ? 'Terminé' : undefined}>
                 {e.etat === 'fait' ? <Icone nom="check" taille={14} epaisseur={2.4} /> : i + 1}

@@ -4,7 +4,6 @@ import { titreCarte } from '@/lib/admin/intitule';
 import { sansContenance } from '@/lib/format';
 
 const pl = (n: number, s: string, p = `${s}s`) => `${n} ${n > 1 ? p : s}`;
-const MAX = 5;
 
 /**
  * Tableau de bord d'un restaurant inscrit seul, tant qu'aucun client n'a encore ouvert l'app : trois pas pour être prêt.
@@ -49,40 +48,24 @@ export function MiseEnRoute({ resto, app, exemple, verifier }: {
               )}
             </div>
           ) : <p className="discret" style={{ margin: 0 }}>Choisissez un de vos plats : Pat vous propose le vin de votre carte qui l’accompagne, et vous dit pourquoi.</p>}
-          <div className="ligne-actions">
+          <div className="ligne-actions mise-en-route-action">
             <Link href={`/admin/${resto}/simulateur`} className="btn">Ouvrir le simulateur →</Link>
             <a href={app} target="_blank" rel="noopener" className="btn sec petit">Ouvrir l’app comme un client</a>
           </div>
         </article>
 
-        {/* 2. Vérification rapide : seulement ce que la lecture des cartes n'a pas trouvé. */}
+        {/* 2. Vérifier la carte des vins lue par Pat (noms, prix, contenances), dans la page de la carte. */}
         <article className="carte-bo pile" style={{ gap: 14 }}>
           <span className="pas-mise-en-route">2</span>
-          <h3 style={{ fontSize: 20 }}>Vérifiez la lecture de vos cartes</h3>
-          {manques === 0 ? (
-            <p style={{ margin: 0 }}><span className="etat ok">✓ Tout est en ordre</span> Pat a trouvé un prix pour tous vos vins et tous vos plats.</p>
-          ) : (
-            <>
-              <p className="discret" style={{ margin: 0, fontSize: 15 }}>
-                Pat n’a pas trouvé de prix pour {[verifier.vins.length && pl(verifier.vins.length, 'vin'), verifier.plats.length && pl(verifier.plats.length, 'plat')].filter(Boolean).join(' et ')}. Complétez-les en un clic :
-              </p>
-              <ul className="pile liste-a-verifier">
-                {verifier.vins.slice(0, MAX).map((v) => (
-                  <li key={v.id}><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}`}>{v.nom}</Link><span className="discret">vin sans prix</span></li>
-                ))}
-                {verifier.plats.slice(0, MAX).map((p) => (
-                  <li key={p.id}><Link href={`/admin/${resto}/menu?plat=${encodeURIComponent(p.id)}#plat-${p.id}`}>{p.nom}</Link><span className="discret">plat sans prix</span></li>
-                ))}
-              </ul>
-              {(verifier.vins.length > MAX || verifier.plats.length > MAX) && (
-                <span className="discret" style={{ fontSize: 14 }}>
-                  Et d’autres : voir {verifier.vins.length > MAX && <Link href={`/admin/${resto}/carte`}>la carte des vins</Link>}
-                  {verifier.vins.length > MAX && verifier.plats.length > MAX && ' et '}
-                  {verifier.plats.length > MAX && <Link href={`/admin/${resto}/menu`}>le menu</Link>}.
-                </span>
-              )}
-            </>
-          )}
+          <h3 style={{ fontSize: 20 }}>Vérifiez la lecture de votre carte</h3>
+          <p className="discret" style={{ margin: 0, fontSize: 15 }}>
+            Relisez vos vins tels que Pat les a lus : leurs noms, leurs prix et leurs contenances.
+            {manques > 0 && <> Il manque encore le prix de {[verifier.vins.length && pl(verifier.vins.length, 'vin'), verifier.plats.length && pl(verifier.plats.length, 'plat')].filter(Boolean).join(' et ')}.</>}
+          </p>
+          <div className="ligne-actions mise-en-route-action">
+            <Link href={`/admin/${resto}/carte`} className="btn">Vérifier ma carte des vins →</Link>
+            <Link href={`/admin/${resto}/menu`} className="btn sec petit">Vérifier mon menu</Link>
+          </div>
         </article>
 
         {/* 3. Le QR code sur les tables. */}
@@ -95,7 +78,7 @@ export function MiseEnRoute({ resto, app, exemple, verifier }: {
               style={{ padding: 6, borderRadius: 12, border: '1px solid var(--ligne)', background: '#FFFFFF' }} />
             <p className="discret" style={{ margin: 0, fontSize: 15, flex: '1 1 160px' }}>Vos clients le scannent avec leur téléphone : Pat les conseille à table.</p>
           </div>
-          <div className="ligne-actions">
+          <div className="ligne-actions mise-en-route-action">
             <Link href={`/admin/${resto}/chevalet`} className="btn">Imprimer un chevalet de table</Link>
             <a href={`/admin/${resto}/acces/qr?format=png`} download className="btn sec petit">Télécharger l’image</a>
           </div>

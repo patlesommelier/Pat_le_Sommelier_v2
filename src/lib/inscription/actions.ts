@@ -1,9 +1,9 @@
 'use server';
 // Pat le sommelier — actions du formulaire de la page d'accueil : 1. carte des vins, 2. menu, 3. restaurant (compte) et création.
 // Chaque action relit l'inscription depuis le cookie : rien n'est confié au navigateur, qui ne reçoit que des compteurs.
-import { headers } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { z } from 'zod';
-import { utilisateurReel } from '@/lib/admin/auth';
+import { COOKIE_VUE, emailsAdmin, utilisateurReel } from '@/lib/admin/auth';
 import { creerCompte, MDP_MINIMUM, ouvrirSession, trouverCompte, verifierIdentifiants } from '@/lib/comptes/comptes';
 import { requete } from '@/lib/db';
 import { traiterAnalyses } from './analyse';
@@ -142,6 +142,11 @@ export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   try {
     const { restaurantId } = await finaliserInscription(i.id, userId, email);
     await appliquerLogo(restaurantId, form.get('logo'));
+    // Restaurant créé par un super-admin (essai) : il arrive dans l'espace comme le restaurant (« Vue restaurant »), pas en
+    // super-admin ; il en sort avec « Quitter la vue restaurant ».
+    if (emailsAdmin().includes(email.toLowerCase())) {
+      (await cookies()).set(COOKIE_VUE, restaurantId, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 8 * 3600 });
+    }
     return { erreurs: [], resume: resumePublic(await lireInscription(i.id)), restaurantId };
   } catch (e) {
     console.error('[inscription] création', i.id, e);
