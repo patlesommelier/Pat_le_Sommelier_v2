@@ -57,5 +57,6 @@ export const carteValidee = (r: { origine: string; carte_complete_le?: string | 
 export const caveVisible = (r: { origine: string; premier_client_le?: string | null; inventaire_le?: string | null; carte_complete_le?: string | null }) =>
   carteValidee(r);
 
-/** Message des entrées grisées (Gestion de cave, impression de la carte) tant que la carte n'est pas validée. */
-export const MESSAGE_CARTE_A_VALIDER = 'Le menu sera disponible dès que la liste des vins est validée, ceci prend 1 à 2 jours';
+/** Messages des entrées grisées tant que la carte n'est pas validée : la Gestion de cave, et l'impression de la carte. */
+export const MESSAGE_CARTE_A_VALIDER = 'La gestion de cave deviendra accessible dès que tous vos vins sont identifiés, d’ici 1 à 2 jours';
+export const MESSAGE_IMPRESSION_A_VALIDER = 'L’impression de la carte deviendra accessible dès que tous vos vins sont identifiés, d’ici 1 à 2 jours';

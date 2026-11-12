@@ -8,7 +8,7 @@ import { etapesRestaurant } from './etapes';
 import type { Etape } from '@/components/admin/Nav';
 import { AvisRestaurant, type Avis } from '@/components/admin/AvisRestaurant';
 import { requete } from '@/lib/db';
-import { carteValidee, MESSAGE_CARTE_A_VALIDER } from '@/lib/admin/prochaine-etape';
+import { carteValidee, MESSAGE_CARTE_A_VALIDER, MESSAGE_IMPRESSION_A_VALIDER } from '@/lib/admin/prochaine-etape';
 
 
 // Menu de gauche : chaque entrée avec son icône (celle des cadres du tableau de bord) ; les trois premières disent ce qu'on y fait.
@@ -30,7 +30,7 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee
   const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Paramètres', icone: 'reglages' };
   // Centre d'impression (logo et couleur des impressions, menu, suggestions, carte des vins) : entre l'app client et les paramètres.
   const impression: Etape = { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', groupe: 'Centre d’impression', icone: 'imprimante',
-    ...(cave === 'grisee' ? { desactive: MESSAGE_CARTE_A_VALIDER } : {}) };
+    ...(cave === 'grisee' ? { desactive: MESSAGE_IMPRESSION_A_VALIDER } : {}) };
   const chevalet: Etape = { href: `${base}/chevalet`, libelle: 'Impression du chevalet', etat: 'fait', groupe: 'Centre d’impression', icone: 'qr' };
   // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et les paramètres.
   const cartes = etapes.filter((e) => e.groupe === 'Cartes et menus');
