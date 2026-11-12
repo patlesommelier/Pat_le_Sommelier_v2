@@ -21,7 +21,7 @@ export interface Commande {
   /** Facture jointe par Quid Vinum (date), servie par /commandes/<id>/facture. */
   facture_le: string | null;
 }
-export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; commande_societe: string | null; commande_adresse: string | null;
+export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; inventaire_frequence: string; commande_societe: string | null; commande_adresse: string | null;
   commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null;
   /** Adresse de facturation, quand elle diffère de l'adresse de livraison (commande_adresse). */
   commande_adresse_facturation: string | null;
@@ -53,7 +53,7 @@ export async function getFournisseurs(resto: string) {
 
 export async function getCoordonnees(resto: string) {
   const [r] = await requete<CoordonneesRestaurant>(
-    `select nom, stock_limite_basse, commande_societe, commande_adresse, commande_tva, commande_contact, commande_telephone, commande_email,
+    `select nom, stock_limite_basse, inventaire_frequence, commande_societe, commande_adresse, commande_tva, commande_contact, commande_telephone, commande_email,
             commande_adresse_facturation, latitude, longitude from restaurant where id = $1`, [resto]);
   return r ?? null;
 }

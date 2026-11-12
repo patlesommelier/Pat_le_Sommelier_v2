@@ -9,5 +9,9 @@ export function ilYA(d: string | Date) {
   return n <= 0 ? 'aujourd’hui' : n === 1 ? 'hier' : `il y a ${n} jours`;
 }
 
-/** L'inventaire est à refaire : jamais fait, ou plus de 7 jours. */
-export const inventaireARefaire = (d: string | Date | null | undefined) => !d || joursDepuis(d) > 7;
+/** Jours entre deux inventaires selon la fréquence choisie dans les Paramètres (7 sans rappel choisi). */
+export const JOURS_PAR_FREQUENCE: Record<string, number> = { semaine: 7, '2semaines': 14, mois: 31 };
+
+/** L'inventaire est à refaire : jamais fait, ou plus vieux que la fréquence choisie (7 jours par défaut). */
+export const inventaireARefaire = (d: string | Date | null | undefined, frequence?: string | null) =>
+  !d || joursDepuis(d) > (JOURS_PAR_FREQUENCE[frequence ?? ''] ?? 7);

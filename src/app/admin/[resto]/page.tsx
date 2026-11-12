@@ -100,7 +100,7 @@ async function etapeDuRestaurant(r: RestaurantBO, s: Resume, admin: boolean) {
   const vinsStockBas = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible) && stockBas(g.principal.stock, r.stock_limite_basse ?? 2)).length;
   return prochaineEtape({
     commandesAVoir: aVoir, accordsARelire: s.accords_proposes, vinsSansPrix: verifier.vins.length, cave, vinsStockBas,
-    inventaireARefaire: s.vins > 0 && inventaireARefaire(r.inventaire_le), inventaireIlYA: r.inventaire_le ? ilYA(r.inventaire_le) : null,
+    inventaireARefaire: s.vins > 0 && inventaireARefaire(r.inventaire_le, r.inventaire_frequence), inventaireIlYA: r.inventaire_le ? ilYA(r.inventaire_le) : null,
     apparenceAChoisir: !r.modifie_bo,
   });
 }

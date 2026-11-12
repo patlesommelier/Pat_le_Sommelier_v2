@@ -1,5 +1,5 @@
 // Paramètres du restaurant (tout en bas du menu) : coordonnées du restaurant (livraison, facturation, reprises sur les bons de commande),
-// limite de stock bas, et les utilisateurs de l'espace (invitation, liste).
+// limite de stock bas, fréquence d'inventaire (rappel par e-mail le lundi), et les utilisateurs de l'espace (invitation, liste).
 import { creerAcces, retirerAcces } from '../../actions';
 import { enregistrerParametresStock } from '../../stocks-actions';
 import { ChampAdresse } from '@/components/admin/ChampAdresse';
@@ -21,7 +21,7 @@ export default async function Parametres({ params, searchParams }: { params: Pro
   );
   return (
     <>
-      <Entete titre="Paramètres du restaurant" texte="Les coordonnées de votre restaurant (reprises sur les bons de commande), l’alerte de stock bas et les utilisateurs de votre espace." />
+      <Entete titre="Paramètres du restaurant" texte="Les coordonnées de votre restaurant (reprises sur les bons de commande), l’alerte de stock bas, la fréquence d’inventaire et les utilisateurs de votre espace." />
       <Message ok={sp.ok} erreur={sp.erreur} />
       <FormulaireAdmin action={enregistrerParametresStock.bind(null, resto)} className="pile" style={{ gap: 20, maxWidth: 820 }}>
         <section className="carte-bo pile" style={{ gap: 12 }}>
@@ -54,6 +54,19 @@ export default async function Parametres({ params, searchParams }: { params: Pro
           <label className="champ" style={{ maxWidth: 320 }}><span>Alerte à partir de</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}><input name="stock_limite_basse" type="number" min={0} max={1000} defaultValue={c.stock_limite_basse} required style={{ width: 100 }} /> bouteilles ou moins</span>
             <span className="aide">Un point d’exclamation rouge apparaît alors dans « Ma cave » et sur la carte des vins (jamais à l’impression).</span>
+          </label>
+        </section>
+        <section className="carte-bo pile" style={{ gap: 12 }}>
+          <h2>Fréquence d’inventaire</h2>
+          <label className="champ" style={{ maxWidth: 420 }}><span>Faire l’inventaire de la cave</span>
+            <select name="inventaire_frequence" defaultValue={c.inventaire_frequence}>
+              <option value="semaine">Toutes les semaines</option>
+              <option value="2semaines">Toutes les 2 semaines</option>
+              <option value="mois">Tous les mois</option>
+              <option value="aucune">Pas de rappel</option>
+            </select>
+            <span className="aide">Un e-mail « Faites votre inventaire de vin » part le lundi matin, avec le lien vers la page d’inventaire
+              (une semaine sur deux, ou le premier lundi du mois, selon votre choix).{!envoiEmailConfigure() && ' L’envoi d’e-mails n’est pas encore activé sur Pat.'}</span>
           </label>
         </section>
         <span><button className="btn">Enregistrer</button></span>

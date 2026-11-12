@@ -229,6 +229,11 @@ export async function enregistrerParametresStock(resto: string, f: FormData): Pr
     `update restaurant set stock_limite_basse = $2, commande_societe = $3, commande_adresse = $4, commande_tva = $5, commande_contact = $6,
             commande_telephone = $7, commande_email = $8, commande_adresse_facturation = $9 where id = $1`,
     [resto, limite, txt(f, 'commande_societe'), txt(f, 'commande_adresse'), txt(f, 'commande_tva'), txt(f, 'commande_contact'), txt(f, 'commande_telephone'), email, facturation]);
+  // Fréquence d'inventaire (rappel par e-mail le lundi matin).
+  const frequence = txt(f, 'inventaire_frequence');
+  if (frequence && ['aucune', 'semaine', '2semaines', 'mois'].includes(frequence)) {
+    await requete('update restaurant set inventaire_frequence = $2 where id = $1', [resto, frequence]);
+  }
   // Position de l'adresse : seulement si elle a été choisie dans les propositions d'OpenStreetMap (sinon, adresse non vérifiée).
   const [lat, lon] = [Number(f.get('adresse_lat') || NaN), Number(f.get('adresse_lon') || NaN)];
   const position = txt(f, 'commande_adresse') && Math.abs(lat) <= 90 && Math.abs(lon) <= 180 ? [lat, lon] : [null, null];

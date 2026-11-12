@@ -13,8 +13,10 @@ import { ilYA } from '@/lib/admin/inventaire';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
-export default async function Inventaire({ params }: { params: Promise<{ resto: string }> }) {
+export default async function Inventaire({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ vin?: string }> }) {
   const { resto } = await params;
+  // Arrivée depuis le stock d'un vin dans Ma cave : sa ligne est montrée, mise en évidence, prête à être corrigée.
+  const { vin: choisi } = await searchParams;
   await exigerCave(resto);
   const [vins, r] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
@@ -43,12 +45,13 @@ export default async function Inventaire({ params }: { params: Promise<{ resto: 
                   {c.groupes.map(({ principal: v, disponible }) => {
                     const nom = nomPourListe(v);
                     return (
-                      <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
+                      <tr key={v.id} id={`inv-${v.id}`} className={[disponible ? '' : 'indisponible', v.id === choisi ? 'ligne-choisie' : ''].filter(Boolean).join(' ') || undefined}
+                        style={{ scrollMarginTop: 120 }}>
                         <td><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={84} />
                           <div><div className="nom">{nom[0]}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}
                             {!disponible && <div className="petit discret">Pas sur votre carte</div>}
                             {disponible && stockBas(v.stock, limite) && <div className="petit" style={{ color: 'var(--rouge)' }}>Stock bas</div>}</div></div></td>
-                        <td className="droite"><ChampStock id={v.id} stock={v.stock} libelle={v.libelle} /></td>
+                        <td className="droite"><ChampStock id={v.id} stock={v.stock} libelle={v.libelle} focus={v.id === choisi} /></td>
                       </tr>
                     );
                   })}

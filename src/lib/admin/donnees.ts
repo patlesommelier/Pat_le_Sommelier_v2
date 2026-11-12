@@ -15,11 +15,13 @@ export interface RestaurantBO {
   carte_complete_le: string | null;
   /** Date du dernier inventaire validé (page Inventaire) ; null : jamais. */
   inventaire_le: string | null;
+  /** Fréquence d'inventaire choisie dans les Paramètres ('aucune', 'semaine', '2semaines', 'mois'). */
+  inventaire_frequence: string;
 }
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, stock_limite_basse, inventaire_le::text as inventaire_le,
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, stock_limite_basse, inventaire_le::text as inventaire_le, inventaire_frequence,
             premier_client_le::text as premier_client_le, cave_annonce_fermee_le::text as cave_annonce_fermee_le, cree_le::text as cree_le, carte_complete_le::text as carte_complete_le
        from restaurant where id = $1`, [id]);
   return r ?? null;

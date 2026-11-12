@@ -162,7 +162,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         <td className="droite"><span className="champ-stock">
                           {alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>}
                           <input type="hidden" name={`ligne_${v.id}`} value="1" />
-                          <Link href={`/admin/${resto}/inventaire`} className="stock-lecture" title="Le stock se change dans l’inventaire">{v.stock}</Link>
+                          <Link href={`/admin/${resto}/inventaire?vin=${encodeURIComponent(v.id)}#inv-${v.id}`} className="stock-lecture" title="Le stock se change dans l’inventaire">{v.stock}</Link>
                         </span></td>
                         {/* En commande : suit les commandes passées (panier → Commander) et leur réception, jamais saisi à la main. */}
                         <td className="droite">{v.en_commande > 0

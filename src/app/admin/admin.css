@@ -650,3 +650,5 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 @media (max-width: 900px) { .section-desactivee:hover::after, .section-desactivee:focus::after { left: 12px; top: calc(100% + 6px); transform: none; } }
 .badge-groupe { margin-left: 2px; padding: 1px 7px; font-size: 10.5px; letter-spacing: .02em; text-transform: none; flex-shrink: 0; }
 .bo-liens .section-repliable { white-space: nowrap; }
+/* Inventaire : la ligne du vin ouvert depuis Ma cave (clic sur son stock). */
+.table-inventaire tr.ligne-choisie td { background: var(--rose); }
