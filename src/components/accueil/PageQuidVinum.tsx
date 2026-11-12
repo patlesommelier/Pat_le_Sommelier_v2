@@ -142,8 +142,23 @@ export async function PageQuidVinum() {
           </nav>
         </header>
         <div className={s.centre}>
-          <h1 id="h-titre">Développez et gérez <span>l’offre vin</span> de votre restaurant.</h1>
-          <p className={s.accroche}>Quid Vinum gère vos stocks, regroupe vos commandes, rédige et imprime votre carte des vins, vous aide à composer les accords avec vos plats et conseille vos clients à table.</p>
+          <p className={s.surtitre}>Le vin de votre restaurant</p>
+          <h1 id="h-titre">Plus simple pour vous. <span>Meilleur</span> pour vos clients.</h1>
+        </div>
+        {/* Les deux en quelques secondes : Quid Vinum pour le restaurateur, Pat pour ses clients (repris sur l'aperçu). */}
+        <div className={s.duo}>
+          <div className={s.duoCarte}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/quidvinum/icone.png" alt="" className={s.duoIcone} />
+            <span><b>Quid Vinum</b><small>pour vous restaurateur</small>
+              Gestion de stock, commandes et carte des vins au même endroit : Quid Vinum vous fait gagner du temps et de l’argent.</span>
+          </div>
+          <span className={s.duoPlus} aria-hidden="true">+</span>
+          <div className={`${s.duoCarte} ${s.duoPat}`}>
+            <span className={s.duoIcone}><Icone nom="pat" taille={30} /></span>
+            <span><b>Pat le sommelier</b><small>pour vos clients à table</small>
+              Un QR code sur la table permet à chaque client de trouver le vin qui va avec son plat.</span>
+          </div>
         </div>
       </section>
 
