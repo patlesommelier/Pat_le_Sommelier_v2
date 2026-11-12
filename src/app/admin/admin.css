@@ -652,3 +652,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-liens .section-repliable { white-space: nowrap; }
 /* Inventaire : la ligne du vin ouvert depuis Ma cave (clic sur son stock). */
 .table-inventaire tr.ligne-choisie td { background: var(--rose); }
+/* Paramètres du restaurant : seul en bas du menu, séparé des groupes au-dessus. */
+.bo-liens .bo-lien-seul { margin-top: 16px; position: relative; }
+.bo-liens .bo-lien-seul::before { content: ''; position: absolute; left: 12px; right: 12px; top: -8px; border-top: 1px solid var(--ligne); }

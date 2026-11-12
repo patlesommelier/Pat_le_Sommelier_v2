@@ -26,8 +26,8 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee
       // Carte pas encore validée par Quid Vinum : grisé, avec le message (la page « Ajouter un vin » reste ouverte depuis la
       // carte des vins, pour la compléter).
       ...(cave === 'grisee' ? { desactive: MESSAGE_CARTE_A_VALIDER } : {}) }));
-  // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.
-  const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Paramètres', icone: 'reglages' };
+  // Paramètres du restaurant (coordonnées, stock bas, inventaire, utilisateurs) : tout en bas du menu, seul (sans groupe à dérouler).
+  const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', icone: 'reglages' };
   // Centre d'impression (logo et couleur des impressions, menu, suggestions, carte des vins) : entre l'app client et les paramètres.
   const impression: Etape = { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', groupe: 'Centre d’impression', icone: 'imprimante',
     ...(cave === 'grisee' ? { desactive: MESSAGE_IMPRESSION_A_VALIDER } : {}) };

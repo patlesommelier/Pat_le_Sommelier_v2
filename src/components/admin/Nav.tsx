@@ -80,7 +80,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
               <span>{e.libelle}</span>
             </span>
           )}
-          {!cache(e.groupe) && !groupeGrise(e.groupe) && !e.desactive && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
+          {!cache(e.groupe) && !groupeGrise(e.groupe) && !e.desactive && <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}${!e.groupe && etapes[i - 1]?.groupe ? ' bo-lien-seul' : ''}`} aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
             {e.icone ? <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span> : (
               <span className={`bo-num ${e.etat}`} aria-label={e.etat === 'fait' ? 'Terminé' : undefined}>
                 {e.etat === 'fait' ? <Icone nom="check" taille={14} epaisseur={2.4} /> : i + 1}
