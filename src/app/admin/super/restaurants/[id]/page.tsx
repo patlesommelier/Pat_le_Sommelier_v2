@@ -1,7 +1,5 @@
 // Page d'un restaurant (super-admin, en cliquant sur sa carte) : tous ses réglages de super-admin — statut, mise en place,
 // carte et accords (préparation), producteurs à valider, distributeurs (et verrou sur un seul distributeur Quid Vinum), suppression.
-import { BoutonMode } from '@/components/admin/BoutonMode';
-import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { changerStatutRestaurant, envoyerCarteComplete, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
@@ -64,15 +62,11 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
 
       <section className="carte-bo pile">
         <h2 style={{ margin: 0 }}>Statut et mise en place</h2>
-        {/* Statut de l'espace : vert actif, jaune inscription, rouge test (un clic sur le rond pour le changer). */}
-        <span style={{ display: 'flex', gap: 8, alignItems: 'center' }} className="petit">
-          <BoutonMode id={id} nom={r.nom} mode={x.mode} retour={`/admin/super/restaurants/${id}`} />
-          <span><b>{MODES[x.mode as ModeRestaurant]?.libelle}</b> : {MODES[x.mode as ModeRestaurant]?.sens}</span>
-        </span>
         <form action={changerStatutRestaurant.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
           <input type="hidden" name="retour" value={`/admin/super/restaurants/${id}`} />
-          {r.statut === 'en_service' ? <span className="rond-vert" role="img" aria-label="En service" title="En service" />
-            : <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>}
+          {/* App des clients (accords en préparation, ouverte, ou suspendue) : distinct du statut vert / jaune / rouge,
+              qui se règle sur la carte du restaurant dans la liste. */}
+          <span className="petit"><b>App des clients</b></span>
           <select name="statut" defaultValue={r.statut} aria-label={`Statut de ${r.nom}`} style={{ minHeight: 36, borderRadius: 8, border: '1.5px solid var(--ligne)' }}>
             {Object.entries(STATUTS).map(([k, [l]]) => <option key={k} value={k}>{l}</option>)}
           </select>

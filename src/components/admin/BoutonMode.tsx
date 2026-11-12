@@ -1,24 +1,32 @@
-// Statut de l'espace d'un restaurant (super-admin) : un petit rond de couleur (vert actif, jaune inscription, rouge test) ;
-// un clic ouvre le choix des trois statuts, avec ce qu'ils veulent dire.
+'use client';
+// Statut de l'espace d'un restaurant (super-admin) : un interrupteur à trois positions — vert (actif), jaune (inscription),
+// rouge (test). Un clic sur une position y amène le bouton et enregistre le statut.
+import { useState, useTransition } from 'react';
 import { changerModeRestaurant } from '@/app/admin/super/actions';
 import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
+const ORDRE: ModeRestaurant[] = ['actif', 'inscription', 'test'];
+
 export function BoutonMode({ id, nom, mode, retour }: { id: string; nom: string; mode: string; retour: string }) {
-  const m = MODES[mode as ModeRestaurant] ?? MODES.actif;
+  const [choisi, setChoisi] = useState<ModeRestaurant>(ORDRE.includes(mode as ModeRestaurant) ? mode as ModeRestaurant : 'actif');
+  const [enCours, demarrer] = useTransition();
+  const m = MODES[choisi];
+  const choisir = (k: ModeRestaurant) => {
+    if (k === choisi || enCours) return;
+    setChoisi(k);
+    const f = new FormData(); f.set('mode', k); f.set('retour', retour);
+    demarrer(() => changerModeRestaurant(id, f));
+  };
   return (
-    <details className="bouton-mode">
-      <summary aria-label={`Statut de ${nom} : ${m.libelle}. Changer`} title={`${m.libelle} : ${m.sens} Cliquez pour changer.`}>
-        <span className="rond-mode" style={{ background: m.couleur, boxShadow: `0 0 0 3px ${m.couleur}2E` }} />
-      </summary>
-      <form action={changerModeRestaurant.bind(null, id)} className="menu-mode">
-        <input type="hidden" name="retour" value={retour} />
-        {(Object.entries(MODES) as [ModeRestaurant, (typeof MODES)[ModeRestaurant]][]).map(([k, x]) => (
-          <button key={k} name="mode" value={k} aria-pressed={k === mode}>
-            <span className="rond-mode" style={{ background: x.couleur }} />
-            <span><b>{x.libelle}</b><small>{x.sens}</small></span>
-          </button>
+    <span className="mode-ligne">
+      <span className="interrupteur-mode" role="radiogroup" aria-label={`Statut de ${nom}`} style={{ background: m.couleur }} data-occupe={enCours || undefined}>
+        <span className="interrupteur-bouton" style={{ transform: `translateX(${ORDRE.indexOf(choisi) * 100}%)` }} aria-hidden="true" />
+        {ORDRE.map((k) => (
+          <button key={k} type="button" role="radio" aria-checked={k === choisi} onClick={() => choisir(k)}
+            title={`${MODES[k].libelle} : ${MODES[k].sens}`} aria-label={MODES[k].libelle} />
         ))}
-      </form>
-    </details>
+      </span>
+      <span className="petit" title={m.sens}><b>{m.libelle}</b></span>
+    </span>
   );
 }
