@@ -157,7 +157,7 @@ export async function PageQuidVinum() {
           <div className={`${s.duoCarte} ${s.duoPat}`}>
             <span className={s.duoIcone}><Icone nom="pat" taille={30} /></span>
             <span><b>Pat le sommelier</b><small>pour vos clients à table</small>
-              Un QR code sur la table permet à chaque client de trouver le vin qui va avec son plat.</span>
+              Un QR code sur la table permet à chaque client de trouver rapidement le vin qui accompagnera parfaitement son plat.</span>
           </div>
         </div>
       </section>
