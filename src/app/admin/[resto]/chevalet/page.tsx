@@ -6,6 +6,7 @@ import { Entete } from '@/components/admin/Ui';
 import { getRestaurantBO } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { exigerAcces } from '@/lib/admin/auth';
+import { requete } from '@/lib/db';
 import { couleurClaire, logoAffiche } from '@/lib/couleurs';
 import { contrasteLogo, couleurDesSupports, fondDuLogo } from '@/lib/couleur-logo';
 import { logoPourMasque } from '@/lib/logo-masque';
@@ -23,7 +24,9 @@ const SANS = "'Inter', 'Helvetica Neue', Arial, sans-serif";
 /** Chevalet de table aux couleurs du restaurant, en trois modèles. */
 export default async function Chevalet({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ modele?: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
+  const acces = await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
+  // Le restaurant a ouvert le chevalet : le post-it « Imprimez votre chevalet » des visites suivantes n'a plus lieu d'être.
+  if (!acces.admin) await requete('update restaurant set chevalet_annonce_fermee_le = now() where id = $1 and chevalet_annonce_fermee_le is null', [resto]);
   const brut = await getRestaurantBO(resto);
   if (!brut) notFound();
   const modele = [1, 2, 3].includes(Number((await searchParams).modele)) ? Number((await searchParams).modele) : 1;

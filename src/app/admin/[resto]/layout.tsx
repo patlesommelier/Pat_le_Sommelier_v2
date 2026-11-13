@@ -18,6 +18,8 @@ const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus
 // Post-its qui expliquent le fonctionnement : 4 « Gérez votre cave » (cave qui vient de s'ouvrir), 5 « Configurez vos
 // distributeurs » (après le premier inventaire), 7 « Accords ». Un seul à la fois : le plus petit numéro.
 const ANNONCES = {
+  // Visites suivantes : le chevalet pas encore ouvert (la première visite, le guide des premiers pas le montre).
+  chevalet: { numero: 3, texte: 'Imprimez votre chevalet de table' },
   accords: { numero: 7, texte: 'Quand vous ajoutez un plat, Pat prépare les accords pour celui-ci. Vous pouvez aussi régénérer tous les accords et changer la priorité des vins' },
   stocks: { numero: 4, texte: 'Gérez votre cave : classez vos vins et indiquez votre stock' },
   'trouver-vin': { numero: 9, texte: 'Une fois qu’un distributeur a été ajouté, vous pouvez rajouter un de ses vins à la carte et lui passer des commandes qui viendront directement alimenter le stock' },
@@ -25,7 +27,7 @@ const ANNONCES = {
   commandes: { numero: 10, texte: 'Quand les bouteilles de votre commande sont livrées, cliquez sur « Réception des bouteilles » : le stock se met à jour automatiquement', surPlace: true },
   fournisseurs: { numero: 5, texte: 'Configurez vos distributeurs de vin pour automatiser vos commandes, ou choisissez ceux de Quid Vinum pour bénéficier de leurs prix' },
 } as const;
-function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee' | 'nouvelle' | 'visible' = 'visible', annonces: { stocks?: boolean; fournisseurs?: boolean; accords?: boolean; 'trouver-vin'?: boolean; commandes?: boolean } = {}): Etape[] {
+function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee' | 'nouvelle' | 'visible' = 'visible', annonces: { stocks?: boolean; fournisseurs?: boolean; accords?: boolean; 'trouver-vin'?: boolean; commandes?: boolean; chevalet?: boolean } = {}): Etape[] {
   const base = `/admin/${resto}`;
   const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['inventaire', 'Faire l’inventaire', 'check'], ['trouver-vin', 'Ajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Gestion de cave', icone,
@@ -41,7 +43,8 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee
   // Centre d'impression (logo et couleur des impressions, menu, suggestions, carte des vins) : entre l'app client et les paramètres.
   const impression: Etape = { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', groupe: 'Centre d’impression', icone: 'imprimante',
     ...(cave === 'grisee' ? { desactive: MESSAGE_IMPRESSION_A_VALIDER } : {}) };
-  const chevalet: Etape = { href: `${base}/chevalet`, libelle: 'Impression du chevalet', etat: 'fait', groupe: 'Centre d’impression', icone: 'qr' };
+  const chevalet: Etape = { href: `${base}/chevalet`, libelle: 'Impression du chevalet', etat: 'fait', groupe: 'Centre d’impression', icone: 'qr',
+    ...(annonces.chevalet ? { annonce: ANNONCES.chevalet } : {}) };
   // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et les paramètres.
   const cartes = etapes.filter((e) => e.groupe === 'Cartes et menus')
     .map((e) => (annonces.accords && e.href === `${base}/accords` ? { ...e, annonce: ANNONCES.accords } : e));
@@ -71,6 +74,8 @@ export default async function LayoutRestaurant({ children, params }: { children:
           'trouver-vin': !u.admin && cave !== 'grisee' && r.a_distributeur && !r.commandes_annonce_fermee_le,
           // Post-it 10 « Livraison » : restaurant inscrit seul, une commande envoyée, aucune livraison encore reçue.
           commandes: !u.admin && r.origine === 'inscription' && cave !== 'grisee' && r.attend_livraison,
+          // Post-it « Chevalet » (visites suivantes) : restaurant inscrit seul, page du chevalet pas encore ouverte.
+          chevalet: !u.admin && r.origine === 'inscription' && !r.chevalet_annonce_fermee_le,
           // Post-it 7 « Accords » : page des accords pas encore ouverte.
           accords: !u.admin && !r.accords_annonce_fermee_le,
         })}>

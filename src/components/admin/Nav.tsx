@@ -17,7 +17,7 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   /** Entrée grisée, non cliquable : le message montré au survol (ex. carte pas encore validée par Quid Vinum). */
   desactive?: string;
   /** Post-it qui montre cette entrée (4 « Gérez votre cave », 5 « Configurez vos distributeurs », 7 « Accords », 9 « Ajouter un vin, commander », 10 « Livraison », montré aussi sur sa page : surPlace) jusqu'à sa première visite. */
-  annonce?: { numero: 4 | 5 | 7 | 9 | 10; texte: string; surPlace?: boolean } }
+  annonce?: { numero: 3 | 4 | 5 | 7 | 9 | 10; texte: string; surPlace?: boolean } }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
@@ -37,8 +37,8 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
   const [premiersPas, premiersPasEnCours] = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
-  // Post-its 4, 5, 7, 9, 10 : le plus petit numéro d'abord ; aucun pendant les premiers pas (post-its 1 à 3, même en
-  // attendant le suivant).
+  // Post-its 3 (chevalet, visites suivantes), 4, 5, 7, 9, 10 : le plus petit numéro d'abord ; aucun pendant la visite des
+  // premiers pas (post-its 1 à 3, même une fois finis) : ils attendent la visite suivante.
   // Page montrée déjà ouverte : le post-it et l'entourage disparaissent tout de suite. Le menu (layout) n'est pas relu en
   // changeant de page : sans cela, l'entrée restait entourée jusqu'au prochain rechargement.
   const [annoncesVues, setAnnoncesVues] = useState<number[]>([]);
@@ -47,7 +47,7 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
     const vue = pagesAnnoncees.split('|').map((x) => x.split(' ')).find(([, href]) => href && chemin.startsWith(href))?.[0];
     try {
       if (vue) sessionStorage.setItem(`${CLE_GUIDE}-vu-${vue}`, '1');
-      setAnnoncesVues([4, 5, 7, 9].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
+      setAnnoncesVues([3, 4, 5, 7, 9].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
     } catch { if (vue) setAnnoncesVues((v) => [...v, Number(vue)]); }
   }, [chemin, pagesAnnoncees]);
   const annonce = premiersPasEnCours ? undefined : etapes
@@ -56,7 +56,7 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
   const [annoncesFermees, setAnnoncesFermees] = useState<number[]>([]);
   useEffect(() => {
-    try { setAnnoncesFermees([4, 5, 7, 9, 10].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
+    try { setAnnoncesFermees([3, 4, 5, 7, 9, 10].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
   }, []);
   const guide: Guide | null = premiersPas ?? (annonce?.annonce ? {
     href: annonce.href, numero: annonce.annonce.numero, postIt: !annoncesFermees.includes(annonce.annonce.numero), texte: annonce.annonce.texte,
@@ -145,12 +145,15 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): [Guide |
   const chevalet = etapes.find((e) => /\/chevalet$/.test(e.href))?.href;
   const [etat, setEtat] = useState<{ numero: 2 | 3; visible: boolean; ferme: boolean; accueil: boolean } | null>(null);
   const [fermes, setFermes] = useState(0); // relance l'effet quand on ferme le post-it
+  // Premiers pas faits pendant cette visite (même finis) : les autres post-its attendent la visite suivante.
+  const [guideIci, setGuideIci] = useState(false);
   useEffect(() => {
     let t: ReturnType<typeof setTimeout> | undefined;
     try {
       const lire = (k: string) => sessionStorage.getItem(`${CLE_GUIDE}-${k}`);
       const ecrire = (k: string, v: string) => sessionStorage.setItem(`${CLE_GUIDE}-${k}`, v);
       let etape = lire('etape');
+      setGuideIci(Boolean(etape) || bienvenue);
       if (chevalet && chemin.startsWith(chevalet)) { if (etape === '2' || etape === '3') ecrire('etape', 'fini'); etape = 'fini'; }
       else if (carte && chemin === carte && (etape === '2' || etape === '3' || bienvenue)) {
         if (etape !== '3') { ecrire('etape', '3'); ecrire('debut-3', String(Date.now())); etape = '3'; }
@@ -179,7 +182,7 @@ function useGuide(chemin: string, bienvenue: boolean, etapes: Etape[]): [Guide |
     href: '', numero: 1, place: 'haut-droite', postIt: true, fermer: fermer(1),
     titre: 'Bienvenue dans le simulateur', texte: 'Testez l’application comme si vous étiez un client du restaurant.',
   }, true];
-  if (!etat?.visible) return [null, Boolean(etat)];
+  if (!etat?.visible) return [null, Boolean(etat) || guideIci];
   const href = etat.numero === 2 ? carte : chevalet;
   if (!href) return [null, true];
   return [{
@@ -225,7 +228,6 @@ function BulleEtape({ guide }: { guide: Guide }) {
   return createPortal(
     <button type="button" onClick={guide.fermer} className={`post-it-etape ${pos.cote}`} style={{ top: pos.top, left: pos.left, width: pos.largeur }}
       title="Cliquez pour fermer" aria-label={`${guide.titre ?? 'Étape suivante'} : ${guide.texte} Fermer`}>
-      <span className="post-it-numero" aria-hidden="true">{guide.numero}</span>
       {guide.titre
         ? <span className="pile" style={{ gap: 4, textAlign: 'left' }}><b>{guide.titre}</b><span style={{ fontSize: 15 }}>{guide.texte}</span></span>
         : <span className="pile" style={{ gap: 4, textAlign: 'left' }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>}
