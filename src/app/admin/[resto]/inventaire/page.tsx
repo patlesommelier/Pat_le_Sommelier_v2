@@ -1,6 +1,7 @@
 // Gestion de cave — Inventaire : le seul endroit où le restaurant change son stock (bouteilles comptées), loin du prix de vente.
 // « Envoyer l'inventaire » (en bas de la liste) enregistre tous les stocks et la date de l'inventaire.
 import { exigerCave } from '@/lib/admin/garde-cave';
+import { requete } from '@/lib/db';
 import Link from 'next/link';
 import { enregistrerInventaire } from '../../stocks-actions';
 import { ChampStock } from '@/components/admin/Inventaire';
@@ -17,7 +18,9 @@ export default async function Inventaire({ params, searchParams }: { params: Pro
   const { resto } = await params;
   // Arrivée depuis le stock d'un vin dans Ma cave : sa ligne est montrée, mise en évidence, prête à être corrigée.
   const { vin: choisi } = await searchParams;
-  await exigerCave(resto);
+  const acces = await exigerCave(resto);
+  // Le restaurant a ouvert l'inventaire : le post-it « Faites l'inventaire sur votre mobile » a fait son travail.
+  if (!acces.admin) await requete('update restaurant set inventaire_annonce_fermee_le = now() where id = $1 and inventaire_annonce_fermee_le is null', [resto]);
   const [vins, r] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
   const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }));

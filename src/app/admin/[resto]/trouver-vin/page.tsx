@@ -24,8 +24,11 @@ type Recherche = { id: string; demande: string; plat_id: string | null; budget: 
 export default async function RajouterUnVin({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ r?: string; erreur?: string; nouvelle?: string }> }) {
   const { resto } = await params;
   const acces = await exigerAcces(resto);
-  // Le restaurant est venu ajouter un vin : le post-it 9 a fait son travail.
-  if (!acces.admin) await requete('update restaurant set commandes_annonce_fermee_le = now() where id = $1 and commandes_annonce_fermee_le is null', [resto]);
+  // Le restaurant est venu ajouter un vin : les post-its « Ajoutez un vin » et, s'il a un distributeur, « Ajouter un vin,
+  // commander » ont fait leur travail.
+  if (!acces.admin) await requete(`update restaurant set ajout_annonce_fermee_le = coalesce(ajout_annonce_fermee_le, now()),
+      commandes_annonce_fermee_le = case when exists (select 1 from fournisseur f where f.restaurant_id = $1) then coalesce(commandes_annonce_fermee_le, now()) else commandes_annonce_fermee_le end
+    where id = $1`, [resto]);
   const sp = await searchParams;
   const [plats, recherches, u] = await Promise.all([
     requete<{ id: string; nom: string }>('select id, nom from plat where restaurant_id = $1 and actif order by ordre, nom', [resto]),

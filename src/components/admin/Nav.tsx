@@ -16,8 +16,14 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   nouveau?: boolean;
   /** Entrée grisée, non cliquable : le message montré au survol (ex. carte pas encore validée par Quid Vinum). */
   desactive?: string;
-  /** Post-it qui montre cette entrée (4 « Gérez votre cave », 5 « Configurez vos distributeurs », 7 « Accords », 9 « Ajouter un vin, commander », 10 « Livraison », montré aussi sur sa page : surPlace) jusqu'à sa première visite. */
-  annonce?: { numero: 3 | 4 | 5 | 7 | 9 | 10; texte: string; surPlace?: boolean } }
+  /** Post-its qui montrent cette entrée (chevalet, cave, distributeurs, accords, pense-bête, ajouter un vin…), un à la fois. */
+  annonces?: Annonce[] }
+
+/**
+ * Post-it d'explication posé sur une entrée du menu. `numero` (interne, jamais affiché) : l'ordre ; `surPlace` : montré aussi
+ * sur la page visée ; `vuSur` : page dont l'ouverture le fait disparaître (par défaut la page visée).
+ */
+export interface Annonce { numero: number; texte: string; surPlace?: boolean; vuSur?: string }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
@@ -37,31 +43,40 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
   const [premiersPas, premiersPasEnCours] = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
-  // Post-its 3 (chevalet, visites suivantes), 4, 5, 7, 9, 10 : le plus petit numéro d'abord ; aucun pendant la visite des
-  // premiers pas (post-its 1 à 3, même une fois finis) : ils attendent la visite suivante.
+  // Post-its d'explication (visites suivantes) : le plus petit numéro d'abord ; aucun pendant la visite des premiers pas
+  // (post-its 1 à 3, même une fois finis) : ils attendent la visite suivante.
   // Page montrée déjà ouverte : le post-it et l'entourage disparaissent tout de suite. Le menu (layout) n'est pas relu en
   // changeant de page : sans cela, l'entrée restait entourée jusqu'au prochain rechargement.
+  const candidates = etapes.flatMap((e) => (e.annonces ?? []).map((a) => ({ href: e.href, ...a })));
+  const numeros = candidates.map((a) => a.numero);
   const [annoncesVues, setAnnoncesVues] = useState<number[]>([]);
-  const pagesAnnoncees = etapes.filter((e) => e.annonce && !e.annonce.surPlace).map((e) => `${e.annonce!.numero} ${e.href}`).join('|');
+  const pagesAnnoncees = candidates.map((a) => `${a.numero} ${a.vuSur ?? (a.surPlace ? '' : a.href)}`).join('|');
   useEffect(() => {
-    const vue = pagesAnnoncees.split('|').map((x) => x.split(' ')).find(([, href]) => href && chemin.startsWith(href))?.[0];
-    try {
-      if (vue) sessionStorage.setItem(`${CLE_GUIDE}-vu-${vue}`, '1');
-      setAnnoncesVues([3, 4, 5, 7, 9].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
-    } catch { if (vue) setAnnoncesVues((v) => [...v, Number(vue)]); }
+    const relire = () => {
+      const vues = pagesAnnoncees.split('|').map((x) => x.split(' ')).filter(([, page]) => page && chemin.startsWith(page)).map(([n]) => n);
+      try {
+        vues.forEach((n) => sessionStorage.setItem(`${CLE_GUIDE}-vu-${n}`, '1'));
+        setAnnoncesVues(pagesAnnoncees.split('|').map((x) => Number(x.split(' ')[0])).filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
+      } catch { setAnnoncesVues((v) => [...v, ...vues.map(Number)]); }
+    };
+    relire();
+    // Page ouverte dans un autre onglet (pense-bête) : le lien prévient le menu.
+    window.addEventListener('pat-annonce-vue', relire);
+    return () => window.removeEventListener('pat-annonce-vue', relire);
   }, [chemin, pagesAnnoncees]);
-  const annonce = premiersPasEnCours ? undefined : etapes
-    .filter((e) => e.annonce && !annoncesVues.includes(e.annonce.numero) && (e.annonce.surPlace || !chemin.startsWith(e.href)))
-    .sort((a, b) => a.annonce!.numero - b.annonce!.numero)[0];
+  const annonce = premiersPasEnCours ? undefined : candidates
+    .filter((a) => !annoncesVues.includes(a.numero) && (a.surPlace || !chemin.startsWith(a.href)))
+    .sort((a, b) => a.numero - b.numero)[0];
   // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
   const [annoncesFermees, setAnnoncesFermees] = useState<number[]>([]);
+  const listeNumeros = numeros.join(',');
   useEffect(() => {
-    try { setAnnoncesFermees([3, 4, 5, 7, 9, 10].filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
-  }, []);
-  const guide: Guide | null = premiersPas ?? (annonce?.annonce ? {
-    href: annonce.href, numero: annonce.annonce.numero, postIt: !annoncesFermees.includes(annonce.annonce.numero), texte: annonce.annonce.texte,
+    try { setAnnoncesFermees(listeNumeros.split(',').map(Number).filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
+  }, [listeNumeros]);
+  const guide: Guide | null = premiersPas ?? (annonce ? {
+    href: annonce.href, numero: annonce.numero, postIt: !annoncesFermees.includes(annonce.numero), texte: annonce.texte,
     fermer: () => {
-      const n = annonce.annonce!.numero;
+      const n = annonce.numero;
       setAnnoncesFermees((f) => [...f, n]);
       try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1'); } catch { /* rien */ }
     },
@@ -127,7 +142,7 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   );
 }
 
-type Guide = { href: string; numero: 1 | 2 | 3 | 4 | 5 | 7 | 9 | 10; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
+type Guide = { href: string; numero: number; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
 const CLE_GUIDE = 'pat-guide-chevalet';
 /** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
 const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };

@@ -17,6 +17,8 @@ export interface RestaurantBO {
   accords_annonce_fermee_le: string | null;
   /** Post-it « Imprimez votre chevalet » (visites suivantes) : première visite de la page du chevalet. */
   chevalet_annonce_fermee_le: string | null;
+  /** Post-its « Pense-bête » (première impression) et « Ajoutez un vin » (première visite de la page). */
+  pense_bete_annonce_fermee_le: string | null; ajout_annonce_fermee_le: string | null; inventaire_annonce_fermee_le: string | null;
   /** Post-it 9 « Ajouter un vin, commander » : première visite de la page Ajouter un vin (après l'ajout d'un distributeur). */
   commandes_annonce_fermee_le: string | null;
   /** Le restaurant a au moins un distributeur. */
@@ -36,7 +38,7 @@ export interface RestaurantBO {
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
     `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, design_app, logo_impression_url, design_impression, stock_limite_basse, inventaire_le::text as inventaire_le, inventaire_frequence,
-            premier_client_le::text as premier_client_le, cave_annonce_fermee_le::text as cave_annonce_fermee_le, distributeurs_annonce_fermee_le::text as distributeurs_annonce_fermee_le, accords_annonce_fermee_le::text as accords_annonce_fermee_le, chevalet_annonce_fermee_le::text as chevalet_annonce_fermee_le, commandes_annonce_fermee_le::text as commandes_annonce_fermee_le,
+            premier_client_le::text as premier_client_le, cave_annonce_fermee_le::text as cave_annonce_fermee_le, distributeurs_annonce_fermee_le::text as distributeurs_annonce_fermee_le, accords_annonce_fermee_le::text as accords_annonce_fermee_le, chevalet_annonce_fermee_le::text as chevalet_annonce_fermee_le, pense_bete_annonce_fermee_le::text as pense_bete_annonce_fermee_le, ajout_annonce_fermee_le::text as ajout_annonce_fermee_le, inventaire_annonce_fermee_le::text as inventaire_annonce_fermee_le, commandes_annonce_fermee_le::text as commandes_annonce_fermee_le,
             exists (select 1 from fournisseur f where f.restaurant_id = restaurant.id) as a_distributeur,
             (exists (select 1 from commande c where c.restaurant_id = restaurant.id and c.envoyee_le is not null)
               and not exists (select 1 from reception x join commande c on c.id = x.commande_id where c.restaurant_id = restaurant.id)) as attend_livraison, cree_le::text as cree_le, carte_complete_le::text as carte_complete_le, mode

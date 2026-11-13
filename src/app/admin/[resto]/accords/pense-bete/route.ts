@@ -18,7 +18,9 @@ const SECTIONS: [string, string][] = [['suggestion', 'Suggestions'], ['entree', 
  */
 export async function GET(req: Request, { params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto);
+  const acces = await exigerAcces(resto);
+  // Le pense-bête a été imprimé : le post-it qui le montrait n'a plus lieu d'être.
+  if (!acces.admin) await requete('update restaurant set pense_bete_annonce_fermee_le = now() where id = $1 and pense_bete_annonce_fermee_le is null', [resto]);
   const sp = new URL(req.url).searchParams;
   const [r] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null }>(
     'select nom, couleur, logo_url, logo_fonce_url, couleur_impression from restaurant where id = $1', [resto]);
