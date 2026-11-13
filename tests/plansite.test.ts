@@ -15,14 +15,28 @@ test('plan du site : robots.txt, index, plan des produits ; les plans d’articl
   assert.ok(!lus.includes('https://www.cinoco.be/post-sitemap.xml'));
 });
 
-test('page du vin : tous les mots du nom et le producteur ; le millésime départage ; ambigu → null', () => {
+test('page du vin : le nom et le producteur ; le millésime départage ; deux vins différents → null', () => {
   const pages = ['https://x.be/produit/ferrari-maximum-brut/', 'https://x.be/produit/ferrari-perle-2016/', 'https://x.be/produit/ferrari-perle-2017/',
     'https://x.be/produit/bellavista-perle/', 'https://x.be/fr/vin/domaine-roc-rouge/', 'https://x.be/fr/vin/domaine-roc-blanc/'];
   assert.equal(pageDuVin(pages, { producteur: 'Ferrari', nom: 'Maximum Brut' }), 'https://x.be/produit/ferrari-maximum-brut/');
   assert.equal(pageDuVin(pages, { producteur: 'Ferrari', nom: 'Perlé', millesime: '2017' }), 'https://x.be/produit/ferrari-perle-2017/');
-  assert.equal(pageDuVin(pages, { producteur: 'Ferrari', nom: 'Perlé' }), null);
+  // Sans millésime : deux millésimes du même vin, l'un ou l'autre (même étiquette).
+  assert.match(pageDuVin(pages, { producteur: 'Ferrari', nom: 'Perlé' }) ?? '', /ferrari-perle-201[67]/);
+  // Deux vins différents aussi proches : ambigu.
+  assert.equal(pageDuVin(pages, { producteur: 'Domaine du Roc', nom: 'Rosé' }), null);
   assert.equal(pageDuVin(pages, { producteur: 'Domaine du Roc', nom: 'Rouge' }), 'https://x.be/fr/vin/domaine-roc-rouge/');
   assert.equal(pageDuVin(pages, { producteur: 'Ca’ del Bosco', nom: 'Cuvée Prestige' }), null);
+});
+
+test('page du vin : site de Cinoco (millésimes, formats, langues ; nom de la base différent du site)', () => {
+  const pages = ['https://www.cinoco.com/produit/chateau-batailley-375cl-wb12-2024-2/', 'https://www.cinoco.com/nl/produit/chateau-batailley-wb6-2019-2/',
+    'https://www.cinoco.com/produit/chateau-batailley-wb6-2019/', 'https://www.cinoco.com/produit/lions-de-batailley-wb6-2019/',
+    'https://www.cinoco.com/produit/crozes-les-launes-delas-375cl-c12-2024/', 'https://www.cinoco.com/produit/crozes-les-launes-delas-c6-2023/',
+    'https://www.cinoco.com/produit/trottevieille-saint-emilion-wb6-2019/', 'https://www.cinoco.com/nl/produit/trottevieille-saint-emilion-wb6-2019-2/'];
+  assert.equal(pageDuVin(pages, { producteur: 'Château Batailley', nom: 'Pauillac', millesime: '2019' }), 'https://www.cinoco.com/produit/chateau-batailley-wb6-2019/');
+  assert.equal(pageDuVin(pages, { producteur: 'Château Batailley', nom: 'Lions de Batailley' }), 'https://www.cinoco.com/produit/lions-de-batailley-wb6-2019/');
+  assert.equal(pageDuVin(pages, { producteur: 'Delas', nom: 'Crozes-Hermitage Les Launes' }), 'https://www.cinoco.com/produit/crozes-les-launes-delas-c6-2023/');
+  assert.equal(pageDuVin(pages, { producteur: 'Château Trottevieille', nom: 'Saint-Émilion Grand Cru', millesime: '2019' }), 'https://www.cinoco.com/produit/trottevieille-saint-emilion-wb6-2019/');
 });
 
 test('contenu de page : texte sans menus ni scripts, images de la fiche', () => {

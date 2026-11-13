@@ -57,27 +57,47 @@ const motsAdresse = (url: string) => {
   return new Set(norm(chemin).split(/[^a-z0-9]+/).filter(Boolean));
 };
 
+// Mots d'adresse qui ne disent rien du vin : langue, rubrique, contenance (« 375cl »), conditionnement (« wb12 », « c6 »),
+// numéros (millésime, doublon « -2 »). Deux pages qui ne diffèrent que par eux sont le même vin (autre millésime, format, langue).
+const BRUIT = /^(\d+|\d+(?:[.,]\d+)?(?:cl|ml|l)|[a-z]{1,3}\d+|nl|fr|en|de|it|es|produit|produits|product|products|produkt|shop|boutique|vin|vins|wine|wines|wijn|magnum)$/;
+const LANGUE = /^\/(nl|en|de|it|es)\//i;
+const cheminDe = (url: string) => { try { return new URL(url).pathname; } catch { return url; } };
+
 /**
- * Page du vin parmi les pages du site : son adresse contient tous les mots significatifs du nom du vin et au moins un mot
- * du producteur (si le nom du vin n'en a pas, tous ceux du producteur). Avec plusieurs pages, celle dont l'adresse a le moins d'autres mots
- * (et le millésime quand il y figure). null si aucune ou si deux pages se valent sans le millésime pour trancher.
+ * Page du vin parmi les pages du site : son adresse contient le producteur et les mots du nom du vin (au moins la moitié
+ * avec tout le producteur). Les pages qui ne diffèrent que par le millésime, la
+ * contenance, le conditionnement ou la langue sont le même vin : on prend celle du bon millésime, en français, en 75 cl.
+ * null si aucune, ou si deux vins différents (d'autres mots dans l'adresse) se valent.
  */
 export function pageDuVin(pages: string[], v: { producteur: string; nom: string; millesime?: string | null }, index?: Map<string, Set<string>>): string | null {
   const duNom = mots(v.nom).filter((m) => !/^\d{4}$/.test(m));
   const duProducteur = mots(v.producteur);
   if (!duNom.length && !duProducteur.length) return null;
-  const candidates: { url: string; autres: number; millesime: boolean }[] = [];
+  const connus = new Set([...duNom, ...duProducteur]);
+  const candidates: { url: string; manquants: number; autres: string; nbAutres: number; millesime: boolean; langue: boolean; format: boolean; mots: number }[] = [];
   for (const url of pages) {
     const m = index?.get(url) ?? motsAdresse(url);
-    if (!duNom.every((x) => m.has(x))) continue;
-    if (duProducteur.length && (duNom.length ? !duProducteur.some((x) => m.has(x)) : !duProducteur.every((x) => m.has(x)))) continue;
-    const connus = new Set([...duNom, ...duProducteur]);
-    candidates.push({ url, autres: [...m].filter((x) => x.length > 2 && !connus.has(x) && !/^\d+$/.test(x)).length, millesime: Boolean(v.millesime && m.has(v.millesime)) });
+    // Le nom du vin dans la base n'est pas toujours celui du site (« Pauillac » pour « chateau-batailley ») : avec tout le
+    // producteur dans l'adresse, la moitié des mots du nom suffit (arrondie en dessous) ; avec une partie, la moitié arrondie
+    // au-dessus ; sans producteur, tous. La page la plus complète passe d'abord, et Claude vérifie ensuite que c'est le bon vin.
+    const prod = duProducteur.filter((x) => m.has(x)).length;
+    if (duProducteur.length && !prod) continue;
+    const trouves = duNom.filter((x) => m.has(x)).length;
+    const exiges = !duProducteur.length || !duNom.length ? duNom.length
+      : prod === duProducteur.length ? Math.floor(duNom.length / 2) : Math.ceil(duNom.length / 2);
+    if (trouves < exiges || (!duNom.length && prod < duProducteur.length)) continue;
+    const manquants = duNom.length - trouves;
+    const autres = [...m].filter((x) => !connus.has(x) && !BRUIT.test(x) && mots(x).length > 0).sort(); // sans « chateau », « domaine »…
+    candidates.push({ url, manquants, autres: autres.join(' '), nbAutres: autres.length, millesime: Boolean(v.millesime && m.has(v.millesime)),
+      langue: LANGUE.test(cheminDe(url)), format: [...m].some((x) => /^\d+(?:[.,]\d+)?(?:cl|ml|l)$/.test(x) && x !== '75cl'), mots: m.size });
   }
   if (!candidates.length) return null;
-  candidates.sort((a, b) => Number(b.millesime) - Number(a.millesime) || a.autres - b.autres || a.url.length - b.url.length);
-  const [a, b] = candidates;
-  if (b && b.millesime === a.millesime && b.autres === a.autres) return null; // ambigu : la recherche web tranchera
+  // D'abord le vin le plus proche (le moins d'autres mots), puis, parmi ses variantes : le millésime, le français, la bouteille.
+  candidates.sort((a, b) => a.manquants - b.manquants || a.nbAutres - b.nbAutres || Number(b.millesime) - Number(a.millesime) || Number(a.langue) - Number(b.langue)
+    || Number(a.format) - Number(b.format) || a.mots - b.mots || a.url.length - b.url.length);
+  const [a] = candidates;
+  // Un autre vin (d'autres mots) aussi proche : ambigu, la recherche web tranchera.
+  if (candidates.some((c) => c.manquants === a.manquants && c.nbAutres === a.nbAutres && c.autres !== a.autres)) return null;
   return a.url;
 }
 
