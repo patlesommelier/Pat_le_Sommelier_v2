@@ -47,7 +47,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   // Bilan de l'ancienne recherche des étiquettes sur le web (retirée) : plus affiché
   const bilan = d.completion_statut && !(d.completion_message ?? '').startsWith('Photos sur le web') && !(d.completion_message ?? '').startsWith('Recherche des photos sur le web') ? d.completion_statut : null;
   const calculQv = d.calcul_qv === 'remise' && d.remise_qv != null;
-  const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 15 * 60_000;
+  // Recherche vivante : son avancement a bougé depuis moins de 5 minutes (il bouge au moins toutes les deux ou trois minutes).
+  // Au-delà, elle a été arrêtée (redémarrage du site, mise en ligne) : le bouton revient pour la reprendre.
+  const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 5 * 60_000;
   const domaine = domaineDuSite(d.site);
 
   return (

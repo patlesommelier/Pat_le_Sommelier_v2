@@ -106,6 +106,11 @@ async function chercherLot(client: Anthropic, modele: string, texte: string, dom
 export async function completerVinsDistributeur(requete: Requete, distributeurId: string, { aussiDejaCherches = false } = {}) {
   const etat = (statut: string, message: string) =>
     requete('update distributeur set completion_statut = $2, completion_message = $3, completion_le = now() where id = $1', [distributeurId, statut, message]);
+  // Signe de vie chaque minute, même pendant une longue étape : la page sait que la recherche tourne toujours
+  // (sans signe de vie depuis 5 minutes, elle la considère arrêtée et propose de la reprendre).
+  const battement = setInterval(() => {
+    requete(`update distributeur set completion_le = now() where id = $1 and completion_statut = 'en_cours'`, [distributeurId]).catch(() => {});
+  }, 60_000);
   try {
     const [d] = await requete<{ nom: string; site: string | null; modele_lecture: ModeleTarif }>('select nom, site, modele_lecture from distributeur where id = $1', [distributeurId]);
     if (!d) return;
@@ -252,6 +257,8 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
   } catch (e) {
     console.error('[completer]', distributeurId, e);
     await etat('echec', `La recherche n’a pas abouti : ${(e as Error).message}`.slice(0, 500));
+  } finally {
+    clearInterval(battement);
   }
 }
 

@@ -27,6 +27,16 @@ export async function garder(octets: Buffer, type: string, nom: string): Promise
   return `/uploads/${fichier}`;
 }
 
+/** Type d'une image d'après ses premiers octets (JPEG, PNG, GIF, WebP) ; null si ce n'en est pas une. */
+export function typeDImage(o: Buffer): string | null {
+  if (o.length < 12) return null;
+  if (o[0] === 0xff && o[1] === 0xd8 && o[2] === 0xff) return 'image/jpeg';
+  if (o.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) return 'image/png';
+  if (o.subarray(0, 4).toString('latin1') === 'GIF8') return 'image/gif';
+  if (o.subarray(0, 4).toString('latin1') === 'RIFF' && o.subarray(8, 12).toString('latin1') === 'WEBP') return 'image/webp';
+  return null;
+}
+
 /** Image du site du distributeur ; null si elle n'est pas accessible (site réservé aux clients connectés…). */
 export async function telecharger(url: string): Promise<{ octets: Buffer; type: string } | null> {
   try {
@@ -37,8 +47,14 @@ export async function telecharger(url: string): Promise<{ octets: Buffer; type: 
       return type ? { octets: await fs.readFile(path.join(process.cwd(), 'public', url)), type } : null;
     }
     const r = await fetch(url, { signal: AbortSignal.timeout(20_000), headers: { accept: 'image/*' } });
-    const type = (r.headers.get('content-type') ?? '').split(';')[0].trim();
-    return r.ok && EXTENSIONS[type] ? { octets: Buffer.from(await r.arrayBuffer()), type } : null;
+    if (!r.ok) return null;
+    const entete = (r.headers.get('content-type') ?? '').split(';')[0].trim().toLowerCase();
+    if (EXTENSIONS[entete]) return { octets: Buffer.from(await r.arrayBuffer()), type: entete };
+    // Certains serveurs (Cinoco, sur Azure) envoient leurs images comme « application/octet-stream » : reconnues à leurs premiers octets.
+    if (entete && !/octet-stream|binary|^$/.test(entete)) return null;
+    const octets = Buffer.from(await r.arrayBuffer());
+    const type = typeDImage(octets);
+    return type ? { octets, type } : null;
   } catch {
     return null;
   }
