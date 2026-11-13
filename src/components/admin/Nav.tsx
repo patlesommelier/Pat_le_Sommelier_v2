@@ -23,7 +23,9 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
  * Post-it d'explication posé sur une entrée du menu. `numero` (interne, jamais affiché) : l'ordre ; `surPlace` : montré aussi
  * sur la page visée ; `vuSur` : page dont l'ouverture le fait disparaître (par défaut la page visée).
  */
-export interface Annonce { numero: number; texte: string; surPlace?: boolean; vuSur?: string }
+export interface Annonce { numero: number; texte: string; surPlace?: boolean; vuSur?: string;
+  /** Sur la page visée : le post-it se pose à côté de cet élément (id) plutôt que de l'entrée du menu. */
+  ancre?: string }
 
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
@@ -78,15 +80,17 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   useEffect(() => {
     try { setAnnoncesFermees(listeNumeros.split(',').map(Number).filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
   }, [listeNumeros]);
+  // Sur sa page, un post-it avec une ancre (pense-bête) se pose à côté du bouton, pas de l'entrée du menu.
+  const ancre = annonce?.ancre && chemin.startsWith(annonce.href) ? annonce.ancre : undefined;
   const guide: Guide | null = premiersPas ?? (annonce ? {
-    href: annonce.href, numero: annonce.numero, postIt: !annoncesFermees.includes(annonce.numero), texte: annonce.texte,
+    href: annonce.href, numero: annonce.numero, ...(ancre ? { place: 'ancre' as const, ancre } : {}), postIt: !annoncesFermees.includes(annonce.numero), texte: annonce.texte,
     fermer: () => {
       const n = annonce.numero;
       setAnnoncesFermees((f) => [...f, n]);
       try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1'); } catch { /* rien */ }
     },
   } : null);
-  const suivante = guide?.href;
+  const suivante = guide?.place === 'ancre' ? undefined : guide?.href;
   const groupeGrise = (g?: string) => Boolean(g && etapes.filter((x) => x.groupe === g).every((x) => x.desactive));
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && (courant(e.href) || e.href === suivante));
   const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
@@ -147,7 +151,7 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   );
 }
 
-type Guide = { href: string; numero: number; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' };
+type Guide = { href: string; numero: number; titre?: string; texte: string; postIt: boolean; fermer: () => void; place?: 'menu' | 'haut-droite' | 'ancre'; ancre?: string };
 const CLE_GUIDE = 'pat-guide-chevalet';
 /** Attente avant le post-it : le temps d'essayer le simulateur (étape 2), puis la carte des vins (étape 3). */
 const ATTENTE: Record<2 | 3, number> = { 2: 60_000, 3: 120_000 };
@@ -220,6 +224,15 @@ function BulleEtape({ guide }: { guide: Guide }) {
   const [pos, setPos] = useState<{ top: number; left: number; largeur: number; cote: 'droite' | 'dessous' | 'haut' } | null>(null);
   useEffect(() => {
     const placer = () => {
+      if (guide.place === 'ancre' && guide.ancre) {
+        // Sous l'élément de la page (ex. le bouton « Imprimer le pense-bête »), flèche vers le haut.
+        const r = document.getElementById(guide.ancre)?.getBoundingClientRect();
+        if (!r || !r.height) { setPos(null); return; }
+        const largeur = Math.min(280, window.innerWidth - 32);
+        const left = Math.min(Math.max(16, r.left + window.scrollX), document.documentElement.clientWidth - largeur - 16);
+        setPos({ top: r.bottom + window.scrollY + 12, left, largeur, cote: 'dessous' });
+        return;
+      }
       if (guide.place === 'haut-droite') {
         // Sur le téléphone du simulateur, à cheval sur son bord droit ; sans téléphone, en haut à droite de la page.
         const largeur = Math.min(290, window.innerWidth - 32);
@@ -243,7 +256,7 @@ function BulleEtape({ guide }: { guide: Guide }) {
     const t = setTimeout(placer, 300); // après le dépliage du groupe
     window.addEventListener('resize', placer);
     return () => { clearTimeout(t); window.removeEventListener('resize', placer); };
-  }, [guide.href, guide.place]);
+  }, [guide.href, guide.place, guide.ancre]);
   if (!pos) return null;
   return createPortal(
     <button type="button" onClick={guide.fermer} className={`post-it-etape ${pos.cote}`} style={{ top: pos.top, left: pos.left, width: pos.largeur }}

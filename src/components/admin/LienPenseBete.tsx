@@ -6,5 +6,5 @@ export function LienPenseBete({ href, className, children }: { href: string; cla
     try { sessionStorage.setItem('pat-guide-chevalet-vu-11', '1'); sessionStorage.setItem('pat-guide-chevalet-annonce-faite', '1'); } catch { /* rien */ }
     window.dispatchEvent(new Event('pat-annonce-vue'));
   };
-  return <a href={href} target="_blank" rel="noopener" className={className} onClick={vu}>{children}</a>;
+  return <a id="bouton-pense-bete" href={href} target="_blank" rel="noopener" className={className} onClick={vu}>{children}</a>;
 }

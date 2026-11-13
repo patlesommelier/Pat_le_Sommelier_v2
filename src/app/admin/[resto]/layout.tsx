@@ -29,8 +29,9 @@ const ANNONCES: Record<Cle, Annonce & { page: string }> = {
   'trouver-vin': { page: 'trouver-vin', numero: 9, texte: 'Une fois qu’un distributeur a été ajouté, vous pouvez rajouter un de ses vins à la carte et lui passer des commandes qui viendront directement alimenter le stock' },
   // Montré aussi sur la page Commandes (on y arrive en envoyant la commande) ; s'arrête à la première livraison reçue.
   commandes: { page: 'commandes', numero: 10, texte: 'Quand les bouteilles de votre commande sont livrées, cliquez sur « Réception des bouteilles » : le stock se met à jour automatiquement', surPlace: true },
-  // Sur l'entrée des accords (le bouton « Imprimer le pense-bête » y est) ; disparaît à la première impression.
-  'pense-bete': { page: 'accords', numero: 11, texte: 'Imprimez la carte d’accords simplifiée pour votre personnel en salle : elle sera toujours à jour', surPlace: true, vuSur: 'accords/pense-bete' },
+  // Montre l'entrée des accords ; sur la page des accords, se pose sous le bouton « Imprimer le pense-bête ». Disparaît à
+  // la première impression.
+  'pense-bete': { page: 'accords', numero: 11, texte: 'Imprimez la carte d’accords simplifiée pour votre personnel en salle : elle sera toujours à jour', surPlace: true, vuSur: 'accords/pense-bete', ancre: 'bouton-pense-bete' },
   ajout: { page: 'trouver-vin', numero: 12, texte: 'Ajoutez un vin à votre carte en le décrivant, en précisant le plat qu’il doit accompagner, ou en le choisissant dans le catalogue de vos distributeurs' },
 };
 /** Les post-its à montrer, posés sur leurs entrées du menu. */
