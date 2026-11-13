@@ -47,47 +47,43 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   const [premiersPas, premiersPasEnCours] = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
   // Post-its d'explication (visites suivantes) : le plus petit numéro d'abord ; aucun pendant la visite des premiers pas
   // (post-its 1 à 3, même une fois finis) : ils attendent la visite suivante.
-  // Page montrée déjà ouverte : le post-it et l'entourage disparaissent tout de suite. Le menu (layout) n'est pas relu en
-  // changeant de page : sans cela, l'entrée restait entourée jusqu'au prochain rechargement.
+  // Un seul par visite : dès que sa page a été ouverte (ou, pour un post-it montré aussi sur sa page, dès qu'on l'a
+  // quittée), ou qu'on a cliqué dessus pour le fermer, plus aucun post-it ni entourage jusqu'à la visite suivante.
+  // Le menu (layout) n'étant pas relu en changeant de page, c'est retenu ici, dans l'onglet.
   const candidates = etapes.flatMap((e) => (e.annonces ?? []).map((a) => ({ href: e.href, ...a })));
-  const numeros = candidates.map((a) => a.numero);
-  const [annoncesVues, setAnnoncesVues] = useState<number[]>([]);
-  // Un seul post-it par visite : une fois sa page ouverte, le suivant attend la visite d'après (sinon un nouveau post-it
-  // apparaissait aussitôt, comme si le premier restait).
   const [annonceFaite, setAnnonceFaite] = useState(false);
-  const pagesAnnoncees = candidates.map((a) => `${a.numero} ${a.vuSur ?? (a.surPlace ? '' : a.href)}`).join('|');
+  const pages = candidates.map((a) => [a.numero, a.href, a.vuSur ?? '', a.surPlace ? '1' : ''].join(' ')).join('|');
   useEffect(() => {
     const relire = () => {
-      const vues = pagesAnnoncees.split('|').map((x) => x.split(' ')).filter(([, page]) => page && chemin.startsWith(page)).map(([n]) => n);
       try {
-        vues.forEach((n) => sessionStorage.setItem(`${CLE_GUIDE}-vu-${n}`, '1'));
-        if (vues.length) sessionStorage.setItem(`${CLE_GUIDE}-annonce-faite`, '1');
-        setAnnonceFaite(sessionStorage.getItem(`${CLE_GUIDE}-annonce-faite`) === '1');
-        setAnnoncesVues(pagesAnnoncees.split('|').map((x) => Number(x.split(' ')[0])).filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
-      } catch { setAnnoncesVues((v) => [...v, ...vues.map(Number)]); if (vues.length) setAnnonceFaite(true); }
+        const cle = (k: string) => `${CLE_GUIDE}-${k}`;
+        for (const [n, href, vuSur, surPlace] of pages.split('|').filter(Boolean).map((x) => x.split(' '))) {
+          const ici = chemin.startsWith(href);
+          // Page ouverte (celle qui le fait disparaître) : fini pour de bon dans cet onglet.
+          if ((vuSur && chemin.startsWith(vuSur)) || (!vuSur && !surPlace && ici)) sessionStorage.setItem(cle('annonce-faite'), '1');
+          // Montré aussi sur sa page : fini pour cette visite une fois la page quittée.
+          if (surPlace && ici) sessionStorage.setItem(cle(`passe-${n}`), '1');
+          if (surPlace && !ici && sessionStorage.getItem(cle(`passe-${n}`)) === '1') sessionStorage.setItem(cle('annonce-faite'), '1');
+        }
+        setAnnonceFaite(sessionStorage.getItem(cle('annonce-faite')) === '1');
+      } catch { /* sans sessionStorage : comme avant, le serveur s'en charge au rechargement */ }
     };
     relire();
     // Page ouverte dans un autre onglet (pense-bête) : le lien prévient le menu.
     window.addEventListener('pat-annonce-vue', relire);
     return () => window.removeEventListener('pat-annonce-vue', relire);
-  }, [chemin, pagesAnnoncees]);
+  }, [chemin, pages]);
   const annonce = premiersPasEnCours || annonceFaite ? undefined : candidates
-    .filter((a) => !annoncesVues.includes(a.numero) && (a.surPlace || !chemin.startsWith(a.href)))
+    .filter((a) => a.surPlace || !chemin.startsWith(a.href))
     .sort((a, b) => a.numero - b.numero)[0];
-  // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
-  const [annoncesFermees, setAnnoncesFermees] = useState<number[]>([]);
-  const listeNumeros = numeros.join(',');
-  useEffect(() => {
-    try { setAnnoncesFermees(listeNumeros.split(',').map(Number).filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-ferme-${n}`) === '1')); } catch { /* rien */ }
-  }, [listeNumeros]);
   // Sur sa page, un post-it avec une ancre (pense-bête) se pose à côté du bouton, pas de l'entrée du menu.
   const ancre = annonce?.ancre && chemin.startsWith(annonce.href) ? annonce.ancre : undefined;
   const guide: Guide | null = premiersPas ?? (annonce ? {
-    href: annonce.href, numero: annonce.numero, ...(ancre ? { place: 'ancre' as const, ancre } : {}), postIt: !annoncesFermees.includes(annonce.numero), texte: annonce.texte,
+    href: annonce.href, numero: annonce.numero, ...(ancre ? { place: 'ancre' as const, ancre } : {}), postIt: true, texte: annonce.texte,
+    // Un clic le ferme, entourage compris, jusqu'à la visite suivante.
     fermer: () => {
-      const n = annonce.numero;
-      setAnnoncesFermees((f) => [...f, n]);
-      try { sessionStorage.setItem(`${CLE_GUIDE}-ferme-${n}`, '1'); } catch { /* rien */ }
+      try { sessionStorage.setItem(`${CLE_GUIDE}-annonce-faite`, '1'); } catch { /* rien */ }
+      setAnnonceFaite(true);
     },
   } : null);
   const suivante = guide?.place === 'ancre' ? undefined : guide?.href;
