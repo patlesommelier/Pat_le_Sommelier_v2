@@ -139,6 +139,7 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
     /** Enregistre ce qui a été trouvé (sans rien écraser) ; renvoie les ids des vins pour lesquels quelque chose a été trouvé. */
     const appliquer = async (lot: VinACompleter[], reponse: Reponse[], images?: Map<string, string[]>) => {
       const trouves = new Set<string>();
+      const enPhotos: Promise<void>[] = []; // photos du lot traitées ensemble (téléchargement et recadrage prennent du temps)
       for (const r of reponse) {
         const v = lot.find((x) => x.id === r.id);
         if (!v) continue;
@@ -159,14 +160,17 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
         // Fiche lue par le serveur : seulement une image de la page (pas une adresse inventée).
         const image = r.image?.trim();
         if (v.sans_photo && image && (!images || images.get(v.id)?.includes(image))) {
-          const url = await etiquetteDepuisPhoto(client, modele, image, `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
-          if (url) {
-            await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = true where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
-              [distributeurId, v.id, url, image]);
-            photos++;
-          }
+          enPhotos.push((async () => {
+            const url = await etiquetteDepuisPhoto(client, modele, image, `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`).catch(() => null);
+            if (url) {
+              await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = true where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
+                [distributeurId, v.id, url, image]);
+              photos++;
+            }
+          })());
         }
       }
+      await Promise.all(enPhotos);
       return trouves;
     };
     const marquer = (lot: VinACompleter[]) => requete('update distributeur_vin set cherche_le = now() where distributeur_id = $1 and cuvee_id = any($2)', [distributeurId, lot.map((v) => v.id)]);
@@ -183,6 +187,8 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
         const aLire = vins.map((v) => ({ v, url: pageDuVin(pages, v, index) })).filter((x): x is { v: VinACompleter; url: string } => Boolean(x.url));
         await etat('en_cours', `Plan du site ${domaine} : ${aLire.length} fiches de vins trouvées sur ${vins.length}, lecture…`);
         for (let i = 0; i < aLire.length; i += 6) {
+          // Avancement visible pendant la lecture (quelques minutes pour des centaines de fiches).
+          if (i && i % 60 === 0) await etat('en_cours', `Plan du site ${domaine} : lecture des fiches, ${i} sur ${aLire.length}…`);
           await Promise.all(aLire.slice(i, i + 6).map(async ({ v, url }) => {
             const html = await lireUrl(url);
             const c = html ? contenuDePage(html, url) : null;
@@ -194,6 +200,8 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
         const releveur = modeleTarif('haiku');
         const lotsLus: typeof lus[] = [];
         for (let i = 0; i < lus.length; i += 8) lotsLus.push(lus.slice(i, i + 8));
+        let releves = 0;
+        await etat('en_cours', `Fiches de ${domaine} : relevé des cépages, appellations et photos, 0 sur ${lus.length}…`);
         for (let i = 0; i < lotsLus.length; i += EN_PARALLELE) {
           await Promise.all(lotsLus.slice(i, i + EN_PARALLELE).map(async (lot) => {
             try {
@@ -204,9 +212,11 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
               for (const v of faitsIci) sansReponse.delete(v.id);
               parPlan += faitsIci.length;
               if (faitsIci.length) await marquer(faitsIci);
-              await avancer(faitsIci.length);
+              faits += faitsIci.length;
             } catch (e) { console.error('[completer] fiche lue', e); }
+            releves += lot.length;
           }));
+          await etat('en_cours', `Fiches de ${domaine} : relevé des cépages, appellations et photos, ${releves} sur ${lus.length} (${photos} photo${photos > 1 ? 's' : ''} trouvée${photos > 1 ? 's' : ''})…`);
         }
         // Les vins dont la fiche n'a rien donné (ou pas été trouvée) passent à la recherche web.
         const faitsParPlan = new Set(lus.filter((l) => !sansReponse.has(l.v.id)).map((l) => l.v.id));
