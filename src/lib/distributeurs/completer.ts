@@ -9,7 +9,9 @@ import { creerAppellationProposeeAvec } from '../appellations/creation';
 import { cleAppellation } from '../appellations/regroupement';
 import { extraireVins, modeleTarif, type ModeleTarif } from './lecture';
 import { garder, partagerEtiquettesDistributeur, telecharger } from './etiquettes';
-import { recadrerSurEtiquette } from './recadrage';
+import { COTE_MINIMUM, recadrerSurEtiquette } from './recadrage';
+import { photoDeLaFichePdf } from './fiche-pdf';
+import sharp from 'sharp';
 import { cepageDuNom } from './cepages';
 import { appliquerAppellations } from './rattachement';
 import { contenuDePage, indexDesPages, lireUrl, pageDuVin, pagesDuSite } from './plansite';
@@ -37,12 +39,19 @@ export function domaineDuSite(site: string | null | undefined): string | null {
  */
 async function etiquetteDepuisPhoto(client: Anthropic, modele: string, url: string, nom: string): Promise<string | null> {
   if (!/^https?:\/\//i.test(url)) return null;
-  const contenu = await telecharger(url);
+  let contenu = await telecharger(url);
   if (!contenu || contenu.octets.length < 3000) return null; // trop petite : icône, logo ou pixel
+  // Photo du site trop petite pour lire l'étiquette (Cinoco : 127 pixels de large) : la bouteille en grand de la fiche technique PDF.
+  const { width = 0, height = 0 } = await sharp(contenu.octets).metadata().catch(() => ({ width: 0, height: 0 }));
+  if (Math.min(width, height) < COTE_MINIMUM) contenu = (await photoDeLaFichePdf(url)) ?? contenu;
   const r = await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type);
-  if (r.resultat === 'aucune' || r.resultat === 'petite') return null; // pas d'étiquette lisible sur cette photo
+  // Petite photo sans fiche PDF (au moins 100 pixels de large) : gardée telle quelle, mieux que rien (choix de Pat).
+  if (r.resultat === 'petite') return Math.min(width, height) >= PETITE_PHOTO_MINIMUM ? garder(contenu.octets, contenu.type, nom).catch(() => null) : null;
+  if (r.resultat === 'aucune') return null; // pas d'étiquette lisible sur cette photo
   return garder(r.octets, r.type, nom).catch(() => null);
 }
+/** En dessous (plus petit côté, en pixels), une photo n'est qu'une icône : jamais gardée. */
+const PETITE_PHOTO_MINIMUM = 100;
 
 const LOT = 6;
 const EN_PARALLELE = 3;
