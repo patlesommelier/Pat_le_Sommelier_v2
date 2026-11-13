@@ -50,21 +50,26 @@ export function NavLiens({ accueil, etapes, admin, mode }: { accueil: string; et
   const candidates = etapes.flatMap((e) => (e.annonces ?? []).map((a) => ({ href: e.href, ...a })));
   const numeros = candidates.map((a) => a.numero);
   const [annoncesVues, setAnnoncesVues] = useState<number[]>([]);
+  // Un seul post-it par visite : une fois sa page ouverte, le suivant attend la visite d'après (sinon un nouveau post-it
+  // apparaissait aussitôt, comme si le premier restait).
+  const [annonceFaite, setAnnonceFaite] = useState(false);
   const pagesAnnoncees = candidates.map((a) => `${a.numero} ${a.vuSur ?? (a.surPlace ? '' : a.href)}`).join('|');
   useEffect(() => {
     const relire = () => {
       const vues = pagesAnnoncees.split('|').map((x) => x.split(' ')).filter(([, page]) => page && chemin.startsWith(page)).map(([n]) => n);
       try {
         vues.forEach((n) => sessionStorage.setItem(`${CLE_GUIDE}-vu-${n}`, '1'));
+        if (vues.length) sessionStorage.setItem(`${CLE_GUIDE}-annonce-faite`, '1');
+        setAnnonceFaite(sessionStorage.getItem(`${CLE_GUIDE}-annonce-faite`) === '1');
         setAnnoncesVues(pagesAnnoncees.split('|').map((x) => Number(x.split(' ')[0])).filter((n) => sessionStorage.getItem(`${CLE_GUIDE}-vu-${n}`) === '1'));
-      } catch { setAnnoncesVues((v) => [...v, ...vues.map(Number)]); }
+      } catch { setAnnoncesVues((v) => [...v, ...vues.map(Number)]); if (vues.length) setAnnonceFaite(true); }
     };
     relire();
     // Page ouverte dans un autre onglet (pense-bête) : le lien prévient le menu.
     window.addEventListener('pat-annonce-vue', relire);
     return () => window.removeEventListener('pat-annonce-vue', relire);
   }, [chemin, pagesAnnoncees]);
-  const annonce = premiersPasEnCours ? undefined : candidates
+  const annonce = premiersPasEnCours || annonceFaite ? undefined : candidates
     .filter((a) => !annoncesVues.includes(a.numero) && (a.surPlace || !chemin.startsWith(a.href)))
     .sort((a, b) => a.numero - b.numero)[0];
   // Un clic le ferme pour cette visite ; l'entrée reste entourée, et il revient tant que la page n'a pas été ouverte.
