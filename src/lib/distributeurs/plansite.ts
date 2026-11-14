@@ -74,30 +74,32 @@ export function pageDuVin(pages: string[], v: { producteur: string; nom: string;
   const duProducteur = mots(v.producteur);
   if (!duNom.length && !duProducteur.length) return null;
   const connus = new Set([...duNom, ...duProducteur]);
-  const candidates: { url: string; manquants: number; autres: string; nbAutres: number; millesime: boolean; langue: boolean; format: boolean; mots: number }[] = [];
+  const candidates: { url: string; manquants: number; sansProducteur: boolean; autres: string; nbAutres: number; millesime: boolean; langue: boolean; format: boolean; mots: number }[] = [];
   for (const url of pages) {
     const m = index?.get(url) ?? motsAdresse(url);
     // Le nom du vin dans la base n'est pas toujours celui du site (« Pauillac » pour « chateau-batailley ») : avec tout le
     // producteur dans l'adresse, la moitié des mots du nom suffit (arrondie en dessous) ; avec une partie, la moitié arrondie
     // au-dessus ; sans producteur, tous. La page la plus complète passe d'abord, et Claude vérifie ensuite que c'est le bon vin.
     const prod = duProducteur.filter((x) => m.has(x)).length;
-    if (duProducteur.length && !prod) continue;
     const trouves = duNom.filter((x) => m.has(x)).length;
-    const exiges = !duProducteur.length || !duNom.length ? duNom.length
+    // Producteur absent de l'adresse (« Baron Philippe de Rothschild » pour « reserve-mouton-cadet-pauillac ») : accepté seulement
+    // si tout le nom du vin y est, avec au moins deux mots.
+    if (duProducteur.length && !prod && !(duNom.length >= 2 && trouves === duNom.length)) continue;
+    const exiges = !duProducteur.length || !duNom.length || !prod ? duNom.length
       : prod === duProducteur.length ? Math.floor(duNom.length / 2) : Math.ceil(duNom.length / 2);
     if (trouves < exiges || (!duNom.length && prod < duProducteur.length)) continue;
     const manquants = duNom.length - trouves;
     const autres = [...m].filter((x) => !connus.has(x) && !BRUIT.test(x) && mots(x).length > 0).sort(); // sans « chateau », « domaine »…
-    candidates.push({ url, manquants, autres: autres.join(' '), nbAutres: autres.length, millesime: Boolean(v.millesime && m.has(v.millesime)),
+    candidates.push({ url, manquants, sansProducteur: Boolean(duProducteur.length && !prod), autres: autres.join(' '), nbAutres: autres.length, millesime: Boolean(v.millesime && m.has(v.millesime)),
       langue: LANGUE.test(cheminDe(url)), format: [...m].some((x) => /^\d+(?:[.,]\d+)?(?:cl|ml|l)$/.test(x) && x !== '75cl'), mots: m.size });
   }
   if (!candidates.length) return null;
   // D'abord le vin le plus proche (le moins d'autres mots), puis, parmi ses variantes : le millésime, le français, la bouteille.
-  candidates.sort((a, b) => a.manquants - b.manquants || a.nbAutres - b.nbAutres || Number(b.millesime) - Number(a.millesime) || Number(a.langue) - Number(b.langue)
+  candidates.sort((a, b) => a.manquants - b.manquants || Number(a.sansProducteur) - Number(b.sansProducteur) || a.nbAutres - b.nbAutres || Number(b.millesime) - Number(a.millesime) || Number(a.langue) - Number(b.langue)
     || Number(a.format) - Number(b.format) || a.mots - b.mots || a.url.length - b.url.length);
   const [a] = candidates;
   // Un autre vin (d'autres mots) aussi proche : ambigu, la recherche web tranchera.
-  if (candidates.some((c) => c.manquants === a.manquants && c.nbAutres === a.nbAutres && c.autres !== a.autres)) return null;
+  if (candidates.some((c) => c.manquants === a.manquants && c.sansProducteur === a.sansProducteur && c.nbAutres === a.nbAutres && c.autres !== a.autres)) return null;
   return a.url;
 }
 

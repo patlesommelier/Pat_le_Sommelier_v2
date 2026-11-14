@@ -37,6 +37,11 @@ test('page du vin : site de Cinoco (millésimes, formats, langues ; nom de la ba
   assert.equal(pageDuVin(pages, { producteur: 'Château Batailley', nom: 'Lions de Batailley' }), 'https://www.cinoco.com/produit/lions-de-batailley-wb6-2019/');
   assert.equal(pageDuVin(pages, { producteur: 'Delas', nom: 'Crozes-Hermitage Les Launes' }), 'https://www.cinoco.com/produit/crozes-les-launes-delas-c6-2023/');
   assert.equal(pageDuVin(pages, { producteur: 'Château Trottevieille', nom: 'Saint-Émilion Grand Cru', millesime: '2019' }), 'https://www.cinoco.com/produit/trottevieille-saint-emilion-wb6-2019/');
+  // Producteur absent de l'adresse : tout le nom du vin suffit, et passe avant une page qui n'a qu'une partie du nom.
+  const mouton = ['https://www.cinoco.com/produit/reserve-mouton-cadet-pauillac-c6-2021/', 'https://www.cinoco.com/produit/mouton-rothschild-pauillac-wb1-2021/',
+    'https://www.cinoco.com/produit/reserve-mouton-cadet-medoc-c6-2019/'];
+  assert.equal(pageDuVin(mouton, { producteur: 'Baron Philippe de Rothschild', nom: 'Réserve Mouton Cadet Pauillac', millesime: '2021' }), mouton[0]);
+  assert.equal(pageDuVin(mouton, { producteur: 'Mouton Cadet', nom: 'Réserve Pauillac' }), mouton[0]);
 });
 
 test('contenu de page : texte sans menus ni scripts, images de la fiche', () => {
