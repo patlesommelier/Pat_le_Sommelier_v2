@@ -36,15 +36,21 @@ export type Recadrage = { octets: Buffer; type: string; resultat: 'recadree' | '
 
 /** En dessous de cette taille (plus petit côté, en pixels), une photo ne permet pas de lire une étiquette : vignette à remplacer. */
 export const COTE_MINIMUM = 300;
+/** Plus petite photo qu'on accepte de recadrer quand on n'a pas mieux (en dessous : une icône). */
+export const PETITE_MINIMUM = 100;
 
 /** Image recadrée sur l'étiquette (JPEG) ; l'image d'origine si elle est déjà l'étiquette, ou si le cadre n'a pas pu être trouvé. */
-export async function recadrerSurEtiquette(client: Anthropic, modele: string, octets: Buffer, type: string): Promise<Recadrage> {
+export async function recadrerSurEtiquette(client: Anthropic, modele: string, octets: Buffer, type: string,
+  { petiteAussi = false }: { petiteAussi?: boolean } = {}): Promise<Recadrage> {
   try {
     const image = sharp(octets).rotate();
     const { width = 0, height = 0 } = await image.metadata();
     if (!width || !height) return { octets, type, resultat: 'echec' };
-    if (Math.min(width, height) < COTE_MINIMUM) return { octets, type, resultat: 'petite' }; // vignette : sans appel à Claude
-    const apercu = await sharp(octets).rotate().resize(1200, 1200, { fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 85 }).toBuffer();
+    // Vignette : sans appel à Claude, sauf si on accepte les petites photos (à partir de 100 pixels : la bouteille entière de
+    // Cinoco, 127 pixels de large, est quand même recadrée sur son étiquette, petite mais centrée).
+    if (Math.min(width, height) < (petiteAussi ? PETITE_MINIMUM : COTE_MINIMUM)) return { octets, type, resultat: 'petite' };
+    // Aperçu pour Claude : agrandi si la photo est petite (le cadre se lit mieux), réduit si elle est grande.
+    const apercu = await sharp(octets).rotate().resize(1200, 1200, { fit: 'inside', withoutEnlargement: Math.max(width, height) >= 600 }).jpeg({ quality: 85 }).toBuffer();
     const m = await client.messages.create({
       model: modele, max_tokens: 400,
       messages: [{ role: 'user', content: [

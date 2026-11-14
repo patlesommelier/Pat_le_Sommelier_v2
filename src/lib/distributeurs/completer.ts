@@ -37,21 +37,20 @@ export function domaineDuSite(site: string | null | undefined): string | null {
  * Photo trouvée sur le web : téléchargée, vérifiée (une vraie image, pas une icône), recadrée sur l'étiquette si c'est une photo
  * de bouteille, puis gardée chez nous. null si elle n'est pas accessible ou n'en est pas une.
  */
-async function etiquetteDepuisPhoto(client: Anthropic, modele: string, url: string, nom: string): Promise<string | null> {
+async function etiquetteDepuisPhoto(client: Anthropic, modele: string, url: string, nom: string): Promise<{ url: string; recadree: boolean } | null> {
   if (!/^https?:\/\//i.test(url)) return null;
   let contenu = await telecharger(url);
   if (!contenu || contenu.octets.length < 3000) return null; // trop petite : icône, logo ou pixel
   // Photo du site trop petite pour lire l'étiquette (Cinoco : 127 pixels de large) : la bouteille en grand de la fiche technique PDF.
   const { width = 0, height = 0 } = await sharp(contenu.octets).metadata().catch(() => ({ width: 0, height: 0 }));
   if (Math.min(width, height) < COTE_MINIMUM) contenu = (await photoDeLaFichePdf(url)) ?? contenu;
-  const r = await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type);
-  // Petite photo sans fiche PDF (au moins 100 pixels de large) : gardée telle quelle, mieux que rien (choix de Pat).
-  if (r.resultat === 'petite') return Math.min(width, height) >= PETITE_PHOTO_MINIMUM ? garder(contenu.octets, contenu.type, nom).catch(() => null) : null;
-  if (r.resultat === 'aucune') return null; // pas d'étiquette lisible sur cette photo
-  return garder(r.octets, r.type, nom).catch(() => null);
+  // Sans fiche PDF : la petite photo est quand même recadrée sur son étiquette (petite, mais l'étiquette et pas toute la bouteille).
+  const r = await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type, { petiteAussi: true });
+  if (r.resultat === 'petite' || r.resultat === 'aucune') return null; // icône, ou pas d'étiquette lisible sur cette photo
+  const garde = await garder(r.octets, r.type, nom).catch(() => null);
+  // Recadrage en échec (Claude injoignable…) : photo gardée telle quelle, à recadrer plus tard (bouton « Recadrer sur l'étiquette »).
+  return garde ? { url: garde, recadree: r.resultat !== 'echec' } : null;
 }
-/** En dessous (plus petit côté, en pixels), une photo n'est qu'une icône : jamais gardée. */
-const PETITE_PHOTO_MINIMUM = 100;
 
 const LOT = 6;
 const EN_PARALLELE = 3;
@@ -175,10 +174,10 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
         const image = r.image?.trim();
         if (v.sans_photo && image && (!images || images.get(v.id)?.includes(image))) {
           enPhotos.push((async () => {
-            const url = await etiquetteDepuisPhoto(client, modele, image, `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`).catch(() => null);
-            if (url) {
-              await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = true where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
-                [distributeurId, v.id, url, image]);
+            const e = await etiquetteDepuisPhoto(client, modele, image, `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`).catch(() => null);
+            if (e) {
+              await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = $5 where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
+                [distributeurId, v.id, e.url, image, e.recadree]);
               photos++;
             }
           })());
@@ -290,7 +289,7 @@ export async function recadrerPhotosDistributeur(requete: Requete, distributeurI
     let recadrees = 0, deja = 0, illisibles = 0, faites = 0;
     const traiter = async (ancienne: string, i: number) => {
       const contenu = await telecharger(ancienne);
-      const r = contenu ? await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type) : null;
+      const r = contenu ? await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type, { petiteAussi: true }) : null;
       if (r?.resultat === 'recadree') {
         const nouvelle = await garder(r.octets, r.type, `${distributeurId.slice(0, 8)}-etiquette-${i}`);
         if (nouvelle) {
