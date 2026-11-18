@@ -96,7 +96,10 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   const marqueGrisee = (m?: string) => Boolean(m && etapes.filter((x) => x.marque === m).every((x) => x.desactive));
   // Groupe repliable d'une entrée : son sous-groupe chez Pat le sommelier (Carte et menu…), toute la partie Quid Vinum.
   const groupeDe = (e: Etape) => (e.marque === 'qv' ? 'Quid Vinum' : e.groupe);
-  const groupeOuvert = (g: string) => etapes.some((e) => groupeDe(e) === g && (courant(e.href) || e.href === suivante));
+  const groupeOuvert = (g: string) => g === 'Pat le sommelier'
+    // Bloc Pat le sommelier : ouvert sur sa page d'accueil et sur ses pages (ou celle que montre un post-it).
+    ? Boolean(courant(accueil)) || etapes.some((e) => e.marque === 'pat' && (courant(e.href) || e.href === suivante))
+    : etapes.some((e) => groupeDe(e) === g && (courant(e.href) || e.href === suivante));
   const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
   const basculer = (g: string) => {
     const replier = !cache(g);
@@ -114,7 +117,8 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
       {blocs(etapes).map((bloc) => {
         const grisee = marqueGrisee(bloc.marque);
         const info = grisee ? bloc.etapes[0].desactive : undefined;
-        const entrees = bloc.etapes.map((e, i) => {
+        const patReplie = bloc.marque === 'pat' && cache('Pat le sommelier');
+        const entrees = patReplie ? null : bloc.etapes.map((e, i) => {
           const avant = bloc.etapes[i - 1];
           return (
             <Fragment key={e.href}>
@@ -158,15 +162,19 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
                 {pointNotif('Quid Vinum')}{fleche}
               </button>
             ) : bloc.marque === 'pat' ? (
-              // Pat le sommelier : l'en-tête ouvre la page d'accueil de l'espace (les informations générales du sommelier),
-              // qui remplace l'ancien « Tableau de bord ».
-              <Link href={accueil} className="marque-menu marque-lien" aria-current={courant(accueil)}>
-                <span className="marque-menu-nom">
+              // Pat le sommelier : le nom ouvre la page d'accueil de l'espace (les informations générales du sommelier, qui
+              // remplace l'ancien « Tableau de bord ») ; la flèche déroule le bloc, comme celui de Quid Vinum.
+              <span className="marque-menu">
+                <Link href={accueil} className="marque-menu-nom marque-lien" aria-current={courant(accueil)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/pat/pat-avatar-creme.svg" alt="" aria-hidden="true" />
                   <b>Pat le sommelier</b>
-                </span>
-              </Link>
+                </Link>
+                <button type="button" className="marque-fleche" aria-expanded={!cache('Pat le sommelier')} aria-label="Afficher les menus de Pat le sommelier"
+                  onClick={() => basculer('Pat le sommelier')}>
+                  {fleche}
+                </button>
+              </span>
             ) : (
               <span className={`marque-menu${grisee ? ' section-desactivee' : ''}`} {...(grisee ? { 'aria-disabled': true, tabIndex: 0, 'data-info': info, title: info } : {})}>
                 <span className="marque-menu-nom">
