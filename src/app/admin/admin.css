@@ -718,3 +718,15 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-liens .marque-fleche .fleche-section { transition: transform .2s; }
 .bo-liens .marque-fleche[aria-expanded='false'] .fleche-section { transform: rotate(-90deg); }
 .bo-liens .marque-menu b { white-space: nowrap; }
+/* Blocs Pat le sommelier et Quid Vinum : même taille et flèche au même endroit (marges identiques, bord d'un pixel des deux côtés). */
+.bo-liens .bloc-pat, .bo-liens .bloc-qv { padding: 6px 4px 8px; border-width: 1px; border-style: solid; }
+.bo-liens .bloc-qv { border-color: var(--encre-fonce); }
+.bo-liens .bloc-qv.bloc-grise { border-color: #E9E4E2; }
+.bo-liens .bloc-pat .marque-menu { padding: 0; gap: 0; }
+.bo-liens .bloc-pat .marque-lien { padding: 8px 10px; }
+.bo-liens .marque-fleche { width: auto; height: auto; align-self: stretch; padding: 0 10px; }
+.bo-liens .bloc-pat .marque-lien, .bo-liens .bloc-qv .marque-menu { min-height: 44px; box-sizing: border-box; }
+.bo-liens .bloc-pat .section { margin: 14px 8px 4px; }
+.bo-liens .bloc-pat .section { white-space: nowrap; margin-top: 16px; }
+.bo-liens .bloc-qv .marque-menu { margin: 0; }
+.bo-liens .bloc-qv .bo-lien:first-of-type { margin-top: 2px; }

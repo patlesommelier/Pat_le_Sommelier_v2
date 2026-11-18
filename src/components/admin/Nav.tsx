@@ -95,7 +95,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   // Partie dont toutes les entrées sont grisées (Quid Vinum pendant l'inscription) : en-tête grisé, avec le message au survol.
   const marqueGrisee = (m?: string) => Boolean(m && etapes.filter((x) => x.marque === m).every((x) => x.desactive));
   // Groupe repliable d'une entrée : son sous-groupe chez Pat le sommelier (Carte et menu…), toute la partie Quid Vinum.
-  const groupeDe = (e: Etape) => (e.marque === 'qv' ? 'Quid Vinum' : e.groupe);
+  const groupeDe = (e: Etape) => (e.marque === 'qv' ? 'Quid Vinum' : e.marque === 'pat' ? 'Pat le sommelier' : e.groupe);
   const groupeOuvert = (g: string) => g === 'Pat le sommelier'
     // Bloc Pat le sommelier : ouvert sur sa page d'accueil et sur ses pages (ou celle que montre un post-it).
     ? Boolean(courant(accueil)) || etapes.some((e) => e.marque === 'pat' && (courant(e.href) || e.href === suivante))
@@ -122,11 +122,9 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
           const avant = bloc.etapes[i - 1];
           return (
             <Fragment key={e.href}>
-              {bloc.marque === 'pat' && e.groupe && e.groupe !== avant?.groupe && (
-                <button type="button" className="section section-repliable" aria-expanded={!cache(e.groupe)} onClick={() => basculer(e.groupe!)}>
-                  {e.groupe}{pointNotif(e.groupe)}{fleche}
-                </button>)}
-              {cache(groupeDe(e)) && !grisee ? null : e.desactive ? (
+              {/* Bloc Pat le sommelier déroulé : tous ses menus visibles, sous leurs titres (comme Quid Vinum). */}
+              {bloc.marque === 'pat' && e.groupe && e.groupe !== avant?.groupe && <span className="section">{e.groupe}</span>}
+              {bloc.marque === 'qv' && cache('Quid Vinum') && !grisee ? null : e.desactive ? (
                 <span className={`bo-lien bo-lien-desactive${e.sous ? ' bo-lien-sous' : ''}`} aria-disabled="true" tabIndex={grisee ? -1 : 0} data-info={grisee ? undefined : e.desactive} title={e.desactive}>
                   {e.icone && <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} taille={e.sous ? 16 : undefined} /></span>}
                   <span>{e.libelle}</span>
