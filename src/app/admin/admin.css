@@ -698,3 +698,13 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-liens .sous-titre-menu { margin: 12px 12px 2px; font-size: 12.5px; font-weight: 600; color: var(--etiquette); }
 .bo-liens .bo-lien-sous { min-height: 36px; padding-left: 34px; font-size: 14px; color: var(--discret) !important; }
 .bo-liens .bo-lien-sous[aria-current='page'] { color: var(--encre) !important; }
+/* En-tête Quid Vinum repliable (bouton) : flèche à droite, comme les titres des groupes. */
+.bo-liens button.marque-menu { width: 100%; box-sizing: border-box; cursor: pointer; font: inherit; text-align: left; color: #FFFFFF; }
+.bo-liens button.marque-menu .fleche-section { margin-left: auto; transition: transform .2s; flex-shrink: 0; }
+.bo-liens button.marque-menu[aria-expanded='false'] .fleche-section { transform: rotate(-90deg); }
+.bo-liens button.marque-menu:focus-visible { outline: 2px solid #FFFFFF; outline-offset: -2px; }
+.bo-liens .bloc-qv button.marque-menu:hover { background: rgba(255, 255, 255, .08); }
+/* En-tête Pat le sommelier : lien vers la page d'accueil de l'espace (remplace « Tableau de bord »). */
+.bo-liens a.marque-lien { text-decoration: none; }
+.bo-liens a.marque-lien:hover { background: var(--survol); }
+.bo-liens a.marque-lien[aria-current='page'] { background: var(--rose); border-color: var(--rose); }

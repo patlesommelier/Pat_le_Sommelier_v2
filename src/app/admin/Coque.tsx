@@ -10,7 +10,7 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
   utilisateur: Utilisateur;
   resto?: { id: string; nom: string; couleur: string; resume: string; logo?: string | null };
   etapes: Etape[];
-  /** Statut de l'espace du restaurant (vert actif, jaune inscription, rouge test) : montré sous « Tableau de bord ». */
+  /** Statut de l'espace du restaurant (vert actif, jaune inscription, rouge test) : montré sous le logo du restaurant. */
   mode?: string;
   children: React.ReactNode;
 }) {
