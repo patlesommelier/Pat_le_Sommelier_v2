@@ -659,9 +659,9 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-liens .bo-lien-seul::before { content: ''; position: absolute; left: 12px; right: 12px; top: -8px; border-top: 1px solid var(--ligne); }
 .rond-mode { display: inline-block; width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
 /* Menu de gauche, sous « Tableau de bord » : statut de l'espace et ce qu'il veut dire. */
-.statut-espace { display: flex; gap: 12px; align-items: flex-start; margin: 2px 12px 6px; font-size: 12.5px; line-height: 1.35; color: var(--discret); }
-/* Le rond dans la colonne des icônes (aligné sur la maison de « Tableau de bord »), le texte sous « Tableau de bord ». */
-.statut-espace .rond-mode { width: 11px; height: 11px; margin: 3px 6.5px 0; }
+.statut-espace { display: flex; gap: 8px; align-items: center; margin: 8px 12px 4px; font-size: 13px; line-height: 1.35; color: var(--discret); }
+/* Juste sous le logo du restaurant. */
+.statut-espace .rond-mode { width: 10px; height: 10px; }
 .statut-espace b { color: var(--texte); }
 /* Carte d'un restaurant : le choix du statut déborde de la carte (coins arrondis gardés par l'en-tête). */
 .carte-resto { overflow: visible; }
@@ -675,3 +675,26 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   box-shadow: 0 1px 3px rgba(0,0,0,.35); transition: transform .25s; pointer-events: none; }
 .interrupteur-mode button { width: 20px; height: 20px; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 50%; position: relative; z-index: 1; }
 .interrupteur-mode button:focus-visible { outline: 2px solid var(--encre); outline-offset: 1px; }
+/* Menu en deux parties (Pat le sommelier, Quid Vinum) : en-tête de chaque partie, sous-titres discrets, sous-entrée en retrait. */
+.bo-liens .marque-menu { display: flex; align-items: center; gap: 8px; margin: 20px 4px 2px; padding: 8px 10px; border-radius: 12px; background: var(--carte); border: 1px solid var(--ligne); }
+.bo-liens .marque-menu-nom { display: flex; align-items: center; gap: 10px; flex-grow: 1; }
+.bo-liens .marque-menu img { width: 26px; height: 26px; border-radius: 50%; object-fit: contain; flex-shrink: 0; }
+.bo-liens .marque-menu b { font-size: 15px; font-weight: 800; }
+.bo-liens .bloc-pat .marque-menu b { color: var(--rouge); }
+/* Quid Vinum : un bloc bordeaux foncé (comme le site), grisé tant que la cave n'est pas ouverte. */
+.bo-liens .bloc-qv { margin: 20px 0 0; padding: 6px 4px 8px; border-radius: 14px; background: var(--encre-fonce); }
+.bo-liens .bloc-qv .marque-menu { margin: 0 0 2px; background: transparent; border: 0; }
+.bo-liens .bloc-qv .marque-menu b { color: #FFFFFF; }
+.bo-liens .bloc-qv .marque-menu img { border-radius: 7px; background: #FFFFFF; padding: 2px; box-sizing: border-box; }
+.bo-liens .bloc-qv .bo-lien { color: #FFFFFF !important; }
+.bo-liens .bloc-qv .bo-lien .bo-num { color: #F3D9D3; }
+.bo-liens .bloc-qv .bo-lien:hover { background: rgba(255, 255, 255, .1); }
+.bo-liens .bloc-qv .bo-lien[aria-current='page'] { background: #FFFFFF; color: var(--encre) !important; }
+.bo-liens .bloc-qv .bo-lien[aria-current='page'] .bo-num { color: var(--encre); }
+.bo-liens .bloc-qv.bloc-grise { background: #E9E4E2; }
+.bo-liens .bloc-qv.bloc-grise .marque-menu b, .bo-liens .bloc-qv.bloc-grise .bo-lien { color: #9C9491 !important; }
+.bo-liens .bloc-qv.bloc-grise .bo-lien .bo-num { color: #B5ADAA; }
+.bo-liens .bloc-qv.bloc-grise .bo-lien-desactive > span { opacity: 1; }
+.bo-liens .sous-titre-menu { margin: 12px 12px 2px; font-size: 12.5px; font-weight: 600; color: var(--etiquette); }
+.bo-liens .bo-lien-sous { min-height: 36px; padding-left: 34px; font-size: 14px; color: var(--discret) !important; }
+.bo-liens .bo-lien-sous[aria-current='page'] { color: var(--encre) !important; }

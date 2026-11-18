@@ -3,6 +3,7 @@ import { seDeconnecter } from './actions';
 import { quitterVueRestaurant } from './super/actions';
 import { NavLiens, type Etape } from '@/components/admin/Nav';
 import type { Utilisateur } from '@/lib/admin/auth';
+import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
 /** Coque du back-office : marque, restaurant, menu des étapes, déconnexion. */
 export function Coque({ utilisateur, resto, etapes, mode, children }: {
@@ -39,7 +40,14 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
                 <span style={{ flexGrow: 1 }}><b>{resto.nom}</b><small>{resto.resume}</small></span></>}
           </Link>
         )}
-        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} mode={mode} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
+        {/* Statut de l'espace (choisi par Quid Vinum), juste sous le logo du restaurant : son nom seulement. */}
+        {resto && mode && MODES[mode as ModeRestaurant] && (
+          <span className="statut-espace">
+            <span className="rond-mode" style={{ background: MODES[mode as ModeRestaurant].couleur }} aria-hidden="true" />
+            <b>{MODES[mode as ModeRestaurant].libelle}</b>
+          </span>
+        )}
+        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
         <div className="bo-bas">
           <span>{utilisateur.email}</span>
           <form action={seDeconnecter}><button type="submit" className="btn fantome petit" style={{ paddingLeft: 0 }}>Se déconnecter</button></form>
