@@ -675,58 +675,20 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   box-shadow: 0 1px 3px rgba(0,0,0,.35); transition: transform .25s; pointer-events: none; }
 .interrupteur-mode button { width: 20px; height: 20px; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 50%; position: relative; z-index: 1; }
 .interrupteur-mode button:focus-visible { outline: 2px solid var(--encre); outline-offset: 1px; }
-/* Menu en deux parties (Pat le sommelier, Quid Vinum) : en-tête de chaque partie, sous-titres discrets, sous-entrée en retrait. */
-.bo-liens .marque-menu { display: flex; align-items: center; gap: 8px; margin: 20px 4px 2px; padding: 8px 10px; border-radius: 12px; background: var(--carte); border: 1px solid var(--ligne); }
-.bo-liens .marque-menu-nom { display: flex; align-items: center; gap: 10px; flex-grow: 1; }
-.bo-liens .marque-menu img { width: 26px; height: 26px; border-radius: 50%; object-fit: contain; flex-shrink: 0; }
-.bo-liens .marque-menu b { font-size: 15px; font-weight: 800; }
-.bo-liens .bloc-pat .marque-menu b { color: var(--rouge); }
-/* Quid Vinum : un bloc bordeaux foncé (comme le site), grisé tant que la cave n'est pas ouverte. */
-.bo-liens .bloc-qv { margin: 20px 0 0; padding: 6px 4px 8px; border-radius: 14px; background: var(--encre-fonce); }
-.bo-liens .bloc-qv .marque-menu { margin: 0 0 2px; background: transparent; border: 0; }
-.bo-liens .bloc-qv .marque-menu b { color: #FFFFFF; }
-.bo-liens .bloc-qv .marque-menu img { border-radius: 7px; background: #FFFFFF; padding: 2px; box-sizing: border-box; }
-.bo-liens .bloc-qv .bo-lien { color: #FFFFFF !important; }
-.bo-liens .bloc-qv .bo-lien .bo-num { color: #F3D9D3; }
-.bo-liens .bloc-qv .bo-lien:hover { background: rgba(255, 255, 255, .1); }
-.bo-liens .bloc-qv .bo-lien[aria-current='page'] { background: #FFFFFF; color: var(--encre) !important; }
-.bo-liens .bloc-qv .bo-lien[aria-current='page'] .bo-num { color: var(--encre); }
-.bo-liens .bloc-qv.bloc-grise { background: #E9E4E2; }
-.bo-liens .bloc-qv.bloc-grise .marque-menu b, .bo-liens .bloc-qv.bloc-grise .bo-lien { color: #9C9491 !important; }
-.bo-liens .bloc-qv.bloc-grise .bo-lien .bo-num { color: #B5ADAA; }
-.bo-liens .bloc-qv.bloc-grise .bo-lien-desactive > span { opacity: 1; }
-.bo-liens .sous-titre-menu { margin: 12px 12px 2px; font-size: 12.5px; font-weight: 600; color: var(--etiquette); }
-.bo-liens .bo-lien-sous { min-height: 36px; padding-left: 34px; font-size: 14px; color: var(--discret) !important; }
-.bo-liens .bo-lien-sous[aria-current='page'] { color: var(--encre) !important; }
-/* En-tête Quid Vinum repliable (bouton) : flèche à droite, comme les titres des groupes. */
-.bo-liens button.marque-menu { width: 100%; box-sizing: border-box; cursor: pointer; font: inherit; text-align: left; color: #FFFFFF; }
-.bo-liens button.marque-menu .fleche-section { margin-left: auto; transition: transform .2s; flex-shrink: 0; }
-.bo-liens button.marque-menu[aria-expanded='false'] .fleche-section { transform: rotate(-90deg); }
-.bo-liens button.marque-menu:focus-visible { outline: 2px solid #FFFFFF; outline-offset: -2px; }
-.bo-liens .bloc-qv button.marque-menu:hover { background: rgba(255, 255, 255, .08); }
-/* Pat le sommelier : un bloc clair qui se déroule, comme celui de Quid Vinum ; son nom ouvre la page d'accueil de l'espace
-   (remplace « Tableau de bord »), la flèche déroule ses menus. */
-.bo-liens .bloc-pat { margin: 20px 0 0; padding: 4px 4px 6px; border-radius: 14px; background: var(--carte); border: 1px solid var(--ligne); }
-.bo-liens .bloc-pat .marque-menu { margin: 0; padding: 2px; gap: 2px; background: transparent; border: 0; }
-.bo-liens .bloc-pat .marque-lien { flex-grow: 1; padding: 6px 8px; border-radius: 10px; text-decoration: none; }
-.bo-liens .bloc-pat .marque-lien:hover { background: var(--survol); }
-.bo-liens .bloc-pat .marque-lien[aria-current='page'] { background: var(--rose); }
-.bo-liens .marque-fleche { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; border: 0; border-radius: 10px;
-  background: none; color: var(--texte); cursor: pointer; }
-.bo-liens .marque-fleche:hover { background: var(--survol); }
-.bo-liens .marque-fleche:focus-visible { outline: 2px solid var(--encre); outline-offset: -2px; }
-.bo-liens .marque-fleche .fleche-section { transition: transform .2s; }
-.bo-liens .marque-fleche[aria-expanded='false'] .fleche-section { transform: rotate(-90deg); }
-.bo-liens .marque-menu b { white-space: nowrap; }
-/* Blocs Pat le sommelier et Quid Vinum : même taille et flèche au même endroit (marges identiques, bord d'un pixel des deux côtés). */
-.bo-liens .bloc-pat, .bo-liens .bloc-qv { padding: 6px 4px 8px; border-width: 1px; border-style: solid; }
-.bo-liens .bloc-qv { border-color: var(--encre-fonce); }
-.bo-liens .bloc-qv.bloc-grise { border-color: #E9E4E2; }
-.bo-liens .bloc-pat .marque-menu { padding: 0; gap: 0; }
-.bo-liens .bloc-pat .marque-lien { padding: 8px 10px; }
-.bo-liens .marque-fleche { width: auto; height: auto; align-self: stretch; padding: 0 10px; }
-.bo-liens .bloc-pat .marque-lien, .bo-liens .bloc-qv .marque-menu { min-height: 44px; box-sizing: border-box; }
-.bo-liens .bloc-pat .section { margin: 14px 8px 4px; }
-.bo-liens .bloc-pat .section { white-space: nowrap; margin-top: 16px; }
-.bo-liens .bloc-qv .marque-menu { margin: 0; }
-.bo-liens .bloc-qv .bo-lien:first-of-type { margin-top: 2px; }
+
+/* Menu en deux parties, sur le fond du menu : Pat le sommelier (son nom ouvre la page d'accueil), puis Quid Vinum (titre qui se
+   déroule, grisé tant que la cave n'est pas ouverte). Les groupes gardent la présentation initiale (capitales, flèches). */
+.bo-liens .titre-marque { display: flex; align-items: center; gap: 8px; width: calc(100% - 8px); box-sizing: border-box; margin: 22px 4px 4px; padding: 8px;
+  border: 0; border-radius: 10px; background: none; font: inherit; text-align: left; text-decoration: none; cursor: pointer; }
+.bo-liens .titre-marque-nom { display: flex; align-items: center; gap: 10px; flex-grow: 1; font-size: 16px; font-weight: 800; white-space: nowrap; }
+.bo-liens .titre-marque img { width: 26px; height: 26px; border-radius: 50%; object-fit: contain; flex-shrink: 0; }
+.bo-liens .titre-pat { color: var(--rouge) !important; }
+.bo-liens .titre-qv { color: var(--encre) !important; }
+.bo-liens .titre-qv img { border-radius: 6px; }
+.bo-liens .titre-marque:hover { background: var(--survol); }
+.bo-liens .titre-pat[aria-current='page'] { background: var(--rose); }
+.bo-liens button.titre-marque .fleche-section { margin-left: auto; transition: transform .2s; flex-shrink: 0; color: var(--texte); }
+.bo-liens button.titre-marque[aria-expanded='false'] .fleche-section { transform: rotate(-90deg); }
+.bo-liens .titre-marque:focus-visible { outline: 2px solid var(--encre); outline-offset: 2px; }
+.bo-liens .titre-qv.section-desactivee { cursor: not-allowed; }
+.bo-liens .titre-qv.section-desactivee:hover { background: none; }

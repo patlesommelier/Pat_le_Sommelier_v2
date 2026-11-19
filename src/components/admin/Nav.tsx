@@ -95,11 +95,8 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   // Partie dont toutes les entrées sont grisées (Quid Vinum pendant l'inscription) : en-tête grisé, avec le message au survol.
   const marqueGrisee = (m?: string) => Boolean(m && etapes.filter((x) => x.marque === m).every((x) => x.desactive));
   // Groupe repliable d'une entrée : son sous-groupe chez Pat le sommelier (Carte et menu…), toute la partie Quid Vinum.
-  const groupeDe = (e: Etape) => (e.marque === 'qv' ? 'Quid Vinum' : e.marque === 'pat' ? 'Pat le sommelier' : e.groupe);
-  const groupeOuvert = (g: string) => g === 'Pat le sommelier'
-    // Bloc Pat le sommelier : ouvert sur sa page d'accueil et sur ses pages (ou celle que montre un post-it).
-    ? Boolean(courant(accueil)) || etapes.some((e) => e.marque === 'pat' && (courant(e.href) || e.href === suivante))
-    : etapes.some((e) => groupeDe(e) === g && (courant(e.href) || e.href === suivante));
+  const groupeDe = (e: Etape) => (e.marque === 'qv' ? 'Quid Vinum' : e.groupe);
+  const groupeOuvert = (g: string) => etapes.some((e) => groupeDe(e) === g && (courant(e.href) || e.href === suivante));
   const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g] ?? true));
   const basculer = (g: string) => {
     const replier = !cache(g);
@@ -117,26 +114,26 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
       {blocs(etapes).map((bloc) => {
         const grisee = marqueGrisee(bloc.marque);
         const info = grisee ? bloc.etapes[0].desactive : undefined;
-        const patReplie = bloc.marque === 'pat' && cache('Pat le sommelier');
-        const entrees = patReplie ? null : bloc.etapes.map((e, i) => {
+        // Quid Vinum replié, ou grisé (la cave n'est pas encore ouverte : il ne se déroule pas, comme avant) : ses entrées cachées.
+        const qvCache = bloc.marque === 'qv' && (grisee || cache('Quid Vinum'));
+        const entrees = qvCache ? null : bloc.etapes.map((e, i) => {
           const avant = bloc.etapes[i - 1];
           return (
             <Fragment key={e.href}>
-              {/* Bloc Pat le sommelier déroulé : tous ses menus visibles, sous leurs titres (comme Quid Vinum). */}
-              {bloc.marque === 'pat' && e.groupe && e.groupe !== avant?.groupe && <span className="section">{e.groupe}</span>}
-              {bloc.marque === 'qv' && cache('Quid Vinum') && !grisee ? null : e.desactive ? (
-                <span className={`bo-lien bo-lien-desactive${e.sous ? ' bo-lien-sous' : ''}`} aria-disabled="true" tabIndex={grisee ? -1 : 0} data-info={grisee ? undefined : e.desactive} title={e.desactive}>
-                  {e.icone && <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} taille={e.sous ? 16 : undefined} /></span>}
+              {/* Groupes de Pat le sommelier : titres en capitales qui se déroulent, comme le menu initial. */}
+              {bloc.marque === 'pat' && e.groupe && e.groupe !== avant?.groupe && (
+                <button type="button" className="section section-repliable" aria-expanded={!cache(e.groupe)} onClick={() => basculer(e.groupe!)}>
+                  {e.groupe}{pointNotif(e.groupe)}{fleche}
+                </button>)}
+              {bloc.marque === 'pat' && cache(e.groupe) ? null : e.desactive ? (
+                <span className="bo-lien bo-lien-desactive" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
+                  {e.icone && <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span>}
                   <span>{e.libelle}</span>
                 </span>
               ) : (
-                <Link href={e.href} className={`bo-lien${e.sous ? ' bo-lien-sous' : ''}${e.href === suivante ? ' cible-etape' : ''}${!bloc.marque ? ' bo-lien-seul' : ''}`}
+                <Link href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}${!bloc.marque ? ' bo-lien-seul' : ''}`}
                   aria-current={courant(e.href)} id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
-                  {e.icone ? <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} taille={e.sous ? 16 : undefined} /></span> : (
-                    <span className={`bo-num ${e.etat}`} aria-label={e.etat === 'fait' ? 'Terminé' : undefined}>
-                      {e.etat === 'fait' ? <Icone nom="check" taille={14} epaisseur={2.4} /> : null}
-                    </span>
-                  )}
+                  <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span>
                   {e.libelle}
                   {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
                 </Link>
@@ -145,45 +142,31 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
           );
         });
         if (!bloc.marque) return <Fragment key={bloc.etapes[0].href}>{entrees}</Fragment>;
+        const logo = (
+          <span className="titre-marque-nom">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={bloc.marque === 'pat' ? '/pat/pat-avatar-creme.svg' : '/quidvinum/icone.png'} alt="" aria-hidden="true" />
+            <span>{bloc.marque === 'pat' ? 'Pat le sommelier' : 'Quid Vinum'}</span>
+          </span>
+        );
         return (
-          <div key={bloc.marque} className={`bloc-menu bloc-${bloc.marque}${grisee ? ' bloc-grise' : ''}`}>
-            {bloc.marque === 'qv' && !grisee ? (
-              // Quid Vinum : en-tête repliable, comme les groupes de Pat le sommelier.
-              <button type="button" className="marque-menu section-repliable" aria-expanded={!cache('Quid Vinum')} onClick={() => basculer('Quid Vinum')}>
-                <span className="marque-menu-nom">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/quidvinum/icone.png" alt="" aria-hidden="true" />
-                  <b>Quid Vinum</b>
-                </span>
-                {/* « Nouveau » (la cave vient de s'ouvrir) : à côté de l'en-tête. */}
+          <Fragment key={bloc.marque}>
+            {bloc.marque === 'pat' ? (
+              // Pat le sommelier : son nom ouvre la page d'accueil de l'espace (les informations générales du sommelier).
+              <Link href={accueil} className="titre-marque titre-pat" aria-current={courant(accueil)}>{logo}</Link>
+            ) : grisee ? (
+              <span className="titre-marque titre-qv section-desactivee" aria-disabled="true" tabIndex={0} data-info={info} title={info}>{logo}</span>
+            ) : (
+              // Quid Vinum : titre qui se déroule, comme l'ancienne « Gestion de cave ».
+              <button type="button" className="titre-marque titre-qv" aria-expanded={!cache('Quid Vinum')} onClick={() => basculer('Quid Vinum')}>
+                {logo}
+                {/* « Nouveau » (la cave vient de s'ouvrir) : à côté du titre. */}
                 {bloc.etapes.some((x) => x.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}
                 {pointNotif('Quid Vinum')}{fleche}
               </button>
-            ) : bloc.marque === 'pat' ? (
-              // Pat le sommelier : le nom ouvre la page d'accueil de l'espace (les informations générales du sommelier, qui
-              // remplace l'ancien « Tableau de bord ») ; la flèche déroule le bloc, comme celui de Quid Vinum.
-              <span className="marque-menu">
-                <Link href={accueil} className="marque-menu-nom marque-lien" aria-current={courant(accueil)}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/pat/pat-avatar-creme.svg" alt="" aria-hidden="true" />
-                  <b>Pat le sommelier</b>
-                </Link>
-                <button type="button" className="marque-fleche" aria-expanded={!cache('Pat le sommelier')} aria-label="Afficher les menus de Pat le sommelier"
-                  onClick={() => basculer('Pat le sommelier')}>
-                  {fleche}
-                </button>
-              </span>
-            ) : (
-              <span className={`marque-menu${grisee ? ' section-desactivee' : ''}`} {...(grisee ? { 'aria-disabled': true, tabIndex: 0, 'data-info': info, title: info } : {})}>
-                <span className="marque-menu-nom">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/quidvinum/icone.png" alt="" aria-hidden="true" />
-                  <b>Quid Vinum</b>
-                </span>
-              </span>
             )}
             {entrees}
-          </div>
+          </Fragment>
         );
       })}
       {guide?.postIt && <BulleEtape guide={guide} />}
