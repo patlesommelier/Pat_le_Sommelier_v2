@@ -733,3 +733,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .haut-logo-qv { display: none; }
 }
 @media print { .bo-haut, .fil-ariane { display: none; } }
+/* Menus déroulants des onglets : tous de la même largeur. */
+.haut-onglets .haut-deroulant { width: 310px; min-width: 0; }
+@media (max-width: 900px) { .haut-onglets .haut-deroulant { width: auto; } }

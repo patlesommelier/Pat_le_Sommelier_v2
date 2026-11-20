@@ -8,8 +8,8 @@ import { listeRestaurants } from '@/lib/admin/donnees';
 export default async function AccueilAdmin() {
   const u = await exigerConnexion();
   const restos = (await listeRestaurants()).filter((r) => u.admin || u.restaurants.includes(r.id));
-  // On arrive toujours sur Ma cave (le tableau de bord reste dans le menu).
-  if (!u.admin && restos.length === 1) redirect(`/admin/${restos[0].id}/stocks`);
+  // Un seul restaurant : on arrive sur la page d'accueil de son espace (« Bonjour Patrick »).
+  if (!u.admin && restos.length === 1) redirect(`/admin/${restos[0].id}`);
   return (
     <Coque utilisateur={u} etapes={[]}>
       <Entete titre="Bonjour" texte={restos.length ? 'Choisissez un restaurant.' : 'Aucun restaurant n’est encore relié à votre compte. Demandez à Quid Vinum de vous donner accès.'} />
