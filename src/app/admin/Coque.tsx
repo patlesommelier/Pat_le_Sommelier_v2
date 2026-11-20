@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { seDeconnecter } from './actions';
 import { quitterVueRestaurant } from './super/actions';
-import { NavLiens, type Etape } from '@/components/admin/Nav';
+import { FilAriane, NavHaut, NavLiens, type Etape } from '@/components/admin/Nav';
 import type { Utilisateur } from '@/lib/admin/auth';
 import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
@@ -16,38 +16,43 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
 }) {
   const accueil = resto ? `/admin/${resto.id}` : '/admin';
   const admin = utilisateur.admin ? [{ href: '/admin/super', libelle: 'Super-admin' }] : [];
+  const vue = utilisateur.vueRestaurant && (
+    <form action={quitterVueRestaurant} className="bandeau-vue">
+      <span>Aperçu côté restaurant : vous voyez l’espace exactement comme le restaurant, sans vos outils de super-admin.</span>
+      <button type="submit">Quitter l’aperçu</button>
+    </form>
+  );
+  // Espace d'un restaurant : menu en haut (onglets et menus déroulants), toute la largeur pour le contenu.
+  if (resto) {
+    const m = mode ? MODES[mode as ModeRestaurant] : undefined;
+    return (
+      <div className="bo bo-avec-haut">
+        {vue}
+        <NavHaut accueil={accueil} etapes={etapes} resto={resto} statut={m ? { couleur: m.couleur, libelle: m.libelle } : null}
+          compte={{
+            liens: [{ href: `${accueil}/parametres`, libelle: 'Paramètres du restaurant' }, ...admin,
+              ...(utilisateur.admin || utilisateur.restaurants.length > 1 ? [{ href: '/admin', libelle: 'Changer de restaurant' }] : [])],
+            email: utilisateur.email,
+            deconnexion: <form action={seDeconnecter}><button type="submit" className="btn fantome petit">Se déconnecter</button></form>,
+          }} />
+        <main className="bo-main">
+          <FilAriane accueil={accueil} etapes={etapes} />
+          {children}
+        </main>
+      </div>
+    );
+  }
   return (
     <div className="bo">
-      {utilisateur.vueRestaurant && (
-        <form action={quitterVueRestaurant} className="bandeau-vue">
-          <span>Aperçu côté restaurant : vous voyez l’espace exactement comme le restaurant, sans vos outils de super-admin.</span>
-          <button type="submit">Quitter l’aperçu</button>
-        </form>
-      )}
+      {vue}
       <aside className="bo-nav">
         <Link href="/admin" className="bo-marque">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/quidvinum/logo.png" alt="Quid Vinum" className="logo-qv" />
           <span className="sous-marque">Espace restaurant</span>
         </Link>
-        {resto && (
-          <Link href={utilisateur.admin || utilisateur.restaurants.length > 1 ? '/admin' : `${accueil}/stocks`} className="bo-resto" aria-label={`Restaurant ${resto.nom}${utilisateur.admin ? ' — changer de restaurant' : ''}`}>
-            {/* Logo de l'app (Apparence) sur la couleur du restaurant, à la place du nom ; sinon l'initiale et le nom. */}
-            {resto.logo
-              // eslint-disable-next-line @next/next/no-img-element
-              ? <span className="bo-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
-              : <><span className="pastille" style={{ background: resto.couleur }}>{resto.nom.slice(0, 1)}</span>
-                <span style={{ flexGrow: 1 }}><b>{resto.nom}</b><small>{resto.resume}</small></span></>}
-          </Link>
-        )}
-        {/* Statut de l'espace (choisi par Quid Vinum), juste sous le logo du restaurant : son nom seulement. */}
-        {resto && mode && MODES[mode as ModeRestaurant] && (
-          <span className="statut-espace">
-            <span className="rond-mode" style={{ background: MODES[mode as ModeRestaurant].couleur }} aria-hidden="true" />
-            <b>{MODES[mode as ModeRestaurant].libelle}</b>
-          </span>
-        )}
-        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
+        {/* Sans restaurant (super-admin, choix du restaurant) : le menu de gauche. */}
+        <NavLiens accueil="/admin" etapes={[]} admin={admin} />
         <div className="bo-bas">
           <span>{utilisateur.email}</span>
           <form action={seDeconnecter}><button type="submit" className="btn fantome petit" style={{ paddingLeft: 0 }}>Se déconnecter</button></form>

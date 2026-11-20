@@ -692,3 +692,44 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-liens .titre-marque:focus-visible { outline: 2px solid var(--encre); outline-offset: 2px; }
 .bo-liens .titre-qv.section-desactivee { cursor: not-allowed; }
 .bo-liens .titre-qv.section-desactivee:hover { background: none; }
+
+/* ───────── Menu du haut (espace d'un restaurant) ───────── */
+.bo-avec-haut { flex-direction: column; flex-wrap: nowrap; }
+.bo-avec-haut .bo-main { flex: 1 1 auto; width: 100%; }
+.bo-haut { position: sticky; top: 0; z-index: 60; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; box-sizing: border-box;
+  padding: 10px clamp(16px, 3vw, 32px); background: var(--carte); border-bottom: 1px solid var(--ligne); }
+.haut-resto { display: flex; flex-direction: column; align-items: center; gap: 5px; text-decoration: none; color: var(--texte) !important; }
+.haut-resto-logo { display: flex; align-items: center; justify-content: center; height: 48px; min-width: 110px; max-width: 160px; padding: 0 12px; box-sizing: border-box; border-radius: 10px; }
+.haut-resto-logo img { max-height: 36px; max-width: 136px; object-fit: contain; display: block; }
+.haut-resto-logo b { color: #FFFFFF; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.haut-resto[aria-current='page'] .haut-resto-logo { box-shadow: 0 0 0 2px var(--carte), 0 0 0 4px var(--rose); }
+.haut-statut { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; }
+.haut-statut .rond-mode { width: 9px; height: 9px; }
+.haut-onglets { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; flex: 1 1 auto; }
+.haut-groupe { position: relative; }
+.haut-onglet { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border: 0; border-radius: 12px; background: none; cursor: pointer;
+  font: inherit; font-size: 14px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; white-space: nowrap; color: var(--texte); }
+.haut-onglet:hover, .haut-onglet[aria-expanded='true'] { background: var(--survol); }
+.haut-onglet.actif { background: var(--rose); color: var(--encre); }
+.haut-onglet .fleche-onglet { transition: transform .2s; }
+.haut-onglet[aria-expanded='true'] .fleche-onglet { transform: rotate(180deg); }
+.haut-onglet.section-desactivee { cursor: not-allowed; }
+.haut-onglet.section-desactivee:hover::after, .haut-onglet.section-desactivee:focus::after { left: 0; top: calc(100% + 8px); transform: none; white-space: normal; width: 260px; }
+.haut-deroulant { position: absolute; z-index: 70; top: calc(100% + 8px); left: 0; min-width: 280px; box-sizing: border-box; padding: 8px; display: flex; flex-direction: column; gap: 2px;
+  background: var(--carte); border: 1px solid var(--ligne); border-radius: 16px; box-shadow: 0 18px 40px -18px rgba(33, 33, 33, .35); }
+.haut-deroulant .bo-lien { white-space: nowrap; }
+.haut-deroulant-droite { left: auto; right: 0; }
+.haut-email { padding: 8px 12px 0; font-size: 13px; color: var(--discret); border-top: 1px solid var(--ligne); margin-top: 6px; }
+.haut-deroulant form { margin: 0; padding: 0 4px; }
+.haut-droite { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+.haut-roue { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--ligne); border-radius: 12px; background: none; cursor: pointer; color: var(--discret); }
+.haut-roue:hover, .haut-roue[aria-expanded='true'] { background: var(--survol); }
+.haut-logo-qv { height: 30px; width: auto; display: block; }
+.fil-ariane { margin: -12px 0 0; font-size: 13px; color: var(--discret); }
+@media (max-width: 900px) {
+  .haut-onglets { order: 3; flex-basis: 100%; }
+  .haut-onglet { height: 40px; padding: 0 10px; font-size: 13px; }
+  .haut-deroulant { position: fixed; left: 16px; right: 16px; top: auto; min-width: 0; }
+  .haut-logo-qv { display: none; }
+}
+@media print { .bo-haut, .fil-ariane { display: none; } }

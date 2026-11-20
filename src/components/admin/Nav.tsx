@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -31,8 +31,11 @@ export interface Annonce { numero: number; texte: string; surPlace?: boolean; vu
   ancre?: string }
 
 
-/** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
-export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
+/**
+ * Ce que les deux menus (à gauche pour le super-admin, en haut pour un restaurant) partagent : la page ouverte, et le post-it
+ * du moment (premiers pas après l'inscription, puis un post-it d'explication par visite) avec l'entrée qu'il montre.
+ */
+function useMenu(accueil: string, etapes: Etape[]) {
   const sp = useSearchParams();
   let chemin = usePathname();
   // Fiche d'un vin ouverte depuis Ma cave (?retour=…/stocks), fiche d'un producteur : on reste sur « Ma cave » dans le menu.
@@ -42,11 +45,6 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   // « Ajouter un vin » (bouton de la carte des vins) : « Gérer la carte des vins » reste en évidence dans le menu.
   const cheminMenu = chemin.replace(/\/trouver-vin(\/.*)?$/, '/carte');
   const courant = (href: string) => (href === accueil ? chemin === href : cheminMenu.startsWith(href)) ? 'page' : undefined;
-  // Groupes repliables (flèche à côté du titre) : en entrant dans l'espace, tous repliés sauf celui de la page ouverte ;
-  // ceux qu'on ouvre ou ferme restent ainsi pendant la visite (pas d'un jour à l'autre).
-  const [replies, setReplies] = useState<Record<string, boolean>>({});
-  // Groupe de la page ouverte : déplié d'office, mais on peut quand même le replier (pour cette visite).
-  const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
   // Premiers pas après l'inscription : l'entrée du menu de l'étape suivante est entourée (son groupe déplié) et un post-it
   // la montre, après un temps pour essayer la page (voir useGuide).
   const [premiersPas, premiersPasEnCours] = useGuide(chemin, sp?.get('bienvenue') === '1', etapes);
@@ -92,6 +90,17 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
     },
   } : null);
   const suivante = guide?.place === 'ancre' ? undefined : guide?.href;
+  return { chemin, courant, guide, suivante };
+}
+
+/** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
+export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
+  const { courant, guide, suivante } = useMenu(accueil, etapes);
+  // Groupes repliables (flèche à côté du titre) : en entrant dans l'espace, tous repliés sauf celui de la page ouverte ;
+  // ceux qu'on ouvre ou ferme restent ainsi pendant la visite (pas d'un jour à l'autre).
+  const [replies, setReplies] = useState<Record<string, boolean>>({});
+  // Groupe de la page ouverte : déplié d'office, mais on peut quand même le replier (pour cette visite).
+  const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
   // Partie dont toutes les entrées sont grisées (Quid Vinum pendant l'inscription) : en-tête grisé, avec le message au survol.
   const marqueGrisee = (m?: string) => Boolean(m && etapes.filter((x) => x.marque === m).every((x) => x.desactive));
   // Groupe repliable d'une entrée : son sous-groupe chez Pat le sommelier (Carte et menu…), toute la partie Quid Vinum.
@@ -174,6 +183,132 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
       {admin?.map((l) => <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}><span className="bo-num" style={{ border: 0 }}><Icone nom="users" /></span>{l.libelle}</Link>)}
     </nav>
   );
+}
+
+/** Onglets du menu du haut : les groupes de Pat le sommelier, puis la Gestion de cave (Quid Vinum). */
+function onglets(etapes: Etape[]) {
+  const r: { nom: string; etapes: Etape[] }[] = [];
+  for (const e of etapes) {
+    const nom = e.marque === 'qv' ? 'Gestion de cave' : e.marque === 'pat' ? e.groupe : undefined;
+    if (!nom) continue;
+    const o = r.find((x) => x.nom === nom);
+    if (o) o.etapes.push(e); else r.push({ nom, etapes: [e] });
+  }
+  return r;
+}
+
+/**
+ * Menu du haut d'un restaurant : à gauche son logo (vers l'accueil de l'espace) et son statut ; puis les onglets, chacun avec
+ * son menu déroulant (Cartes et menus, App client, Impression, Gestion de cave) ; à droite les paramètres et le compte.
+ * L'onglet de la page ouverte est mis en évidence ; celui que montre un post-it est entouré, le post-it dessous.
+ */
+export function NavHaut({ accueil, etapes, resto, statut, compte }: {
+  accueil: string; etapes: Etape[];
+  resto: { nom: string; couleur: string; logo?: string | null };
+  statut?: { couleur: string; libelle: string } | null;
+  /** Menu du compte (roue) : paramètres, super-admin, changer de restaurant, e-mail et déconnexion. */
+  compte: { liens: { href: string; libelle: string }[]; email: string; deconnexion: React.ReactNode };
+}) {
+  const { chemin, courant, guide, suivante } = useMenu(accueil, etapes);
+  const [ouvert, setOuvert] = useState<string | null>(null);
+  const barre = useRef<HTMLElement>(null);
+  // Un menu ouvert se ferme en changeant de page, en cliquant ailleurs ou avec Échap.
+  useEffect(() => { setOuvert(null); }, [chemin]);
+  useEffect(() => {
+    if (!ouvert) return;
+    const ailleurs = (ev: MouseEvent) => { if (!barre.current?.contains(ev.target as Node)) setOuvert(null); };
+    const echap = (ev: KeyboardEvent) => { if (ev.key === 'Escape') setOuvert(null); };
+    document.addEventListener('mousedown', ailleurs);
+    document.addEventListener('keydown', echap);
+    return () => { document.removeEventListener('mousedown', ailleurs); document.removeEventListener('keydown', echap); };
+  }, [ouvert]);
+  const fleche = <svg className="fleche-onglet" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>;
+  const basculer = (nom: string) => setOuvert((o) => (o === nom ? null : nom));
+  return (
+    <header className="bo-haut" ref={barre}>
+      <Link href={accueil} className="haut-resto" aria-label={`${resto.nom} : accueil de votre espace`} aria-current={courant(accueil)}>
+        {resto.logo
+          // eslint-disable-next-line @next/next/no-img-element
+          ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
+          : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
+        {statut && <span className="haut-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
+      </Link>
+      <nav aria-label="Menu principal" className="haut-onglets">
+        {onglets(etapes).map((o) => {
+          const grise = o.etapes.every((e) => e.desactive);
+          const actif = o.etapes.some((e) => courant(e.href));
+          const montre = o.etapes.some((e) => e.href === suivante);
+          const notif = o.etapes.some((e) => (e.notif?.n ?? 0) > 0);
+          if (grise) return (
+            <span key={o.nom} className="haut-onglet section-desactivee" aria-disabled="true" tabIndex={0} data-info={o.etapes[0].desactive} title={o.etapes[0].desactive}>
+              <span>{o.nom}</span>
+            </span>);
+          return (
+            <div key={o.nom} className="haut-groupe">
+              <button type="button" className={`haut-onglet${actif ? ' actif' : ''}${montre ? ' cible-etape' : ''}`} aria-expanded={ouvert === o.nom}
+                onClick={() => basculer(o.nom)} id={montre ? 'lien-etape-suivante' : undefined}>
+                {o.nom}
+                {o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}
+                {notif && <span className="point-notif" aria-label="Nouveauté" />}
+                {fleche}
+              </button>
+              {ouvert === o.nom && (
+                <div className="haut-deroulant">
+                  {o.etapes.map((e) => e.desactive ? (
+                    <span key={e.href} className="bo-lien bo-lien-desactive" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
+                      {e.icone && <span className="bo-num" style={{ border: 0 }}><Icone nom={e.icone} /></span>}
+                      <span>{e.libelle}</span>
+                    </span>
+                  ) : (
+                    <Link key={e.href} href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)}>
+                      <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span>
+                      {e.libelle}
+                      {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </nav>
+      <div className="haut-droite">
+        <div className="haut-groupe">
+          <button type="button" className="haut-roue" aria-expanded={ouvert === 'compte'} aria-label="Paramètres et compte" onClick={() => basculer('compte')}>
+            <Icone nom="reglages" />
+          </button>
+          {ouvert === 'compte' && (
+            <div className="haut-deroulant haut-deroulant-droite">
+              {compte.liens.map((l) => (
+                <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}>{l.libelle}</Link>
+              ))}
+              <span className="haut-email">{compte.email}</span>
+              {compte.deconnexion}
+            </div>
+          )}
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/quidvinum/logo.png" alt="Quid Vinum" className="haut-logo-qv" />
+      </div>
+      {guide?.postIt && <BulleEtape guide={guide} />}
+    </header>
+  );
+}
+
+/** Fil d'Ariane sous le menu du haut : « Cartes et menus › Gérer la carte des vins ». */
+export function FilAriane({ accueil, etapes }: { accueil: string; etapes: Etape[] }) {
+  // Même repérage que le menu (sans ses post-its) : fiche d'un vin ouverte depuis Ma cave, producteur, « Ajouter un vin ».
+  const sp = useSearchParams();
+  let chemin = usePathname();
+  const retour = sp?.get('retour') ?? '';
+  if (/^\/admin\/[^/]+\/carte\/[^/]+$/.test(chemin) && /^\/admin\/[^/]+\/stocks/.test(retour)) chemin = retour.split('?')[0];
+  if (/^\/admin\/[^/]+\/producteurs\//.test(chemin)) chemin = chemin.replace(/\/producteurs\/.*$/, '/stocks');
+  chemin = chemin.replace(/\/trouver-vin(\/.*)?$/, '/carte');
+  if (chemin === accueil) return null;
+  const e = etapes.find((x) => chemin.startsWith(x.href));
+  if (!e) return null;
+  const groupe = e.marque === 'qv' ? 'Gestion de cave' : e.groupe;
+  return <p className="fil-ariane">{groupe ? `${groupe} › ` : ''}{e.libelle}</p>;
 }
 
 /** Entrées regroupées par partie (Pat le sommelier, Quid Vinum, puis les entrées seules), dans l'ordre. */
@@ -278,7 +413,14 @@ function BulleEtape({ guide }: { guide: Guide }) {
         } else setPos({ top: 14, left: document.documentElement.clientWidth - largeur - 18, largeur, cote: 'haut' });
         return;
       }
-      const r = document.getElementById('lien-etape-suivante')?.getBoundingClientRect();
+      const cible = document.getElementById('lien-etape-suivante');
+      const r = cible?.getBoundingClientRect();
+      // Menu du haut : le post-it sous l'onglet entouré.
+      if (cible?.closest('.bo-haut') && r && r.height) {
+        const largeur = Math.min(280, window.innerWidth - 32);
+        setPos({ top: r.bottom + window.scrollY + 12, left: Math.min(Math.max(16, r.left + window.scrollX), document.documentElement.clientWidth - largeur - 16), largeur, cote: 'dessous' });
+        return;
+      }
       const nav = document.querySelector('.bo-nav')?.getBoundingClientRect();
       if (!r || !r.height || !nav) { setPos(null); return; }
       const largeur = Math.min(260, window.innerWidth - 32);

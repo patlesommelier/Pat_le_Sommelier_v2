@@ -53,15 +53,15 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee
   const grise = (message: string) => (cave === 'grisee' ? { desactive: message } : {});
   // 1. Pat le sommelier : carte et menu, l'app client, l'impression.
   const carteEtMenu: Etape[] = [
-    ...pat(page('menu'), 'Carte et menu'), ...pat(page('carte'), 'Carte et menu'),
-    ...pat(page('accords'), 'Carte et menu'),
+    ...pat(page('menu'), 'Cartes et menus'), ...pat(page('carte'), 'Cartes et menus'),
+    ...pat(page('accords'), 'Cartes et menus'),
     // Règles du sommelier : des curseurs (l'avatar de Pat est déjà sur l'en-tête de la partie).
-    ...pat(page('regles') && { ...page('regles')!, icone: 'sliders' }, 'Carte et menu'),
+    ...pat(page('regles') && { ...page('regles')!, icone: 'sliders' }, 'Cartes et menus'),
   ];
   const app = [...pat(page('simulateur'), 'App client'), ...pat(page('apparence'), 'App client'), ...pat(page('acces'), 'App client')];
   const impression: Etape[] = [
-    { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', icone: 'imprimante', marque: 'pat', groupe: 'Gestionnaire d’impression', ...grise(MESSAGE_IMPRESSION_A_VALIDER) },
-    { href: `${base}/chevalet`, libelle: 'Impression du chevalet', etat: 'fait', icone: 'qr', marque: 'pat', groupe: 'Gestionnaire d’impression' },
+    { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', icone: 'imprimante', marque: 'pat', groupe: 'Impression', ...grise(MESSAGE_IMPRESSION_A_VALIDER) },
+    { href: `${base}/chevalet`, libelle: 'Impression du chevalet', etat: 'fait', icone: 'qr', marque: 'pat', groupe: 'Impression' },
   ];
   // 2. Quid Vinum : la cave.
   const quidVinum: Etape[] = [['stocks', 'Ma cave', 'stock'], ['inventaire', 'Faire l’inventaire', 'check'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
