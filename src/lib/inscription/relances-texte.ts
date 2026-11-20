@@ -16,6 +16,6 @@ export function texteRelance(r: Relance, numero: 1 | 2, lien: string) {
   ].filter(Boolean).map((t, i) => `${i + 1}. ${t}`).join('\n');
   const texte = numero === 1
     ? `${bonjour}\n\n${etat}\n\nPour être prêt ce soir, il ne reste que quelques minutes :\n${pas}\n\nTout se trouve dans votre espace :\n${lien}\n\nÀ bientôt à table,\nPat`
-    : `${bonjour}\n\nVotre carte des vins et votre menu sont prêts chez Pat, mais aucun client ne l’a encore utilisé.\nLe plus simple : imprimez un chevalet de table avec votre QR code, depuis le Centre d’impression de votre espace.\n\n${lien}\n\nSi quelque chose vous bloque, répondez simplement à cet e-mail.\n\nPat`;
+    : `${bonjour}\n\nVotre carte des vins et votre menu sont prêts chez Pat, mais aucun client ne l’a encore utilisé.\nLe plus simple : imprimez un chevalet de table avec votre QR code, depuis l’onglet Impression de votre espace.\n\n${lien}\n\nSi quelque chose vous bloque, répondez simplement à cet e-mail.\n\nPat`;
   return { sujet, texte };
 }

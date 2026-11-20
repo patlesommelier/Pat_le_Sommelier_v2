@@ -60,7 +60,7 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee
   ];
   const app = [...pat(page('simulateur'), 'App client'), ...pat(page('apparence'), 'App client'), ...pat(page('acces'), 'App client')];
   const impression: Etape[] = [
-    { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', icone: 'imprimante', marque: 'pat', groupe: 'Impression', ...grise(MESSAGE_IMPRESSION_A_VALIDER) },
+    { href: `${base}/impression`, libelle: 'Impression des cartes et menus', etat: 'fait', icone: 'imprimante', marque: 'pat', groupe: 'Impression', ...grise(MESSAGE_IMPRESSION_A_VALIDER) },
     { href: `${base}/chevalet`, libelle: 'Impression du chevalet', etat: 'fait', icone: 'qr', marque: 'pat', groupe: 'Impression' },
   ];
   // 2. Quid Vinum : la cave.

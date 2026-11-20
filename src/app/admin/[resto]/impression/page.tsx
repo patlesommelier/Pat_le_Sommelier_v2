@@ -38,7 +38,7 @@ export default async function CentreDImpression({ params, searchParams }: { para
   const fondLogo = await fondDuLogo(r.logo_impression_url ?? r.logo_fonce_url ?? r.logo_url);
   return (
     <>
-      <Entete titre="Centre d’impression" />
+      <Entete titre="Impression des cartes et menus" />
       <Message ok={sp.ok} erreur={sp.erreur} />
       <CentreImpression action={enregistrerImpression.bind(null, resto)} resto={resto}
         logoApp={r.logo_fonce_url ?? r.logo_url} logoImpression={r.logo_impression_url}
