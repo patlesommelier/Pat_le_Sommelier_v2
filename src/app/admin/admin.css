@@ -736,3 +736,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 /* Menus déroulants des onglets : tous de la même largeur. */
 .haut-onglets .haut-deroulant { width: 310px; min-width: 0; }
 @media (max-width: 900px) { .haut-onglets .haut-deroulant { width: auto; } }
+/* Logo du restaurant dans la barre du haut : un peu plus grand. */
+.haut-resto-logo { height: 58px; min-width: 132px; max-width: 200px; padding: 0 14px; }
+.haut-resto-logo img { max-height: 44px; max-width: 172px; }
