@@ -2,7 +2,9 @@
 
 export interface BouteilleWineMS {
   id: string | number; emplacement: string | null; entreeLe: string | null; millesime: number | null;
-  vin: { id: string | number; nom: string; producteur: string | null; appellation: string | null; couleur: string | null; cepages: string | null; pays: string | null } | null;
+  vin: { id: string | number; nom: string; producteur: string | null; appellation: string | null; couleur: string | null; cepages: string | null; pays: string | null;
+    /** Photo de l'étiquette (adresse complète) ; absente avec une ancienne version de WineMS. */
+    image?: string | null } | null;
   prixClient: number | null; prixFinal: number | null;
 }
 export interface FrigoWineMS {

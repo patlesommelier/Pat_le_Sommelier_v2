@@ -1,6 +1,7 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
 import { getFrigos } from '@/lib/frigos/winems';
+import { Icone } from '@/components/admin/Icone';
 import { exigerCave } from '@/lib/admin/garde-cave';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
@@ -209,7 +210,16 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                 <tbody>
                   {f.vins.map((v, i) => (
                     <tr key={i}>
-                      <td><b>{v.nom}</b><br /><span className="petit discret">{[v.producteur, v.appellation].filter(Boolean).join(' · ')}</span></td>
+                      <td>
+                        <span style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                          {/* Vignette de l'étiquette (photo servie par WineMS) ; sans photo, la bouteille dessinée. */}
+                          {v.image_url
+                            // eslint-disable-next-line @next/next/no-img-element
+                            ? <img src={v.image_url} alt="" loading="lazy" className="vignette-frigo" />
+                            : <span className="vignette-frigo vide" aria-hidden="true"><Icone nom="bottle" taille={18} /></span>}
+                          <span><b>{v.nom}</b><br /><span className="petit discret">{[v.producteur, v.appellation].filter(Boolean).join(' · ')}</span></span>
+                        </span>
+                      </td>
                       <td>{v.millesime ?? '—'}</td>
                       <td style={{ textAlign: 'right' }}><b>{v.bouteilles}</b></td>
                       <td style={{ textAlign: 'right' }}>{v.prix_achat != null ? euros(v.prix_achat) : '—'}</td>

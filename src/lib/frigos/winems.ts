@@ -33,15 +33,15 @@ export async function synchroniserFrigos(): Promise<number> {
       for (const b of f.bouteilles) {
         await requete(
           `insert into frigo_bouteille (id, frigo_id, restaurant_id, emplacement, entree_le, millesime, winems_vin_id, nom, producteur, appellation,
-             couleur, cepages, pays, prix_achat, prix_conseille)
-           values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+             couleur, cepages, pays, prix_achat, prix_conseille, image_url)
+           values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
            on conflict (id) do update set frigo_id = excluded.frigo_id, restaurant_id = excluded.restaurant_id, emplacement = excluded.emplacement,
              entree_le = excluded.entree_le, millesime = excluded.millesime, winems_vin_id = excluded.winems_vin_id, nom = excluded.nom,
              producteur = excluded.producteur, appellation = excluded.appellation, couleur = excluded.couleur, cepages = excluded.cepages,
-             pays = excluded.pays, prix_achat = excluded.prix_achat, prix_conseille = excluded.prix_conseille`,
+             pays = excluded.pays, prix_achat = excluded.prix_achat, prix_conseille = excluded.prix_conseille, image_url = excluded.image_url`,
           [String(b.id), id, r.id, b.emplacement, b.entreeLe, b.millesime, b.vin ? String(b.vin.id) : null, b.vin?.nom ?? 'Vin inconnu',
             b.vin?.producteur ?? null, b.vin?.appellation ?? null, b.vin?.couleur ?? null, b.vin?.cepages ?? null, b.vin?.pays ?? null,
-            b.prixClient, b.prixFinal]);
+            b.prixClient, b.prixFinal, b.vin?.image && /^https:\/\//i.test(b.vin.image) ? b.vin.image : null]);
       }
       n++;
     }
@@ -55,7 +55,7 @@ export interface FrigoRestaurant {
   id: string; nom: string; emplacement: string | null; capacite: number | null; statut: number | null; statut_depuis: string | null; cycle: number | null;
   temperature: number | null; temperature_le: string | null; synchro_le: string;
   vins: { nom: string; producteur: string | null; appellation: string | null; couleur: string | null; millesime: number | null;
-    bouteilles: number; prix_achat: number | null; prix_conseille: number | null }[];
+    bouteilles: number; prix_achat: number | null; prix_conseille: number | null; image_url: string | null }[];
 }
 
 /** Frigos d'un restaurant et leurs vins présents (une ligne par vin et millésime, avec le nombre de bouteilles). */
@@ -66,7 +66,7 @@ export async function getFrigos(resto: string): Promise<FrigoRestaurant[]> {
   if (!frigos.length) return [];
   const vins = await requete<FrigoRestaurant['vins'][number] & { frigo_id: string }>(
     `select frigo_id, nom, producteur, appellation, couleur, millesime, count(*)::int as bouteilles,
-            max(prix_achat)::float8 as prix_achat, max(prix_conseille)::float8 as prix_conseille
+            max(prix_achat)::float8 as prix_achat, max(prix_conseille)::float8 as prix_conseille, max(image_url) as image_url
        from frigo_bouteille where restaurant_id = $1
       group by frigo_id, nom, producteur, appellation, couleur, millesime order by nom, millesime`, [resto]);
   return frigos.map((f) => ({ ...f, vins: vins.filter((v) => v.frigo_id === f.id).map(({ frigo_id: _f, ...v }) => v) }));
