@@ -55,7 +55,11 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const frigo = /lvqnep/i.test(d.nom);
   const [restosFrigo, vinsWineMS, prixFrigo] = frigo ? await Promise.all([
     requete<{ id: string; nom: string }>('select id, nom from restaurant where winems_client_id is not null order by nom'),
-    requete<{ winems_vin_id: string; nom: string }>(`select distinct on (winems_vin_id) winems_vin_id, nom || coalesce(' — ' || producteur, '') as nom from frigo_bouteille where winems_vin_id is not null order by winems_vin_id, nom`),
+    // Vins WineMS connus : ceux des bouteilles reçues, et ceux déjà reliés à une ligne de LVQNEP.
+    requete<{ winems_vin_id: string; nom: string }>(`select distinct on (winems_vin_id) winems_vin_id, nom from (
+        select winems_vin_id, nom || coalesce(' — ' || producteur, '') as nom, 0 as rang from frigo_bouteille where winems_vin_id is not null
+        union all select winems_vin_id, libelle || coalesce(' — ' || producteur_texte, ''), 1 from distributeur_vin where distributeur_id = $1 and winems_vin_id is not null) x
+      order by winems_vin_id, rang, nom`, [id]),
     requete<{ distributeur_vin_id: string; restaurant_id: string; prix: string | null; prix_vente: string | null }>(
       'select px.* from distributeur_vin_prix_restaurant px join distributeur_vin dv on dv.id = px.distributeur_vin_id where dv.distributeur_id = $1', [id]),
   ]) : [[], [], []];

@@ -365,23 +365,39 @@ export async function enregistrerQv(f: FormData): Promise<Retour> {
  */
 export async function enregistrerFrigoDistributeur(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
-  const lignes = await requete<{ id: string }>('select id from distributeur_vin where distributeur_id = $1', [id]);
+  const lignes = await requete<{ id: string; cle: string; winems_vin_id: string | null }>('select id, cle, winems_vin_id from distributeur_vin where distributeur_id = $1', [id]);
   const restos = await requete<{ id: string }>('select id from restaurant where winems_client_id is not null');
-  const liens = new Map<string, string>();
+  const choix = new Map<string, string | null>();
+  for (const l of lignes) if (f.has(`winems_${l.id}`)) choix.set(l.id, (txt(f, `winems_${l.id}`) ?? '').trim() || null);
+  // Un vin WineMS choisi sur une nouvelle ligne la quitte l'ancienne : le choix qui vient de changer l'emporte.
+  const fusions = new Map<string, string>(); // vin gardé → doublon fondu dedans
   for (const l of lignes) {
-    if (!f.has(`winems_${l.id}`)) continue;
-    const w = (txt(f, `winems_${l.id}`) ?? '').trim();
-    if (w && liens.has(w)) return { erreur: 'Un même vin WineMS ne peut être lié qu’à un seul vin LVQNEP.' };
-    if (w) liens.set(w, l.id);
+    const w = choix.get(l.id);
+    if (!w || w === l.winems_vin_id) continue;
+    for (const k of lignes) {
+      if (k.id === l.id || (choix.get(k.id) ?? k.winems_vin_id) !== w) continue;
+      choix.set(k.id, null);
+      // L'autre ligne est un vin ajouté pour le frigo (doublon d'un vin que LVQNEP avait déjà) : fondu dans celle-ci.
+      if (k.cle.startsWith('frigo|')) fusions.set(l.id, k.id);
+    }
   }
-  for (const l of lignes) {
-    if (!f.has(`winems_${l.id}`)) continue;
-    await requete('update distributeur_vin set winems_vin_id = null where id = $1', [l.id]);
+  const vus = new Set<string>();
+  for (const w of choix.values()) { if (w && vus.has(w)) return { erreur: 'Un même vin WineMS est choisi sur deux lignes : gardez-le sur une seule.' }; if (w) vus.add(w); }
+  for (const [l] of choix) await requete('update distributeur_vin set winems_vin_id = null where id = $1', [l]);
+  for (const [l, w] of choix) if (w) await requete('update distributeur_vin set winems_vin_id = $2 where id = $1', [l, w]);
+  for (const [garde, doublon] of fusions) {
+    await requete(`insert into distributeur_vin_prix_restaurant (distributeur_vin_id, restaurant_id, prix, prix_vente)
+                   select $1, restaurant_id, prix, prix_vente from distributeur_vin_prix_restaurant where distributeur_vin_id = $2
+                   on conflict (distributeur_vin_id, restaurant_id) do nothing`, [garde, doublon]);
+    await requete('update frigo_bouteille set distributeur_vin_id = $1 where distributeur_vin_id = $2', [garde, doublon]);
+    await requete('update commande_ligne set distributeur_vin_id = $1 where distributeur_vin_id = $2', [garde, doublon]);
+    await requete('delete from vin_carte where distributeur_vin_id = $1 and frigo', [doublon]);
+    await requete('delete from distributeur_vin where id = $1', [doublon]);
   }
-  for (const [w, l] of liens) await requete('update distributeur_vin set winems_vin_id = $2 where id = $1', [l, w]);
+  const fondus = new Set(fusions.values());
   // Producteur de chaque vin : changé, le vin quitte son ancien producteur (et son vin de la base).
   for (const l of lignes) {
-    if (!f.has(`producteur_${l.id}`)) continue;
+    if (fondus.has(l.id) || !f.has(`producteur_${l.id}`)) continue;
     const nom = txt(f, `producteur_${l.id}`)?.slice(0, 200) ?? null;
     await requete(`update distributeur_vin set producteur_texte = $2, producteur_id = null, producteur_manuel = false, cuvee_id = null, cuvee_manuel = false
                     where id = $1 and coalesce(producteur_texte, '') <> coalesce($2, '')`, [l.id, nom]);
@@ -397,8 +413,11 @@ export async function enregistrerFrigoDistributeur(id: string, f: FormData): Pro
   await ajouterCuveesManquantes(requete, id);
   revalidatePath('/admin/super/vins');
   for (const l of lignes) for (const r of restos) {
-    if (!f.has(`prix_${l.id}_${r.id}`)) continue;
-    const prix = nombre(f, `prix_${l.id}_${r.id}`), vente = nombre(f, `vente_${l.id}_${r.id}`);
+    if (fondus.has(l.id) || !f.has(`prix_${l.id}_${r.id}`)) continue;
+    // Vin qui vient de recevoir un doublon : ses prix laissés vides prennent ceux du doublon.
+    const d = fusions.get(l.id);
+    const source = d && !txt(f, `prix_${l.id}_${r.id}`) && !txt(f, `vente_${l.id}_${r.id}`) ? d : l.id;
+    const prix = nombre(f, `prix_${source}_${r.id}`), vente = nombre(f, `vente_${source}_${r.id}`);
     if (prix === undefined || vente === undefined) return { erreur: 'Prix illisible : écrivez par exemple 12,50.' };
     if (prix == null && vente == null) await requete('delete from distributeur_vin_prix_restaurant where distributeur_vin_id = $1 and restaurant_id = $2', [l.id, r.id]);
     else await requete(`insert into distributeur_vin_prix_restaurant (distributeur_vin_id, restaurant_id, prix, prix_vente) values ($1, $2, $3, $4)
