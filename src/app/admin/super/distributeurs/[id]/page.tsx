@@ -217,17 +217,18 @@ export default async function FicheDistributeur({ params, searchParams }: { para
           {frigo && (
             <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }} open>
               <summary><h2 style={{ margin: 0 }}>Frigo connecté (WineMS)</h2><span className="petit discret">{actifs.length} vin{actifs.length > 1 ? 's' : ''} · {restosFrigo.length} restaurant{restosFrigo.length > 1 ? 's' : ''} relié{restosFrigo.length > 1 ? 's' : ''}</span></summary>
-              <p className="sous" style={{ margin: '4px 0 0' }}>Chaque vin est relié au vin du frigo dans WineMS : ses bouteilles y sont rattachées et entrent dans « Ma cave » du restaurant, marquées « Frigo ». Les prix (achat et vente sur la carte, HTVA) sont propres à chaque restaurant ; le prix de vente ne sert qu’à la première mise sur la carte, le restaurant peut ensuite le changer.</p>
+              <p className="sous" style={{ margin: '4px 0 0' }}>Indiquez le producteur de chaque vin : le vin entre dans les Vins de la base (à valider), avec son producteur. Chaque vin est relié au vin du frigo dans WineMS : ses bouteilles y sont rattachées et entrent dans « Ma cave » du restaurant, marquées « Frigo ». Les prix (achat et vente sur la carte, HTVA) sont propres à chaque restaurant ; le prix de vente ne sert qu’à la première mise sur la carte, le restaurant peut ensuite le changer.</p>
               <FormulaireAdmin action={enregistrerFrigoDistributeur.bind(null, id)} className="pile" style={{ gap: 12 }}>
                 <div className="tableau">
                   <table style={{ minWidth: 640 }}>
-                    <thead><tr><th>Vin</th><th>Vin WineMS</th>{restosFrigo.map((r) => <th key={r.id} className="droite">{r.nom}<div className="petit discret" style={{ fontWeight: 400 }}>achat · vente</div></th>)}</tr></thead>
+                    <thead><tr><th>Vin</th><th>Producteur</th><th>Vin WineMS</th>{restosFrigo.map((r) => <th key={r.id} className="droite">{r.nom}<div className="petit discret" style={{ fontWeight: 400 }}>achat · vente</div></th>)}</tr></thead>
                     <tbody>
                       {actifs.map((v) => (
                         <tr key={v.id}>
                           <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div>
                             <div className="nom"><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}</div>
-                            <div className="petit">{v.producteur_texte ?? <span className="discret">producteur non indiqué</span>}</div></div></div></td>
+                            <div className="petit">{v.cuvee_id ? <span className="discret">dans les Vins de la base{v.cuvee_statut === 'propose' ? ' (à valider)' : ''}</span> : <span className="discret">pas encore dans la base : indiquez son producteur</span>}</div></div></div></td>
+                          <td><input name={`producteur_${v.id}`} defaultValue={v.producteur_texte ?? ''} list="producteurs-base" placeholder="Producteur" aria-label={`Producteur : ${v.libelle}`} style={{ minWidth: 160 }} /></td>
                           <td>
                             <select name={`winems_${v.id}`} defaultValue={v.winems_vin_id ?? ''} className="champ-liste" aria-label={`Vin WineMS : ${v.libelle}`}>
                               <option value="">— pas relié (au nom, dès qu’une bouteille arrive) —</option>

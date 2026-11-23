@@ -379,6 +379,23 @@ export async function enregistrerFrigoDistributeur(id: string, f: FormData): Pro
     await requete('update distributeur_vin set winems_vin_id = null where id = $1', [l.id]);
   }
   for (const [w, l] of liens) await requete('update distributeur_vin set winems_vin_id = $2 where id = $1', [l, w]);
+  // Producteur de chaque vin : changé, le vin quitte son ancien producteur (et son vin de la base).
+  for (const l of lignes) {
+    if (!f.has(`producteur_${l.id}`)) continue;
+    const nom = txt(f, `producteur_${l.id}`)?.slice(0, 200) ?? null;
+    await requete(`update distributeur_vin set producteur_texte = $2, producteur_id = null, producteur_manuel = false, cuvee_id = null, cuvee_manuel = false
+                    where id = $1 and coalesce(producteur_texte, '') <> coalesce($2, '')`, [l.id, nom]);
+  }
+  // Chaque producteur pas encore relié : celui de la base qui porte ce nom, sinon ajouté à la base (à valider) ;
+  // ses vins entrent alors dans les Vins de la base (à valider).
+  const aRelier = await requete<{ nom: string }>(
+    `select distinct producteur_texte as nom from distributeur_vin where distributeur_id = $1 and actif and producteur_texte is not null and producteur_id is null`, [id]);
+  for (const { nom } of aRelier) {
+    const [p] = await requete<{ id: string }>(`select id from producteur where lower(nom) = lower($1) and statut <> 'retire' order by statut = 'valide' desc limit 1`, [nom]);
+    if (p) await relierProducteur(requete, id, nom, p.id); else await ajouterProducteurBase(requete, id, nom);
+  }
+  await ajouterCuveesManquantes(requete, id);
+  revalidatePath('/admin/super/vins');
   for (const l of lignes) for (const r of restos) {
     if (!f.has(`prix_${l.id}_${r.id}`)) continue;
     const prix = nombre(f, `prix_${l.id}_${r.id}`), vente = nombre(f, `vente_${l.id}_${r.id}`);
