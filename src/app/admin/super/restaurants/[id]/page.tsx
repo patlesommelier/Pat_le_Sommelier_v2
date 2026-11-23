@@ -1,5 +1,7 @@
 // Page d'un restaurant (super-admin, en cliquant sur sa carte) : tous ses réglages de super-admin — statut, mise en place,
 // carte et accords (préparation), producteurs à valider, distributeurs (et verrou sur un seul distributeur Quid Vinum), suppression.
+import { lireFrigosWineMS } from '@/lib/frigos/winems-donnees';
+import { winemsConfigure } from '@/lib/frigos/winems';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { changerStatutRestaurant, envoyerCarteComplete, relierWineMS, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
@@ -29,6 +31,15 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
       `select f.id, f.nom, f.statut, f.temperature::float8 as temperature, f.synchro_le::text, (select count(*)::int from frigo_bouteille b where b.frigo_id = f.id) as bouteilles
          from frigo f where f.restaurant_id = $1 order by f.nom`, [id]),
   ]);
+  // Clients WineMS lus en direct, pour les choisir par leur nom (l'application WineMS n'affiche pas leur numéro).
+  let clientsWineMS: { id: string; nom: string }[] | null = null;
+  let erreurWineMS: string | null = null;
+  if (winemsConfigure()) {
+    try {
+      clientsWineMS = (await lireFrigosWineMS(process.env.WINEMS_API_URL!.trim(), process.env.WINEMS_API_KEY!.trim()))
+        .map((c) => ({ id: String(c.id), nom: c.nom })).sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
+    } catch (e) { erreurWineMS = (e as Error).message; }
+  }
   const winems = { client: lien?.client ?? null, frigos: frigosWineMS };
   const [r] = await requete<{ id: string; nom: string; ville: string | null; statut: string; distributeur_qv_unique: string | null }>(
     'select id, nom, ville, statut, distributeur_qv_unique from restaurant where id = $1', [id]);
@@ -90,10 +101,20 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
       <section className="carte-bo pile" style={{ gap: 12 }}>
         <h2 style={{ margin: 0 }}>Frigo connecté (WineMS)</h2>
         <form action={relierWineMS.bind(null, id)} className="ligne-actions" style={{ alignItems: 'flex-end' }}>
-          <div className="champ" style={{ margin: 0 }}><label htmlFor="winems_client_id">Numéro du client dans WineMS</label>
-            <input id="winems_client_id" name="winems_client_id" defaultValue={winems.client ?? ''} inputMode="numeric" placeholder="ex. 1" style={{ width: 140 }} /></div>
+          {clientsWineMS ? (
+            <div className="champ" style={{ margin: 0 }}><label htmlFor="winems_client_id">Client dans WineMS</label>
+              <select id="winems_client_id" name="winems_client_id" defaultValue={winems.client ?? ''} style={{ minWidth: 240 }}>
+                <option value="">— Pas de frigo connecté —</option>
+                {clientsWineMS.map((c) => <option key={c.id} value={c.id}>{c.nom}</option>)}
+              </select></div>
+          ) : (
+            <div className="champ" style={{ margin: 0 }}><label htmlFor="winems_client_id">Numéro du client dans WineMS</label>
+              <input id="winems_client_id" name="winems_client_id" defaultValue={winems.client ?? ''} inputMode="numeric" placeholder="ex. 1" style={{ width: 140 }} /></div>
+          )}
           <button className="btn sec petit">{winems.client ? 'Enregistrer et synchroniser' : 'Relier'}</button>
         </form>
+        {!winemsConfigure() && <p className="petit" style={{ margin: 0, color: 'var(--ocre)' }}>WINEMS_API_URL et WINEMS_API_KEY ne sont pas réglées dans Coolify (ou le site n’a pas été redéployé depuis).</p>}
+        {erreurWineMS && <p className="petit" style={{ margin: 0, color: 'var(--ocre)' }}>Lecture de WineMS impossible : {erreurWineMS}</p>}
         {winems.frigos.length > 0 ? (
           <ul className="petit" style={{ margin: 0, paddingLeft: 18 }}>
             {winems.frigos.map((f) => <li key={f.id}><b>{f.nom}</b> : {f.bouteilles} bouteille{f.bouteilles > 1 ? 's' : ''}
