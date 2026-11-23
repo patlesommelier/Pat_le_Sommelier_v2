@@ -15,6 +15,7 @@ import { cleVin, contenanceTarif, prixRemise } from '@/lib/distributeurs/tarif';
 import { typeReel } from '@/lib/inscription/fichiers';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { passerEnDistributeurQv } from '@/lib/distributeurs/non-signes';
+import { vinsDuFrigoDansLaCave } from '@/lib/frigos/winems';
 
 type Retour = { ok?: string; erreur?: string };
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -356,4 +357,38 @@ export async function enregistrerQv(f: FormData): Promise<Retour> {
   await enregistrerCoordonneesQv({ qv_nom: txt(f, 'qv_nom'), qv_email: email, qv_adresse: txt(f, 'qv_adresse'), qv_tva: txt(f, 'qv_tva'), qv_telephone: txt(f, 'qv_telephone') });
   rafraichir();
   return { ok: 'Coordonnées de Quid Vinum enregistrées.' };
+}
+
+/**
+ * Frigo connecté (LVQNEP) : pour chaque vin, le vin WineMS lié (les bouteilles du frigo de ce vin s'y rattachent) et les prix
+ * propres à chaque restaurant relié à WineMS (prix d'achat convenu, prix de vente de départ sur sa carte). Vide : retiré.
+ */
+export async function enregistrerFrigoDistributeur(id: string, f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  const lignes = await requete<{ id: string }>('select id from distributeur_vin where distributeur_id = $1', [id]);
+  const restos = await requete<{ id: string }>('select id from restaurant where winems_client_id is not null');
+  const liens = new Map<string, string>();
+  for (const l of lignes) {
+    if (!f.has(`winems_${l.id}`)) continue;
+    const w = (txt(f, `winems_${l.id}`) ?? '').trim();
+    if (w && liens.has(w)) return { erreur: 'Un même vin WineMS ne peut être lié qu’à un seul vin LVQNEP.' };
+    if (w) liens.set(w, l.id);
+  }
+  for (const l of lignes) {
+    if (!f.has(`winems_${l.id}`)) continue;
+    await requete('update distributeur_vin set winems_vin_id = null where id = $1', [l.id]);
+  }
+  for (const [w, l] of liens) await requete('update distributeur_vin set winems_vin_id = $2 where id = $1', [l, w]);
+  for (const l of lignes) for (const r of restos) {
+    if (!f.has(`prix_${l.id}_${r.id}`)) continue;
+    const prix = nombre(f, `prix_${l.id}_${r.id}`), vente = nombre(f, `vente_${l.id}_${r.id}`);
+    if (prix === undefined || vente === undefined) return { erreur: 'Prix illisible : écrivez par exemple 12,50.' };
+    if (prix == null && vente == null) await requete('delete from distributeur_vin_prix_restaurant where distributeur_vin_id = $1 and restaurant_id = $2', [l.id, r.id]);
+    else await requete(`insert into distributeur_vin_prix_restaurant (distributeur_vin_id, restaurant_id, prix, prix_vente) values ($1, $2, $3, $4)
+                        on conflict (distributeur_vin_id, restaurant_id) do update set prix = excluded.prix, prix_vente = excluded.prix_vente`, [l.id, r.id, prix, vente]);
+  }
+  // Les bouteilles du frigo suivent tout de suite les liens changés.
+  for (const r of restos) await vinsDuFrigoDansLaCave(r.id).catch((e) => console.error('[frigos]', (e as Error).message));
+  rafraichir(id);
+  return { ok: 'Vins du frigo enregistrés.' };
 }

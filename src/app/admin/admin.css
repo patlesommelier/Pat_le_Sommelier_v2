@@ -745,3 +745,4 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .frigo-info .rond-mode { width: 10px; height: 10px; }
 .vignette-frigo { width: 40px; height: 52px; flex-shrink: 0; object-fit: contain; border-radius: 6px; background: var(--fond); }
 .vignette-frigo.vide { display: inline-flex; align-items: center; justify-content: center; color: var(--discret); }
+.badge-frigo { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 999px; background: var(--encre); color: #FFFFFF; font-size: 11px; font-weight: 700; vertical-align: middle; }

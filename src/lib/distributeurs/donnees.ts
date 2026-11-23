@@ -27,6 +27,8 @@ export interface VinDistributeur {
   couleur: string | null; certification: string | null; prix_qv: number | null; prix_restaurant: number | null; epuise: boolean; maximum: number | null;
   producteur_id: string | null; producteur_nom: string | null; producteur_manuel: boolean; actif: boolean;
   cuvee_id: string | null; cuvee_nom: string | null; cuvee_statut: string | null;
+  /** Vin du frigo connecté (LVQNEP) : identifiant du vin dans WineMS. */
+  winems_vin_id: string | null;
   reference: string | null; prix_catalogue: number | null; etiquette_url: string | null;
 }
 
@@ -68,7 +70,7 @@ export async function getVinsDistributeur(id: string) {
   return requete<VinDistributeur>(
     `select v.id, v.section, v.producteur_texte, v.libelle, v.millesime, v.contenance, v.couleur, v.certification, v.prix_qv, v.prix_restaurant,
             v.epuise, v.maximum, v.producteur_id, p.nom as producteur_nom, v.producteur_manuel, v.actif,
-            v.cuvee_id, c.nom as cuvee_nom, c.statut::text as cuvee_statut, v.reference, v.prix_catalogue, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
+            v.cuvee_id, c.nom as cuvee_nom, c.statut::text as cuvee_statut, v.reference, v.prix_catalogue, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url, v.winems_vin_id
        from distributeur_vin v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
       where v.distributeur_id = $1 order by v.actif desc, v.ordre, v.libelle`, [id]);
 }

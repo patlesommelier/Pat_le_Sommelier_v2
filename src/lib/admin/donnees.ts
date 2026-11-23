@@ -118,6 +118,8 @@ export async function getProfils(restaurantId: string) {
 
 // ───────── Carte ─────────
 export interface VinBO {
+  /** Vin du frigo connecté (LVQNEP) : stock suivi tout seul (bouteilles présentes), pas compté à l'inventaire. */
+  frigo?: boolean;
   id: string; couleur: string; section: string | null; libelle: string; producteur_id: string | null; producteur_texte: string | null;
   producteur_nom: string | null; producteur_statut: string | null;
   /** Ce que le restaurant voit du producteur : déjà dans la base de Pat, ou nouveau (proposé). */
@@ -155,7 +157,7 @@ export async function getVinsBO(restaurantId: string) {
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.cave_categorie, v.cave_rubrique, v.cave_ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
             coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,
-            v.stock, v.en_commande, v.fournisseur_id, v.distributeur_vin_id,
+            v.stock, v.en_commande, v.fournisseur_id, v.distributeur_vin_id, v.frigo,
             case when v.lu_sur_carte is null then null
                  -- Reconnu : relié à un vin de la base ; un vin proposé depuis une carte (fiche remplie par le restaurant) attend que Pat le valide.
                  when cu.id is not null and (cu.statut = 'valide' or coalesce(cu.source, '') <> 'carte') then 'reconnu' else 'en_attente' end as reconnaissance

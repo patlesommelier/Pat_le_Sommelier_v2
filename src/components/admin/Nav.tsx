@@ -189,7 +189,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
 function onglets(etapes: Etape[]) {
   const r: { nom: string; etapes: Etape[] }[] = [];
   for (const e of etapes) {
-    const nom = e.marque === 'qv' ? 'Gestion de cave' : e.marque === 'pat' ? e.groupe : undefined;
+    const nom = e.marque === 'qv' ? e.groupe ?? 'Gestion de cave' : e.marque === 'pat' ? e.groupe : undefined;
     if (!nom) continue;
     const o = r.find((x) => x.nom === nom);
     if (o) o.etapes.push(e); else r.push({ nom, etapes: [e] });
@@ -199,7 +199,7 @@ function onglets(etapes: Etape[]) {
 
 /**
  * Menu du haut d'un restaurant : à gauche son logo (vers l'accueil de l'espace) et son statut ; puis les onglets, chacun avec
- * son menu déroulant (Cartes et menus, App client, Impression, Gestion de cave) ; à droite les paramètres et le compte.
+ * son menu déroulant (Cartes et menus, App client, Impression, Gestion de cave, Frigos connectés s'il y en a) ; à droite les paramètres et le compte.
  * L'onglet de la page ouverte est mis en évidence ; celui que montre un post-it est entouré, le post-it dessous.
  */
 export function NavHaut({ accueil, etapes, resto, statut, compte }: {
@@ -305,9 +305,9 @@ export function FilAriane({ accueil, etapes }: { accueil: string; etapes: Etape[
   if (/^\/admin\/[^/]+\/producteurs\//.test(chemin)) chemin = chemin.replace(/\/producteurs\/.*$/, '/stocks');
   chemin = chemin.replace(/\/trouver-vin(\/.*)?$/, '/carte');
   if (chemin === accueil) return null;
-  const e = etapes.find((x) => chemin.startsWith(x.href));
+  const e = etapes.filter((x) => chemin.startsWith(x.href)).sort((a, b) => b.href.length - a.href.length)[0];
   if (!e) return null;
-  const groupe = e.marque === 'qv' ? 'Gestion de cave' : e.groupe;
+  const groupe = e.marque === 'qv' ? e.groupe ?? 'Gestion de cave' : e.groupe;
   return <p className="fil-ariane">{groupe ? `${groupe} › ` : ''}{e.libelle}</p>;
 }
 

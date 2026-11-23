@@ -1,7 +1,7 @@
 // Super-admin — fiche d’un distributeur : coordonnées et remise, tarif lu par Claude, vins (prix publics, prix QV, prix restaurant), remises des restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, enregistrerRemises, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, enregistrerRemises, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerFrigoDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -51,6 +51,15 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   // Au-delà, elle a été arrêtée (redémarrage du site, mise en ligne) : le bouton revient pour la reprendre.
   const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 5 * 60_000;
   const domaine = domaineDuSite(d.site);
+  // LVQNEP : les vins des frigos connectés (WineMS). Lien vers le vin WineMS et prix propres à chaque restaurant relié.
+  const frigo = /lvqnep/i.test(d.nom);
+  const [restosFrigo, vinsWineMS, prixFrigo] = frigo ? await Promise.all([
+    requete<{ id: string; nom: string }>('select id, nom from restaurant where winems_client_id is not null order by nom'),
+    requete<{ winems_vin_id: string; nom: string }>(`select distinct on (winems_vin_id) winems_vin_id, nom || coalesce(' — ' || producteur, '') as nom from frigo_bouteille where winems_vin_id is not null order by winems_vin_id, nom`),
+    requete<{ distributeur_vin_id: string; restaurant_id: string; prix: string | null; prix_vente: string | null }>(
+      'select px.* from distributeur_vin_prix_restaurant px join distributeur_vin dv on dv.id = px.distributeur_vin_id where dv.distributeur_id = $1', [id]),
+  ]) : [[], [], []];
+  const prixDe = (v: string, r: string) => prixFrigo.find((p) => p.distributeur_vin_id === v && p.restaurant_id === r);
 
   return (
     <>
@@ -204,6 +213,43 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               ))}
             </div>
           </details>
+
+          {frigo && (
+            <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }} open>
+              <summary><h2 style={{ margin: 0 }}>Frigo connecté (WineMS)</h2><span className="petit discret">{actifs.length} vin{actifs.length > 1 ? 's' : ''} · {restosFrigo.length} restaurant{restosFrigo.length > 1 ? 's' : ''} relié{restosFrigo.length > 1 ? 's' : ''}</span></summary>
+              <p className="sous" style={{ margin: '4px 0 0' }}>Chaque vin est relié au vin du frigo dans WineMS : ses bouteilles y sont rattachées et entrent dans « Ma cave » du restaurant, marquées « Frigo ». Les prix (achat et vente sur la carte, HTVA) sont propres à chaque restaurant ; le prix de vente ne sert qu’à la première mise sur la carte, le restaurant peut ensuite le changer.</p>
+              <FormulaireAdmin action={enregistrerFrigoDistributeur.bind(null, id)} className="pile" style={{ gap: 12 }}>
+                <div className="tableau">
+                  <table style={{ minWidth: 640 }}>
+                    <thead><tr><th>Vin</th><th>Vin WineMS</th>{restosFrigo.map((r) => <th key={r.id} className="droite">{r.nom}<div className="petit discret" style={{ fontWeight: 400 }}>achat · vente</div></th>)}</tr></thead>
+                    <tbody>
+                      {actifs.map((v) => (
+                        <tr key={v.id}>
+                          <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div>
+                            <div className="nom"><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}</div>
+                            <div className="petit">{v.producteur_texte ?? <span className="discret">producteur non indiqué</span>}</div></div></div></td>
+                          <td>
+                            <select name={`winems_${v.id}`} defaultValue={v.winems_vin_id ?? ''} className="champ-liste" aria-label={`Vin WineMS : ${v.libelle}`}>
+                              <option value="">— pas relié (au nom, dès qu’une bouteille arrive) —</option>
+                              {v.winems_vin_id && !vinsWineMS.some((w) => w.winems_vin_id === v.winems_vin_id) && <option value={v.winems_vin_id}>Vin WineMS n° {v.winems_vin_id}</option>}
+                              {vinsWineMS.map((w) => <option key={w.winems_vin_id} value={w.winems_vin_id}>{w.nom} (n° {w.winems_vin_id})</option>)}
+                            </select>
+                          </td>
+                          {restosFrigo.map((r) => { const p = prixDe(v.id, r.id); return (
+                            <td key={r.id} className="droite" style={{ whiteSpace: 'nowrap' }}>
+                              <span className="champ-prix"><input type="text" inputMode="decimal" name={`prix_${v.id}_${r.id}`} defaultValue={virgule(p?.prix != null ? Number(p.prix) : null)} placeholder="—" aria-label={`Prix d’achat : ${v.libelle}, ${r.nom}`} style={{ width: 70 }} /> €</span>{' '}
+                              <span className="champ-prix"><input type="text" inputMode="decimal" name={`vente_${v.id}_${r.id}`} defaultValue={virgule(p?.prix_vente != null ? Number(p.prix_vente) : null)} placeholder="—" aria-label={`Prix de vente : ${v.libelle}, ${r.nom}`} style={{ width: 70 }} /> €</span>
+                            </td>); })}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {!restosFrigo.length && <span className="petit discret">Aucun restaurant relié à WineMS : reliez-le depuis sa fiche (Restaurants → Frigo connecté).</span>}
+                {actifs.length > 0 && <span><button className="btn">Enregistrer</button></span>}
+              </FormulaireAdmin>
+            </details>
+          )}
 
           <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }}>
             <summary><h2 style={{ margin: 0 }}>Restaurants et remises</h2><span className="petit discret">{restos.length} restaurant{restos.length > 1 ? 's' : ''}</span></summary>

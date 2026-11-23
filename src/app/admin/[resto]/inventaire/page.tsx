@@ -23,7 +23,9 @@ export default async function Inventaire({ params, searchParams }: { params: Pro
   if (!acces.admin) await requete('update restaurant set inventaire_annonce_fermee_le = now() where id = $1 and inventaire_annonce_fermee_le is null', [resto]);
   const [vins, r] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
-  const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }));
+  // Vins du frigo connecté : leur stock suit le frigo tout seul, ils ne sont pas à compter.
+  const duFrigo = vins.filter((v) => v.frigo).length;
+  const groupes = regrouperVins(vins.filter((v) => !v.frigo)).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }));
   // Les vins à la carte d'abord (ce qu'on compte chaque semaine), puis ceux qui n'y sont pas.
   const parCouleur = COULEURS.map(([k, l]) => ({ titre: l, groupes: groupes.filter((g) => g.principal.couleur === k).sort((a, b) => Number(b.disponible) - Number(a.disponible)) }))
     .filter((c) => c.groupes.length);
@@ -35,7 +37,8 @@ export default async function Inventaire({ params, searchParams }: { params: Pro
       <Entete titre="Faire l’inventaire">
         <Link href={`/admin/${resto}/stocks`} className="btn fantome">← Ma cave</Link>
       </Entete>
-      <p className="petit" style={{ margin: 0 }}>{dernier ? <>Dernier inventaire : <b>{ilYA(dernier)}</b>.</> : <b>Aucun inventaire pour l’instant.</b>}</p>
+      <p className="petit" style={{ margin: 0 }}>{dernier ? <>Dernier inventaire : <b>{ilYA(dernier)}</b>.</> : <b>Aucun inventaire pour l’instant.</b>}
+        {duFrigo > 0 && <> Les vins du frigo connecté n’y sont pas : leur stock se compte tout seul.</>}</p>
       <form action={action} className="pile" style={{ gap: 14 }}>
         {!groupes.length && <p className="discret">Aucun vin dans Ma cave pour l’instant.</p>}
         {parCouleur.length > 0 && (

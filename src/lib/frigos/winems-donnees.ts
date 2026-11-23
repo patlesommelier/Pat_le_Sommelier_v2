@@ -25,3 +25,7 @@ export async function lireFrigosWineMS(url: string, cle: string, lire: typeof fe
   if (!Array.isArray(d?.clients)) throw new Error('Réponse de WineMS illisible.');
   return d.clients.map((c) => ({ ...c, frigos: (c.frigos ?? []).map((f) => ({ ...f, bouteilles: f.bouteilles ?? [] })) }));
 }
+
+/** Nom comparable d'un vin (catalogue LVQNEP / WineMS) : sans accents, ponctuation ni lettres doublées (« Mascallese » = « Mascalese »). */
+export const nomCommun = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  .replace(/[^a-z0-9]+/g, '').replace(/(.)\1+/g, '$1');

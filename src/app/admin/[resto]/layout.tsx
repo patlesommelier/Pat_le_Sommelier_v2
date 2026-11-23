@@ -1,3 +1,4 @@
+import { aDesFrigos } from '@/lib/frigos/documents';
 import { notFound } from 'next/navigation';
 import { Coque } from '../Coque';
 import { exigerAcces } from '@/lib/admin/auth';
@@ -44,7 +45,7 @@ function avecAnnonces(resto: string, etapes: Etape[], actives: Partial<Record<Cl
     return annonces.length ? { ...e, annonces } : e;
   });
 }
-function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee' | 'nouvelle' | 'visible' = 'visible'): Etape[] {
+function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee' | 'nouvelle' | 'visible' = 'visible', frigos = false): Etape[] {
   const base = `/admin/${resto}`;
   const page = (chemin: string) => etapes.find((e) => e.href === `${base}/${chemin}`);
   const pat = (e: Etape | undefined, groupe: string): Etape[] => (e ? [{ ...e, marque: 'pat', groupe }] : []);
@@ -70,17 +71,20 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number, cave: 'grisee
       ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}),
       ...(chemin === 'stocks' && cave === 'nouvelle' ? { nouveau: true } : {}),
       ...grise(MESSAGE_CARTE_A_VALIDER) }));
+  // 3. Frigos connectés (WineMS, LVQNEP) : un onglet à droite de la Gestion de cave, seulement pour un restaurant qui en a.
+  const frigo: Etape[] = frigos ? [['frigos', 'Mes frigos', 'bottle'], ['bons-frigo', 'Bons de commande', 'camion'], ['factures-frigo', 'Factures', 'download']]
+    .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait' as const, icone, marque: 'qv' as const, groupe: 'Frigos connectés', ...grise(MESSAGE_CARTE_A_VALIDER) })) : [];
   // Paramètres du restaurant (coordonnées, stock bas, inventaire, utilisateurs) : tout en bas du menu, seul.
   const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', icone: 'reglages' };
-  return [...carteEtMenu, ...app, ...impression, ...quidVinum, parametres];
+  return [...carteEtMenu, ...app, ...impression, ...quidVinum, ...frigo, parametres];
 }
 
 export default async function LayoutRestaurant({ children, params }: { children: React.ReactNode; params: Promise<{ resto: string }> }) {
   const { resto } = await params;
   const u = await exigerAcces(resto);
-  const [r, resume, aVoir, avis] = await Promise.all([getRestaurantBO(resto), getResume(resto), u.admin ? 0 : commandesAVoir(resto),
+  const [r, resume, aVoir, avis, frigos] = await Promise.all([getRestaurantBO(resto), getResume(resto), u.admin ? 0 : commandesAVoir(resto),
     // Avis de Quid Vinum pas encore fermés par le restaurant (pas montrés au super-admin, qui ne doit pas les fermer à sa place).
-    u.admin ? [] : requete<Avis>('select id, titre, texte, lien, lien_libelle, forme from avis_restaurant where restaurant_id = $1 and lu_le is null order by cree_le', [resto])]);
+    u.admin ? [] : requete<Avis>('select id, titre, texte, lien, lien_libelle, forme from avis_restaurant where restaurant_id = $1 and lu_le is null order by cree_le', [resto]), aDesFrigos(resto)]);
   if (!r) notFound();
   // Restaurant inscrit seul : Gestion de cave et impression de la carte grisées tant que Quid Vinum n'a pas validé sa carte ;
   // « Nouveau » à côté de Gestion de cave le jour qui suit cette validation. Le super-admin a tout (sans « Nouveau » avant validation).
@@ -88,7 +92,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
     : r.origine === 'inscription' && r.carte_complete_le && Date.now() - Date.parse(r.carte_complete_le) < 864e5 ? 'nouvelle' : 'visible';
   return (
     <Coque utilisateur={u} mode={r.mode} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}
-      etapes={avecAnnonces(resto, avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir, cave),
+      etapes={avecAnnonces(resto, avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir, cave, frigos),
         {
           // Post-it 4 « Gérez votre cave » : restaurant inscrit seul, carte validée, cave pas encore ouverte.
           stocks: !u.admin && r.origine === 'inscription' && cave !== 'grisee' && !r.cave_annonce_fermee_le,

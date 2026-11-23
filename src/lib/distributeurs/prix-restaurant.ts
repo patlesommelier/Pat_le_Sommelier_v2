@@ -4,8 +4,10 @@
 // Calcul fait par la fonction SQL prix_restaurant_distributeur (migration 0096) ; jamais le prix QV ni la commission au restaurant.
 
 /** Expression SQL du prix restaurant (HTVA) ; alias du vin du distributeur, du distributeur et du fournisseur du restaurant. */
+// Un prix convenu avec le restaurant pour ce vin (vins du frigo connecté, LVQNEP) passe avant ce calcul.
 export const prixRestaurantSql = (v = 'v', d = 'd', f = 'f') =>
-  `prix_restaurant_distributeur(${v}.prix_catalogue, ${v}.prix_qv, ${d}.remise_qv, coalesce(${f}.remise, ${d}.remise_restaurant))`;
+  `coalesce((select px.prix from distributeur_vin_prix_restaurant px where px.distributeur_vin_id = ${v}.id and px.restaurant_id = ${f}.restaurant_id),
+    prix_restaurant_distributeur(${v}.prix_catalogue, ${v}.prix_qv, ${d}.remise_qv, coalesce(${f}.remise, ${d}.remise_restaurant)))`;
 
 /** Même calcul côté serveur (affichages du super-admin). */
 export function prixRestaurant(publie: number | null, qv: number | null, remiseQv: number | null, remise: number | null): number | null {
