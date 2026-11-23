@@ -7,6 +7,8 @@ export interface BouteilleWineMS {
 }
 export interface FrigoWineMS {
   id: string | number; nom: string; emplacement: string | null; capacite: number | null; statut: number | null; statutDepuis: string | null;
+  /** 0 en service, 1 au dépôt, 2 en maintenance ; absent avec une ancienne version de WineMS. */
+  cycle?: number | null;
   temperature: number | null; temperatureLe: string | null; bouteilles: BouteilleWineMS[];
 }
 export interface ClientWineMS { id: string | number; nom: string; delaiFacturationMinutes: number | null; frigos: FrigoWineMS[] }

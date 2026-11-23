@@ -27,8 +27,8 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
   const [{ id }, sp] = await Promise.all([params, searchParams]);
   const [[lien], frigosWineMS] = await Promise.all([
     requete<{ client: string | null }>('select winems_client_id as client from restaurant where id = $1', [id]),
-    requete<{ id: string; nom: string; statut: number | null; temperature: number | null; synchro_le: string; bouteilles: number }>(
-      `select f.id, f.nom, f.statut, f.temperature::float8 as temperature, f.synchro_le::text, (select count(*)::int from frigo_bouteille b where b.frigo_id = f.id) as bouteilles
+    requete<{ id: string; nom: string; statut: number | null; cycle: number | null; temperature: number | null; synchro_le: string; bouteilles: number }>(
+      `select f.id, f.nom, f.statut, f.cycle, f.temperature::float8 as temperature, f.synchro_le::text, (select count(*)::int from frigo_bouteille b where b.frigo_id = f.id) as bouteilles
          from frigo f where f.restaurant_id = $1 order by f.nom`, [id]),
   ]);
   // Clients WineMS lus en direct, pour les choisir par leur nom (l'application WineMS n'affiche pas leur numéro).
@@ -118,7 +118,7 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
         {winems.frigos.length > 0 ? (
           <ul className="petit" style={{ margin: 0, paddingLeft: 18 }}>
             {winems.frigos.map((f) => <li key={f.id}><b>{f.nom}</b> : {f.bouteilles} bouteille{f.bouteilles > 1 ? 's' : ''}
-              {f.temperature != null ? ` · ${String(f.temperature).replace('.', ',')} °C` : ''} · {f.statut === 0 ? 'connecté' : f.statut === 1 ? 'déconnecté' : f.statut === 2 ? 'en erreur' : 'état inconnu'}
+              {f.temperature != null ? ` · ${String(f.temperature).replace('.', ',')} °C` : ''} · {f.cycle === 2 ? 'en maintenance' : f.cycle === 1 ? 'au dépôt' : f.statut === 0 ? 'connecté' : f.statut === 1 ? 'déconnecté' : f.statut === 2 ? 'en erreur' : 'état inconnu'}
               <span className="discret"> · relu le {new Date(f.synchro_le).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</span></li>)}
           </ul>
         ) : <p className="petit discret" style={{ margin: 0 }}>{winems.client ? 'Aucun frigo lu pour ce client pour l’instant.' : 'Pas de frigo connecté pour ce restaurant.'}</p>}

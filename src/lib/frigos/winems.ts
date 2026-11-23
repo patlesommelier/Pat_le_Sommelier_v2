@@ -21,12 +21,12 @@ export async function synchroniserFrigos(): Promise<number> {
       const id = String(f.id);
       vus.push(id);
       await requete(
-        `insert into frigo (id, restaurant_id, nom, emplacement, capacite, statut, statut_depuis, temperature, temperature_le, synchro_le)
-         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, now())
+        `insert into frigo (id, restaurant_id, nom, emplacement, capacite, statut, statut_depuis, temperature, temperature_le, cycle, synchro_le)
+         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, now())
          on conflict (id) do update set restaurant_id = excluded.restaurant_id, nom = excluded.nom, emplacement = excluded.emplacement,
            capacite = excluded.capacite, statut = excluded.statut, statut_depuis = excluded.statut_depuis, temperature = excluded.temperature,
-           temperature_le = excluded.temperature_le, synchro_le = now()`,
-        [id, r.id, f.nom, f.emplacement, f.capacite, f.statut, f.statutDepuis, f.temperature, f.temperatureLe]);
+           temperature_le = excluded.temperature_le, cycle = excluded.cycle, synchro_le = now()`,
+        [id, r.id, f.nom, f.emplacement, f.capacite, f.statut, f.statutDepuis, f.temperature, f.temperatureLe, f.cycle ?? null]);
       // Bouteilles présentes : remplacées par celles que WineMS voit maintenant dans ce frigo.
       const tags = f.bouteilles.map((b) => String(b.id));
       await requete('delete from frigo_bouteille where frigo_id = $1 and not (id = any($2))', [id, tags]);
@@ -52,7 +52,7 @@ export async function synchroniserFrigos(): Promise<number> {
 }
 
 export interface FrigoRestaurant {
-  id: string; nom: string; emplacement: string | null; capacite: number | null; statut: number | null; statut_depuis: string | null;
+  id: string; nom: string; emplacement: string | null; capacite: number | null; statut: number | null; statut_depuis: string | null; cycle: number | null;
   temperature: number | null; temperature_le: string | null; synchro_le: string;
   vins: { nom: string; producteur: string | null; appellation: string | null; couleur: string | null; millesime: number | null;
     bouteilles: number; prix_achat: number | null; prix_conseille: number | null }[];
@@ -61,7 +61,7 @@ export interface FrigoRestaurant {
 /** Frigos d'un restaurant et leurs vins présents (une ligne par vin et millésime, avec le nombre de bouteilles). */
 export async function getFrigos(resto: string): Promise<FrigoRestaurant[]> {
   const frigos = await requete<Omit<FrigoRestaurant, 'vins'>>(
-    `select id, nom, emplacement, capacite, statut, statut_depuis::text, temperature::float8 as temperature, temperature_le::text, synchro_le::text
+    `select id, nom, emplacement, capacite, statut, statut_depuis::text, cycle, temperature::float8 as temperature, temperature_le::text, synchro_le::text
        from frigo where restaurant_id = $1 order by nom`, [resto]);
   if (!frigos.length) return [];
   const vins = await requete<FrigoRestaurant['vins'][number] & { frigo_id: string }>(
