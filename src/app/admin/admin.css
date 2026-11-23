@@ -746,3 +746,17 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .vignette-frigo { width: 40px; height: 52px; flex-shrink: 0; object-fit: contain; border-radius: 6px; background: var(--fond); }
 .vignette-frigo.vide { display: inline-flex; align-items: center; justify-content: center; color: var(--discret); }
 .badge-frigo { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 999px; background: var(--encre); color: #FFFFFF; font-size: 11px; font-weight: 700; vertical-align: middle; }
+/* Espace restaurant, façon HubSpot : cadre bordeaux (barre du haut, menus en blanc), le contenu dans une feuille claire arrondie. */
+.bo-avec-haut { background: var(--encre); }
+.bo-avec-haut .bo-haut { background: var(--encre); border-bottom: 0; padding-top: 12px; padding-bottom: 12px; }
+.bo-avec-haut .haut-onglet { color: #FFFFFF; font-size: 15px; }
+.bo-avec-haut .haut-onglet:hover, .bo-avec-haut .haut-onglet[aria-expanded='true'] { background: rgba(255, 255, 255, .14); }
+.bo-avec-haut .haut-onglet.actif { background: rgba(255, 255, 255, .22); color: #FFFFFF; }
+.bo-avec-haut .haut-onglet.cible-etape { outline-color: #FFFFFF; }
+.bo-avec-haut .haut-statut { color: #FFFFFF; }
+.bo-avec-haut .haut-resto[aria-current='page'] .haut-resto-logo { box-shadow: 0 0 0 2px var(--encre), 0 0 0 4px #FFFFFF; }
+.bo-avec-haut .haut-roue { color: #FFFFFF; border-color: rgba(255, 255, 255, .35); }
+.bo-avec-haut .haut-roue:hover, .bo-avec-haut .haut-roue[aria-expanded='true'] { background: rgba(255, 255, 255, .14); }
+.bo-avec-haut .haut-logo-qv { filter: brightness(0) invert(1); }
+.bo-avec-haut .bo-main { background: var(--fond); border-radius: 22px 22px 0 0; margin: 0 14px; width: auto; min-height: 100vh; }
+@media (max-width: 900px) { .bo-avec-haut .bo-main { margin: 0 6px; border-radius: 16px 16px 0 0; } }
