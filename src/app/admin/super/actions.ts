@@ -2,6 +2,7 @@
 /**
  * Actions de l'espace super-admin (Pat). Chacune vérifie d'abord que l'utilisateur est super-admin.
  */
+import { synchroniserFrigos, winemsConfigure } from '@/lib/frigos/winems';
 import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -144,6 +145,26 @@ export async function changerModeRestaurant(restaurantId: string, mode: string) 
   await requete(`update restaurant set mode = $2, carte_complete_le = case when $2 = 'actif' and origine = 'inscription' then coalesce(carte_complete_le, now()) else carte_complete_le end,
                   actif_le = case when $2 = 'actif' and mode <> 'actif' then now() else actif_le end
                   where id = $1`, [restaurantId, mode]);
+}
+
+/** Frigo connecté : le restaurant relié à son client WineMS (numéro du client), puis une synchronisation tout de suite. */
+export async function relierWineMS(restaurantId: string, f: FormData) {
+  await exigerAdmin();
+  const page = `/admin/super/restaurants/${restaurantId}`;
+  const client = (txt(f, 'winems_client_id') ?? '').trim();
+  if (client && !/^\d{1,12}$/.test(client)) redirect(avec(page, { erreur: 'Le numéro du client WineMS est un nombre (ex. 1).' }));
+  await requete('update restaurant set winems_client_id = $2 where id = $1', [restaurantId, client || null]);
+  if (!client) await requete('delete from frigo where restaurant_id = $1', [restaurantId]);
+  let message = client ? 'Restaurant relié à WineMS.' : 'Restaurant détaché de WineMS.';
+  if (client) {
+    try {
+      const n = await synchroniserFrigos();
+      message += winemsConfigure() ? ` Synchronisation faite (${n} frigo${n > 1 ? 's' : ''} à jour).` : ' WINEMS_API_URL et WINEMS_API_KEY ne sont pas encore réglées dans Coolify.';
+    } catch (e) { redirect(avec(page, { erreur: `${message} Mais la lecture de WineMS a échoué : ${(e as Error).message}` })); }
+  }
+  revalidatePath(page);
+  revalidatePath(`/admin/${restaurantId}`, 'layout');
+  redirect(avec(page, { ok: message }));
 }
 
 export async function changerStatutRestaurant(restaurantId: string, f: FormData) {

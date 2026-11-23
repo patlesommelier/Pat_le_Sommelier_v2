@@ -1,5 +1,6 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
+import { getFrigos } from '@/lib/frigos/winems';
 import { exigerCave } from '@/lib/admin/garde-cave';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
@@ -28,6 +29,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const { filtre, ajoute, commander, ok, erreur, ajout, distributeur, nouveau } = await searchParams;
   if (ajout === '1') redirect(`/admin/${resto}/trouver-vin`); // anciens liens (?ajout=1) : la page Ajouter un vin
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
+  const frigos = await getFrigos(resto);
   const auPanier = new Map(panier.map((l) => [l.vin_id, l.quantite]));
   const limite = r?.stock_limite_basse ?? 2;
   // Vins des distributeurs Quid Vinum : leur prix d'achat est celui du catalogue (prix public moins la remise du restaurant), non modifiable.
@@ -100,6 +102,43 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         <div className="stat"><span className="chiffre">{euros(valeur)}</span><span>valeur du stock HTVA{sansPrix ? ` (${sansPrix} vin${sansPrix > 1 ? 's' : ''} sans prix d’achat)` : ''}</span></div>
         <div className="stat"><span className="chiffre">{ouvertes.length}</span><span>{ouvertes.length > 1 ? 'commandes en cours' : 'commande en cours'}</span></div>
       </section>
+      {/* Frigo connecté (WineMS) : une section à part, gérée toute seule (les tags NFC des bouteilles), en consignation LVQNEP. */}
+      {frigos.map((f) => {
+        const total = f.vins.reduce((n, v) => n + v.bouteilles, 0);
+        const etat = f.statut === 0 ? ['Connecté', '#2E9E5B'] : f.statut === 1 ? ['Déconnecté', '#B3261E'] : f.statut === 2 ? ['En erreur', '#B3261E'] : ['État inconnu', '#9C9491'];
+        return (
+          <section key={f.id} className="carte-bo frigo-connecte pile" style={{ gap: 14 }} aria-labelledby={`frigo-${f.id}`}>
+            <div className="ligne-actions" style={{ justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div className="pile" style={{ gap: 4 }}>
+                <h2 id={`frigo-${f.id}`} style={{ margin: 0 }}>Frigo connecté · {f.nom}</h2>
+                <span className="petit discret">En consignation · LVQNEP{f.emplacement ? ` · ${f.emplacement}` : ''}</span>
+              </div>
+              <div className="ligne-actions" style={{ gap: 18 }}>
+                <span className="frigo-info"><span className="rond-mode" style={{ background: etat[1] }} aria-hidden="true" />{etat[0]}</span>
+                {f.temperature != null && <span className="frigo-info">{f.temperature.toLocaleString('fr-BE', { maximumFractionDigits: 1 })} °C</span>}
+                <span className="frigo-info"><b>{total}</b>{f.capacite ? ` / ${f.capacite}` : ''} bouteille{total > 1 ? 's' : ''}</span>
+              </div>
+            </div>
+            <p className="petit discret" style={{ margin: 0 }}>Géré automatiquement : chaque bouteille est reconnue par son tag dès qu’elle entre ou sort du frigo. Rien à compter à l’inventaire ; une bouteille sortie est facturée par LVQNEP en fin de mois.</p>
+            {f.vins.length ? (
+              <div className="tableau"><table>
+                <thead><tr><th>Vin</th><th>Millésime</th><th style={{ textAlign: 'right' }}>Bouteilles</th><th style={{ textAlign: 'right' }}>Achat HTVA</th><th style={{ textAlign: 'right' }}>Prix conseillé</th></tr></thead>
+                <tbody>
+                  {f.vins.map((v, i) => (
+                    <tr key={i}>
+                      <td><b>{v.nom}</b><br /><span className="petit discret">{[v.producteur, v.appellation].filter(Boolean).join(' · ')}</span></td>
+                      <td>{v.millesime ?? '—'}</td>
+                      <td style={{ textAlign: 'right' }}><b>{v.bouteilles}</b></td>
+                      <td style={{ textAlign: 'right' }}>{v.prix_achat != null ? euros(v.prix_achat) : '—'}</td>
+                      <td style={{ textAlign: 'right' }}>{v.prix_conseille != null ? euros(v.prix_conseille) : '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table></div>
+            ) : <p className="petit" style={{ margin: 0 }}>Le frigo est vide pour l’instant.</p>}
+          </section>
+        );
+      })}
       {/* Enregistrement automatique : chaque chiffre ou distributeur changé est enregistré en quittant le champ. */}
       <FormulaireAdmin action={enregistrerStocks.bind(null, resto)} className="pile" auto>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>

@@ -2,6 +2,7 @@
 // vérifiés toutes les heures.
 import { envoyerRelances } from './lib/inscription/relances';
 import { envoyerRappelsInventaire } from './lib/inscription/rappel-inventaire';
+import { synchroniserFrigos } from './lib/frigos/winems';
 
 const passer = () => {
   envoyerRelances()
@@ -14,3 +15,8 @@ const passer = () => {
 };
 setTimeout(passer, 5 * 60 * 1000); // après le démarrage (migrations faites, serveur prêt)
 setInterval(passer, 60 * 60 * 1000);
+
+// Frigos connectés WineMS : bouteilles présentes et état des frigos, relus toutes les 3 minutes (sans configuration : rien).
+const frigos = () => synchroniserFrigos().catch((e) => console.error('[frigos]', (e as Error).message));
+setTimeout(frigos, 60 * 1000);
+setInterval(frigos, 3 * 60 * 1000);

@@ -739,3 +739,7 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 /* Logo du restaurant dans la barre du haut : un peu plus grand. */
 .haut-resto-logo { height: 58px; min-width: 132px; max-width: 200px; padding: 0 14px; }
 .haut-resto-logo img { max-height: 44px; max-width: 172px; }
+/* Ma cave : frigo connecté (WineMS), section à part. */
+.frigo-connecte { border-color: var(--encre); }
+.frigo-info { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+.frigo-info .rond-mode { width: 10px; height: 10px; }

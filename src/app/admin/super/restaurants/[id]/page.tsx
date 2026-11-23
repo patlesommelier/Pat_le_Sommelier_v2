@@ -2,7 +2,7 @@
 // carte et accords (préparation), producteurs à valider, distributeurs (et verrou sur un seul distributeur Quid Vinum), suppression.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { changerStatutRestaurant, envoyerCarteComplete, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
+import { changerStatutRestaurant, envoyerCarteComplete, relierWineMS, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { CopierLien } from '@/components/admin/CopierLien';
 import { etapesRestaurant } from '../../../[resto]/etapes';
@@ -23,6 +23,13 @@ const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
 export default async function ConfigurationRestaurant({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string; lien?: string }> }) {
   await exigerAdmin();
   const [{ id }, sp] = await Promise.all([params, searchParams]);
+  const [[lien], frigosWineMS] = await Promise.all([
+    requete<{ client: string | null }>('select winems_client_id as client from restaurant where id = $1', [id]),
+    requete<{ id: string; nom: string; statut: number | null; temperature: number | null; synchro_le: string; bouteilles: number }>(
+      `select f.id, f.nom, f.statut, f.temperature::float8 as temperature, f.synchro_le::text, (select count(*)::int from frigo_bouteille b where b.frigo_id = f.id) as bouteilles
+         from frigo f where f.restaurant_id = $1 order by f.nom`, [id]),
+  ]);
+  const winems = { client: lien?.client ?? null, frigos: frigosWineMS };
   const [r] = await requete<{ id: string; nom: string; ville: string | null; statut: string; distributeur_qv_unique: string | null }>(
     'select id, nom, ville, statut, distributeur_qv_unique from restaurant where id = $1', [id]);
   if (!r) notFound();
@@ -77,6 +84,23 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
           {etapes.map((e, i) => <span key={e.href}>{i ? ' · ' : ''}<Link href={e.href}>{e.libelle}</Link> {e.etat === 'fait' ? '✓' : '…'}</span>)}</p>
         <p className="petit discret" style={{ margin: 0 }}>{x.acces} accès · {x.langues.map((l) => l.toUpperCase()).join('/')}{x.ajustements ? ` · ${x.ajustements} règle(s) ajustée(s)` : ''}</p>
         <CopierLien url={lienApp} titre="Lien de l’app des clients" />
+      </section>
+
+      {/* Frigo connecté WineMS (bouteilles en consignation LVQNEP) : le restaurant relié à son client WineMS. */}
+      <section className="carte-bo pile" style={{ gap: 12 }}>
+        <h2 style={{ margin: 0 }}>Frigo connecté (WineMS)</h2>
+        <form action={relierWineMS.bind(null, id)} className="ligne-actions" style={{ alignItems: 'flex-end' }}>
+          <div className="champ" style={{ margin: 0 }}><label htmlFor="winems_client_id">Numéro du client dans WineMS</label>
+            <input id="winems_client_id" name="winems_client_id" defaultValue={winems.client ?? ''} inputMode="numeric" placeholder="ex. 1" style={{ width: 140 }} /></div>
+          <button className="btn sec petit">{winems.client ? 'Enregistrer et synchroniser' : 'Relier'}</button>
+        </form>
+        {winems.frigos.length > 0 ? (
+          <ul className="petit" style={{ margin: 0, paddingLeft: 18 }}>
+            {winems.frigos.map((f) => <li key={f.id}><b>{f.nom}</b> : {f.bouteilles} bouteille{f.bouteilles > 1 ? 's' : ''}
+              {f.temperature != null ? ` · ${String(f.temperature).replace('.', ',')} °C` : ''} · {f.statut === 0 ? 'connecté' : f.statut === 1 ? 'déconnecté' : f.statut === 2 ? 'en erreur' : 'état inconnu'}
+              <span className="discret"> · relu le {new Date(f.synchro_le).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</span></li>)}
+          </ul>
+        ) : <p className="petit discret" style={{ margin: 0 }}>{winems.client ? 'Aucun frigo lu pour ce client pour l’instant.' : 'Pas de frigo connecté pour ce restaurant.'}</p>}
       </section>
 
       <section className="carte-bo pile">
