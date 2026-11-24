@@ -760,3 +760,22 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-avec-haut .haut-logo-qv { filter: brightness(0) invert(1); }
 .bo-avec-haut .bo-main { background: var(--fond); border-radius: 22px 22px 0 0; margin: 0 14px; width: auto; min-height: 100vh; }
 @media (max-width: 900px) { .bo-avec-haut .bo-main { margin: 0 6px; border-radius: 16px 16px 0 0; } }
+/* Onglets du haut : tous de la même largeur (celle du plus long), texte centré. */
+@media (min-width: 901px) {
+  .bo-avec-haut .haut-onglets { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; flex: 0 1 auto; gap: 6px; }
+  .bo-avec-haut .haut-onglet { width: 100%; justify-content: center; }
+}
+/* Chaque onglet est un bouton visible (même largeur) ; le logo du restaurant est posé sur une carte blanche :
+   lisible quelle que soit sa couleur, même foncée, sur le bordeaux. */
+.bo-avec-haut .haut-onglet { background: rgba(255, 255, 255, .08); }
+.bo-avec-haut .haut-onglet:hover, .bo-avec-haut .haut-onglet[aria-expanded='true'] { background: rgba(255, 255, 255, .16); }
+.bo-avec-haut .haut-onglet.actif { background: rgba(255, 255, 255, .26); }
+.bo-avec-haut .haut-resto { background: #FFFFFF; border-radius: 16px; padding: 6px 6px 5px; color: var(--texte) !important; }
+.bo-avec-haut .haut-statut { color: var(--texte); }
+.bo-avec-haut .haut-resto[aria-current='page'] .haut-resto-logo { box-shadow: none; }
+/* Boutons du menu et roue alignés sur le centre du logo (et non sur le bloc logo + statut) :
+   centre du logo = 6px de marge de la carte + 58px / 2 = 35px ; bouton de 44px → 35 − 22 = 13px. */
+@media (min-width: 901px) {
+  .bo-avec-haut .bo-haut { align-items: flex-start; }
+  .bo-avec-haut .haut-onglets, .bo-avec-haut .haut-droite { margin-top: 13px; }
+}
