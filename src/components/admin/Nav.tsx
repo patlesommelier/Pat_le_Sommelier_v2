@@ -421,7 +421,7 @@ function BulleEtape({ guide }: { guide: Guide }) {
         setPos({ top: r.bottom + window.scrollY + 12, left: Math.min(Math.max(16, r.left + window.scrollX), document.documentElement.clientWidth - largeur - 16), largeur, cote: 'dessous' });
         return;
       }
-      const nav = document.querySelector('.bo-nav')?.getBoundingClientRect();
+      const nav = document.querySelector('.bo-nav, .bo-gauche')?.getBoundingClientRect();
       if (!r || !r.height || !nav) { setPos(null); return; }
       const largeur = Math.min(260, window.innerWidth - 32);
       const aDroite = nav.right + largeur + 24 <= document.documentElement.clientWidth && nav.width < window.innerWidth * 0.6;
@@ -443,4 +443,70 @@ function BulleEtape({ guide }: { guide: Guide }) {
         : <span className="pile" style={{ gap: 4, textAlign: 'left' }}><small>Votre étape suivante</small><b>{guide.texte}</b><span className="post-it-suite">{pos.cote === 'droite' ? '← C’est ici' : '↑ C’est ici'}</span></span>}
       <span className="post-it-fermer" aria-hidden="true">✕</span>
     </button>, document.body);
+}
+
+/**
+ * Menu de gauche d'un restaurant, façon HubSpot : une colonne bordeaux avec le logo du restaurant (sur une carte blanche) et
+ * son statut, puis chaque partie (Cartes et menus, App client, Impression, Gestion de cave, Frigos connectés) et toutes ses
+ * entrées, toujours visibles ; en bas les paramètres, le compte et Quid Vinum.
+ */
+export function NavGauche({ accueil, etapes, resto, statut, compte }: {
+  accueil: string; etapes: Etape[];
+  resto: { nom: string; couleur: string; logo?: string | null };
+  statut?: { couleur: string; libelle: string } | null;
+  compte: { liens: { href: string; libelle: string }[]; email: string; deconnexion: React.ReactNode };
+}) {
+  const { chemin, courant, guide, suivante } = useMenu(accueil, etapes);
+  const [compteOuvert, setCompteOuvert] = useState(false);
+  // Sur le téléphone, le menu est replié derrière un bouton « Menu » ; il se replie en changeant de page.
+  const [menuOuvert, setMenuOuvert] = useState(false);
+  useEffect(() => { setMenuOuvert(false); setCompteOuvert(false); }, [chemin]);
+  return (
+    <aside className={`bo-gauche${menuOuvert ? ' menu-ouvert' : ''}`}>
+      <button type="button" className="gauche-bascule" aria-expanded={menuOuvert} onClick={() => setMenuOuvert((x) => !x)}>
+        <Icone nom="burger" /> Menu
+      </button>
+      <Link href={accueil} className="haut-resto gauche-resto" aria-label={`${resto.nom} : accueil de votre espace`} aria-current={courant(accueil)}>
+        {resto.logo
+          // eslint-disable-next-line @next/next/no-img-element
+          ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
+          : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
+        {statut && <span className="haut-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
+      </Link>
+      <nav aria-label="Menu principal" className="gauche-menu">
+        {onglets(etapes).map((o) => (
+          <div key={o.nom} className="gauche-partie">
+            <p className="gauche-titre">{o.nom}{o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}</p>
+            {o.etapes.map((e) => e.desactive ? (
+              <span key={e.href} className="bo-lien bo-lien-desactive section-desactivee" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
+                <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span><span>{e.libelle}</span>
+              </span>
+            ) : (
+              <Link key={e.href} href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)}
+                id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
+                <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span>
+                {e.libelle}
+                {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
+              </Link>
+            ))}
+          </div>
+        ))}
+      </nav>
+      <div className="gauche-bas">
+        <button type="button" className="bo-lien gauche-compte" aria-expanded={compteOuvert} onClick={() => setCompteOuvert((x) => !x)}>
+          <span className="bo-num" style={{ border: 0 }}><Icone nom="reglages" /></span>Paramètres et compte
+        </button>
+        {compteOuvert && (
+          <div className="gauche-compte-liens">
+            {compte.liens.map((l) => <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}>{l.libelle}</Link>)}
+            <span className="haut-email">{compte.email}</span>
+            {compte.deconnexion}
+          </div>
+        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/quidvinum/logo.png" alt="Quid Vinum" className="haut-logo-qv" />
+      </div>
+      {guide?.postIt && <BulleEtape guide={guide} />}
+    </aside>
+  );
 }

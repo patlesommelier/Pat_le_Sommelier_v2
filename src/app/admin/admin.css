@@ -779,3 +779,43 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .bo-avec-haut .bo-haut { align-items: flex-start; }
   .bo-avec-haut .haut-onglets, .bo-avec-haut .haut-droite { margin-top: 13px; }
 }
+/* Menu de gauche façon HubSpot (proposition) : colonne bordeaux, entrées en blanc, contenu dans une feuille claire arrondie. */
+.bo-avec-gauche { background: var(--encre); flex-wrap: wrap; align-items: flex-start; }
+/* Aperçu côté restaurant (super-admin) : le bandeau sur toute la largeur, au-dessus du menu et du contenu. */
+.bo-avec-gauche > .bandeau-vue { flex: 0 0 100%; }
+.bo-gauche { position: sticky; top: 0; flex: 0 0 284px; height: 100vh; overflow-y: auto; box-sizing: border-box; padding: 18px 14px 16px;
+  display: flex; flex-direction: column; gap: 18px; color: #FFFFFF; }
+.bo-gauche .gauche-resto { align-self: center; background: #FFFFFF; border-radius: 16px; padding: 6px 6px 5px; color: var(--texte) !important; }
+.bo-gauche .haut-statut { color: var(--texte); }
+.gauche-menu { display: flex; flex-direction: column; gap: 12px; }
+.gauche-partie { display: flex; flex-direction: column; gap: 2px; }
+.gauche-titre { margin: 0 0 4px; padding: 0 12px; font-size: 12px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: rgba(255, 255, 255, .62); display: flex; align-items: center; gap: 8px; }
+.bo-gauche .bo-lien { color: #FFFFFF !important; min-height: 36px; padding: 5px 12px; font-size: 14.5px; }
+.bo-gauche .bo-lien .bo-num { color: rgba(255, 255, 255, .85); background: none; }
+.bo-gauche .bo-lien:hover { background: rgba(255, 255, 255, .12); }
+.bo-gauche .bo-lien[aria-current='page'] { background: #FFFFFF; color: var(--encre) !important; font-weight: 700; }
+.bo-gauche .bo-lien[aria-current='page'] .bo-num { color: var(--encre); }
+.bo-gauche .bo-lien-desactive { opacity: .5; }
+.bo-gauche .cible-etape { outline-color: #FFFFFF; }
+.gauche-bas { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+.gauche-compte { width: 100%; background: none; border: 0; cursor: pointer; font: inherit; text-align: left; }
+.gauche-compte-liens { background: #FFFFFF; border-radius: 14px; padding: 6px; display: flex; flex-direction: column; gap: 2px; }
+.gauche-compte-liens .bo-lien { color: var(--texte) !important; }
+.gauche-compte-liens .bo-lien:hover { background: var(--survol); }
+.gauche-bas .haut-logo-qv { align-self: center; filter: brightness(0) invert(1); margin-top: 4px; }
+.bo-avec-gauche .bo-main { flex: 1 1 0; min-width: 0; min-height: calc(100vh - 12px); margin: 12px 12px 0 0; background: var(--fond); border-radius: 22px 22px 0 0; }
+@media (max-width: 900px) {
+  .bo-avec-gauche { flex-direction: column; align-items: stretch; }
+  .bo-gauche { position: static; height: auto; flex-basis: auto; }
+  .bo-avec-gauche .bo-main { margin: 0 6px; border-radius: 16px 16px 0 0; }
+}
+.gauche-bascule { display: none; }
+@media (max-width: 900px) {
+  .bo-gauche { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; }
+  .bo-gauche .gauche-resto { order: 1; align-self: auto; }
+  .gauche-bascule { order: 2; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 12px; background: rgba(255, 255, 255, .08); color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer; }
+  .bo-gauche .gauche-menu, .bo-gauche .gauche-bas { order: 3; flex-basis: 100%; display: none; }
+  .bo-gauche.menu-ouvert .gauche-menu, .bo-gauche.menu-ouvert .gauche-bas { display: flex; }
+  .gauche-bas .haut-logo-qv { display: none; }
+}
