@@ -789,7 +789,7 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-gauche .haut-statut { color: var(--texte); }
 .gauche-menu { display: flex; flex-direction: column; gap: 12px; }
 .gauche-partie { display: flex; flex-direction: column; gap: 2px; }
-.gauche-titre { margin: 0 0 4px; padding: 0 12px; font-size: 12px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: rgba(255, 255, 255, .62); display: flex; align-items: center; gap: 8px; }
+.gauche-titre { margin: 0 0 4px; padding: 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: #F7C9BE; display: flex; align-items: center; gap: 8px; }
 .bo-gauche .bo-lien { color: #FFFFFF !important; min-height: 36px; padding: 5px 12px; font-size: 14.5px; }
 .bo-gauche .bo-lien .bo-num { color: rgba(255, 255, 255, .85); background: none; }
 .bo-gauche .bo-lien:hover { background: rgba(255, 255, 255, .12); }
