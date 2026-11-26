@@ -35,15 +35,10 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
     return (
       <div className="bo bo-avec-gauche">
         {vue}
-        <NavGauche accueil={accueil} etapes={etapes} resto={resto} statut={m ? { couleur: m.couleur, libelle: m.libelle } : null} compte={compte} />
+        <NavGauche accueil={accueil} etapes={etapes} resto={resto} compte={compte} />
         <main className="bo-main">
-          {/* Logo du restaurant, en haut à droite de la page (son nom et son statut sont en haut du menu). */}
-          <Link href={accueil} className="haut-resto feuille-resto" aria-label={`${resto.nom} : accueil de votre espace`}>
-            {resto.logo
-              // eslint-disable-next-line @next/next/no-img-element
-              ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
-              : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
-          </Link>
+          {/* Statut du restaurant (Actif, Inscription…), en haut à droite de la page ; son logo est en haut du menu. */}
+          {m && <span className="gauche-statut feuille-statut"><span className="rond-mode" style={{ background: m.couleur }} aria-hidden="true" />{m.libelle}</span>}
           {children}
         </main>
       </div>

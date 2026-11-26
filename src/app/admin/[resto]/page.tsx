@@ -5,6 +5,7 @@ import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
 import { Entete } from '@/components/admin/Ui';
 import { aVerifierLecture, getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { caveVisible, prochaineEtape } from '@/lib/admin/prochaine-etape';
+import { ChiffresCarte, ChiffresCave } from '@/components/admin/ChiffresRestaurant';
 import { commandesAVoir, stockBas } from '@/lib/admin/stocks';
 import { getVinsBO, type RestaurantBO, type Resume } from '@/lib/admin/donnees';
 import { regrouperVins } from './carte/etats';
@@ -58,6 +59,9 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
           ))}
         </div>
       </div>
+      {/* Les chiffres clés de la carte et de la cave (autrefois en haut de leurs pages). */}
+      <ChiffresCarte resto={r.id} />
+      {caveVisible(r) && <ChiffresCave resto={r.id} />}
       </>}
 
 

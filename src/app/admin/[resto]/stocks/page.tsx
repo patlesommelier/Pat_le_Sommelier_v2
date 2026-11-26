@@ -16,7 +16,7 @@ import { Entete, Message } from '@/components/admin/Ui';
 import { requete } from '@/lib/db';
 import { euros } from '@/lib/bon-commande';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
-import { getCommandes, getFournisseurs, getPanier, getPrixAchat, stockBas } from '@/lib/admin/stocks';
+import { getFournisseurs, getPanier, getPrixAchat, stockBas } from '@/lib/admin/stocks';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 import { VignetteVin } from '@/components/admin/VignetteVin';
 
@@ -29,7 +29,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   if (!u.admin) await requete('update restaurant set cave_annonce_fermee_le = now() where id = $1 and cave_annonce_fermee_le is null', [resto]);
   const { filtre, ajoute, commander, ok, erreur, ajout, distributeur, nouveau } = await searchParams;
   if (ajout === '1') redirect(`/admin/${resto}/trouver-vin`); // anciens liens (?ajout=1) : la page Ajouter un vin
-  const [tousLesVins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
+  const [tousLesVins, r, fournisseurs, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
   // Vins du frigo connecté : montrés dans leur frigo, plus bas (stock suivi par WineMS), pas dans ce tableau.
   const vins = tousLesVins.filter((v) => !v.frigo);
   const frigos = await getFrigos(resto);
@@ -67,10 +67,6 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   }
   // Liste filtrée (stock bas, un distributeur) : on ne déplace pas les vins (le classement ne verrait qu'une partie de la cave).
   const fixe = filtre === 'bas' || Boolean(filtreDistributeur);
-  const enCommande = groupes.reduce((n, g) => n + g.principal.en_commande, 0);
-  // Valeur du stock au prix d'achat HTVA (vins sans prix d'achat : comptés à part).
-  const valeur = groupes.reduce((n, g) => n + (achats.get(g.principal.id) ?? 0) * g.principal.stock, 0);
-  const sansPrix = groupes.filter((g) => !achats.has(g.principal.id)).length;
   // Vin qui vient d'être ajouté depuis le catalogue d'un distributeur : la commande est proposée.
   const [ajouteChez] = ajoute && commander ? await requete<{ libelle: string; fournisseur_id: string; distributeur: string; prix_achat: number | null }>(
     `select v.libelle, v.fournisseur_id, f.nom as distributeur, v.prix_achat::float8 as prix_achat from vin_carte v join fournisseur f on f.id = v.fournisseur_id
@@ -97,13 +93,6 @@ export default async function Stocks({ params, searchParams }: { params: Promise
           <Link href={`/admin/${resto}/stocks`} className="btn fantome petit">Fermer</Link>
         </div>
       )}
-      <section className="stats" aria-label="Résumé des stocks">
-        <div className="stat"><span className="chiffre" style={{ color: bas.length ? 'var(--rouge)' : undefined }}>{bas.length}</span><span>{bas.length > 1 ? 'vins en stock bas' : 'vin en stock bas'}</span></div>
-        <div className="stat"><span className="chiffre">{groupes.reduce((n, g) => n + g.principal.stock, 0).toLocaleString('fr-BE')}</span><span>bouteilles en stock</span></div>
-        <div className="stat"><span className="chiffre">{enCommande}</span><span>bouteilles en commande</span></div>
-        <div className="stat"><span className="chiffre">{euros(valeur)}</span><span>valeur du stock HTVA{sansPrix ? ` (${sansPrix} vin${sansPrix > 1 ? 's' : ''} sans prix d’achat)` : ''}</span></div>
-        <div className="stat"><span className="chiffre">{ouvertes.length}</span><span>{ouvertes.length > 1 ? 'commandes en cours' : 'commande en cours'}</span></div>
-      </section>
       {/* Enregistrement automatique : chaque chiffre ou distributeur changé est enregistré en quittant le champ. */}
       <FormulaireAdmin action={enregistrerStocks.bind(null, resto)} className="pile" auto>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>

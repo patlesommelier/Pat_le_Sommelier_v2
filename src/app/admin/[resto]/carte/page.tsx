@@ -60,13 +60,6 @@ export default async function Carte({ params, searchParams }: { params: Promise<
       {choisi && sp.ok
         ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />
         : <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />}
-      {/* Chiffres clés de la carte */}
-      <section className="stats" aria-label="Résumé de la carte">
-        <div className="stat"><span className="chiffre">{tousGroupes.length}</span><span>vins sur la carte</span></div>
-        <div className="stat"><span className="chiffre">{tousGroupes.filter((g) => g.contenances.some((x) => /verre/i.test(x)) || g.tous.some((x) => x.prix_verre != null)).length}</span><span>servis au verre</span></div>
-        <div className="stat"><span className="chiffre">{tousGroupes.filter((g) => g.tous.some((x) => x.coup_de_coeur)).length}</span><span>coups de cœur</span></div>
-        <div className="stat"><span className="chiffre" style={{ color: sansEtiquette ? 'var(--fuchsia)' : undefined }}>{sansEtiquette}</span><span>{sansEtiquette ? 'étiquettes à ajouter : Pat les cherche, vous pouvez envoyer vos photos' : 'étiquette à ajouter'}</span></div>
-      </section>
       {/* Super-admin : recherche Wine Labs (crédits), sur sa propre ligne */}
       {wineLabs && (
         <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>

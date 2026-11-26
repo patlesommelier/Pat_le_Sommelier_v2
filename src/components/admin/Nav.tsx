@@ -450,10 +450,9 @@ function BulleEtape({ guide }: { guide: Guide }) {
  * son statut, puis chaque partie (Cartes et menus, App client, Impression, Gestion de cave, Frigos connectés) et toutes ses
  * entrées, toujours visibles ; en bas les paramètres, le compte et Quid Vinum.
  */
-export function NavGauche({ accueil, etapes, resto, statut, compte }: {
+export function NavGauche({ accueil, etapes, resto, compte }: {
   accueil: string; etapes: Etape[];
-  resto: { nom: string };
-  statut?: { couleur: string; libelle: string } | null;
+  resto: { nom: string; couleur: string; logo?: string | null };
   compte: { liens: { href: string; libelle: string }[]; email: string; deconnexion: React.ReactNode };
 }) {
   const { chemin, courant, guide, suivante } = useMenu(accueil, etapes);
@@ -466,12 +465,20 @@ export function NavGauche({ accueil, etapes, resto, statut, compte }: {
       <button type="button" className="gauche-bascule" aria-expanded={menuOuvert} onClick={() => setMenuOuvert((x) => !x)}>
         <Icone nom="burger" /> Menu
       </button>
-      {/* En haut de la colonne : le nom du restaurant et son statut (vers l'accueil) ; son logo est en haut à droite de la page. */}
-      <Link href={accueil} className="gauche-resto-nom" aria-current={courant(accueil)}>
-        <b>{resto.nom}</b>
-        {statut && <span className="gauche-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
+      {/* En haut de la colonne : le logo du restaurant (vers l'accueil) ; son statut est en haut à droite de la page. */}
+      <Link href={accueil} className="haut-resto gauche-resto" aria-label={`${resto.nom} : accueil de votre espace`}>
+        {resto.logo
+          // eslint-disable-next-line @next/next/no-img-element
+          ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
+          : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
       </Link>
       <nav aria-label="Menu principal" className="gauche-menu">
+        {/* La page d'accueil du restaurant (ses chiffres clés), sous son nom, au-dessus des parties. */}
+        <div className="gauche-partie">
+          <Link href={accueil} className="bo-lien" aria-current={courant(accueil)}>
+            <span className="bo-num" style={{ border: 0 }}><Icone nom="home" /></span>{resto.nom}
+          </Link>
+        </div>
         {onglets(etapes).map((o) => (
           <div key={o.nom} className="gauche-partie">
             <p className="gauche-titre">{o.nom}{o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}</p>

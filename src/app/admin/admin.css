@@ -843,3 +843,7 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .gauche-bas .gauche-logo-qv { align-self: center; filter: brightness(0) invert(1); margin-top: 4px; }
 .bo-avec-gauche .feuille-resto { padding: 4px; }
 @media (max-width: 900px) { .bo-gauche .gauche-resto-nom { order: 1; padding: 0; } }
+/* Logo du restaurant en haut du menu (petit, sur sa carte blanche) ; statut en pastille en haut à droite de la page. */
+.bo-gauche .gauche-resto { align-self: flex-start; margin-left: 8px; padding: 4px; }
+.bo-avec-gauche .feuille-statut { align-self: flex-end; margin-bottom: -12px; border: 1px solid var(--ligne); padding: 5px 12px; font-size: 13.5px; }
+@media (max-width: 900px) { .bo-gauche .gauche-resto { order: 1; margin-left: 0; } }
