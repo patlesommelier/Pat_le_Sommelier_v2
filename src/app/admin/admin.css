@@ -847,3 +847,10 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-gauche .gauche-resto { align-self: flex-start; margin-left: 8px; padding: 4px; }
 .bo-avec-gauche .feuille-statut { align-self: flex-end; margin-bottom: -12px; border: 1px solid var(--ligne); padding: 5px 12px; font-size: 13.5px; }
 @media (max-width: 900px) { .bo-gauche .gauche-resto { order: 1; margin-left: 0; } }
+/* Parties du menu repliables : titre cliquable avec une flèche. */
+.bo-gauche button.gauche-titre { width: 100%; background: none; border: 0; cursor: pointer; font-family: inherit; text-align: left; padding: 8px 12px; margin: 0; border-radius: 10px; }
+.bo-gauche button.gauche-titre:hover { background: rgba(255, 255, 255, .08); }
+.gauche-titre .fleche-partie { margin-left: auto; transition: transform .2s; }
+.gauche-titre[aria-expanded='false'] .fleche-partie { transform: rotate(-90deg); }
+.bo-gauche .gauche-menu { gap: 4px; }
+.bo-gauche .gauche-partie + .gauche-partie { margin-top: 2px; }

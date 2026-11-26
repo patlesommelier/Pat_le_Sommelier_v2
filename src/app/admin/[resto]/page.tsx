@@ -28,7 +28,6 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
   const miseEnRoute = !accueil && r.origine === 'inscription' && !r.premier_client_le;
   // « Votre prochaine étape » : ni pendant la mise en route (ses 3 pas guident déjà), ni avec l'annonce de la cave.
   const etape = !accueil && !miseEnRoute ? await etapeDuRestaurant(r, s, u.admin) : null;
-  const resume: [number, string, string][] = [[s.plats, 'plat', 'plats au menu'], [s.vins, 'vin', 'vins à la carte'], [s.accords, 'accord', 'accords mets-vins']];
   const vin = jour && titreCarte(jour.vin);
   return (
     <>
@@ -46,19 +45,6 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
           <Link href={`/admin/${r.id}${etape.chemin}`} className="btn">{etape.bouton} →</Link>
         </section>
       )}
-      {/* Résumé général du restaurant */}
-      <div className="carte-bo sticker" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat/pat-attable-rouge.svg" alt="" width={166} height={130} />
-        <div style={{ flex: '1 1 380px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 14 }}>
-          {resume.map(([n, un, plusieurs]) => (
-            <div key={un} style={{ padding: '16px 18px', borderRadius: 14, background: 'var(--fond)', border: '1px solid var(--ligne)' }}>
-              <div className="chiffre" style={{ fontSize: 36, lineHeight: 1.1 }}>{n.toLocaleString('fr-BE')}</div>
-              <div style={{ fontSize: 15 }}>{n > 1 ? plusieurs : plusieurs.replace(/^\S+/, un)}</div>
-            </div>
-          ))}
-        </div>
-      </div>
       {/* Les chiffres clés de la carte et de la cave (autrefois en haut de leurs pages). */}
       <ChiffresCarte resto={r.id} />
       {caveVisible(r) && <ChiffresCave resto={r.id} />}

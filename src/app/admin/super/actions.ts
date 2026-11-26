@@ -55,7 +55,7 @@ export async function testerEmail() {
 export async function voirCommeRestaurant(restaurantId: string) {
   await exigerAdmin();
   (await cookies()).set(COOKIE_VUE, restaurantId, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 8 * 3600 });
-  redirect(`/admin/${restaurantId}/stocks`); // on arrive toujours sur Ma cave
+  redirect(`/admin/${restaurantId}`); // on arrive sur la page d'accueil du restaurant (ses chiffres clés)
 }
 
 export async function quitterVueRestaurant() {

@@ -459,6 +459,9 @@ export function NavGauche({ accueil, etapes, resto, compte }: {
   const [compteOuvert, setCompteOuvert] = useState(false);
   // Sur le téléphone, le menu est replié derrière un bouton « Menu » ; il se replie en changeant de page.
   const [menuOuvert, setMenuOuvert] = useState(false);
+  // Parties repliées par défaut, sauf celle de la page ouverte (ou de l'étape montrée) ; le choix de l'utilisateur l'emporte.
+  const [ouverts, setOuverts] = useState<Record<string, boolean>>({});
+  const ouverte = (o: { nom: string; etapes: Etape[] }) => ouverts[o.nom] ?? o.etapes.some((e) => courant(e.href) || e.href === suivante);
   useEffect(() => { setMenuOuvert(false); setCompteOuvert(false); }, [chemin]);
   return (
     <aside className={`bo-gauche${menuOuvert ? ' menu-ouvert' : ''}`}>
@@ -481,8 +484,13 @@ export function NavGauche({ accueil, etapes, resto, compte }: {
         </div>
         {onglets(etapes).map((o) => (
           <div key={o.nom} className="gauche-partie">
-            <p className="gauche-titre">{o.nom}{o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}</p>
-            {o.etapes.map((e) => e.desactive ? (
+            {/* Chaque partie se replie : ouverte d'office quand elle contient la page ouverte (ou l'étape montrée). */}
+            <button type="button" className="gauche-titre" aria-expanded={ouverte(o)} onClick={() => setOuverts((x) => ({ ...x, [o.nom]: !ouverte(o) }))}>
+              {o.nom}{o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}
+              {!ouverte(o) && o.etapes.some((e) => (e.notif?.n ?? 0) > 0) && <span className="point-notif" aria-label="Nouveauté" />}
+              <svg className="fleche-partie" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            {ouverte(o) && o.etapes.map((e) => e.desactive ? (
               <span key={e.href} className="bo-lien bo-lien-desactive section-desactivee" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
                 <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span><span>{e.libelle}</span>
               </span>
