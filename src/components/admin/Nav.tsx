@@ -452,7 +452,7 @@ function BulleEtape({ guide }: { guide: Guide }) {
  */
 export function NavGauche({ accueil, etapes, resto, statut, compte }: {
   accueil: string; etapes: Etape[];
-  resto: { nom: string; couleur: string; logo?: string | null };
+  resto: { nom: string };
   statut?: { couleur: string; libelle: string } | null;
   compte: { liens: { href: string; libelle: string }[]; email: string; deconnexion: React.ReactNode };
 }) {
@@ -466,12 +466,10 @@ export function NavGauche({ accueil, etapes, resto, statut, compte }: {
       <button type="button" className="gauche-bascule" aria-expanded={menuOuvert} onClick={() => setMenuOuvert((x) => !x)}>
         <Icone nom="burger" /> Menu
       </button>
-      <Link href={accueil} className="haut-resto gauche-resto" aria-label={`${resto.nom} : accueil de votre espace`} aria-current={courant(accueil)}>
-        {resto.logo
-          // eslint-disable-next-line @next/next/no-img-element
-          ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
-          : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
-        {statut && <span className="haut-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
+      {/* En haut de la colonne : le nom du restaurant et son statut (vers l'accueil) ; son logo est en haut à droite de la page. */}
+      <Link href={accueil} className="gauche-resto-nom" aria-current={courant(accueil)}>
+        <b>{resto.nom}</b>
+        {statut && <span className="gauche-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
       </Link>
       <nav aria-label="Menu principal" className="gauche-menu">
         {onglets(etapes).map((o) => (
@@ -504,7 +502,7 @@ export function NavGauche({ accueil, etapes, resto, statut, compte }: {
           </div>
         )}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/quidvinum/logo.png" alt="Quid Vinum" className="haut-logo-qv" />
+        <img src="/quidvinum/logo.png" alt="Quid Vinum" className="haut-logo-qv gauche-logo-qv" />
       </div>
       {guide?.postIt && <BulleEtape guide={guide} />}
     </aside>

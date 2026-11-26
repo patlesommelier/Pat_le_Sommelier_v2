@@ -1,9 +1,13 @@
 import { Icone } from './Icone';
 
-export function Entete({ titre, texte, children }: { titre: string; texte?: string; children?: React.ReactNode }) {
+/**
+ * Titre d'une page. Dans l'espace d'un restaurant, le texte d'explication sous le titre n'est pas montré ;
+ * `infos` le garde quand il porte des informations (distributeur, total d'une commande…).
+ */
+export function Entete({ titre, texte, infos, children }: { titre: string; texte?: string; infos?: boolean; children?: React.ReactNode }) {
   return (
     <header className="bo-entete">
-      <div><h1>{titre}</h1>{texte && <p>{texte}</p>}</div>
+      <div><h1>{titre}</h1>{texte && <p className={infos ? 'entete-infos' : undefined}>{texte}</p>}</div>
       {children && <div className="ligne-actions">{children}</div>}
     </header>
   );

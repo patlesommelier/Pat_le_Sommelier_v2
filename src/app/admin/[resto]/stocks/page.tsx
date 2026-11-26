@@ -90,7 +90,6 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
       {nouveau && (() => { const n = vins.find((x) => x.id === nouveau); return n ? (
         <p className="message ok" style={{ margin: 0 }}>« {n.libelle} » est dans Ma cave (en évidence ci-dessous) : indiquez le nombre de bouteilles et cliquez sur + 🛒 pour le commander.</p>) : null; })()}
-      <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche : description, stock, commande, suppression. Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
           <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Mettez-le au panier pour le commander :</span>

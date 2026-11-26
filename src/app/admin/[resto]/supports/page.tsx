@@ -27,10 +27,6 @@ export default async function Supports({ params, searchParams }: { params: Promi
       <Entete titre="Imprimer la carte des vins" texte="La carte des vins à imprimer ou à enregistrer en PDF : couverture avec votre logo et le QR code, puis chaque vin présenté par Pat en trois à quatre lignes.">
         <BoutonCarteImprimee resto={resto} />
       </Entete>
-      <div className="carte-bo pile" style={{ gap: 6, padding: '16px 20px' }}>
-        <strong>Format, couleurs et contenu se règlent sur la carte elle-même</strong>
-        <span className="discret">A4 ou A5, couleur du restaurant ou noir et blanc, ordre de l’app ou par prix ; présentations, producteurs et millésimes, couverture, rappel « Demandez à Pat ». Puis « Imprimer / Enregistrer en PDF ». Les présentations manquantes sont écrites par Pat avant l’ouverture.</span>
-      </div>
 
       <section className="pile" style={{ gap: 14 }}>
         <div>

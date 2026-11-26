@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { seDeconnecter } from './actions';
 import { quitterVueRestaurant } from './super/actions';
-import { FilAriane, NavGauche, NavLiens, type Etape } from '@/components/admin/Nav';
+import { NavGauche, NavLiens, type Etape } from '@/components/admin/Nav';
 import type { Utilisateur } from '@/lib/admin/auth';
 import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
@@ -37,7 +37,13 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
         {vue}
         <NavGauche accueil={accueil} etapes={etapes} resto={resto} statut={m ? { couleur: m.couleur, libelle: m.libelle } : null} compte={compte} />
         <main className="bo-main">
-          <FilAriane accueil={accueil} etapes={etapes} />
+          {/* Logo du restaurant, en haut à droite de la page (son nom et son statut sont en haut du menu). */}
+          <Link href={accueil} className="haut-resto feuille-resto" aria-label={`${resto.nom} : accueil de votre espace`}>
+            {resto.logo
+              // eslint-disable-next-line @next/next/no-img-element
+              ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
+              : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
+          </Link>
           {children}
         </main>
       </div>

@@ -819,3 +819,27 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .bo-gauche.menu-ouvert .gauche-menu, .bo-gauche.menu-ouvert .gauche-bas { display: flex; }
   .gauche-bas .haut-logo-qv { display: none; }
 }
+/* Espace restaurant : pas de texte d'explication sous le titre des pages (sauf informations, ex. une commande) ; logo plus petit. */
+.bo-avec-gauche .bo-entete > div > p:not(.entete-infos) { display: none; }
+.bo-gauche .haut-resto-logo { height: 44px; min-width: 104px; max-width: 160px; padding: 0 10px; }
+.bo-gauche .haut-resto-logo img { max-height: 32px; max-width: 140px; }
+/* Logo du restaurant en haut à droite de la feuille ; Quid Vinum en haut de la colonne. */
+.bo-avec-gauche .feuille-resto { align-self: flex-end; margin-bottom: -10px; background: #FFFFFF; border: 1px solid var(--ligne); border-radius: 14px; padding: 5px 5px 4px; }
+.gauche-qv { display: flex; justify-content: center; padding: 6px 0 4px; border-radius: 12px; text-decoration: none; }
+.gauche-qv .haut-logo-qv { filter: brightness(0) invert(1); height: 34px; }
+/* Entrée surlignée : même graisse que les autres, pour ne pas passer sur deux lignes. */
+.bo-gauche .bo-lien, .bo-gauche .bo-lien[aria-current='page'] { font-weight: 500; }
+@media (max-width: 900px) {
+  .bo-gauche .gauche-qv { order: 1; }
+  .gauche-qv .haut-logo-qv { display: block; height: 30px; }
+}
+.feuille-resto .haut-resto-logo { height: 44px; min-width: 104px; max-width: 160px; padding: 0 10px; }
+.feuille-resto .haut-resto-logo img { max-height: 32px; max-width: 140px; }
+/* Haut du menu : nom du restaurant et statut ; Quid Vinum en bas. */
+.gauche-resto-nom { display: flex; flex-direction: column; gap: 6px; padding: 8px 12px 4px; text-decoration: none; color: #FFFFFF !important; }
+.gauche-resto-nom b { font-size: 20px; font-weight: 800; line-height: 1.15; }
+.gauche-statut { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; color: var(--texte); font-size: 12.5px; font-weight: 700; }
+.gauche-statut .rond-mode { width: 9px; height: 9px; }
+.gauche-bas .gauche-logo-qv { align-self: center; filter: brightness(0) invert(1); margin-top: 4px; }
+.bo-avec-gauche .feuille-resto { padding: 4px; }
+@media (max-width: 900px) { .bo-gauche .gauche-resto-nom { order: 1; padding: 0; } }

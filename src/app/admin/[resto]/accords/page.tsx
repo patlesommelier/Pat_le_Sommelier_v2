@@ -134,7 +134,6 @@ export default async function Accords({ params, searchParams }: { params: Promis
           <form action={relancerPlatsSansAccord.bind(null, resto)}><button className="btn sec petit"><Icone nom="reset" taille={18} />Relancer les plats sans accord</button></form>
         </div>
       )}
-      <p className="discret" style={{ margin: '4px 0 -8px', fontSize: 15 }}>① Choisissez un plat à gauche — ② ses vins s’affichent à droite.</p>
       <div className="accords-relies">
         <nav aria-label="Plats" className="onglets-plats">
           <span className="surtitre" style={{ padding: '0 14px 6px' }}>① Vos plats</span>
