@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { seDeconnecter } from './actions';
 import { quitterVueRestaurant } from './super/actions';
-import { NavGauche, NavLiens, type Etape } from '@/components/admin/Nav';
+import { NavHaut, NavLiens, type Etape } from '@/components/admin/Nav';
 import type { Utilisateur } from '@/lib/admin/auth';
 import { MODES, type ModeRestaurant } from '@/lib/admin/prochaine-etape';
 
@@ -22,7 +22,7 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
       <button type="submit">Quitter l’aperçu</button>
     </form>
   );
-  // Espace d'un restaurant : menu de gauche (parties et toutes leurs entrées), contenu dans une feuille claire.
+  // Espace d'un restaurant : menu en haut (onglets et menus déroulants), toute la largeur pour le contenu.
   if (resto) {
     const m = mode ? MODES[mode as ModeRestaurant] : undefined;
     const compte = {
@@ -31,16 +31,12 @@ export function Coque({ utilisateur, resto, etapes, mode, children }: {
       email: utilisateur.email,
       deconnexion: <form action={seDeconnecter}><button type="submit" className="btn fantome petit">Se déconnecter</button></form>,
     };
-    // Menu de gauche façon HubSpot : colonne bordeaux, toutes les entrées visibles, contenu dans une feuille claire.
+    // Menu en haut (onglets et menus déroulants) ; le contenu dans une feuille claire arrondie.
     return (
-      <div className="bo bo-avec-gauche">
+      <div className="bo bo-avec-haut">
         {vue}
-        <NavGauche accueil={accueil} etapes={etapes} resto={resto} compte={compte} />
-        <main className="bo-main">
-          {/* Statut du restaurant (Actif, Inscription…), en haut à droite de la page ; son logo est en haut du menu. */}
-          {m && <span className="gauche-statut feuille-statut"><span className="rond-mode" style={{ background: m.couleur }} aria-hidden="true" />{m.libelle}</span>}
-          {children}
-        </main>
+        <NavHaut accueil={accueil} etapes={etapes} resto={resto} statut={m ? { couleur: m.couleur, libelle: m.libelle } : null} compte={compte} />
+        <main className="bo-main">{children}</main>
       </div>
     );
   }

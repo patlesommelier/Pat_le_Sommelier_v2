@@ -212,6 +212,29 @@ export function NavHaut({ accueil, etapes, resto, statut, compte }: {
   const { chemin, courant, guide, suivante } = useMenu(accueil, etapes);
   const [ouvert, setOuvert] = useState<string | null>(null);
   const barre = useRef<HTMLElement>(null);
+  // Les onglets (tous de la largeur du plus long) ne tiennent pas à côté du logo et des paramètres : ils passent sur une
+  // seconde ligne, sous le logo. Mesuré sur la largeur naturelle des libellés, pour ne pas basculer d'une ligne à l'autre.
+  const [dessous, setDessous] = useState(false);
+  useEffect(() => {
+    const h = barre.current;
+    if (!h) return;
+    const mesurer = () => {
+      if (window.innerWidth <= 900) { setDessous(false); return; }
+      const onglets = [...h.querySelectorAll<HTMLElement>('.haut-onglets .haut-onglet')];
+      if (!onglets.length) return;
+      const r = document.createRange();
+      const plusLong = Math.max(...onglets.map((o) => { r.selectNodeContents(o); return r.getBoundingClientRect().width + 26; }));
+      const besoin = onglets.length * plusLong + (onglets.length - 1) * 6;
+      const s = getComputedStyle(h);
+      const autour = (h.querySelector('.haut-resto')?.getBoundingClientRect().width ?? 0) + (h.querySelector('.haut-droite')?.getBoundingClientRect().width ?? 0)
+        + parseFloat(s.paddingLeft) + parseFloat(s.paddingRight) + 2 * 14;
+      setDessous(besoin > h.clientWidth - autour);
+    };
+    mesurer();
+    const ro = new ResizeObserver(mesurer);
+    ro.observe(h);
+    return () => ro.disconnect();
+  }, [etapes.length]);
   // Un menu ouvert se ferme en changeant de page, en cliquant ailleurs ou avec Échap.
   useEffect(() => { setOuvert(null); }, [chemin]);
   useEffect(() => {
@@ -225,15 +248,18 @@ export function NavHaut({ accueil, etapes, resto, statut, compte }: {
   const fleche = <svg className="fleche-onglet" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>;
   const basculer = (nom: string) => setOuvert((o) => (o === nom ? null : nom));
   return (
-    <header className="bo-haut" ref={barre}>
+    <header className={`bo-haut${dessous ? ' onglets-dessous' : ''}`} ref={barre}>
       <Link href={accueil} className="haut-resto" aria-label={`${resto.nom} : accueil de votre espace`} aria-current={courant(accueil)}>
         {resto.logo
           // eslint-disable-next-line @next/next/no-img-element
           ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
           : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
-        {statut && <span className="haut-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
       </Link>
       <nav aria-label="Menu principal" className="haut-onglets">
+        {/* Premier onglet : la page d'accueil du restaurant (ses chiffres clés), sous son nom. */}
+        <div className="haut-groupe">
+          <Link href={accueil} className={`haut-onglet${courant(accueil) ? ' actif' : ''}`} aria-current={courant(accueil)}>{resto.nom}</Link>
+        </div>
         {onglets(etapes).map((o) => {
           const grise = o.etapes.every((e) => e.desactive);
           const actif = o.etapes.some((e) => courant(e.href));
@@ -273,6 +299,8 @@ export function NavHaut({ accueil, etapes, resto, statut, compte }: {
         })}
       </nav>
       <div className="haut-droite">
+        {/* Statut du restaurant (Actif, Inscription…), à gauche des paramètres. */}
+        {statut && <span className="haut-statut haut-statut-pastille"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
         <div className="haut-groupe">
           <button type="button" className="haut-roue" aria-expanded={ouvert === 'compte'} aria-label="Paramètres et compte" onClick={() => basculer('compte')}>
             <Icone nom="reglages" />

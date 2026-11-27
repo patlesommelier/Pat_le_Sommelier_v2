@@ -854,3 +854,22 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .gauche-titre[aria-expanded='false'] .fleche-partie { transform: rotate(-90deg); }
 .bo-gauche .gauche-menu { gap: 4px; }
 .bo-gauche .gauche-partie + .gauche-partie { margin-top: 2px; }
+/* Menu du haut (retour) : pas de texte d'explication sous le titre des pages ; l'onglet du restaurant est un lien. */
+.bo-avec-haut .bo-entete > div > p:not(.entete-infos) { display: none; }
+.bo-avec-haut a.haut-onglet { text-decoration: none; }
+/* Statut en pastille blanche, à gauche de la roue des paramètres. */
+.bo-avec-haut .haut-statut-pastille { display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 14px; border-radius: 999px; background: #FFFFFF; color: var(--texte); font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+.bo-avec-haut .haut-statut-pastille .rond-mode { width: 9px; height: 9px; }
+/* Barre du haut plus compacte : tout tient sur une ligne (onglets, statut, paramètres). */
+@media (min-width: 901px) {
+  .bo-avec-haut .bo-haut { flex-wrap: nowrap; gap: 14px; }
+  .bo-avec-haut .haut-onglet { font-size: 13.5px; letter-spacing: .4px; padding: 0 12px; gap: 6px; }
+  .bo-avec-haut .haut-onglets { gap: 6px; min-width: 0; }
+  .bo-avec-haut .haut-droite { gap: 10px; flex-shrink: 0; }
+  .bo-avec-haut .haut-logo-qv { height: 26px; }
+}
+@media (min-width: 901px) {
+  .bo-avec-haut .bo-haut.onglets-dessous { flex-wrap: wrap; row-gap: 10px; }
+  .bo-avec-haut .onglets-dessous .haut-onglets { order: 3; flex-basis: 100%; margin-top: 0; }
+  .bo-avec-haut .onglets-dessous .haut-droite { margin-left: auto; }
+}
