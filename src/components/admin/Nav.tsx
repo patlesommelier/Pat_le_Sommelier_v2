@@ -531,7 +531,8 @@ export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1
       </div>
       <nav aria-label="Menu principal" className="gauche-menu">
         {onglets(etapes).map((o) => {
-          const actif = o.etapes.some((e) => courant(e.href));
+          // Partie de la page ouverte, surlignée ; quand un volet est ouvert, seule sa partie l'est (un seul surlignage à la fois).
+          const actif = o.etapes.some((e) => courant(e.href)) && (!flottant || !volet || volet === o.nom);
           return (
             <div key={o.nom} className={`gauche-partie${actif ? ' partie-active' : ''}`}>
               <button type="button" className="gauche-titre" aria-expanded={ouverte(o)} onClick={() => basculer(o)}>

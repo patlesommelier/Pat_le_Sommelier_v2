@@ -990,3 +990,8 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .bo-gauche .haut-resto-logo { height: 50px; min-width: 100px; max-width: 150px; padding: 0 10px; }
   .bo-gauche .haut-resto-logo img { max-height: 38px; max-width: 130px; }
 }
+/* Logo du restaurant encore plus grand (ordinateur) : presque toute la largeur de la colonne. */
+@media (min-width: 901px) {
+  .bo-gauche .haut-resto-logo { height: 110px; min-width: 200px; max-width: 244px; padding: 0 12px; }
+  .bo-gauche .haut-resto-logo img { max-height: 92px; max-width: 220px; }
+}
