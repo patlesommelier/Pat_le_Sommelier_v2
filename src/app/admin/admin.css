@@ -924,3 +924,7 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 
 .rac-a .rac-hero a.btn.rac-etape-btn { background: #FFFFFF; color: var(--encre) !important; border-color: #FFFFFF; }
 @media (max-width: 640px) { .rac-pat { display: none; } .rac-hero { padding: 22px; } }
+/* Onglets du haut : boutons au bord fin, libellés en minuscules ; l'onglet de la page ouverte en blanc plein. */
+.bo-avec-haut .haut-onglet { text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700; background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .28); }
+.bo-avec-haut .haut-onglet:hover, .bo-avec-haut .haut-onglet[aria-expanded='true'] { background: rgba(255, 255, 255, .16); }
+.bo-avec-haut .haut-onglet.actif { background: #FFFFFF; color: var(--encre); box-shadow: none; }
