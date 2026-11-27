@@ -474,10 +474,20 @@ function BulleEtape({ guide }: { guide: Guide }) {
  * son statut, puis chaque partie (Cartes et menus, App client, Impression, Gestion de cave, Frigos connectés) et toutes ses
  * entrées, toujours visibles ; en bas les paramètres, le compte et Quid Vinum.
  */
-export function NavGauche({ accueil, etapes, resto, compte }: {
+const ICONES_PARTIES: Record<string, string> = { 'Cartes et menus': 'menu', 'App client': 'phone', Impression: 'imprimante', 'Gestion de cave': 'stock', 'Frigos connectés': 'bottle' };
+
+/**
+ * Menu de gauche d'un restaurant : le logo et le statut en haut, puis chaque partie (Cartes et menus, App client, Impression,
+ * Gestion de cave, Frigos connectés) qui déroule ses entrées ; en bas les paramètres, le compte et Quid Vinum.
+ * Variante 1 et 2 : les parties se déplient dans la colonne (celle de la page ouverte est dépliée d'office) ;
+ * variante 3 : la partie choisie ouvre ses entrées dans un volet à droite de la colonne ; variante 4 : la 3 sur une colonne blanche.
+ */
+export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1 }: {
   accueil: string; etapes: Etape[];
   resto: { nom: string; couleur: string; logo?: string | null };
+  statut?: { couleur: string; libelle: string } | null;
   compte: { liens: { href: string; libelle: string }[]; email: string; deconnexion: React.ReactNode };
+  variante?: 1 | 2 | 3 | 4;
 }) {
   const { chemin, courant, guide, suivante } = useMenu(accueil, etapes);
   const [compteOuvert, setCompteOuvert] = useState(false);
@@ -485,49 +495,71 @@ export function NavGauche({ accueil, etapes, resto, compte }: {
   const [menuOuvert, setMenuOuvert] = useState(false);
   // Parties repliées par défaut, sauf celle de la page ouverte (ou de l'étape montrée) ; le choix de l'utilisateur l'emporte.
   const [ouverts, setOuverts] = useState<Record<string, boolean>>({});
-  const ouverte = (o: { nom: string; etapes: Etape[] }) => ouverts[o.nom] ?? o.etapes.some((e) => courant(e.href) || e.href === suivante);
-  useEffect(() => { setMenuOuvert(false); setCompteOuvert(false); }, [chemin]);
+  // Variante 3 : une seule partie ouverte à la fois, dans un volet ; il se ferme en changeant de page ou en cliquant ailleurs.
+  const [volet, setVolet] = useState<string | null>(null);
+  const colonne = useRef<HTMLElement>(null);
+  const flottant = variante >= 3;
+  // Volet : celui choisi ; sans choix, celui de l'étape que montre un post-it (pour qu'il pointe sur l'entrée).
+  const [voletFerme, setVoletFerme] = useState(false);
+  const ouverte = (o: { nom: string; etapes: Etape[] }) => flottant ? volet === o.nom || (!volet && !voletFerme && Boolean(guide?.postIt) && o.etapes.some((e) => e.href === suivante))
+    : ouverts[o.nom] ?? o.etapes.some((e) => courant(e.href) || e.href === suivante);
+  const basculer = (o: { nom: string; etapes: Etape[] }) => flottant ? (setVoletFerme(true), setVolet(ouverte(o) ? null : o.nom))
+    : setOuverts((x) => ({ ...x, [o.nom]: !ouverte(o) }));
+  useEffect(() => { setMenuOuvert(false); setCompteOuvert(false); setVolet(null); }, [chemin]);
+  useEffect(() => {
+    if (!volet) return;
+    const ailleurs = (ev: MouseEvent) => { if (!colonne.current?.contains(ev.target as Node)) setVolet(null); };
+    const echap = (ev: KeyboardEvent) => { if (ev.key === 'Escape') setVolet(null); };
+    document.addEventListener('mousedown', ailleurs);
+    document.addEventListener('keydown', echap);
+    return () => { document.removeEventListener('mousedown', ailleurs); document.removeEventListener('keydown', echap); };
+  }, [volet]);
   return (
-    <aside className={`bo-gauche${menuOuvert ? ' menu-ouvert' : ''}`}>
+    <aside ref={colonne} className={`bo-gauche ${variante === 4 ? 'gauche-v2 gauche-v3' : `gauche-v${variante}`}${menuOuvert ? ' menu-ouvert' : ''}`}>
       <button type="button" className="gauche-bascule" aria-expanded={menuOuvert} onClick={() => setMenuOuvert((x) => !x)}>
         <Icone nom="burger" /> Menu
       </button>
-      {/* En haut de la colonne : le logo du restaurant (vers l'accueil) ; son statut est en haut à droite de la page. */}
-      <Link href={accueil} className="haut-resto gauche-resto" aria-label={`${resto.nom} : accueil de votre espace`}>
-        {resto.logo
-          // eslint-disable-next-line @next/next/no-img-element
-          ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
-          : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
-      </Link>
+      {/* En haut de la colonne : le logo du restaurant (vers l'accueil) et son statut. */}
+      <div className="gauche-tete">
+        <Link href={accueil} className="haut-resto gauche-resto" aria-label={`${resto.nom} : accueil de votre espace`} aria-current={courant(accueil)}>
+          {resto.logo
+            // eslint-disable-next-line @next/next/no-img-element
+            ? <span className="haut-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
+            : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
+        </Link>
+        {statut && <span className="gauche-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
+      </div>
       <nav aria-label="Menu principal" className="gauche-menu">
-        {/* La page d'accueil du restaurant (ses chiffres clés), sous son nom, au-dessus des parties. */}
-        <div className="gauche-partie">
-          <Link href={accueil} className="bo-lien" aria-current={courant(accueil)}>
-            <span className="bo-num" style={{ border: 0 }}><Icone nom="home" /></span>{resto.nom}
-          </Link>
-        </div>
-        {onglets(etapes).map((o) => (
-          <div key={o.nom} className="gauche-partie">
-            {/* Chaque partie se replie : ouverte d'office quand elle contient la page ouverte (ou l'étape montrée). */}
-            <button type="button" className="gauche-titre" aria-expanded={ouverte(o)} onClick={() => setOuverts((x) => ({ ...x, [o.nom]: !ouverte(o) }))}>
-              {o.nom}{o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}
-              {!ouverte(o) && o.etapes.some((e) => (e.notif?.n ?? 0) > 0) && <span className="point-notif" aria-label="Nouveauté" />}
-              <svg className="fleche-partie" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
-            </button>
-            {ouverte(o) && o.etapes.map((e) => e.desactive ? (
-              <span key={e.href} className="bo-lien bo-lien-desactive section-desactivee" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
-                <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span><span>{e.libelle}</span>
-              </span>
-            ) : (
-              <Link key={e.href} href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)}
-                id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
-                <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span>
-                {e.libelle}
-                {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
-              </Link>
-            ))}
-          </div>
-        ))}
+        {onglets(etapes).map((o) => {
+          const actif = o.etapes.some((e) => courant(e.href));
+          return (
+            <div key={o.nom} className={`gauche-partie${actif ? ' partie-active' : ''}`}>
+              <button type="button" className="gauche-titre" aria-expanded={ouverte(o)} onClick={() => basculer(o)}>
+                <span className="gauche-titre-icone"><Icone nom={ICONES_PARTIES[o.nom] ?? 'menu'} /></span>
+                <span className="gauche-titre-nom">{o.nom}</span>
+                {o.etapes.some((e) => e.nouveau) && <span className="badge-nouveau badge-groupe">Nouveau</span>}
+                {!ouverte(o) && o.etapes.some((e) => (e.notif?.n ?? 0) > 0) && <span className="point-notif" aria-label="Nouveauté" />}
+                <svg className="fleche-partie" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              {ouverte(o) && (
+                <div className={flottant ? 'gauche-volet' : 'gauche-entrees'}>
+                  {o.etapes.map((e) => e.desactive ? (
+                    <span key={e.href} className="bo-lien bo-lien-desactive section-desactivee" aria-disabled="true" tabIndex={0} data-info={e.desactive} title={e.desactive}>
+                      <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span><span>{e.libelle}</span>
+                    </span>
+                  ) : (
+                    <Link key={e.href} href={e.href} className={`bo-lien${e.href === suivante ? ' cible-etape' : ''}`} aria-current={courant(e.href)}
+                      id={e.href === suivante ? 'lien-etape-suivante' : undefined}>
+                      <span className="bo-num" style={{ border: 0 }}>{e.icone && <Icone nom={e.icone} />}</span>
+                      {e.libelle}
+                      {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </nav>
       <div className="gauche-bas">
         <button type="button" className="bo-lien gauche-compte" aria-expanded={compteOuvert} onClick={() => setCompteOuvert((x) => !x)}>

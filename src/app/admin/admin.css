@@ -928,3 +928,57 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .bo-avec-haut .haut-onglet { text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700; background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .28); }
 .bo-avec-haut .haut-onglet:hover, .bo-avec-haut .haut-onglet[aria-expanded='true'] { background: rgba(255, 255, 255, .16); }
 .bo-avec-haut .haut-onglet.actif { background: #FFFFFF; color: var(--encre); box-shadow: none; }
+/* ——— Menu de gauche avec parties déroulantes (essais 1, 2, 3) ——— */
+.gauche-tete { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.bo-gauche .gauche-tete .gauche-resto { align-self: center; margin-left: 0; }
+.bo-gauche button.gauche-titre { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; padding: 6px 12px; text-transform: none; letter-spacing: 0;
+  font-size: 15px; font-weight: 700; color: #FFFFFF; border-radius: 12px; }
+.gauche-titre-icone { display: flex; width: 22px; justify-content: center; }
+.gauche-titre-icone svg { width: 20px; height: 20px; }
+.gauche-titre-nom { flex: 1; }
+.gauche-entrees { display: flex; flex-direction: column; gap: 2px; margin: 2px 0 6px 22px; padding-left: 10px; border-left: 1.5px solid rgba(255, 255, 255, .22); }
+.bo-gauche .gauche-entrees .bo-lien { font-size: 14px; min-height: 34px; }
+.bo-gauche .partie-active > button.gauche-titre { background: rgba(255, 255, 255, .12); }
+
+/* 2 — Colonne blanche : le menu clair sur la gauche, la page sur fond chaud. */
+.avec-gauche-v2 { background: var(--fond); }
+.avec-gauche-v2 .bo-main { margin: 0; border-radius: 0; background: var(--fond); }
+.gauche-v2 { background: #FFFFFF; border-right: 1px solid var(--ligne); color: var(--texte); }
+.gauche-v2 .gauche-resto { border: 1px solid var(--ligne); }
+.gauche-v2 .gauche-statut { background: var(--fond); }
+.gauche-v2 button.gauche-titre { color: var(--texte); }
+.gauche-v2 button.gauche-titre:hover { background: var(--survol); }
+.gauche-v2 .gauche-titre-icone { color: var(--encre); }
+.gauche-v2 .partie-active > button.gauche-titre { background: var(--rose); color: var(--encre); }
+.gauche-v2 .gauche-entrees { border-left-color: var(--ligne); }
+.gauche-v2 .bo-lien { color: var(--texte) !important; }
+.gauche-v2 .bo-lien .bo-num { color: var(--encre); }
+.gauche-v2 .bo-lien:hover { background: var(--survol); }
+.gauche-v2 .bo-lien[aria-current='page'] { background: var(--encre); color: #FFFFFF !important; }
+.gauche-v2 .bo-lien[aria-current='page'] .bo-num { color: #FFFFFF; }
+.gauche-v2 .gauche-bas .gauche-logo-qv { filter: none; }
+.gauche-v2 .gauche-bascule { color: var(--encre); border-color: var(--ligne); background: #FFFFFF; }
+
+/* 3 — Colonne bordeaux, chaque partie ouvre ses entrées dans un volet blanc à droite. */
+.gauche-v3 { overflow: visible; }
+.gauche-v3 .gauche-partie { position: relative; }
+.gauche-v3 .fleche-partie { transform: rotate(-90deg); }
+.gauche-v3 .gauche-titre[aria-expanded='true'] { background: rgba(255, 255, 255, .2); }
+.gauche-volet { position: absolute; z-index: 85; top: 0; left: calc(100% + 18px); min-width: 290px; padding: 8px; display: flex; flex-direction: column; gap: 2px;
+  background: #FFFFFF; border-radius: 16px; box-shadow: 0 18px 40px -14px rgba(33, 33, 33, .45); }
+.gauche-volet-titre { margin: 4px 10px 6px; font-size: 12px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: var(--rouge); }
+.bo-gauche .gauche-volet .bo-lien { color: var(--texte) !important; }
+.bo-gauche .gauche-volet .bo-lien .bo-num { color: var(--encre); }
+.bo-gauche .gauche-volet .bo-lien:hover { background: var(--survol); }
+.bo-gauche .gauche-volet .bo-lien[aria-current='page'] { background: var(--rose); color: var(--encre) !important; }
+@media (max-width: 900px) {
+  .gauche-volet { position: static; min-width: 0; margin: 4px 0 8px; }
+  .gauche-tete { order: 1; flex-direction: row; }
+}
+.gauche-tete .gauche-statut { align-self: center; }
+.bo-gauche.gauche-v3 { z-index: 70; }
+/* Colonne blanche avec volets (2 + 3). */
+.gauche-v2.gauche-v3 .gauche-titre[aria-expanded='true'] { background: var(--rose); color: var(--encre); }
+.gauche-v2 .gauche-volet { border: 1px solid var(--ligne); }
+.gauche-v2.gauche-v3 .gauche-volet .bo-lien[aria-current='page'] { background: var(--encre); color: #FFFFFF !important; }
+.gauche-v2.gauche-v3 .gauche-volet .bo-lien[aria-current='page'] .bo-num { color: #FFFFFF; }
