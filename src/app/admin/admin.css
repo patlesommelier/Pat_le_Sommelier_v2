@@ -982,3 +982,11 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .gauche-v2 .gauche-volet { border: 1px solid var(--ligne); }
 .gauche-v2.gauche-v3 .gauche-volet .bo-lien[aria-current='page'] { background: var(--encre); color: #FFFFFF !important; }
 .gauche-v2.gauche-v3 .gauche-volet .bo-lien[aria-current='page'] .bo-num { color: #FFFFFF; }
+/* Logo du restaurant plus grand en haut du menu de gauche. */
+.bo-gauche .haut-resto-logo { height: 76px; min-width: 160px; max-width: 236px; padding: 0 14px; }
+.bo-gauche .haut-resto-logo img { max-height: 58px; max-width: 208px; }
+@media (max-width: 900px) {
+  .bo-gauche .gauche-tete .gauche-resto { order: 0; }
+  .bo-gauche .haut-resto-logo { height: 50px; min-width: 100px; max-width: 150px; padding: 0 10px; }
+  .bo-gauche .haut-resto-logo img { max-height: 38px; max-width: 130px; }
+}
