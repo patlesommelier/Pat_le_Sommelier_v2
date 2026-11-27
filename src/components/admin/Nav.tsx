@@ -256,10 +256,6 @@ export function NavHaut({ accueil, etapes, resto, statut, compte }: {
           : <span className="haut-resto-logo" style={{ background: resto.couleur }}><b>{resto.nom}</b></span>}
       </Link>
       <nav aria-label="Menu principal" className="haut-onglets">
-        {/* Premier onglet : la page d'accueil du restaurant (ses chiffres clés), sous son nom. */}
-        <div className="haut-groupe">
-          <Link href={accueil} className={`haut-onglet${courant(accueil) ? ' actif' : ''}`} aria-current={courant(accueil)}>{resto.nom}</Link>
-        </div>
         {onglets(etapes).map((o) => {
           const grise = o.etapes.every((e) => e.desactive);
           const actif = o.etapes.some((e) => courant(e.href));

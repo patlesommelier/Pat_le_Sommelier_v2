@@ -873,3 +873,54 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .bo-avec-haut .onglets-dessous .haut-onglets { order: 3; flex-basis: 100%; margin-top: 0; }
   .bo-avec-haut .onglets-dessous .haut-droite { margin-left: auto; }
 }
+/* ——— Page d'accueil du restaurant ——— */
+.rac { display: flex; flex-direction: column; gap: 26px; }
+.rac-hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; border-radius: 24px; padding: 30px 34px; position: relative; overflow: hidden; }
+.rac-hero h1 { margin: 0; font-size: clamp(32px, 3.4vw, 44px); letter-spacing: -.8px; line-height: 1.05; }
+.rac-date { font-size: 14px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+.rac-sous { margin: 0; font-size: 17px; }
+.rac-etape { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; padding: 16px 18px; border-radius: 16px; max-width: 640px; }
+.rac-etape b { font-size: 18px; }
+.rac-etape-sur { font-size: 12px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; }
+.rac-etape .rac-etape-btn { margin-top: 8px; }
+.rac-pat { width: 240px; height: auto; flex-shrink: 0; }
+.rac-titre { margin: 0; font-size: 20px; }
+.rac-raccourcis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.rac-raccourci { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 18px; text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s; }
+.rac-raccourci:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -18px rgba(33, 33, 33, .45); }
+.rac-raccourci b { display: block; font-size: 16px; }
+.rac-raccourci span span { display: block; font-size: 13.5px; opacity: .8; }
+.rac-raccourci-icone { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 14px; flex-shrink: 0; }
+.rac-raccourci-icone svg, .rac-tuile-icone svg { width: 22px; height: 22px; }
+.rac-tuiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.rac-tuile { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 16px; background: #FFFFFF; border: 1px solid var(--ligne); text-decoration: none; color: inherit; }
+.rac-tuile:hover { border-color: var(--rose-pat); }
+.rac-tuile b { display: block; font-size: 24px; line-height: 1.1; color: var(--encre); }
+.rac-tuile span span { display: block; font-size: 13.5px; color: var(--discret); }
+.rac-tuile-icone { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0; background: var(--rose); color: var(--encre); }
+.rac-tuile.alerte { background: #FDECEA; border-color: #F5B5AA; }
+.rac-tuile.alerte b { color: var(--rouge); }
+.rac-tuile.alerte .rac-tuile-icone { background: var(--rouge); color: #FFFFFF; }
+.rac-deux { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 1000px) { .rac-deux { grid-template-columns: 1fr; } .rac-pat { width: 170px; } }
+.rac-regle { display: flex; flex-direction: column; gap: 14px; }
+.rac-regle-tete { display: flex; align-items: center; gap: 14px; }
+.rac-regle-tete img { border-radius: 50%; background: var(--rose); }
+.rac-regle-vin { display: flex; flex-wrap: wrap; gap: 18px; padding: 16px; border-radius: 14px; background: var(--fond); border: 1px solid var(--ligne); }
+.rac-regle-vin img { width: 110px; max-height: 160px; object-fit: contain; border-radius: 8px; }
+.rac-nouvelles { list-style: none; margin: 0; padding: 6px; display: flex; flex-direction: column; gap: 2px; background: #FFFFFF; border: 1px solid var(--ligne); border-radius: 18px; }
+.rac-nouvelles a { display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 12px; text-decoration: none; color: inherit; }
+.rac-nouvelles a:hover { background: var(--survol); }
+.rac-nouvelle-texte { flex: 1; font-size: 14.5px; font-weight: 600; }
+
+/* Accueil en bordeaux, Pat en blanc, raccourcis blancs avec une icône bordeaux. */
+.rac-a .rac-hero { background: linear-gradient(120deg, #610420 0%, #8A0B30 100%); color: #FFFFFF; }
+.rac-a .rac-date { color: #F7C9BE; }
+.rac-a .rac-etape { background: rgba(255, 255, 255, .12); }
+.rac-a .rac-etape-sur { color: #F7C9BE; }
+.rac-a .rac-etape-btn { background: #FFFFFF; color: var(--encre); }
+.rac-a .rac-raccourci { background: #FFFFFF; border: 1px solid var(--ligne); }
+.rac-a .rac-raccourci-icone { background: var(--encre); color: #FFFFFF; }
+
+.rac-a .rac-hero a.btn.rac-etape-btn { background: #FFFFFF; color: var(--encre) !important; border-color: #FFFFFF; }
+@media (max-width: 640px) { .rac-pat { display: none; } .rac-hero { padding: 22px; } }

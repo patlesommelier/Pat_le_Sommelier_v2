@@ -5,19 +5,19 @@ import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
 import { Entete } from '@/components/admin/Ui';
 import { aVerifierLecture, getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { caveVisible, prochaineEtape } from '@/lib/admin/prochaine-etape';
-import { ChiffresCarte, ChiffresCave } from '@/components/admin/ChiffresRestaurant';
+import { Chiffres, Nouvelles, Raccourcis } from '@/components/admin/ChiffresRestaurant';
 import { commandesAVoir, stockBas } from '@/lib/admin/stocks';
 import { getVinsBO, type RestaurantBO, type Resume } from '@/lib/admin/donnees';
 import { regrouperVins } from './carte/etats';
 import { exigerAcces, prenomUtilisateur } from '@/lib/admin/auth';
 import { titreCarte } from '@/lib/admin/intitule';
 import { avecAppreciation } from '@/lib/appreciation';
-import { sansContenance } from '@/lib/format';
 
 /** Tableau de bord : bonjour, l'espace Quid Vinum (et Pat le Sommelier pour les accords), le résumé du restaurant et la règle de Pat du jour. */
 export default async function TableauDeBord({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ bienvenue?: string }> }) {
   const { resto } = await params;
   const { bienvenue } = await searchParams;
+  const aujourdhui = new Date().toLocaleDateString('fr-BE', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Brussels' });
   const u = await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const [r, s, prenom, jour] = await Promise.all([getRestaurantBO(resto), getResume(resto), prenomUtilisateur(u, resto), getRegleDuJour(resto)]);
   if (!r) notFound();
@@ -31,53 +31,60 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
   const vin = jour && titreCarte(jour.vin);
   return (
     <>
-      {accueil ? <BienvenueRestaurant restaurantId={r.id} /> : <>
-      <Entete titre={prenom ? `Bonjour ${prenom}` : 'Bonjour'}
-        texte="Votre espace Quid Vinum : votre menu et votre carte des vins, vos vins en stock et vos commandes à vos distributeurs. Pour les accords mets-vins, Pat le Sommelier accompagne vos clients : chacun choisit son plat sur son téléphone et découvre le vin de votre carte qui l’accompagne le mieux, comme le ferait un sommelier à table. Vous gardez la main : relisez les accords que Pat a préparés, ajustez ses règles à votre service, choisissez l’apparence de l’app et imprimez le QR code à poser sur vos tables." />
-      {/* Sinon : une seule chose à faire maintenant, la plus urgente. */}
-      {etape && (
-        <section className="carte-bo rappel-inventaire" aria-labelledby="prochaine-etape">
-          <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
-            <span className="surtitre">Votre prochaine étape</span>
-            <b id="prochaine-etape" style={{ fontSize: 18 }}>{etape.titre}</b>
-            <span className="petit">{etape.texte}</span>
-          </div>
-          <Link href={`/admin/${r.id}${etape.chemin}`} className="btn">{etape.bouton} →</Link>
-        </section>
-      )}
-      {/* Les chiffres clés de la carte et de la cave (autrefois en haut de leurs pages). */}
-      <ChiffresCarte resto={r.id} />
-      {caveVisible(r) && <ChiffresCave resto={r.id} />}
-      </>}
-
-
-      {/* La règle de Pat du jour : une de ses règles, illustrée par le meilleur vin de la carte pour un plat du menu. */}
-      {jour && vin && (
-        <section className="carte-bo" style={{ display: 'flex', flexDirection: 'column', gap: 18 }} aria-labelledby="regle-du-jour">
-          <div className="pile" style={{ gap: 8 }}>
-            <span className="surtitre" id="regle-du-jour">La règle de Pat du jour</span>
-            <h2 style={{ fontSize: 26 }}>{jour.titre}</h2>
-            <p style={{ margin: 0, fontSize: 16, lineHeight: 1.55, maxWidth: '75ch' }}>{jour.regle}</p>
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 22, alignItems: 'flex-start', padding: 20, borderRadius: 14, background: 'var(--fond)', border: '1px solid var(--ligne)' }}>
-            {jour.vin.etiquette_url && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={jour.vin.etiquette_url} alt={`Étiquette : ${jour.vin.libelle}`} style={{ width: 150, maxHeight: 210, objectFit: 'contain', borderRadius: 8, flexShrink: 0 }} />
-            )}
-            <div className="pile" style={{ flex: '1 1 320px', gap: 10 }}>
-              <span className="surtitre">Avec : {jour.plat}</span>
-              <div>
-                <h3 style={{ fontSize: 21 }}>{vin.titre}</h3>
-                {vin.sousTitre && <span className="discret" style={{ fontSize: 15 }}>{vin.sousTitre}</span>}
+      {accueil ? <BienvenueRestaurant restaurantId={r.id} /> : <div className="rac rac-a">
+        {/* En haut : bonjour, la date, et la prochaine étape conseillée comme action principale. */}
+        <section className="rac-hero" aria-labelledby="bonjour">
+          <div className="pile" style={{ gap: 10, flex: '1 1 380px' }}>
+            <span className="rac-date">{aujourdhui}</span>
+            <h1 id="bonjour">{prenom ? `Bonjour ${prenom}` : 'Bonjour'}</h1>
+            {etape ? (
+              <div className="rac-etape">
+                <span className="rac-etape-sur">Votre prochaine étape</span>
+                <b>{etape.titre}</b>
+                <span>{etape.texte}</span>
+                <span><Link href={`/admin/${r.id}${etape.chemin}`} className="btn rac-etape-btn">{etape.bouton} →</Link></span>
               </div>
-              {jour.vin.presentation && <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55 }}>{sansContenance(jour.vin.presentation)}</p>}
-              <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55, paddingLeft: 14, borderLeft: '3px solid var(--rouge)' }}>
-                {avecAppreciation(jour.explication, jour.note, { cle: jour.plat_id, ecritParLeRestaurant: jour.ecrit_par_le_restaurant })}
-              </p>
-            </div>
+            ) : <p className="rac-sous">Tout est à jour. Bon service !</p>}
           </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="rac-pat" src="/pat/pat-attable-blanc.svg" alt="" width={240} height={188} />
         </section>
-      )}
+        <Raccourcis resto={r.id} cave={caveVisible(r)} />
+        <Chiffres resto={r.id} cave={caveVisible(r)} />
+        <div className="rac-deux">
+          {/* La règle de Pat du jour : une de ses règles, illustrée par le meilleur vin de la carte pour un plat du menu. */}
+          {jour && vin && (
+            <section className="carte-bo rac-regle" aria-labelledby="regle-du-jour">
+              <div className="rac-regle-tete">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/pat/pat-avatar.svg" alt="" width={52} height={52} />
+                <div className="pile" style={{ gap: 2 }}>
+                  <span className="surtitre" id="regle-du-jour">La règle de Pat du jour</span>
+                  <h2 style={{ fontSize: 22, margin: 0 }}>{jour.titre}</h2>
+                </div>
+              </div>
+              <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55 }}>{jour.regle}</p>
+              <div className="rac-regle-vin">
+                {jour.vin.etiquette_url && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={jour.vin.etiquette_url} alt={`Étiquette : ${jour.vin.libelle}`} />
+                )}
+                <div className="pile" style={{ gap: 8, flex: '1 1 240px' }}>
+                  <span className="surtitre">Avec : {jour.plat}</span>
+                  <div>
+                    <h3 style={{ fontSize: 19, margin: 0 }}>{vin.titre}</h3>
+                    {vin.sousTitre && <span className="discret" style={{ fontSize: 14.5 }}>{vin.sousTitre}</span>}
+                  </div>
+                  <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, paddingLeft: 12, borderLeft: '3px solid var(--rouge)' }}>
+                    {avecAppreciation(jour.explication, jour.note, { cle: jour.plat_id, ecritParLeRestaurant: jour.ecrit_par_le_restaurant })}
+                  </p>
+                </div>
+              </div>
+            </section>
+          )}
+          <Nouvelles resto={r.id} cave={caveVisible(r)} />
+        </div>
+      </div>}
     </>
   );
 }
