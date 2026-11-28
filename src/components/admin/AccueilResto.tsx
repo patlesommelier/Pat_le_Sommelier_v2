@@ -50,7 +50,7 @@ const CarteQv = ({ children }: { children?: React.ReactNode }) => (
       <img src="/quidvinum/icone.png" alt="" width={44} height={44} />
       <span><b>Quid Vinum</b><small>pour vous restaurateur</small></span>
     </div>
-    <p>Gestion de stock, commandes et carte des vins au même endroit : Quid Vinum vous fait gagner du temps et de l’argent.</p>
+    <p>Gestion de stock, commandes de vin chez vos distributeurs, choix de nouveaux vins : Quid Vinum centralise tous vos besoins.</p>
     {children}
   </section>
 );
@@ -62,18 +62,17 @@ const CartePat = ({ children }: { children?: React.ReactNode }) => (
       <img src="/pat/pat-avatar.svg" alt="" width={44} height={44} />
       <span><b>Pat le sommelier</b><small>pour vos clients à table</small></span>
     </div>
-    <p>Un QR code sur la table permet à chaque client de trouver rapidement le vin qui accompagnera parfaitement son plat.</p>
+    <p>Un QR code sur chaque table permet à vos clients de choisir leur vin.</p>
     {children}
   </section>
 );
 
-/** Le QR code des tables (celui du chevalet), avec le lien vers son impression. */
+/** Le QR code des tables (celui du chevalet). */
 const QrCode = ({ resto, taille = 132 }: { resto: string; taille?: number }) => (
   <div className="ha-qr">
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img src={`/admin/${resto}/acces/qr?affichage=1`} alt="QR code de votre app" width={taille} height={taille} />
-    <span><b>Votre QR code</b><small>Scannez-le pour essayer l’app, comme vos clients.</small>
-      <Link href={`/admin/${resto}/chevalet`} className="btn sec petit">Imprimer le chevalet</Link></span>
+    <span><b>Votre QR code</b></span>
   </div>
 );
 
