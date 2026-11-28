@@ -94,8 +94,9 @@ export async function AccueilResto({ resto, cave, entete, etape }: {
   const { pat, qv } = await chiffres(resto, cave);
   return (
     <div className="ha ha-b">
+      {/* Bonjour sur toute la largeur : le haut du téléphone s'aligne sur le premier bloc (la prochaine étape). */}
+      <div className="ha-b-entete">{entete}</div>
       <div className="ha-b-gauche">
-        {entete}
         {etape}
         <CartePat><Chiffres liste={pat} /></CartePat>
         <CarteQv>
@@ -104,7 +105,7 @@ export async function AccueilResto({ resto, cave, entete, etape }: {
         </CarteQv>
       </div>
       <aside className="ha-b-droite">
-        <Telephone resto={resto} echelle={0.62} />
+        <Telephone resto={resto} echelle={0.5} />
         <QrCode resto={resto} taille={110} />
       </aside>
     </div>

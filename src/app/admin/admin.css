@@ -1012,3 +1012,6 @@ a.vin-cell.lien-fiche:hover .nom { text-decoration: underline; }
 @media (max-width: 800px) { .fiche-catalogue { grid-template-columns: 1fr; padding: 18px; } }
 .fiche-catalogue-producteur-texte { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border-radius: 14px; background: var(--fond); }
 .fiche-catalogue-producteur-texte p { margin: 0; font-size: 15px; line-height: 1.6; }
+.ha-b { row-gap: 18px; }
+.ha-b-entete { grid-column: 1 / -1; }
+.ha-b-droite { top: 0; }
