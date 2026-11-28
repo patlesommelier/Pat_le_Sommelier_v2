@@ -56,7 +56,9 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
       )}
       {c.statut === 'ouverte' && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'flex-start' }}>
-          {c.fournisseur_email
+          {!c.via_qv && !c.fournisseur_id
+            ? <span className="petit" style={{ color: 'var(--ocre)' }}>Cette commande n’a pas de distributeur : elle ne peut être envoyée à personne. Annulez-la dans <Link href={`/admin/${resto}/commandes`}>Commandes</Link>, choisissez le distributeur de ses vins dans <Link href={`/admin/${resto}/stocks`}>Ma cave</Link>, puis commandez-les à nouveau.</span>
+            : c.fournisseur_email
             ? <EnvoiCommande pdf={pdf} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
                 serveur={envoiEmailConfigure()} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee}
                 apres={envoyee ? undefined : suivante ?? `/admin/${resto}/commandes?commande=${c.id}`} />

@@ -89,7 +89,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
               </span>
               {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}
               {/* « Catalogue » : tous les vins de ce distributeur ; chacun peut être ajouté à vos vins, puis commandé. */}
-              <Link href={`/admin/${resto}/fournisseurs/${d.id}`} className="btn sec petit bouton-commande">Tous ses vins</Link>
+              <Link href={`/admin/${resto}/fournisseurs/${d.id}`} className="btn sec petit bouton-commande">Catalogue</Link>
               {/* À droite, près de la sélection : ses vins sur votre carte (actif), ou la taille de son catalogue. */}
               <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? (() => { const n = vinsSurCarte.get(d.id) ?? 0; return `${n} vin${n > 1 ? 's' : ''} sur votre carte`; })() : `${d.vins} vins au catalogue`}</span>
               <EtatDistributeur actif={Boolean(f)} nom={d.nom} activer={ajouterDistributeurQv.bind(null, resto, d.id)} retirer={supprimerFournisseur.bind(null, resto, f?.id ?? '')} />

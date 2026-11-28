@@ -564,6 +564,12 @@ export async function ajouterAuPanier(resto: string, vinId: string, quantite: nu
     const groupes = await lignesDesVins(resto, [vinId]);
     await choisirFournisseur(resto, groupes.get(vinId)?.length ? groupes.get(vinId)! : [vinId], fournisseur, null);
   }
+  // Pas de commande sans distributeur : le vin (ou une autre contenance du même vin) doit en avoir un.
+  const [f] = await requete<{ id: string | null }>(
+    `select coalesce(v.fournisseur_id, (select x.fournisseur_id from vin_carte x where x.restaurant_id = v.restaurant_id
+              and lower(x.libelle) = lower(v.libelle) and x.millesime is not distinct from v.millesime and x.fournisseur_id is not null limit 1)) as id
+       from vin_carte v where v.id = $1`, [vinId]);
+  if (!f?.id) return { erreur: `Choisissez d’abord le distributeur de « ${v.libelle} » (colonne Distributeur) : sans distributeur, la commande ne peut être envoyée à personne.` };
   const [l] = await requete<{ quantite: number }>(`insert into panier (restaurant_id, vin_id, quantite) values ($1, $2, $3)
      on conflict (restaurant_id, vin_id) do update set quantite = panier.quantite + excluded.quantite returning quantite`, [resto, vinId, q]);
   rafraichir(resto);
@@ -619,9 +625,13 @@ export async function commanderPanier(resto: string, referenceInterne?: string |
     creees.push(r.id);
     await retirer(duCatalogue.map((l) => l.vin_id));
   }
-  // Les autres : une commande par distributeur (sans distributeur : « fournisseur à préciser »).
+  // Les autres : une commande par distributeur. Un vin sans distributeur reste au panier : pas de commande à personne.
+  const sansDistributeur = lignes.filter((x) => !duCatalogue.includes(x) && !x.fournisseur_id);
+  if (sansDistributeur.length && !creees.length && sansDistributeur.length === lignes.length) {
+    return { erreur: 'Choisissez d’abord le distributeur des vins du panier (colonne Distributeur de Ma cave) : sans distributeur, la commande ne peut être envoyée à personne.' };
+  }
   const parFournisseur = new Map<string, typeof lignes>();
-  for (const l of lignes.filter((x) => !duCatalogue.includes(x))) parFournisseur.set(l.fournisseur_id ?? '', [...(parFournisseur.get(l.fournisseur_id ?? '') ?? []), l]);
+  for (const l of lignes.filter((x) => !duCatalogue.includes(x) && x.fournisseur_id)) parFournisseur.set(l.fournisseur_id!, [...(parFournisseur.get(l.fournisseur_id!) ?? []), l]);
   for (const [fournisseurId, ls] of parFournisseur) {
     const r = await enregistrerCommande(resto, u.email, fournisseurId, ls.map((l) => [l.vin_id, l.quantite] as const), [], undefined, reference);
     if ('erreur' in r) { rafraichir(resto); return r; }

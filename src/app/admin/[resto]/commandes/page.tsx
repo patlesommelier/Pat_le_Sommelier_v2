@@ -121,7 +121,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
         </table></div>
         {/* Toutes les actions sur une ligne. */}
         <div className="actions-commande">
-          {c.statut === 'ouverte' && !envoyee && (c.fournisseur_email
+          {c.statut === 'ouverte' && !envoyee && !c.via_qv && !c.fournisseur_id && <span className="petit" style={{ color: 'var(--ocre)' }}>Commande sans distributeur : annulez-la, choisissez le distributeur de ses vins dans Ma cave, puis commandez-les à nouveau.</span>}
+          {c.statut === 'ouverte' && !envoyee && (c.via_qv || c.fournisseur_id) && (c.fournisseur_email
             ? <EnvoiCommande pdf={`/admin/${resto}/commandes/${c.id}/pdf`} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
                 serveur={emailPret} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee} petit />
             : <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn rouge petit">Envoyer la commande</Link>)}
