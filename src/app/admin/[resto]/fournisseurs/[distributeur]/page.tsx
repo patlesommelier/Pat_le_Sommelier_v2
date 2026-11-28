@@ -69,10 +69,11 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
                 const x = dansVins.get(v.id);
                 return (
                   <tr key={v.id} className={v.epuise ? 'indisponible' : undefined}>
-                    <td><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={d.logo_url} taille={40} />
+                    <td><Link href={`/admin/${resto}/fournisseurs/${distributeur}/${encodeURIComponent(v.id)}`} className="vin-cell lien-fiche" title="Voir la fiche du vin">
+                      <VignetteVin url={v.etiquette_url} logo={d.logo_url} taille={40} />
                       <div><div className="nom">{v.libelle}{v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}</div>
                         <div className="petit">{[v.producteur, v.section, v.contenance, v.certification, v.reference ? `réf. ${v.reference}` : null].filter(Boolean).join(' · ')}</div>
-                        {v.epuise && <Etat type="defaut">Épuisé</Etat>}</div></div></td>
+                        {v.epuise && <Etat type="defaut">Épuisé</Etat>}</div></Link></td>
                     <td className="droite discret" style={{ whiteSpace: 'nowrap', textDecoration: d.remise > 0 && v.prix_public != null ? 'line-through' : undefined }}>{v.prix_public != null ? euros(v.prix_public) : '—'}</td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}><b>{v.prix != null ? euros(v.prix) : '—'}</b></td>
                     <td className="centre">{x

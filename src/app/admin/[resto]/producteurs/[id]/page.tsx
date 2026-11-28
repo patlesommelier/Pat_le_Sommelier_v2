@@ -38,7 +38,10 @@ export default async function FicheProducteur({ params, searchParams }: { params
     requete<{ id: string; libelle: string; millesime: string | null }>(
       `select distinct on (libelle, millesime) id, libelle, millesime from vin_carte where restaurant_id = $1 and producteur_id = $2 order by libelle, millesime, ordre`, [resto, id]),
   ]);
-  if (!p || !siens.length) notFound();
+  // Retour : la fiche du vin de la cave ; sinon la page d'où l'on vient dans l'espace (fiche d'un vin du catalogue) ; sinon Ma cave.
+  const depuisCatalogue = !vin && retour && retour.startsWith(`/admin/${resto}/fournisseurs/`) ? retour : null;
+  // Producteur d'un vin de la cave, ou ouvert depuis la fiche d'un vin du catalogue d'un distributeur.
+  if (!p || (!siens.length && !depuisCatalogue)) notFound();
   // Vins du producteur chez les distributeurs de Quid Vinum (au prix du restaurant, HTVA ; jamais le prix QV) :
   // par vin de la base, et ceux du catalogue reliés au producteur sans vin de la base.
   const sansCuvee = (await requete<{ id: string }>('select id from distributeur_vin where producteur_id = $1 and actif and cuvee_id is null', [id])).map((x) => x.id);
@@ -60,11 +63,11 @@ export default async function FicheProducteur({ params, searchParams }: { params
     logo: l.offres.map((o) => images.get(o.id)?.logo).find(Boolean) ?? null }));
   const versCave = `/admin/${resto}/stocks`;
   const ficheVin = (vinId: string) => `/admin/${resto}/carte/${encodeURIComponent(vinId)}?${new URLSearchParams({ retour: versCave })}`;
-  const vers = vin ? `/admin/${resto}/carte/${encodeURIComponent(vin)}${retour ? `?${new URLSearchParams({ retour })}` : ''}` : `/admin/${resto}/stocks`;
+  const vers = vin ? `/admin/${resto}/carte/${encodeURIComponent(vin)}${retour ? `?${new URLSearchParams({ retour })}` : ''}` : depuisCatalogue ?? `/admin/${resto}/stocks`;
   const lieu = [p.sous_region, p.region, p.pays].filter(Boolean).join(' · ');
   return (
     <>
-      <Link href={vers} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← {vin ? 'Fiche du vin' : 'Ma cave'}</Link>
+      <Link href={vers} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← {vin || depuisCatalogue ? 'Fiche du vin' : 'Ma cave'}</Link>
       <header className="bo-entete"><div>
         <span className="surtitre">Producteur</span>
         <h1>{p.nom}</h1>
@@ -110,12 +113,12 @@ export default async function FicheProducteur({ params, searchParams }: { params
             </section>
           )}
         </section>
-        <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
+        {siens.length > 0 && <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
           <div className="carte-bo pile" style={{ gap: 8 }}>
             <b>Vos vins de ce producteur</b>
             {siens.map((x) => <Link key={x.id} href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="petit">{x.libelle}{x.millesime ? ` ${x.millesime}` : ''}</Link>)}
           </div>
-        </aside>
+        </aside>}
       </div>
     </>
   );

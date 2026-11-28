@@ -873,57 +873,6 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .bo-avec-haut .onglets-dessous .haut-onglets { order: 3; flex-basis: 100%; margin-top: 0; }
   .bo-avec-haut .onglets-dessous .haut-droite { margin-left: auto; }
 }
-/* ——— Page d'accueil du restaurant ——— */
-.rac { display: flex; flex-direction: column; gap: 26px; }
-.rac-hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; border-radius: 24px; padding: 30px 34px; position: relative; overflow: hidden; }
-.rac-hero h1 { margin: 0; font-size: clamp(32px, 3.4vw, 44px); letter-spacing: -.8px; line-height: 1.05; }
-.rac-date { font-size: 14px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
-.rac-sous { margin: 0; font-size: 17px; }
-.rac-etape { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; padding: 16px 18px; border-radius: 16px; max-width: 640px; }
-.rac-etape b { font-size: 18px; }
-.rac-etape-sur { font-size: 12px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; }
-.rac-etape .rac-etape-btn { margin-top: 8px; }
-.rac-pat { width: 240px; height: auto; flex-shrink: 0; }
-.rac-titre { margin: 0; font-size: 20px; }
-.rac-raccourcis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
-.rac-raccourci { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 18px; text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s; }
-.rac-raccourci:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -18px rgba(33, 33, 33, .45); }
-.rac-raccourci b { display: block; font-size: 16px; }
-.rac-raccourci span span { display: block; font-size: 13.5px; opacity: .8; }
-.rac-raccourci-icone { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 14px; flex-shrink: 0; }
-.rac-raccourci-icone svg, .rac-tuile-icone svg { width: 22px; height: 22px; }
-.rac-tuiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-.rac-tuile { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 16px; background: #FFFFFF; border: 1px solid var(--ligne); text-decoration: none; color: inherit; }
-.rac-tuile:hover { border-color: var(--rose-pat); }
-.rac-tuile b { display: block; font-size: 24px; line-height: 1.1; color: var(--encre); }
-.rac-tuile span span { display: block; font-size: 13.5px; color: var(--discret); }
-.rac-tuile-icone { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0; background: var(--rose); color: var(--encre); }
-.rac-tuile.alerte { background: #FDECEA; border-color: #F5B5AA; }
-.rac-tuile.alerte b { color: var(--rouge); }
-.rac-tuile.alerte .rac-tuile-icone { background: var(--rouge); color: #FFFFFF; }
-.rac-deux { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 18px; align-items: start; }
-@media (max-width: 1000px) { .rac-deux { grid-template-columns: 1fr; } .rac-pat { width: 170px; } }
-.rac-regle { display: flex; flex-direction: column; gap: 14px; }
-.rac-regle-tete { display: flex; align-items: center; gap: 14px; }
-.rac-regle-tete img { border-radius: 50%; background: var(--rose); }
-.rac-regle-vin { display: flex; flex-wrap: wrap; gap: 18px; padding: 16px; border-radius: 14px; background: var(--fond); border: 1px solid var(--ligne); }
-.rac-regle-vin img { width: 110px; max-height: 160px; object-fit: contain; border-radius: 8px; }
-.rac-nouvelles { list-style: none; margin: 0; padding: 6px; display: flex; flex-direction: column; gap: 2px; background: #FFFFFF; border: 1px solid var(--ligne); border-radius: 18px; }
-.rac-nouvelles a { display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 12px; text-decoration: none; color: inherit; }
-.rac-nouvelles a:hover { background: var(--survol); }
-.rac-nouvelle-texte { flex: 1; font-size: 14.5px; font-weight: 600; }
-
-/* Accueil en bordeaux, Pat en blanc, raccourcis blancs avec une icône bordeaux. */
-.rac-a .rac-hero { background: linear-gradient(120deg, #610420 0%, #8A0B30 100%); color: #FFFFFF; }
-.rac-a .rac-date { color: #F7C9BE; }
-.rac-a .rac-etape { background: rgba(255, 255, 255, .12); }
-.rac-a .rac-etape-sur { color: #F7C9BE; }
-.rac-a .rac-etape-btn { background: #FFFFFF; color: var(--encre); }
-.rac-a .rac-raccourci { background: #FFFFFF; border: 1px solid var(--ligne); }
-.rac-a .rac-raccourci-icone { background: var(--encre); color: #FFFFFF; }
-
-.rac-a .rac-hero a.btn.rac-etape-btn { background: #FFFFFF; color: var(--encre) !important; border-color: #FFFFFF; }
-@media (max-width: 640px) { .rac-pat { display: none; } .rac-hero { padding: 22px; } }
 /* Onglets du haut : boutons au bord fin, libellés en minuscules ; l'onglet de la page ouverte en blanc plein. */
 .bo-avec-haut .haut-onglet { text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700; background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .28); }
 .bo-avec-haut .haut-onglet:hover, .bo-avec-haut .haut-onglet[aria-expanded='true'] { background: rgba(255, 255, 255, .16); }
@@ -1006,3 +955,60 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 /* Volet des sous-menus : fond rose clair (comme la partie choisie) ; l'entrée survolée dans un rose plus foncé. */
 .bo-gauche .gauche-volet { background: var(--rose); border-color: #EBCFC7; }
 .bo-gauche .gauche-volet .bo-lien:hover { background: #EBC6BC; }
+/* ——— Page d'accueil (Home) : bonjour, les deux promesses, chiffres, QR code, l'app sur un téléphone ——— */
+.ha { display: flex; flex-direction: column; gap: 22px; }
+.ha-bonjour span { font-size: 13px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--rouge); }
+.ha-bonjour h1 { margin: 4px 0 0; font-size: clamp(30px, 3vw, 38px); letter-spacing: -.6px; }
+.ha-etape { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 12px 16px; border-radius: 14px; background: #FFFFFF; border: 1px solid var(--ligne); border-left: 4px solid var(--rouge); }
+.ha-etape .surtitre { flex-basis: 100%; }
+.ha-etape > span:nth-child(2) { flex: 1 1 320px; font-size: 14.5px; }
+.ha-carte { display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 20px; background: #FFFFFF; border: 1px solid var(--ligne); }
+.ha-carte > p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+.ha-carte-tete { display: flex; align-items: center; gap: 12px; }
+.ha-carte-tete img { border-radius: 12px; }
+.ha-carte-tete b { display: block; font-size: 19px; }
+.ha-carte-tete small { display: block; font-size: 13px; color: var(--discret); }
+.ha-qv { border-top: 4px solid var(--encre); }
+.ha-pat { border-top: 4px solid var(--rouge); }
+.ha-pat .ha-carte-tete img { background: var(--rose); border-radius: 50%; }
+.ha-chiffres { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.ha-chiffre { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 14px; background: var(--fond); text-decoration: none; color: inherit; }
+.ha-chiffre:hover { background: var(--rose); }
+.ha-chiffre b { font-size: 22px; color: var(--encre); line-height: 1.1; }
+.ha-chiffre span { font-size: 13px; color: var(--discret); }
+.ha-chiffre.alerte { background: #FDECEA; }
+.ha-chiffre.alerte b { color: var(--rouge); }
+.ha-qr { display: flex; align-items: center; gap: 14px; }
+.ha-qr img { padding: 6px; border-radius: 14px; border: 1px solid var(--ligne); background: #FFFFFF; flex-shrink: 0; }
+.ha-qr b { display: block; font-size: 15px; }
+.ha-qr small { display: block; font-size: 13px; color: var(--discret); margin: 2px 0 8px; }
+.ha-tel { position: relative; display: block; flex-shrink: 0; overflow: hidden; border: 8px solid #241F20; border-radius: 30px; background: #EFEBE9; box-sizing: border-box; box-shadow: 0 18px 36px -20px rgba(33, 33, 33, .55); }
+.ha-tel iframe { position: absolute; top: 0; left: 0; width: 390px; height: 800px; border: 0; transform-origin: top left; pointer-events: none; }
+/* b — le téléphone en vedette à droite */
+.ha-b { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 26px; align-items: start; }
+.ha-b-gauche { display: flex; flex-direction: column; gap: 18px; }
+.ha-b-droite { display: flex; flex-direction: column; align-items: center; gap: 16px; position: sticky; top: 20px; }
+.ha-b-droite .ha-qr { flex-direction: column; text-align: center; max-width: 260px; }
+@media (max-width: 1000px) { .ha-b { grid-template-columns: 1fr; } .ha-b-droite { position: static; } }
+/* Catalogue d'un distributeur : la ligne d'un vin ouvre sa fiche. */
+a.vin-cell.lien-fiche { text-decoration: none; color: inherit !important; }
+a.vin-cell.lien-fiche:hover .nom { text-decoration: underline; }
+/* Fiche d'un vin du catalogue. */
+.fiche-catalogue { display: grid; grid-template-columns: minmax(220px, 360px) minmax(0, 1fr); gap: 32px; padding: 28px; border-radius: 22px; background: #FFFFFF; border: 1px solid var(--ligne); align-items: start; }
+.fiche-catalogue-photo { border-radius: 16px; overflow: hidden; background: var(--fond); }
+.fiche-catalogue-photo img { object-fit: contain !important; }
+.fiche-catalogue-texte { display: flex; flex-direction: column; gap: 20px; }
+.fiche-catalogue-producteur { font-size: 20px; font-weight: 700; color: var(--encre); }
+.fiche-catalogue-prix { display: flex; flex-wrap: wrap; gap: 12px; }
+.fiche-catalogue-prix > div { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; border-radius: 14px; background: var(--fond); min-width: 150px; }
+.fiche-catalogue-prix small { font-size: 12.5px; color: var(--discret); }
+.fiche-catalogue-prix span { font-size: 18px; color: var(--discret); }
+.fiche-catalogue-prix .votre-prix { background: var(--rose); }
+.fiche-catalogue-prix .votre-prix b { font-size: 24px; color: var(--encre); }
+.fiche-catalogue-infos { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px 24px; }
+.fiche-catalogue-infos dt { font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--etiquette); }
+.fiche-catalogue-infos dd { margin: 2px 0 0; font-size: 15.5px; }
+.fiche-catalogue-presentation { margin: 0; font-size: 15.5px; line-height: 1.6; padding-left: 14px; border-left: 3px solid var(--rouge); }
+@media (max-width: 800px) { .fiche-catalogue { grid-template-columns: 1fr; padding: 18px; } }
+.fiche-catalogue-producteur-texte { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border-radius: 14px; background: var(--fond); }
+.fiche-catalogue-producteur-texte p { margin: 0; font-size: 15px; line-height: 1.6; }
