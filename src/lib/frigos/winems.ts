@@ -6,8 +6,28 @@ import { requete } from '../db';
 import { randomUUID } from 'node:crypto';
 import { lireFrigosWineMS, nomCommun, type ClientWineMS } from './winems-donnees';
 import { ajouterVinCommande } from '../admin/distributeur-vin';
+import { adressePour } from '../domaines';
 
 export const winemsConfigure = () => Boolean(process.env.WINEMS_API_URL?.trim() && process.env.WINEMS_API_KEY?.trim());
+
+/**
+ * QR code du frigo : WineMS renvoie les clients d'un restaurant relié vers son app Quid Vinum. L'adresse est posée par
+ * Quid Vinum dans la fiche du client WineMS (null : lien retiré). Retenue ici une fois posée, pour ne pas la renvoyer à chaque lecture.
+ */
+const redirectionsPosees = new Map<string, string | null>();
+export async function poserRedirectionQr(client: string, url: string | null): Promise<boolean> {
+  if (!winemsConfigure() || redirectionsPosees.get(client) === url) return false;
+  try {
+    const r = await fetch(`${process.env.WINEMS_API_URL!.trim().replace(/\/$/, '')}/quidvinum/redirection`, {
+      method: 'POST', headers: { 'x-api-key': process.env.WINEMS_API_KEY!.trim(), 'content-type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify({ client, url }), signal: AbortSignal.timeout(15_000) });
+    if (!r.ok) return false; // WineMS pas encore à jour (404) : on réessaiera à la prochaine lecture
+    redirectionsPosees.set(client, url);
+    return true;
+  } catch { return false; }
+}
+/** Adresse où le QR code du frigo d'un client WineMS renvoie (l'app du restaurant, côté clients). */
+export const adresseQr = (client: string) => { const base = adressePour('/winems'); return base ? `${base}/winems/${encodeURIComponent(client)}` : null; };
 
 /** Relit WineMS et met à jour les frigos et leurs bouteilles ; renvoie le nombre de frigos mis à jour. */
 export async function synchroniserFrigos(): Promise<number> {
@@ -18,6 +38,9 @@ export async function synchroniserFrigos(): Promise<number> {
   for (const r of relies) {
     const client = clients.find((c) => String(c.id) === r.winems_client_id.trim());
     if (!client) continue;
+    // Son QR code WineMS ouvre son app Quid Vinum.
+    const qr = adresseQr(String(client.id));
+    if (qr) await poserRedirectionQr(String(client.id), qr);
     const vus: string[] = [];
     for (const f of client.frigos) {
       const id = String(f.id);

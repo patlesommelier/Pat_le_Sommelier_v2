@@ -2,7 +2,7 @@
 /**
  * Actions de l'espace super-admin (Pat). Chacune vérifie d'abord que l'utilisateur est super-admin.
  */
-import { synchroniserFrigos, winemsConfigure } from '@/lib/frigos/winems';
+import { poserRedirectionQr, synchroniserFrigos, winemsConfigure } from '@/lib/frigos/winems';
 import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -153,6 +153,9 @@ export async function relierWineMS(restaurantId: string, f: FormData) {
   const page = `/admin/super/restaurants/${restaurantId}`;
   const client = (txt(f, 'winems_client_id') ?? '').trim();
   if (client && !/^\d{1,12}$/.test(client)) redirect(avec(page, { erreur: 'Le numéro du client WineMS est un nombre (ex. 1).' }));
+  // Ancien client WineMS (changé ou retiré) : son QR code ne renvoie plus vers ce restaurant.
+  const [avant] = await requete<{ winems_client_id: string | null }>('select winems_client_id from restaurant where id = $1', [restaurantId]);
+  if (avant?.winems_client_id && avant.winems_client_id !== client) await poserRedirectionQr(avant.winems_client_id, null);
   await requete('update restaurant set winems_client_id = $2 where id = $1', [restaurantId, client || null]);
   if (!client) await requete('delete from frigo where restaurant_id = $1', [restaurantId]);
   let message = client ? 'Restaurant relié à WineMS.' : 'Restaurant détaché de WineMS.';
