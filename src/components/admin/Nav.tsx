@@ -445,7 +445,8 @@ function BulleEtape({ guide }: { guide: Guide }) {
         setPos({ top: r.bottom + window.scrollY + 12, left: Math.min(Math.max(16, r.left + window.scrollX), document.documentElement.clientWidth - largeur - 16), largeur, cote: 'dessous' });
         return;
       }
-      const nav = document.querySelector('.bo-nav, .bo-gauche')?.getBoundingClientRect();
+      // Entrée dans le volet d'une partie (menu de gauche) : le post-it à droite du volet, pas par-dessus.
+      const nav = (cible?.closest('.gauche-volet') ?? document.querySelector('.bo-nav, .bo-gauche'))?.getBoundingClientRect();
       if (!r || !r.height || !nav) { setPos(null); return; }
       const largeur = Math.min(260, window.innerWidth - 32);
       const aDroite = nav.right + largeur + 24 <= document.documentElement.clientWidth && nav.width < window.innerWidth * 0.6;
@@ -498,6 +499,10 @@ export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1
   // Variante 3 : une seule partie ouverte à la fois, dans un volet ; il se ferme en changeant de page ou en cliquant ailleurs.
   const [volet, setVolet] = useState<string | null>(null);
   const colonne = useRef<HTMLElement>(null);
+  // Le pointeur quitte la partie et son volet : le volet se ferme (après un court délai, pour traverser l'espace entre les deux).
+  const sortie = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const quitter = () => { if (sortie.current) clearTimeout(sortie.current); sortie.current = setTimeout(() => { setVoletFerme(true); setVolet(null); }, 350); };
+  const revenir = () => { if (sortie.current) clearTimeout(sortie.current); };
   const flottant = variante >= 3;
   // Volet : celui choisi ; sans choix, celui de l'étape que montre un post-it (pour qu'il pointe sur l'entrée).
   const [voletFerme, setVoletFerme] = useState(false);
@@ -506,6 +511,8 @@ export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1
   const basculer = (o: { nom: string; etapes: Etape[] }) => flottant ? (setVoletFerme(true), setVolet(ouverte(o) ? null : o.nom))
     : setOuverts((x) => ({ ...x, [o.nom]: !ouverte(o) }));
   useEffect(() => { setMenuOuvert(false); setCompteOuvert(false); setVolet(null); }, [chemin]);
+  // Volets ouverts (choisi, ou ouvert pour un post-it) : seule leur partie est alors surlignée.
+  const voletsOuverts = flottant ? onglets(etapes).filter((o) => ouverte(o)).map((o) => o.nom) : [];
   useEffect(() => {
     if (!volet) return;
     const ailleurs = (ev: MouseEvent) => { if (!colonne.current?.contains(ev.target as Node)) setVolet(null); };
@@ -531,7 +538,7 @@ export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1
       </div>
       <nav aria-label="Menu principal" className="gauche-menu">
         {/* Home : la page d'accueil du restaurant (comme le logo), au-dessus des parties. */}
-        <div className={`gauche-partie${courant(accueil) && (!flottant || !volet) ? ' partie-active' : ''}`}>
+        <div className={`gauche-partie${courant(accueil) && (!flottant || !voletsOuverts.length) ? ' partie-active' : ''}`}>
           <Link href={accueil} className="gauche-titre" aria-current={courant(accueil)}>
             <span className="gauche-titre-icone"><Icone nom="home" /></span>
             <span className="gauche-titre-nom">Home</span>
@@ -539,9 +546,10 @@ export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1
         </div>
         {onglets(etapes).map((o) => {
           // Partie de la page ouverte, surlignée ; quand un volet est ouvert, seule sa partie l'est (un seul surlignage à la fois).
-          const actif = o.etapes.some((e) => courant(e.href)) && (!flottant || !volet || volet === o.nom);
+          const actif = o.etapes.some((e) => courant(e.href)) && (!flottant || !voletsOuverts.length || voletsOuverts.includes(o.nom));
           return (
-            <div key={o.nom} className={`gauche-partie${actif ? ' partie-active' : ''}`}>
+            <div key={o.nom} className={`gauche-partie${actif ? ' partie-active' : ''}`}
+              onMouseLeave={flottant && ouverte(o) ? quitter : undefined} onMouseEnter={flottant ? revenir : undefined}>
               <button type="button" className="gauche-titre" aria-expanded={ouverte(o)} onClick={() => basculer(o)}>
                 <span className="gauche-titre-icone"><Icone nom={ICONES_PARTIES[o.nom] ?? 'menu'} /></span>
                 <span className="gauche-titre-nom">{o.nom}</span>

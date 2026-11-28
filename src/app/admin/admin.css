@@ -1002,3 +1002,7 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 .gauche-v2 a.gauche-titre:hover { background: var(--survol); }
 .gauche-v2 .partie-active > a.gauche-titre { background: var(--rose); color: var(--encre) !important; }
 .bo-gauche a.gauche-titre { text-transform: none; letter-spacing: 0; margin: 0; }
+.bo-gauche .gauche-volet .cible-etape, .gauche-v2 .cible-etape { outline-color: var(--rouge); }
+/* Volet des sous-menus : fond rose clair (comme la partie choisie) ; l'entrée survolée dans un rose plus foncé. */
+.bo-gauche .gauche-volet { background: var(--rose); border-color: #EBCFC7; }
+.bo-gauche .gauche-volet .bo-lien:hover { background: #EBC6BC; }
