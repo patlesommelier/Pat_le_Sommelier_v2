@@ -530,6 +530,13 @@ export function NavGauche({ accueil, etapes, resto, statut, compte, variante = 1
         {statut && <span className="gauche-statut"><span className="rond-mode" style={{ background: statut.couleur }} aria-hidden="true" />{statut.libelle}</span>}
       </div>
       <nav aria-label="Menu principal" className="gauche-menu">
+        {/* Home : la page d'accueil du restaurant (comme le logo), au-dessus des parties. */}
+        <div className={`gauche-partie${courant(accueil) && (!flottant || !volet) ? ' partie-active' : ''}`}>
+          <Link href={accueil} className="gauche-titre" aria-current={courant(accueil)}>
+            <span className="gauche-titre-icone"><Icone nom="home" /></span>
+            <span className="gauche-titre-nom">Home</span>
+          </Link>
+        </div>
         {onglets(etapes).map((o) => {
           // Partie de la page ouverte, surlignée ; quand un volet est ouvert, seule sa partie l'est (un seul surlignage à la fois).
           const actif = o.etapes.some((e) => courant(e.href)) && (!flottant || !volet || volet === o.nom);

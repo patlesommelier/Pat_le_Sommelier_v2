@@ -995,3 +995,10 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
   .bo-gauche .haut-resto-logo { height: 110px; min-width: 200px; max-width: 244px; padding: 0 12px; }
   .bo-gauche .haut-resto-logo img { max-height: 92px; max-width: 220px; }
 }
+/* Entrée « Home » du menu de gauche : comme les parties, mais un lien direct. */
+.bo-gauche a.gauche-titre { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; padding: 6px 12px; box-sizing: border-box; border-radius: 12px;
+  font-size: 15px; font-weight: 700; text-decoration: none; color: #FFFFFF; }
+.gauche-v2 a.gauche-titre { color: var(--texte) !important; }
+.gauche-v2 a.gauche-titre:hover { background: var(--survol); }
+.gauche-v2 .partie-active > a.gauche-titre { background: var(--rose); color: var(--encre) !important; }
+.bo-gauche a.gauche-titre { text-transform: none; letter-spacing: 0; margin: 0; }

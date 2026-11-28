@@ -21,10 +21,9 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   // Score et rankings : cuisine interne, montrés à Pat seulement. Le restaurant voit le rang et la note /5.
   const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
-  // Sans plat demandé : le premier plat du menu qui a des accords. Arrivée après l'inscription : aucun, le téléphone montre
-  // le menu de l'app et le restaurateur choisit lui-même son plat, comme un client.
-  const parDefaut = bienvenue ? undefined : actifs.find((p) => avecAccords.has(p.id))?.id ?? actifs[0]?.id;
-  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : parDefaut ? [parDefaut] : []).filter((id) => actifs.some((p) => p.id === id)) as string[];
+  // Sans plat demandé, le téléphone s'ouvre sur l'accueil de l'app, comme pour un client : les plats (sommelier d'abord)
+  // ou la carte des vins (carte d'abord) ; le restaurateur choisit lui-même son plat, et la page suit.
+  const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : []).filter((id) => actifs.some((p) => p.id === id)) as string[];
   const arelire = sp.arelire === '1';
   const tour = Math.max(1, Math.min(5, Number(sp.tour) || 1));
   const statuts = arelire ? ['valide', 'propose'] : accordsVisibles();
